@@ -1,6 +1,6 @@
 # developers.ulule.com
 
-A changelog of our API deployments
+Ulule API changelog to follow deployments.
 
 ## Changelog
 

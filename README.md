@@ -2,6 +2,13 @@
 
 Ulule API changelog to follow changes.
 
+## Legend
+
+* **[FEAT]** is a new feature
+* **[FIX]** is a bugfix
+* **[DOCS]** is a change to the documentation
+* **[REF]** is a refactoring
+
 ## Changelog
 
 ### 22-03-2018

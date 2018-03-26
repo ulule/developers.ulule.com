@@ -11,6 +11,12 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 26-03-2018
+
+* **[ULULE/FEAT]** webhook `proposal.validated`
+* **[ULULE/FEAT]** webhook `proposal.refused`
+* **[DISCUSSIONS/FIX]** `>` character is not escaped anymore in the sanitizer
+
 ### 22-03-2018
 
 * **[ULULE/FEAT]** A staff member can change the `unread` flag on the Project

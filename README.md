@@ -15,7 +15,7 @@ Ulule API changelog to follow changes.
 
 * **[ULULE/FEAT]** webhook `proposal.validated`
 * **[ULULE/FEAT]** webhook `proposal.refused`
-* **[DISCUSSIONS/FIX]** `>` character is not escaped anymore in the sanitizer
+* **[DISCUSSIONS/FIX]** character `>` is not escaped anymore in the sanitizer
 
 ### 22-03-2018
 

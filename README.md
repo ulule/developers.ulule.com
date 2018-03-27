@@ -11,16 +11,13 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
-### 27-03-2018
+### 26-03-2018
 
 * **[DISCUSSIONS/FIX]** double character `>>` was still escaped
 * **[ULULE/FEAT]** integrate `proposal.created` webhook
 * **[ULULE/FEAT]** we only create the discussion from proposal with the proposal user and the manager
 * **[ULULE/FEAT]** add more fields to proposal creation endpoint (`legal_entity_type`, `date_start_estimation`, `answer_code`)
 * **[ULULE/FEAT]** register ip address when creating a new proposal
-
-### 26-03-2018
-
 * **[ULULE/FEAT]** webhook `proposal.validated`
 * **[ULULE/FEAT]** webhook `proposal.refused`
 * **[DISCUSSIONS/FIX]** character `>` is not escaped anymore in the sanitizer

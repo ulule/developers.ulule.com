@@ -16,6 +16,8 @@ Ulule API changelog to follow changes.
 * **[DISCUSSIONS/FIX]** double character `>>` was still escaped
 * **[ULULE/FEAT]** integrate `proposal.created` webhook
 * **[ULULE/FEAT]** we only create the discussion from proposal with the proposal user and the manager
+* **[ULULE/FEAT]** add more fields to proposal creation endpoint (`legal_entity_type`, `date_start_estimation`)
+* **[ULULE/FEAT]** register ip address when creating a new proposal
 
 ### 26-03-2018
 

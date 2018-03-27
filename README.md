@@ -13,21 +13,21 @@ Ulule API changelog to follow changes.
 
 ### 26-03-2018
 
-* **[DISCUSSIONS/FIX]** double character `>>` was still escaped
-* **[ULULE/FEAT]** integrate `proposal.created` webhook
-* **[ULULE/FEAT]** we only create the discussion from proposal with the proposal user and the manager
-* **[ULULE/FEAT]** add more fields to proposal creation endpoint (`legal_entity_type`, `date_start_estimation`, `answer_code`)
-* **[ULULE/FEAT]** register ip address when creating a new proposal
-* **[ULULE/FEAT]** webhook `proposal.validated`
-* **[ULULE/FEAT]** webhook `proposal.refused`
-* **[DISCUSSIONS/FIX]** character `>` is not escaped anymore in the sanitizer
+* **[DISCUSSIONS-API/FIX]** double character `>>` was still escaped
+* **[ULULE-API/FEAT]** integrate `proposal.created` webhook
+* **[ULULE-API/FEAT]** we only create the discussion from proposal with the proposal user and the manager
+* **[ULULE-API/FEAT]** add more fields to proposal creation endpoint (`legal_entity_type`, `date_start_estimation`, `answer_code`)
+* **[ULULE-API/FEAT]** register ip address when creating a new proposal
+* **[ULULE-API/FEAT]** webhook `proposal.validated`
+* **[ULULE-API/FEAT]** webhook `proposal.refused`
+* **[DISCUSSIONS-API/FIX]** character `>` is not escaped anymore in the sanitizer
 
 ### 22-03-2018
 
-* **[ULULE/FEAT]** A staff member can change the `unread` flag on the Project
-* **[ULULE/FEAT]** If a user is reachable by another, this user can view the user detail endpoint (`/users/:id`)
-* **[ULULE/FIX]** Preload avatar for project manager
-* **[DISCUSSIONS/FIX]** Retrieve user from last message when it's not a recipient
-* **[DISCUSSIONS/FEAT]** Automatically mark a discussion as `read` when its messages are retrieved
-* **[ULULE/FEAT]** Add `DELETE /comments/:id`
-* **[ULULE/FEAT]** Add `PATCH /comments/:id`
+* **[ULULE-API/FEAT]** A staff member can change the `unread` flag on the Project
+* **[ULULE-API/FEAT]** If a user is reachable by another, this user can view the user detail endpoint (`/users/:id`)
+* **[ULULE-API/FIX]** Preload avatar for project manager
+* **[DISCUSSIONS-API/FIX]** Retrieve user from last message when it's not a recipient
+* **[DISCUSSIONS-API/FEAT]** Automatically mark a discussion as `read` when its messages are retrieved
+* **[ULULE-API/FEAT]** Add `DELETE /comments/:id`
+* **[ULULE-API/FEAT]** Add `PATCH /comments/:id`

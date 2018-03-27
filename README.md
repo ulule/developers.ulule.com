@@ -13,6 +13,7 @@ Ulule API changelog to follow changes.
 
 ### 26-03-2018
 
+* **[ULULE_API/FIX]** added fallback on `project.video` and `project.main_image` when a resource does not exist for the selected langage
 * **[DISCUSSIONS-API/FIX]** double character `>>` was still escaped
 * **[ULULE-API/FEAT]** integrate `proposal.created` webhook
 * **[ULULE-API/FEAT]** we only create the discussion from proposal with the proposal user and the manager

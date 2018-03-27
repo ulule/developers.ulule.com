@@ -11,6 +11,12 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 27-03-2018
+
+* **[DISCUSSIONS/FIX]** double character `>>` was still escaped
+* **[ULULE/FEAT]** integrate `proposal.created` webhook
+* **[ULULE/FEAT]** we only create the discussion from proposal with the proposal user and the manager
+
 ### 26-03-2018
 
 * **[ULULE/FEAT]** webhook `proposal.validated`

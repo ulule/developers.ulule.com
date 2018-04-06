@@ -11,6 +11,11 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 06-04-2018
+
+* **[ULULE-API/FIX]** Let the `partner.ribbon` field be `null` in case it doesn't exist
+* **[ULULE-API/FEAT]** When a proposal is completed, if the proposal user already owns a project, the project manager is automatically assigned to the proposal
+
 ### 05-04-2018
 
 * **[ULULE-API/FIX]** Fix a bug that prevented the `message.sent` webhook to be sent

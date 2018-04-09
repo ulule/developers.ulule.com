@@ -11,6 +11,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 09-04-2018
+
+* **[ULULE-API/FEAT]** Add `partnerships` field to `project` resource in the `project.detail` endpoint
+
 ### 06-04-2018
 
 * **[ULULE-API/FIX]** Let the `partner.ribbon` field be `null` in case it doesn't exist

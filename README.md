@@ -11,6 +11,12 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 12-04-2018
+
+* **[ULULE-API/FEAT]** Add `stats.proposals_refused_count` field to the `user` resource
+* **[ULULE-API/FEAT]** Add `validator` field to the `proposal` resource
+* **[ULULE-API/FEAT]** When validating a proposal, the proposal links are automatically listed to the `description_yourself` field of the project
+
 ### 09-04-2018
 
 * **[ULULE-API/FEAT]** Add `partnerships` field to `project` resource in the `project.detail` endpoint

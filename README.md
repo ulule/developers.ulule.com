@@ -14,7 +14,7 @@ Ulule API changelog to follow changes.
 ### 16-04-2018
 
 * **[ULULE-API/FEAT]** Add `2018-04-11` version change which removes `partnership.status`
-* **[ULULE-API/FEAT]** Add `2018-04-14` version change which removes `proposal.status_display` and `proposal.type_display`, and changes the type of `proposal.status` and `proposal.type` from numbers to string.
+* **[ULULE-API/FEAT]** Add `2018-04-14` version change which removes `proposal.status_display` and `proposal.type_display`, and changes the type of `proposal.status` and `proposal.type` from numbers to strings
 * **[ULULE-API/DOCS]** Add the two version changes above to the doc https://developers.ulule.com/#changelog
 
 ### 12-04-2018

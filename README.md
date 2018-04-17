@@ -11,6 +11,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 17-04-2018
+
+* **[ULULE-API/FEAT]** Add `2018-04-17` version change which changes the format of the `reward.date_delivery` and `variant.date_delivery` fields from YYYY-MM-DDTHH:MM:SSZ to YYYY-MM-DD so that it matches the format of the payload
+
 ### 16-04-2018
 
 * **[ULULE-API/FEAT]** Add `2018-04-11` version change which removes `partnership.status`

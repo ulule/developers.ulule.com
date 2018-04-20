@@ -11,6 +11,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 20-04-2018
+
+* **[DISCUSSIONS-API/FIX]** Ensure POST /messages/:id/send is idempotent. Previously, calling this endpoint multiple times would cause the `message.sent_at` field to be updated
+
 ### 17-04-2018
 
 * **[ULULE-API/FEAT]** Add `2018-04-17` version change which changes the format of the `reward.date_delivery` and `variant.date_delivery` fields from YYYY-MM-DDTHH:MM:SSZ to YYYY-MM-DD so that it matches the format of the payload

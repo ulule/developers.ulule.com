@@ -7,9 +7,12 @@ Ulule API changelog to follow changes.
 * **[FEAT]** is a new feature
 * **[FIX]** is a bugfix
 * **[DOCS]** is a change to the documentation
-* **[REF]** is a refactoring
 
 ## Changelog
+
+### 27-04-2018
+
+* **[ULULE-API/FIX]** Rename `export.name` resource field to `export.format`
 
 ### 20-04-2018
 

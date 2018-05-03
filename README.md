@@ -10,6 +10,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 03-05-2018
+
+* **[ULULE-API/FIX]** Return a 400 status instead of 500 when the :id parameter of a route is outside the int32 range.
+
 ### 27-04-2018
 
 * **[ULULE-API/FIX]** Rename `export.name` resource field to `export.format`

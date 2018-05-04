@@ -10,9 +10,13 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 04-05-2018
+
+* **[ULULE-API/FIX]** Return a 400 status instead of 500 when a `*_id` payload field is outside the int32 range.
+
 ### 03-05-2018
 
-* **[ULULE-API/FIX]** Return a 400 status instead of 500 when the :id parameter of a route is outside the int32 range.
+* **[ULULE-API/FIX]** Return a 400 status instead of 500 when the `:id` parameter of a route is outside the int32 range.
 
 ### 27-04-2018
 

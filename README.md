@@ -10,6 +10,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 07-05-2018
+
+* **[ULULE-API/FIX]** Return a 422 status instead of 500 when `reward.price` is out of the 0-1e10 range and `reward.shipping_int`, `reward.shipping_nat` and `shipping.amount` are out of the 0-1e3 range.
+
 ### 04-05-2018
 
 * **[ULULE-API/FIX]** Return a 400 status instead of 500 when a `*_id` payload field is outside the int32 range.

@@ -10,6 +10,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 15-05-2018
+
+* **[ULULE-API/FEAT]** Add `projects_succeeded_count`, `projects_failed_count` and `projects_currently_funding_count` to the user resources in the GET /proposals endpoint
+
 ### 07-05-2018
 
 * **[ULULE-API/FIX]** Return a 422 status instead of 500 when `reward.price` is out of the 0-1e10 range and `reward.shipping_int`, `reward.shipping_nat` and `shipping.amount` are out of the 0-1e3 range.

@@ -10,6 +10,12 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 16-05-2018
+
+* **[ULULE-API/FEAT]** Add `is_guest` to create-user payload. If true, only the `email` field is required. A guest a user is allowed to create an order without having to fill the `first_name`, `last_name`, `email`, `country`, `nationality` and `birthday` profile information.
+* **[ULULE-API/FEAT]** Add POST /users/:id/register endpoint to register a guest user so that it becomes a regular user.
+* **[ULULE-API/FEAT]** Add `is_public` to comment resource.
+
 ### 15-05-2018
 
 * **[ULULE-API/FEAT]** Add `projects_succeeded_count`, `projects_failed_count` and `projects_currently_funding_count` to the user resources in the GET /proposals endpoint

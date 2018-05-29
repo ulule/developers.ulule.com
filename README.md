@@ -10,6 +10,10 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 29-05-2018
+
+* **[ULULE-API/FEAT]** Add the `pt` language to i18n resources
+
 ### 23-05-2018
 
 * **[ULULE-API/FEAT]** Add the `2018-05-22` version change. This change affects the permissions of the `POST /projects/:id/orders` endpoint. If the version change is activated, that is if Ulule-Version is set to `2018-05-22` or to a later version change, a user may create an order without having to fill the `first_name`, `last_name`, `email`, `country`, `nationality` and `birthday` profile information. 

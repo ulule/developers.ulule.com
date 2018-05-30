@@ -10,6 +10,11 @@ Ulule API changelog to follow changes.
 
 ## Changelog
 
+### 30-05-2018
+
+* **[ULULE-API/FIX]** Return an explicit error instead of a 500 when the `limit` query parameter of a paginated endpoint is invalid.
+* **[ULULE-API/FEAT]** Fix a bug that forbids a staff user with an avatar to create an avatar for another user.
+
 ### 29-05-2018
 
 * **[ULULE-API/FEAT]** Add the `pt` language to i18n resources

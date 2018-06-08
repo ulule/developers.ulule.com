@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - checkout
+      - run: rm -rf public && git worktree add -B gh-pages public origin/gh-pages
+      - run: hugo
+      - run: git config user.email "yann.salaun@ulule.com" && git config user.name "Yann Salaün"
+      - run: cd public && git add --all && git commit -m "Publishing to gh-pages" && cd ..
+      - run: git push origin gh-pages

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discussions on Ulule API documentation</title>
+    <link>/discussions/</link>
+    <description>Recent content in Discussions on Ulule API documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/discussions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thread</title>
+      <link>/discussions/thread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/discussions/thread/</guid>
+      <description>Thread Thread resource    Field Type Description     created_at string Date of the thread creation, with RFC 3339 format   id int Unique ID of the thread   latest_message message resource Latest message of the thread   messages_count int Total count of the messages in thread   metadata json object Arbitrary object   recipients_count int Total count of the thread recipients   recipients array of user resources Recipients of the thread   sender_deleted_at string Date of the thread deletion, with RFC 3339 format, null if the thread is not deleted   sender_id int Unique ID of the sender   status string Status of the thread for the authenticated user, can be unread, read or deleted   subject string Subject of the thread   updated_at string Date of the last update of the thread, with RFC 3339 format    Retrieve thread list Retrieves all the threads where the authenticated is a recipient, ordered by updated_at.</description>
+    </item>
+    
+    <item>
+      <title>Recipient</title>
+      <link>/discussions/recipient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/discussions/recipient/</guid>
+      <description> Recipient Recipient resource A recipient resource is a user resource.
+List recipients of a thread Retrieves recipients of the thread with the given ID. This endpoint is only accessible to the thread recipients.
+post /threads/:id/recipients     Parameter Description     :id Thread ID    </description>
+    </item>
+    
+    <item>
+      <title>Message</title>
+      <link>/discussions/message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/discussions/message/</guid>
+      <description>Message The message status field can be either draft or sent. A draft message is only visible to its sender.
+In case a user needs to add attachments to a message, the typical workflow is to first create a draft message, then create the attachments, and eventually send the message.
+Message resource    Field Type Description     attachments list of attachment resource Attachments of the message   body string Body of the message in raw text and without HTML markup   id int Unique ID of the message   sender_deleted_at string Date of the message deletion, with RFC 3339 format, null if the message is not deleted   sender user resource Sender of the message   sent_at string Date at which the message has been sent, with RFC 3339 format   status string Status of the message, can be draft or sent   thread_id int Unique ID of the message thread   thread thread resource Thread of the message, only present in the message-detail endpoint    Create a message Creates a message for the thread with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Attachment</title>
+      <link>/discussions/attachment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/discussions/attachment/</guid>
+      <description>Attachment Attachment resource    Field Type Description     created_at string Date at which the attachment has been created, with RFC 3339 format   file string URL of the attached file   id int Unique ID of the attachment   name string Name of the attached file    Create an attachment Creates an attachment for the message with the given ID.</description>
+    </item>
+    
+  </channel>
+</rss>

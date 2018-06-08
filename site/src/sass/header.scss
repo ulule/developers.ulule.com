@@ -1,0 +1,164 @@
+$block: '.b-header';
+
+#{$block} {
+  position: relative;
+  z-index: zindex(header);
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  /**
+   * Logo brand
+   */
+
+  .b-icon {
+    &--ulule-logo {
+      font-size: rem(91);
+      transition: font-size time(fast);
+    }
+
+    &--ulule-owl {
+      font-size: rem(32);
+    }
+  }
+
+  /**
+   * Border bar forced to bottom
+   */
+
+  .b-cover--bar {
+    bottom: 0;
+    position: absolute;
+    top: auto;
+  }
+
+  /**
+   * Navigation links
+   */
+
+  .b-nav {
+    &__links {
+      align-items: flex-start;
+      padding-top: em(1);
+    }
+
+    &__link {
+
+    }
+  }
+
+  &__item {
+    &--shutter {
+      z-index: zindex(navshutter);
+    }
+
+    &--search {
+      margin-left: auto;
+    }
+
+    &--user {
+      background-color: color(white);
+      border-left: em(size(border)) solid color(neutral);
+
+      .b-nav__link {
+        max-width: em(200);
+        overflow: hidden;
+      }
+
+      .b-selector {
+        &__menu {
+          border-bottom-left-radius: size(radius);
+          left: auto;
+          right: 0;
+          top: rem(size(nav-bar));
+        }
+
+        &__link {
+          box-sizing: border-box;
+          height: rem(size(space)*2.5);
+          max-width: 100%;
+          width: rem(size(menu));
+        }
+      }
+    }
+  }
+
+  /**
+   * Search form
+   */
+
+  &__search {
+    position: relative;
+  }
+
+  &__input {
+    @include placeholder(color(black));
+    border: none;
+    font-weight: 500;
+    height: em(size(nav-bar) - size(nav-border));
+    padding: 0;
+    padding-left: em(size(space) / 2);
+    padding-right: em(size(space));
+    transition: width time(fast);
+    width: em(100);
+    max-width: 100%;
+
+    &:focus {
+      width: em(200);
+    }
+  }
+
+  /**
+   * Profile
+   */
+
+  &__avatar {
+    border-radius: 50px;
+    flex-shrink: 0;
+    margin-right: em(size(space)/2);
+    overflow: hidden;
+
+    img {
+      display: block;
+    }
+  }
+
+  @media (max-width: size(screen, tablet)) {
+    &__item {
+      display: none;
+
+      &--shutter, &--user {
+        display: block;
+      }
+
+      &--user {
+        border-left: none;
+      }
+    }
+  }
+
+  @media (max-width: size(screen, phablet)) {
+    &__pseudo, &__item--shutter .b-nav__label {
+      display: none;
+    }
+
+    &__avatar {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: size(screen, phone)) {
+    &__logo-link {
+      overflow: hidden;
+      width: rem(28);
+    }
+
+    &__avatar img {
+      height: rem(28);
+      width: rem(28);
+    }
+  }
+}

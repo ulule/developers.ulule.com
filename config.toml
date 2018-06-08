@@ -1,7 +1,5 @@
 languageCode = "en-us"
 title = "Ulule API documentation"
 
-publishDir = "docs"
-
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"

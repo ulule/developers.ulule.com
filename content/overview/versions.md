@@ -19,7 +19,7 @@ To request a specific version, add the `Ulule-Version` HTTP header to the reques
 $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 ```
 
-## Changelog
+## Versions changelog
 
 ### 2018-04-17
 

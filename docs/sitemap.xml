@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/authentication/http-basic/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/pagination/</loc>
+  </url>
+  
+  <url>
+    <loc>/discussions/thread/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/user/</loc>
+  </url>
+  
+  <url>
+    <loc>/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/avatar/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/languages/</loc>
+  </url>
+  
+  <url>
+    <loc>/discussions/recipient/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/i18n/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/link/</loc>
+  </url>
+  
+  <url>
+    <loc>/discussions/message/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>/discussions/attachment/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/notification/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/versions/</loc>
+  </url>
+  
+  <url>
+    <loc>/webhooks/</loc>
+  </url>
+  
+  <url>
+    <loc>/discussions/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/project/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/category-and-tag/</loc>
+  </url>
+  
+  <url>
+    <loc>/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/image/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/video/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/reward/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/variant/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/shipping/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/analytics-tag/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/account/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/news/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/comment/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/export/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/order/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/address/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/authentication/api-key/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authentication/oauth2/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/partnership/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authentication/ulule-connect/</loc>
+  </url>
+  
+  <url>
+    <loc>/webhooks/webhooks-reference/</loc>
+  </url>
+  
+</urlset>

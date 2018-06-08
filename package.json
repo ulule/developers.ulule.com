@@ -1,0 +1,44 @@
+{
+  "name": "developers-ulule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --progress",
+    "build": "webpack --config webpack.config.js --optimize-minimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulule/ulule-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulule/ulule-static/issues"
+  },
+  "homepage": "https://github.com/ulule/ulule-static#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "webpack": "^3.11.0",
+    "webpack-path-rewriter": "^1.1.4"
+  },
+  "dependencies": {
+    "@ulule/owl-kit": "^2.0.31-rc.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "parser": "flow",
+    "semi": false,
+    "singleQuote": true
+  }
+}

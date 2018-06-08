@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on Ulule API documentation</title>
+    <link>/reference/</link>
+    <description>Recent content in Reference on Ulule API documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>User</title>
+      <link>/reference/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/user/</guid>
+      <description>User The user resource represents a user registered on the Ulule website, possibly via a partner website.
+User resource    Field Type Description     absolute_url string Link to the profile page of the user on the Ulule website   avatar avatar resource Avatar of the user   birthday string Birthday of the user, with format YYYY-MM-DD   country string Two-letter ISO code of the country where the user lives   date_joined string Date at which the user created an account, with RFC 3339 format   description i18n object Short description of the user   email string Email of the user   first_name string First name of the user   has_avatar bool True if user has an avatar.</description>
+    </item>
+    
+    <item>
+      <title>Avatar</title>
+      <link>/reference/avatar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/avatar/</guid>
+      <description>Avatar The avatar resource represents the avatar belonging to a user. A user can only have one avatar.
+Avatar resource    Field Type Description     id int Unique ID of the avatar   name string Name of the uploaded image file   value string Path to the file   versions object Object whose keys are strings representing the image dimensions (20x20, 30x30, 40x40, 55x55, 75x75, 90x90, 128x128, 180x180, 230x230, 290x290, and full for the image in its original size), and whose values are image version objects defined below    Image version object    Field Type Description     height int Image height in pixel, null in case it is the original version of the file   url string Image URL   width int Image width in pixel, null in case it is the original version of the file    Create a user avatar Creates a new avatar for the user with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Link</title>
+      <link>/reference/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/link/</guid>
+      <description>Link Users may add social websites links to their profile.
+Link resource    Field Type Description     id int Unique ID of the link   url string URL of the link    Create a link Creates a new link for the user with the given ID. This endpoint is only accessible to oneself.
+post /v1/users/:id/links     Parameter Description     :id User ID    Payload    Field Type Description     url string URL of the link &amp;ndash; required    Update a link Updates the link with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Notification</title>
+      <link>/reference/notification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/notification/</guid>
+      <description>Notification By default, users receive notifications when certain events happen.
+The list of those notifications can be read via the list user notifications endpoint, and updated via the update user notifications endpoint.
+By default, users also receive notifications when a news is published in one of the projects they are fan of. Those notifications can be read via the list user projects endpoint, and updated via the update project notifications endpoint.</description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>/reference/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/project/</guid>
+      <description>Project The project resource represents a project hosted on Ulule.
+There are two types of project on Ulule and they have different objectives: projects of type project are for collecting a certain amount of money, and projects of type presale are for receiving a certain number of pre-orders.
+The project status can have the following values:
+   Status Description     new The project has been created from a validated proposal   pending The project owner has submitted the project to validation   pending-owner The moderation team is waiting for a change or an answer from the project owner   pending-final-validation The moderation team has sent the project to final validation   validated The moderation team has validated the project   online The project owner has published the project   refused The moderation team has refused the project   waiting The moderation team has put the project to a waiting state    Project resource    Field Type Description     absolute_url string Link to the project page on the Ulule website   account account resource    amount_raised int    analytics_count int    background image resource Background image or color of the project   comments_count int    committed int    country string Two-letter ISO code of the country   currency string Three-letter ISO code of the currency   currency_display string Unicode character of the currency   date_end string Date at which the funding campaign ends, with RFC 3339 format   date_start string Date at which the funding campaign starts, with RFC 3339 format   description i18n object Main description of the project   description_founding i18n object Description of what are funds for   description_yourself i18n object Description of the owner of the project   discussions_thread_id int    finished bool True if the funding campaign ended   goal_raised bool True if the current sum collected is superior to the project goal   goal int Total sum in the given currency of the found targeted by the campaign   id int Unique ID of the project   is_cancelled bool True if the project is cancelled   is_online bool True if the project is online   lang string Main language of the project   location location resource Location of the project   lowest_contribution_amount int Lowest contribution possible in the project currency   main_image image resource Main image of the project   main_tag tag resource Main tag of the project   name i18n object Name of the project   nb_days int Duration of the funding campaign in days   nb_products_sold int Number of products sold   news_count int Count of news published   owner user resource Owner of the project   partnerships array of partnership resources Partnerships of the project, only present in the project-detail endpoint   payments_methods array of strings Payments methods supported by the project (check, creditcard, paypal, directdebit, maestro, ideal, saving, bankwire)   percent int Percentage of the goal raised on the goal targeted   resource_uri string URL of the project resource   rewards array of reward resources Rewards of the project   slug string Unique slug of the project   sponsorships_count int    status string Status of the project (online, new, pending, pending-owner, validated, refused, waiting, pending-final-validation)   subtitle i18n object Subtitle of the project   supporters_count int Number of supporters   timezone string Timezone of the project   type string Type of the project (presale or project)   urls urls resource URLs of the project   video video resource Video of the project   visible bool     In addition, some fields are present only in certain conditions:</description>
+    </item>
+    
+    <item>
+      <title>Category and Tag</title>
+      <link>/reference/category-and-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/category-and-tag/</guid>
+      <description>Category and Tag There are two kinds of tag. The main ones are categories and can be used as a project main tag. The secondary ones are subtags, they always belong to a category and can be used as project tags.
+Tag resource    Field Type Description     absolute_url string Link to the category page on the Ulule website   category Tag resource Parent category, only present in the list-tags endpoint   id int Unique ID of the tag   name i18n object Name of the tag   position int Position of the tag   slug string Unique slug of the tag    List categories Retrieves all categories.</description>
+    </item>
+    
+    <item>
+      <title>Image</title>
+      <link>/reference/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/image/</guid>
+      <description>Image There are three different types of images:
+   Type Description     main The main image of a project. It is the main image displayed on the project page. It is also used to preview the project in a list of projects. A project can have only one main image per language   background The background image of a project. It is only displayed on the project page.</description>
+    </item>
+    
+    <item>
+      <title>Video</title>
+      <link>/reference/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/video/</guid>
+      <description>Video The project owner can add a video to the project. The video will be displayed on the project page. A project can&amp;rsquo;t have more than one video per language.
+Video resource    Field Type Description     id int Unique ID of the video   language string Language of the video   url string URL of the video    The video resource also contains the following oEmbed fields.</description>
+    </item>
+    
+    <item>
+      <title>Reward</title>
+      <link>/reference/reward/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/reward/</guid>
+      <description>Reward Reward resource    Field Type Description     address_required bool The project owner can choose to set this field. If true, contributors must specify a shipping address when ordering the reward   available bool True if reward is available   date_delivery string Date of the reward delivery with the YYYY-MM-DD format. This field must be set by the project owner. It is only an estimation of the expected shipping delivery delay of the reward   description i18n object Description of the reward, can contain HTML tags   has_shippings bool True if the reward has shippings   id int Unique ID of the reward   price int Price of the reward   project_id int Unique ID of the related project   resource_uri string URL of the reward resource   shipping_int float International shipping cost, null if no shipping   shipping_nat float National shipping cost, null if no shipping   shippings array of shipping resources Per country shippings   stock int Maximum number of rewards the project owner can produce.</description>
+    </item>
+    
+    <item>
+      <title>Variant</title>
+      <link>/reference/variant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/variant/</guid>
+      <description>Variant Variant resource The variant resource is almost the same as the reward resource. It has no has_shippings, shipping_int, shipping_nat, shippings fields, as a variant always has the same shipping costs as its parent reward. It also has no variants field.
+Create a reward variant Creates a new variant for the reward with the given ID. This endpoint has the same limitations as the create-reward endpoint.
+post /v1/rewards/:id/variants     Parameter Description     :id Reward ID    Payload    Field Type Description     date_delivery string Date estimated for the delivery with the YYYY-MM-DD format &amp;ndash; optional   description i18n object Description &amp;ndash; required   stock int Stock &amp;ndash; optional    Update a variant Updates the variant with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Shipping</title>
+      <link>/reference/shipping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/shipping/</guid>
+      <description>Shipping Shipping resource    Field Type Description     amount float Shipping cost   countries array of strings Array of countries, represented by their two-letter ISO code   id int Unique ID of the shipping    Create a reward shipping Creates a new shipping for the reward with the given ID. This endpoint has the same limitations as the create-reward endpoint.</description>
+    </item>
+    
+    <item>
+      <title>Analytics Tag</title>
+      <link>/reference/analytics-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/analytics-tag/</guid>
+      <description>Analytics Tag Project owners may add analytics tags to their project to collect data. At the time of writing, only Google Analytics, Facebook pixel and Twitter are supported.
+Analytics tag resource    Field Type Description     id int Unique ID of the tag   tag string Tag value   type string Tag type, can be facebook, google, twitter    Create an analytics tag Creates a new analytics tag for the project with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Account</title>
+      <link>/reference/account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/account/</guid>
+      <description>Account The account resource is where project owners declare their legal status and bank details in order to get the funds after their project has been successfully funded.
+The typical workflow is the following:
+ Create an account. Update the project account_id. Let the project owner visit the edit account page at edit_url and fill all the required fields.  The web page behind edit_url can be customized with the logo_url and return_url url parameters.</description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>/reference/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/news/</guid>
+      <description>News Project owner may add news to their project to keep the crowd updated during and after the funding campaign.
+News resource    Field Type Description     absolute_url string Link to the news on the Ulule website   author user resource Author of the news, only present in the news-detail endpoint   comments_count int Count of news comments   content i18n object Content of the news   date_publication string Date at which the news was published, with RFC 3339 format, null if the news is not published   id int Unique ID of the news   project project resource Project the news belongs to, only present in the news-detail endpoint   reserved bool If true, news is only visible to the project supporters   resource_uri string URL of the news resource   status string Status of the news, can be onlineor waiting   title i18n object Title of the news    Retrieve a news Retrieves the news resource with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Comment</title>
+      <link>/reference/comment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/comment/</guid>
+      <description>Comment Users may post comments on projects and news.
+Comment resource    Field Type Description     comment string Body of the comment   id int Unique ID of the tag   submit_date string Date of the comment submission, with RFC 3339 format   submit_date_formatted string Relative date of the comment submission   user user resource Author of the comment    Create a project comment Creates a comment on the project with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Export</title>
+      <link>/reference/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/export/</guid>
+      <description>Export Project owners can export data about their projects, typically for bookkeeping.
+At the time of writing, only exports of type orders are available. The export file format can be csv or xlsx.
+The typical workflow is the following:
+ The project owner creates an export. The export is created asynchronously. Its status goes from waiting to processing to succeeded, it can also be failed or cancelled by the staff.</description>
+    </item>
+    
+    <item>
+      <title>Order</title>
+      <link>/reference/order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/order/</guid>
+      <description>Order The order status field can have the following values:
+   Status Description     processing Order is processing   awaiting-confirmation User is filling payment information   payment-completed Order is completed   cancelled User has cancelled order during the campaign   payment-done Campaign has succeeded, funds have been transfered to project owner   payment-invalid PSP needs more info to transfer payment to project owner   payment-reimbursed Campaign has failed, contributor has been reimbursed   error An error has occurred    Order resource    Field Type Description     absolute_url string Link to the order on the Ulule website   billing_address address resource Billing address   created_at string Date at which the order has been created, with RFC 3339 format=   id int Unique ID of the order   items array of order item resources Order items   note string Free field that the contributor can fill to give special information to the project owner about the order   order_shipping_total int Total shipping cost   order_subtotal int Cost of the order, minus the shipping cost   order_total int Total cost   payment_method string Payment methods used for the order, can be check, creditcard, paypal, directdebit, maestro, ideal, saving, bankwire   payment_url string URL that the contributor must visit to fill payment information   project project resource Project related to the order   project_id int Unique ID of the related project   refunded bool True if the order was refunded   resource_uri string URL of the order resource   shipping_address address resource Shipping address   status string Status of the order, can be processing, awaiting-confirmation, payment-completed, cancelled, payment-done, payment-invalid, payment-reimbursed, error   user user resource Author of the order    Order item resource    Field Type Description     line_shipping_total int Total shipping cost   line_subtotal int Cost of the item, minus the shipping cost   line_total int Total cost of the item   quantity int Number of reward item   reward reward resource Reward item   reward_id int Unique ID of the reward item   unit_price int Price of a single reward item    Retrieve an order Retrieves the order with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Address</title>
+      <link>/reference/address/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/address/</guid>
+      <description>Address Contributors may be required to create addresses resources to be used with orders.
+Address resource    Field Type Description     address1 string First line of the address   address2 string Second line of the address   city string City name   country string Two-letter ISO code of the country   entity_name string Entity name   first_name string First name of the address owner   id int Unique ID of the address   last_name string Last name of the address owner   postal_code string Postal Code   state string State   type string Legal entity type, can be personal, business, association   user_id int Unique ID of the address owner    Retrieve an address Retrieves the address with the given ID.</description>
+    </item>
+    
+    <item>
+      <title>Proposal</title>
+      <link>/reference/proposal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/proposal/</guid>
+      <description>Proposal To launch a project on the Ulule platform, users must first go through the proposal process.
+The proposal status can have the following values:
+   Status Description     pending The proposal is pending for more information from the user   new The proposal is ready to be evaluated by the moderation team   valid The moderation team has accepted the proposal   invalid The moderation team has refused the proposal   waiting The moderation team has suspended the proposal, it must be updated by the user   updated The user has updated the proposal    For a proposal to go from status pending to new, the proposal must not be anonymous and the following fields must be completed:</description>
+    </item>
+    
+    <item>
+      <title>Partnership</title>
+      <link>/reference/partnership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/partnership/</guid>
+      <description>Partnership Partnership resource    Field Type Description     id int Unique ID of the partnership   is_default int If true, the partner is the default one for the project   is_support int    partner partner resource Partner   presale project resource Project    Retrieve a partnership Retrieves the partnership with the given ID. This endpoint is only accessible to partner users.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@ weight: 6
 
 # FAQ
 
-## When I visit a project page on the Ulule website, I see the following message: "This project was taken offline at the request of the project owner". What does that mean and is there a corresponding in the project resource?
+## When I visit a project page on the Ulule website, I see the following message: "This project was taken offline at the request of the project owner". What does that mean and is there a corresponding field in the project resource?
 
 Projects owners can decide to cancel their project at any time for any reason. In that case the project is still considered online (`is_online` in the project resource) but the content is not visible and there can be no orders.
 

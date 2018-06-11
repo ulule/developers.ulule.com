@@ -1,14 +1,10 @@
 # developers.ulule.com
 
-Ulule API changelog to follow changes.
-
-## Legend
-
-* **[FEAT]** is a new feature
-* **[FIX]** is a bugfix
-* **[DOCS]** is a change to the documentation
-
 ## Changelog
+
+### 11-06-2018
+
+* **[DOCS]** Revamp https://developers.ulule.com/
 
 ### 30-05-2018
 

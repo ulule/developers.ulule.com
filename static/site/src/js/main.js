@@ -7,7 +7,7 @@ const updateHash = location => {
 }
 
 const updateActive = hash => {
-  const element = document.querySelector(`a[href="${hash}"]`)
+  let element = document.querySelector(`a[href="${hash}"]`)
 
   if (!element || element.classList.contains('active')) return
 
@@ -15,8 +15,24 @@ const updateActive = hash => {
     current.classList.remove('active')
     current.parentNode.classList.remove('active')
   })
-  element.parentNode.classList.add('active')
-  element.parentNode.parentNode.classList.add('active')
+
+  while (true) {
+    let parentNode = element.parentNode
+    if (!parentNode) {
+      break
+    }
+
+    let nodeName = parentNode.nodeName.toLowerCase()
+    if (nodeName === 'nav') {
+      break
+    }
+
+    if (nodeName === 'li') {
+      parentNode.classList.add('active')
+    }
+
+    element = parentNode.parentNode
+  }
 }
 
 document.addEventListener('DOMContentLoaded', event => {

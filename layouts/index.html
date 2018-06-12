@@ -63,14 +63,26 @@
                 {{range .Sections}}
                 <li>
                     <a href="#{{ .Title | urlize }}">{{.Title}}</a>
+                    <ul>
+                        {{range .Pages}}
+                        <li>
+                            <a href="#{{ .Title | urlize }}">{{.Title}}</a>
+
+                            {{$subsections := findRE "<h2.*>.*</h2>" .Content}}
+                            {{if ge (len $subsections) 1}}
+                            <ul>
+                                {{range $subsections}}
+                                {{$plain := . | plainify}}
+                                {{$anchor := $plain | htmlEscape | urlize}}
+                                <li><a href="#{{$anchor}}">{{$plain}}</a></li>
+                                {{end}}
+                            </ul>
+                            {{end}}
+
+                        </li>
+                        {{end}}
+                    </ul>
                 </li>
-                <ul>
-                    {{range .Pages}}
-                    <li>
-                        <a href="#{{ .Title | urlize }}">{{.Title}}</a>
-                    </li>
-                    {{end}}
-                </ul>
                 {{end}}
 
             </ul>

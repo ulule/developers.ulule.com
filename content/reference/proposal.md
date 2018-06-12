@@ -202,7 +202,7 @@ List the references of the proposal with the given ID. This endpoint is only acc
 | `id`  | int    | Unique ID of the reference |
 | `url` | string | URL of the reference       |
 
-# Staff stuff
+## Staff stuff
 
 The following endpoints are only accessible to staff users.
 

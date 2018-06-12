@@ -36,7 +36,7 @@ Creates an image. This endpoint is only accessible to the project owner.
 | --------- | ----------- |
 | `:id`     | Project ID  |
 
-## Payload
+### Payload
 
 The Content-Type must be `multipart/form-data`.
 

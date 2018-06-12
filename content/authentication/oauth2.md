@@ -112,7 +112,7 @@ Refresh-Token: user-refresh-token
 
 You now have an access token to automatically authenticate the user on Ulule.
 
-## Refresh your access token
+## Refresh the access token
 
 An access token expires after 10 hours.
 

@@ -13,7 +13,7 @@ When we must introduce a backward-incompatible change, we release a new version 
 
 To request a specific version, add the `Ulule-Version` HTTP header to the request.
 
-## Example
+### Example
 
 ```bash
 $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10

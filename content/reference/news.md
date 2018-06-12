@@ -5,7 +5,7 @@ weight: 14
 
 # News
 
-Project owner may add news to their project to keep the crowd updated during and after the funding campaign.
+Project owners may add news to their project to keep the crowd updated during and after the funding campaign.
 
 ## News resource
 

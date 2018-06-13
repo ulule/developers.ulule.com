@@ -4,7 +4,7 @@
 
 ### 13-06-2018
 
-* **ULULE-API/FIX]** Fix a bug that forbids to set the `reward.shipping_nat` and `reward.shipping_int` fields to `null` once they have been set to any value.
+* **[ULULE-API/FIX]** Fix a bug that forbids to set the `reward.shipping_nat` and `reward.shipping_int` fields to `null` once they have been set to any value.
 
 ### 11-06-2018
 

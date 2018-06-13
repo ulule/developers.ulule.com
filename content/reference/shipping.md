@@ -27,7 +27,7 @@ Creates a new shipping for the reward with the given ID. This endpoint has the s
 
 | Field       | Type             | Description                                                                                        |
 | ----------- | ---------------- | -------------------------------------------------------------------------------------------------- |
-| `amount`    | float            | Shipping cost -- required, must be between 0 and 1e3                                               |
+| `amount`    | float            | Shipping cost -- can be between 0 and 999.99, default is 0                                           |
 | `countries` | array of strings | Countries, represented by their two-letter ISO code -- required, must contain at least one country |
 
 ## Update a shipping
@@ -44,7 +44,7 @@ Updates the shipping with the given ID. This endpoint has the same limitations a
 
 | Field       | Type             | Description                                         |
 | ----------- | ---------------- | --------------------------------------------------- |
-| `amount`    | float            | Shipping cost -- must be between 0 and 1e3          |
+| `amount`    | float            | Shipping cost -- can be between 0 and 999.99        |
 | `countries` | array of strings | Countries, represented by their two-letter ISO code |
 
 ## Delete a shipping

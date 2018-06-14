@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 14-06-2018
+
+* **[ULULE-API/FIX]** Allow to set `shipping.amount` to a zero number.
+* **[ULULE-API/FIX]** Allow to set `account.first_name` and `account.last_name` to a string between 1 and 250 characters.
+
 ### 13-06-2018
 
 * **[ULULE-API/FIX]** Fix a bug that forbids to set the `reward.shipping_nat` and `reward.shipping_int` fields to `null` once they have been set to any value.

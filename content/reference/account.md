@@ -58,8 +58,8 @@ Creates an account.
 | `currency`    | string | Currency of the account -- optional, three-letter ISO code of the currency                                      |
 | `email`       | string | Email of the user -- required, max 254 characters                                                               |
 | `entity_name` | string | Entity name of the account owner -- required if entity type is `business` or `association`,  max 250 characters |
-| `first_name`  | string | First name of the user -- required, between 3 and 30 characters                                                 |
-| `last_name`   | string | Last name of the user -- required, between 3 and 30 characters                                                  |
+| `first_name`  | string | First name of the user -- required, must be between 1 and 250 characters                                        |
+| `last_name`   | string | Last name of the user -- required, must between 1 and 250 characters                                            |
 | `nationality` | string | Nationality of the user -- required, two-letter ISO 31661-code                                                  |
 | `type`        | string | Legal entity type -- optional, must be one of `business`, `association`, `personal`, default is `personal`      |
 | `user_id`     | int    | Unique ID of the user -- optional, default is the ID of the authenticated user                                  |

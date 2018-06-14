@@ -1531,11 +1531,9 @@ Refresh-Token: user-refresh-token</code></pre></div>
 
 <p>An access token expires after 10 hours.</p>
 
-<p>As we assume you don&rsquo;t store your user passwords in plain text in your database, you don&rsquo;t have a way to generate a new access token automatically without asking the user credentials again.</p>
+<p>Because you don&rsquo;t store the user passwords in plain text in your database, you can&rsquo;t generate a new access token automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.</p>
 
-<p>In terms of user experience it will be a disaster for your application.</p>
-
-<p>We are introducing the concept of a <em>refresh token</em> which allows you to generate a new access token:</p>
+<p>To address this issue, we also provide a <em>refresh token</em> which allows you to generate a new access token:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># refresh_token.py</span>
 <span style="color:#f92672">import</span> <span style="color:#111">base64</span>
 <span style="color:#f92672">import</span> <span style="color:#111">os</span>

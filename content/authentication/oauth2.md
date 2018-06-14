@@ -116,11 +116,9 @@ You now have an access token to automatically authenticate the user on Ulule.
 
 An access token expires after 10 hours.
 
-As we assume you don't store your user passwords in plain text in your database, you don't have a way to generate a new access token automatically without asking the user credentials again.
+Because you don't store the user passwords in plain text in your database, you can't generate a new access token automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.
 
-In terms of user experience it will be a disaster for your application.
-
-We are introducing the concept of a *refresh token* which allows you to generate a new access token:
+To address this issue, we also provide a *refresh token* which allows you to generate a new access token:
 
 ```python
 # refresh_token.py

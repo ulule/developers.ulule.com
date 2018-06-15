@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 15-06-2018
+
+* **[ULULE-API/FIX]** Fix a bug that shows a wrong `url` for the `project.background` resource in case the background image doesn't have a URL. This field is now omitted.
+
 ### 14-06-2018
 
 * **[ULULE-API/FIX]** Allow to set `shipping.amount` to a zero number.

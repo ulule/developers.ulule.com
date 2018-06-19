@@ -39,12 +39,12 @@ The project `status` can have the following values:
 | `date_end`                   | string                                         | Date at which the funding campaign ends, with RFC 3339 format                                                                        |
 | `date_start`                 | string                                         | Date at which the funding campaign starts, with RFC 3339 format                                                                      |
 | `description`                | [i18n object](#i18n)                           | Main description of the project                                                                                                      |
-| `description_founding`       | [i18n object](#i18n)                           | Description of what are funds for                                                                                                    |
+| `description_funding`        | [i18n object](#i18n)                           | Description of what are funds for                                                                                                    |
 | `description_yourself`       | [i18n object](#i18n)                           | Description of the owner of the project                                                                                              |
 | `discussions_thread_id`      | int                                            |                                                                                                                                      |
 | `finished`                   | bool                                           | True if the funding campaign ended                                                                                                   |
 | `goal_raised`                | bool                                           | True if the current sum collected is superior to the project goal                                                                    |
-| `goal`                       | int                                            | Total sum in the given currency of the found targeted by the campaign                                                                |
+| `goal`                       | int                                            | Total sum in the given currency of the funds targeted by the campaign                                                                |
 | `id`                         | int                                            | Unique ID of the project                                                                                                             |
 | `is_cancelled`               | bool                                           | True if the project is cancelled                                                                                                     |
 | `is_online`                  | bool                                           | True if the project is online                                                                                                        |
@@ -73,6 +73,7 @@ The project `status` can have the following values:
 | `urls`                       | [urls resource](#urls)                         | URLs of the project                                                                                                                  |
 | `video`                      | [video resource](#video)                       | Video of the project                                                                                                                 |
 | `visible`                    | bool                                           |                                                                                                                                      |
+
 
 In addition, some fields are present only in certain conditions:
 
@@ -106,7 +107,7 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 | Field                  | Type                 | Description                                                                                                             |
 | ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `description`          | [i18n object](#i18n) | Main description of the project                                                                                         |
-| `description_founding` | [i18n object](#i18n) | Description of what are funds for                                                                                       |
+| `description_funding`  | [i18n object](#i18n) | Description of what are funds for                                                                                       |
 | `description_yourself` | [i18n object](#i18n) | Description of the owner of the project                                                                                 |
 | `name`                 | [i18n object](#i18n) | Name of the project                                                                                                     |
 | `slug`                 | string               | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |

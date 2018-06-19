@@ -107,7 +107,7 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 | Field                  | Type                 | Description                                                                                                             |
 | ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `description`          | [i18n object](#i18n) | Main description of the project                                                                                         |
-| `description_funding`  | [i18n object](#i18n) | Description of what are funds for                                                                                       |
+| `description_funding`  | [i18n object](#i18n) | Description of what the funds are for                                                                                   |
 | `description_yourself` | [i18n object](#i18n) | Description of the owner of the project                                                                                 |
 | `name`                 | [i18n object](#i18n) | Name of the project                                                                                                     |
 | `slug`                 | string               | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |

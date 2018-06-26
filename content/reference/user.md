@@ -123,3 +123,25 @@ The response is [paginated](#pagination).
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | Project ID  |
+
+## Create a discussion thread with a user
+
+Creates a discussion thread between the authenticated user and the user with the given ID. One of the following condition must be fulfilled for a user to have the permission to reach another one:
+
+* One of the users is staff
+* One of the users is a partner member and the other one if a partner moderator
+* One of the users is a project supporter and the other one is the project owner
+* One of the users is a project supporter and the other one is a project editor
+
+{{% http method="post" %}}/v1/users/:id/threads{{% /http %}}
+
+| Parameter | Description  |
+| --------- | ------------ |
+| `:id`     | User ID      |
+
+### Payload
+
+| Field     | Type   | Description                                                             |
+| --------- | ------ | ----------------------------------------------------------------------- |
+| `message` | string | Body of the first message in the thread                                 |
+| `subject` | string | Subject of the thread -- required, must be between 3 and 255 characters |

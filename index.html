@@ -1050,6 +1050,33 @@
                 </li>
                 
                 <li>
+                    <a href="#search">Search</a>
+                    <ul>
+                        
+                        <li>
+                            <a href="#projects">Projects</a>
+
+                            
+                            
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="#query-parameters">Query parameters</a></li>
+                                
+                                
+                                
+                                <li><a href="#response">Response</a></li>
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                <li>
                     <a href="#faq">FAQ</a>
                     <ul>
                         
@@ -2977,7 +3004,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>amount_raised</code></td>
 <td>int</td>
-<td></td>
+<td>Amount raised in project currency</td>
 </tr>
 
 <tr>
@@ -3073,7 +3100,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>goal</code></td>
 <td>int</td>
-<td>Total sum in the given currency of the funds targeted by the campaign</td>
+<td>Goal in the project currency if type is <code>project</code>, or number of pre-orders if type is <code>presale</code></td>
 </tr>
 
 <tr>
@@ -9596,6 +9623,344 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>:id</code></td>
 <td>Attachement ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+        </section>
+         
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="search">Search</h1>
+</div>
+        </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="projects">Projects</h1>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/search/projects</span>
+</div>
+
+
+<h2 id="query-parameters">Query parameters</h2>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>Search keywords and qualifiers</td>
+</tr>
+
+<tr>
+<td><code>lang</code></td>
+<td>string</td>
+<td>Host language, for example it is the <code>fr</code> in <code>fr.ulule.com</code>. Results that are translated in that language are sorted first. Can be one of the <a href="#languages">supported languages</a></td>
+</tr>
+
+<tr>
+<td><code>limit</code></td>
+<td>int</td>
+<td>Page size, default is 16</td>
+</tr>
+
+<tr>
+<td><code>offset</code></td>
+<td>int</td>
+<td>Pagination offset, default is 0</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <code>q</code> query parameter may contain any combination of keywords and the following search qualifiers.</p>
+
+<table>
+<thead>
+<tr>
+<th>Qualifier</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tag_id</code></td>
+<td>int</td>
+<td>Filter projects by tag</td>
+</tr>
+
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>Filter projects based on the goal status, can be one of <code>currently</code>, <code>all</code>, <code>success</code> or <code>ending</code>, default is <code>currently</code></td>
+</tr>
+
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td>Filter projects by country</td>
+</tr>
+
+<tr>
+<td><code>lang</code></td>
+<td>string</td>
+<td>Filter projects by language</td>
+</tr>
+
+<tr>
+<td><code>region_id</code></td>
+<td>int</td>
+<td>Filter projects by region</td>
+</tr>
+
+<tr>
+<td><code>city_id</code></td>
+<td>int</td>
+<td>Filter projects by city</td>
+</tr>
+
+<tr>
+<td><code>owner_id</code></td>
+<td>int</td>
+<td>Filter projects by owner</td>
+</tr>
+
+<tr>
+<td><code>partner_id</code></td>
+<td>int</td>
+<td>Filter projects by partner</td>
+</tr>
+
+<tr>
+<td><code>sort</code></td>
+<td>string</td>
+<td>Sort field, can be one of <code>popular</code>, <code>amount</code>, <code>ending_soon</code> or <code>new</code>, default is <code>popular</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="response">Response</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>filters</code></td>
+<td><a href="#search-project-filters">project filters</a></td>
+<td>Available filters to further filter the search results</td>
+</tr>
+
+<tr>
+<td><code>projects</code></td>
+<td><a href="#search-project-resource">project resource</a></td>
+<td>Search results</td>
+</tr>
+
+<tr>
+<td><code>results_count</code></td>
+<td>int</td>
+<td>Total number of results</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="search-project-filters">Search project filters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>countries</code></td>
+<td>array of strings</td>
+<td>Available values for the <code>country</code> filter</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="search-project-resource">Search project resource</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>absolute_url</code></td>
+<td>string</td>
+<td>Link to the project page on the Ulule website</td>
+</tr>
+
+<tr>
+<td><code>amount_raised</code></td>
+<td>int</td>
+<td>Amount raised in project currency</td>
+</tr>
+
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td>Two-letter ISO code of the country</td>
+</tr>
+
+<tr>
+<td><code>currency</code></td>
+<td>string</td>
+<td>Three-letter ISO code of the currency</td>
+</tr>
+
+<tr>
+<td><code>date_end</code></td>
+<td>string</td>
+<td>Date at which the funding campaign ends, with RFC 3339 format</td>
+</tr>
+
+<tr>
+<td><code>date_start</code></td>
+<td>string</td>
+<td>Date at which the funding campaign starts, with RFC 3339 format</td>
+</tr>
+
+<tr>
+<td><code>goal</code></td>
+<td>int</td>
+<td>Goal in the project currency if type is <code>project</code>, or number of pre-orders if type is <code>presale</code></td>
+</tr>
+
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the project</td>
+</tr>
+
+<tr>
+<td><code>lang</code></td>
+<td>string</td>
+<td>Main language of the project</td>
+</tr>
+
+<tr>
+<td><code>main_image</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Main image of the project</td>
+</tr>
+
+<tr>
+<td><code>main_tag</code></td>
+<td><a href="#category-and-tag">tag resource</a></td>
+<td>Main tag of the project</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Name of the project</td>
+</tr>
+
+<tr>
+<td><code>nb_products_sold</code></td>
+<td>int</td>
+<td>Number of products sold</td>
+</tr>
+
+<tr>
+<td><code>owner</code></td>
+<td><a href="#search-user-resource">user resource</a></td>
+<td>Owner of the project</td>
+</tr>
+
+<tr>
+<td><code>slug</code></td>
+<td>string</td>
+<td>Unique slug of the project</td>
+</tr>
+
+<tr>
+<td><code>subtitle</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Subtitle of the project</td>
+</tr>
+
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>Type of the project (<code>presale</code> or <code>project</code>)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="search-project-user-resource">Search project user resource</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>first_name</code></td>
+<td>string</td>
+<td>First name of the user</td>
+</tr>
+
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the user</td>
+</tr>
+
+<tr>
+<td><code>last_name</code></td>
+<td>string</td>
+<td>Last name of the user</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Concatenation of first name and last name if they exist, username otherwise</td>
+</tr>
+
+<tr>
+<td><code>username</code></td>
+<td>string</td>
+<td>Username</td>
 </tr>
 </tbody>
 </table>

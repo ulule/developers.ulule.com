@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Search on Ulule API documentation</title>
+    <link>/search/</link>
+    <description>Recent content in Search on Ulule API documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/search/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Projects</title>
+      <link>/search/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/search/project/</guid>
+      <description>Projects get /v1/search/projects  Query parameters    Parameter Type Description     q string Search keywords and qualifiers   lang string Host language, for example it is the fr in fr.ulule.com. Results that are translated in that language are sorted first. Can be one of the supported languages   limit int Page size, default is 16   offset int Pagination offset, default is 0    The q query parameter may contain any combination of keywords and the following search qualifiers.</description>
+    </item>
+    
+  </channel>
+</rss>

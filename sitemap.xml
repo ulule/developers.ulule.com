@@ -15,6 +15,10 @@
   </url>
   
   <url>
+    <loc>/search/project/</loc>
+  </url>
+  
+  <url>
     <loc>/discussions/thread/</loc>
   </url>
   
@@ -83,15 +87,19 @@
   </url>
   
   <url>
+    <loc>/search/</loc>
+  </url>
+  
+  <url>
     <loc>/faq/</loc>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>/reference/image/</loc>
   </url>
   
   <url>
-    <loc>/reference/image/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>

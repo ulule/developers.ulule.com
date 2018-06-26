@@ -211,6 +211,10 @@
                                 
                                 <li><a href="#list-all-project-supporters">List all project supporters</a></li>
                                 
+                                
+                                
+                                <li><a href="#create-a-discussion-thread-with-a-user">Create a discussion thread with a user</a></li>
+                                
                             </ul>
                             
 
@@ -2182,6 +2186,65 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>:id</code></td>
 <td>Project ID</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="create-a-discussion-thread-with-a-user">Create a discussion thread with a user</h2>
+
+<p>Creates a discussion thread between the authenticated user and the user with the given ID. One of the following condition must be fulfilled for a user to have the permission to reach another one:</p>
+
+<ul>
+<li>One of the users is staff</li>
+<li>One of the users is a partner member and the other one if a partner moderator</li>
+<li>One of the users is a project supporter and the other one is the project owner</li>
+<li>One of the users is a project supporter and the other one is a project editor</li>
+</ul>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/users/:id/threads</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>User ID</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="payload-2">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Body of the first message in the thread</td>
+</tr>
+
+<tr>
+<td><code>subject</code></td>
+<td>string</td>
+<td>Subject of the thread &ndash; required, must be between 3 and 255 characters</td>
 </tr>
 </tbody>
 </table>

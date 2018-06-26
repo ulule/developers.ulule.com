@@ -23,12 +23,11 @@ The project `status` can have the following values:
 | `waiting`                  | The moderation team has put the project to a waiting state                      |
 
 ## Project resource
-
 | Field                        | Type                                           | Description                                                                                                                          |
 | ---------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `absolute_url`               | string                                         | Link to the project page on the Ulule website                                                                                        |
 | `account`                    | [account resource](#account)                   |                                                                                                                                      |
-| `amount_raised`              | int                                            |                                                                                                                                      |
+| `amount_raised`              | int                                            | Amount raised in project currency                                                                                                    |
 | `analytics_count`            | int                                            |                                                                                                                                      |
 | `background`                 | [image resource](#image)                       | Background image or color of the project                                                                                             |
 | `comments_count`             | int                                            |                                                                                                                                      |
@@ -44,7 +43,7 @@ The project `status` can have the following values:
 | `discussions_thread_id`      | int                                            |                                                                                                                                      |
 | `finished`                   | bool                                           | True if the funding campaign ended                                                                                                   |
 | `goal_raised`                | bool                                           | True if the current sum collected is superior to the project goal                                                                    |
-| `goal`                       | int                                            | Total sum in the given currency of the funds targeted by the campaign                                                                |
+| `goal`                       | int                                            | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`                                      |
 | `id`                         | int                                            | Unique ID of the project                                                                                                             |
 | `is_cancelled`               | bool                                           | True if the project is cancelled                                                                                                     |
 | `is_online`                  | bool                                           | True if the project is online                                                                                                        |

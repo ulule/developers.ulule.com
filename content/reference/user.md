@@ -141,7 +141,7 @@ Creates a discussion thread between the authenticated user and the user with the
 
 ### Payload
 
-| Field     | Type   | Description                                                                            |
-| --------- | ------ | -------------------------------------------------------------------------------------- |
-| `message` | string | Birthday of the user -- must have YYYY-MM-DD format and year must be greater than 1901 |
-| `subject` | string | Email of the user                                                                      |
+| Field     | Type   | Description                                                             |
+| --------- | ------ | ----------------------------------------------------------------------- |
+| `message` | string | Body of the first message in the thread                                 |
+| `subject` | string | Subject of the thread -- required, must be between 3 and 255 characters |

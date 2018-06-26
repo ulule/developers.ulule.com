@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 26-06-2018
+
+* **[ULULE-API/FEAT]** Allow project supporters and project editors to reach each other.
+
 ### 15-06-2018
 
 * **[ULULE-API/FIX]** Fix a bug that shows a wrong `url` for the `project.background` resource in case the background image doesn't have a URL. This field is now omitted.

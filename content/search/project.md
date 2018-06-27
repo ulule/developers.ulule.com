@@ -21,7 +21,7 @@ The `q` query parameter may contain any combination of keywords and the followin
 | Qualifier    | Type   | Description                                                                                                               |
 | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------- |
 | `tag_id`     | int    | Filter projects by tag                                                                                                    |
-| `status`     | string | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ending`, default is `currently` |
+| `status`     | string | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ended`, default is `currently` |
 | `country`    | string | Filter projects by country                                                                                                |
 | `lang`       | string | Filter projects by language                                                                                               |
 | `region_id`  | int    | Filter projects by region                                                                                                 |

@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 29-06-2018
+
+* **[ULULE-API/FEAT]** Add the `user_id` field to the partner resource.
+* **[ULULE-API/FEAT]** Add the `eula_accepted_at` field to the user resource.
+* **[ULULE-API/FEAT]** Add the `POST /users/:id/accepteula` endpoint.
+
 ### 26-06-2018
 
 * **[ULULE-API/FEAT]** Allow project supporters and project editors to reach each other.

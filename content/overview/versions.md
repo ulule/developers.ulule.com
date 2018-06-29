@@ -23,7 +23,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2018-04-17
 
-* [reward](*reward) and [variant](#variant) resources
+* [reward](#reward) and [variant](#variant) resources
     * `date_delivery` format is YYYY-MM-DD instead of YYY-MM-DDTHH:MM:SSZ
 
 ### 2018-04-14

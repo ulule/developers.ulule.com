@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+/**
+ * FONT-SMOOTHING
+ * Custom fonts may look better, give it a try
+ */
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/**
+ * FONT-FACE-SRC
+ * Generate src for custom fonts src with modern formats
+ */
+
+@mixin font-face-src($dir, $name) {
+    src: url('#{$dir}#{$name}.eot');
+    src: url('#{$dir}#{$name}.eot?#iefix') format('embedded-opentype'),
+         url('#{$dir}#{$name}.woff') format('woff'),
+         url('#{$dir}#{$name}.svg#webfont') format('svg'),
+         url('#{$dir}#{$name}.ttf') format('truetype');
+}
+
+/**
+ * PLACEHOLDER
+ * Custom input placeholder
+ */
+
+@mixin placeholder($color, $opacity: 1) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    opacity: $opacity;
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+    opacity: $opacity;
+    @content;
+  }
+
+  &:-ms-input-placeholder {  
+    color: $color;
+    opacity: $opacity;
+    @content;
+  }
+
+  &:focus {
+    &::-webkit-input-placeholder  { color: transparent }
+    &:-moz-placeholder            { color: transparent }
+    &::-moz-placeholder           { color: transparent }
+    &:-ms-input-placeholder       { color: transparent }
+  }
+}
+
+/**
+ * HDPI_FULL
+ * Old mixin retro compatibility, may be removed, used in _forms
+ */
+
+@mixin hdpi_full($sd_path, $hd_path, $hd_bg_size:100%) {
+    background-image:url(#{$sd_path});
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0) {
+        background-image:url(#{$hd_path});
+        background-size: #{$hd_bg_size};
+    }
+}
+

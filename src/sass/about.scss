@@ -9,7 +9,6 @@ $block: '.b-about';
         justify-content: center;
 
         .b-cover {
-            background-image: url(../img/about/hero-ban-2018.jpg);
             background-position: center;
             background-repeat: repeat;
 
@@ -19,14 +18,6 @@ $block: '.b-about';
 
             &__body {
                 position: relative;
-            }
-
-            @media only screen and (min-resolution: 1.25dppx) {
-                background-image: url(../img/about/hero-ban-2018@2x.jpg);
-            }
-
-            @media only screen and (min-resolution: 2.25dppx) {
-                background-image: url(../img/about/hero-ban-2018@3x.jpg);
             }
         }
     }

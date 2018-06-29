@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', event => {
         mapping[index + 1].position > scrollPosition &&
         window.location.hash !== section.element.getAttribute('href')
       ) {
-        keepScroll = scrollPosition
+        let keepScroll = scrollPosition
         updateHash(section.element.getAttribute('href'))
         updateActive(window.location.hash)
       }

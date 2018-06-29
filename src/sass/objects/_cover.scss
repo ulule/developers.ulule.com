@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #COVER
+\*------------------------------------*/
+
+/**
+ * A cover filling its container
+ */
+
+/*
+  <div class="cover">
+    <div class="cover__mask" style="background-image:url()"></div>
+    <div class="cover__body"></div>
+  </div>
+*/
+
+$block: '.b-cover';
+
+#{$block} {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  /**
+   * E: progress
+   * Progression advancement - use with inline width/height
+   */
+
+  &__mask {
+    background-color: color(neutral);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  /**
+   * E: body
+   * Content centered
+   */
+
+  &__body {
+  }
+
+  /**
+   * M: filling
+   * default: full
+   */
+
+  &--bar {
+    height: em(size(nav-border));
+    position: relative;
+  }
+
+  &--column {
+    width: em(size(nav-border));
+    position: relative;
+  }
+
+  @each $name, $color in ($color-identity) {
+    &--#{'' + $name} #{$block}__mask {
+      background-color: color($name);
+    }
+  }
+
+  &--black #{$block}__mask {
+    background-color: color(black);
+  }
+}

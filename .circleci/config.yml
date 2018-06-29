@@ -4,8 +4,10 @@ jobs:
     branches:
       only:
         - master
+        - improve-webpack-build-system
     docker:
       - image: cibuilds/hugo:latest
     steps:
       - checkout
+      - run: apk add --update nodejs
       - run: ./build-and-push-to-gh-pages.bash

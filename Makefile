@@ -1,8 +1,9 @@
+dependencies:
+	npm install
+
 build:
+	npm run build
 	hugo
 
-build-assets:
-	npm run build
-
-run-server:
+run-server: build
 	hugo serve

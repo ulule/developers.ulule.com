@@ -32,8 +32,8 @@ The following query parameters are required.
 
 A convenient way is to use this URL in a pop-up.
 
-![form.jpg](/images/form.jpg "Ulule Connect sign in / sign up form")
-![authorize.jpg](/images/authorize.jpg "Ulule Connect authorization page")
+![form.jpg](/img/form.jpg "Ulule Connect sign in / sign up form")
+![authorize.jpg](/img/authorize.jpg "Ulule Connect authorization page")
 
 The [redirect URI], or redirection endpoint, is used to redirect users after sign in or sign up. Only registered redirect URIs are allowed. Only one registered URI can be set in the Ulule Connect request, but you can register as many as you want.
 

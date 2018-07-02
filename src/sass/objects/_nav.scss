@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    #NAV
+\*------------------------------------*/
+
+/**
+ * A navigation bar with flexible items
+ */
+
+/*
+  <nav class="nav">
+    <ul class="nav_list">
+      <li class="nav__item">
+        <a class="nav__link">
+          <i class="nav__icon">
+          <span class="nav__label">
+      ...
+  </nav>
+*/
+
+$block: '.b-nav';
+$height: size(nav-bar);
+
+#{$block} {
+  font-family: font(text);
+  background-color: color(white);
+  left: 0;
+  min-height: em($height);
+  margin: 0; // fix margin old main.css
+  position: relative;
+  top: 0;
+  width: 100%;
+
+  /**
+   * E: list
+   * List of navigation items
+   */
+
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /**
+   * E: item
+   * An element of the navigation list
+   */
+
+  &__item {
+    margin: 0;
+    position: relative;
+  }
+
+  /**
+   * E: link
+   *
+   */
+
+  &__link {
+    align-items: center;
+    box-sizing: border-box;
+    color: color(black);
+    display: flex;
+    font-weight: 500;
+    height: em($height);
+    justify-content: flex-start;
+    padding: 0 rem(size(space));
+    transition: all time(fast);
+
+    &:hover {
+      &, #{$block}__icon {
+        color: color(blue);
+      }
+    }
+  }
+
+  /**
+   * E: icon
+   * Icon of an element
+   */
+
+  &__icon {
+    font-size: em(14);
+    transition: all time(fast);
+
+    &--big {
+      font-size: em(22);
+    }
+
+    & + #{$block}__label {
+      margin-left: em(size(space) / 2)
+    }
+  }
+
+  /**
+   * E: label
+   * Text of an element
+   */
+
+  &__label {
+    display: inline-block;
+  }
+
+  /**
+   * M: Position
+   * default: relative
+   */
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  /**
+   * E: Mobile
+   * Mobile only
+   */
+
+  &__mobile {
+    display: none;
+  }
+
+  @media (max-width: size(screen, tablet)) {
+    &__item--blabla {
+      #{$block} {
+        &__icon {
+          display: inline-block;
+          font-size: em(36, 11);
+          margin-left: 0;
+        }
+
+        &__label {
+          display: none;
+        }
+      }
+    }
+  }
+}

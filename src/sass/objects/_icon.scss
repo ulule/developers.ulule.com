@@ -1,0 +1,130 @@
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+
+/**
+ * Use of inline SVG icons
+ */
+
+/*
+  <svg class="svg svg--name">
+    <use xlink:href="#svg--name"/>
+  </svg>
+*/
+
+$block: '.b-icon';
+
+#{$block} {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  fill-rule: evenodd;
+  vertical-align: middle;
+
+  // container
+  &__defs {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  // utils
+  &--flip {
+    transform: scaleX(-1) scaleY(-1);
+
+    &-h {
+      transform: scaleX(-1);
+    }
+
+    &-v {
+      transform: scaleY(-1);
+    }
+  }
+
+  // social
+  &--facebook {
+    color: color(facebook);
+    width: em(40px);
+    height: em(40px);
+  }
+
+  &--twitter {
+    color: color(twitter);
+    width: em(40px);
+    height: em(40px);
+  }
+
+  &--youtube {
+    color: color(youtube);
+    width: em(24px);
+    height: em(16px);
+  }
+
+  // other icons by alphabetical order
+  &--arrow-left-o {
+    height: em(24);
+    width: em(24);
+  }
+
+  &--caret-down {
+    height: em(4.8);
+    width: em(8);
+  }
+
+  &--check-circle {
+    height: em(12);
+    width: em(12);
+  }
+
+  &--link {
+    width: em(20px);
+    height: em(20px);
+  }
+
+  &--owl-blabla {
+    color: color(blue);
+    height: rem(30);
+    width: rem(32);
+
+    .icon__bg {
+      fill: color(black);
+    }
+  }
+
+  &--owl-facebook {
+    color: color(facebook);
+  }
+
+  &--owl-instagram {
+    color: color(instagram);
+  }
+
+  &--owl-linkedin {
+    color: color(linkedin);
+  }
+
+  &--owl-twitter {
+    color: color(twitter);
+  }
+
+  &--owl-youtube {
+    color: color(youtube);
+  }
+
+  &--plus-mini {
+    height: em(8);
+    width: em(8);
+  }
+
+  &--ulule-typo {
+    color: color(black);
+    height: 0.48837em;
+    width: 1em;
+  }
+
+  &--ulule-logo {
+    height: 0.30865em;
+    width: 1em;
+  }
+}

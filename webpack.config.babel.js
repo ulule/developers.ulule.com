@@ -3,20 +3,23 @@ var path = require("path");
 var PathRewriterPlugin = require("webpack-path-rewriter");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var baseDir = path.resolve(__dirname, "static");
+var baseDir = path.resolve(__dirname);
 var production = process.env.NODE_ENV === "production";
 
 module.exports = {
-  context: `${baseDir}/site/src`,
+  context: `${baseDir}/src`,
 
   entry: {
     style: "./sass/style.scss",
-    main: "./js/main.js"
+    main: "./index.js",
+    authorize: "./img/authorize.jpg",
+    form: "./img/form.jpg",
+    index: "./index.html"
   },
 
   output: {
-    path: `${baseDir}/site/build`,
-    filename: "js/[name].js",
+    path: `${baseDir}/static`,
+    filename: "js/[name]-[chunkhash].js",
     publicPath: "../"
   },
 
@@ -43,22 +46,27 @@ module.exports = {
         ])
       },
       {
-        test: /fonts\/.+\.(woff|woff2|ttf|otf|eot|svg)(\?.+)?$/,
-        loader: `file-loader?name=fonts/[name].[ext]`
-      },
-      {
         test: /img\/.+\.(gif|png|ico|jpg)(\?.+)?$/,
         loader: `file-loader?name=img/[name].[ext]`
+      },
+      {
+        test: /\.html$/,
+        loader: PathRewriterPlugin.rewriteAndEmit({
+          name: '../layouts/[name].[ext]',
+        })
       }
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin(`css/[name].css`),
+    new ExtractTextPlugin(`css/[name]-[chunkhash].css`),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    new PathRewriterPlugin({
+      emitStats: 'stats.json'
     })
   ]
 };

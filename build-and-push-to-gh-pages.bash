@@ -2,7 +2,10 @@
 
 rm -fr public
 git worktree add -B gh-pages public origin/gh-pages
-hugo
+
+make dependencies
+make build
+
 git -C public add --all
 git config user.email "tech@ulule.com"
 git config user.name "Tech @ Ulule"

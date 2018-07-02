@@ -1,0 +1,281 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/**
+ * BEM
+ * Naming convention
+ */
+
+$block: '.b-class-name' !default; // Block name
+// __ Element separator is double underscore
+// -- Modifier separator is double dash
+
+/**
+ * DIR
+ * Directory paths for assets
+ */
+
+$dir: (
+  fonts:  '../fonts/',
+  img:    '../img/',
+) !default;
+
+/**
+ * COLORS
+ * Let's get visual
+ */
+
+$color-identity: (
+  blue:         #00a6f0,
+  blue-medium:  #0071a4,
+  blue-dark:    #00608b,
+  red:          #ff4336,
+  green:        #66dc88,
+  orange:       #ff9e80,
+  pink:         #ff5858,
+  'yellow':       #f7c884,
+  purple:       #3e51b5,
+  'black':      #111,
+  gray-dark:    #424242,
+  gray:         #999,
+  gray-light:   #bdbdbd,
+  neutral:      #e0e0e0,
+  white-blue:   #f5f6f9,
+  'white':      #fff,
+) !default;
+
+$color-brand: (
+  facebook:    #3b5998,
+  twitter:     #55acee,
+  // googleplus:  #dc4e41,
+  instagram:   #e1306c,
+  linkedin:    #0077b5,
+  // pinterest:   #bd081c,
+  // tumblr:      #35465c,
+  // whatsapp:    #43d854,
+  // wordpress:   #21759b,
+  youtube:     #e52d27,
+) !default;
+
+$colors: map-merge($color-brand, $color-identity);
+
+/**
+ * FONTS
+ * Font families
+ */
+
+$fonts: (
+  text:   ('Roboto', sans-serif),
+  number: ('Roboto Slab', sans-serif),
+  alt:    ('Roboto Slab', sans-serif),
+) !default;
+
+
+/**
+ * SIZES
+ * Measure length, width, height
+ */
+
+$sizes: (
+  font:           13px,
+  space:          20px,
+  radius:         2px,
+  border:         1px,
+  nav-bar:        60px,
+  nav-border:     3px,
+  shutter:        300px,
+  menu:           240px,
+  infinite:       9999px,
+  screen: (
+    phone:        414px,
+    phablet:      640px,
+    tablet:       854px,
+    laptop:       1152px,
+    desktop:      1440px,
+  ),
+  container: (
+    body:         1020px,
+    content:      700px,
+    sidebar:      240px,
+  ),
+  popup: (
+    min:          280px,
+    max:          480px,
+    border-top:   4px,
+    border-bottom:2px,
+  )
+) !default;
+
+/**
+ * ZINDEX
+ * Organize z-index positionning
+ */
+
+$zindex: (
+  below:          -1,
+  above:          1,
+  selector:       100,
+  subnav:         200,
+  header:         300,
+    brand:        301,
+    nav-item:     302,
+    nav-shutter:  303,
+  shutter:        800,
+  popup:          900,
+) !default;
+
+/**
+ * TIMES
+ * Top chrono
+ */
+
+$times: (
+  fast: 0.15s,
+  veryfast: 0.05s,
+  loading: 1.5s,
+) !default;
+
+/**
+ * SPECIAL
+ * Unique variables
+ */
+$box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+/**
+ * OLD
+ * Old plain variables
+ */
+
+//  ========== FILEPATHS  ==========
+// Webfont path directory
+$fonts-directory: "../fonts/";
+
+// Images directory
+$img-directory: "../img/";
+
+//  ========== SIZES  ==========
+
+// Generic sizes
+$gold-number: 0.618;
+
+// Header height
+$header-height: 50px;
+$header-border-height: 4px;
+$head-height: $header-height + $header-border-height;
+$logo-height: 24px;
+$project-width: 680px;
+$project-nav-height: 45px;
+$highlight-height: 35px;
+
+//  ========== COLORS ==========
+
+// Graphic chart
+$neutral-silver: #E0E0E0;
+$neutral-gray: #EEE;
+$neutral-lightgray: #FAFAFA;
+$owl-lightblue: #00A6F0;
+$owl-darkblue: #00608B;
+$owl-lightred: #FF0000;
+$owl-red: #e43d34;
+$owl-darkred: #AD0000;
+$owl-lightorange: #F58058;
+$owl-darkorange: #F74b3c;
+$owl-lightgreen: #A6CB6C;
+$owl-green: #58C167;
+$owl-darkgreen: #218338;
+
+// Header colors
+$header-lightblue: #45b6e4;
+$header-darkblue: #2684bc;
+$header-lightblue: $owl-lightblue;
+$header-darkblue: $owl-darkblue;
+$header-lightred: #f46562;
+$header-cyan: #81d0ef;
+$header-gray: #737373;
+
+// Common ulule colors
+$ulule-black: #000;
+$ulule-gray: #7a7a7a;
+$ulule-lightblue: #45b6e4;
+$ulule-blue: #2684bc;
+$ulule-white: #d5d6d6;
+$ulule-green: #b9d734;
+$ulule-darkblue: #1c6ea0;
+$ulule-lightgray: #d5d7d6;
+$ulule-darkgreen: #97B02B;
+$ulule-darkblue: #1c6ea0;
+$ulule-red: #e43d34;
+$ulule-lightred: #f45d4c;
+
+// Social colors
+$like-color: $owl-lightred;
+$facebook-color: #3B5A9B;
+$twitter-color: #009DEC;
+$google-color: #D44032;
+$linkedin-color: #4875B4;
+$pinterest-color: #CA2128;
+$widget-color: $owl-lightblue;
+
+// Base font size
+$base-font-size: 13px;
+
+// Special colors
+$project-lightgray: #DDD;
+$project-darkgray: #525252;
+$white-bg: #FAFAFA;
+$black-code: #272822;
+$green-method: #038B00;
+$violet-method: #71008b;
+$red-method: #8b0000;
+$brown-method: #8b4c00;
+$green-status: #14943e;
+$red-status: #9B2828;
+$orange-status: #AC891A;
+
+// Design default variable with legacy chunks
+$secondary_text_color: #4f4f4d !default;
+$link_color: #0079b7 !default;
+$line_color: white !default;
+$presale_color: #545349 !default;
+$color_onglet_off: white !default;
+$color_onglet_on: white !default;
+$tab_background_color: #c5e8f6 !default;
+$tab_background_color_hover: #dbf0f9 !default;
+$tab_border_color: white !default;
+$background_onglet_on: #4f4f4d !default;
+$background_onglet_off: #00a6f0 !default;
+$img_directory: "www" !default;
+$color_header_message: #9a988e !default;
+$default_text_color: $secondary_text_color !default;
+$input_border_color: #0a70a3 !default;
+$border_table: #c5c5c5 !default;
+$blue_text: #0079b7 !default;
+$arrow: "blue" !default;
+
+//  ========== MEDIA QUERIES ==========
+
+$screenXS: "screen and (max-width : 320px)";
+$screenS: "screen and (max-width : 480px)";
+$screenM: "screen and (max-width : 640px)";
+$screenL: "screen and (max-width : 800px)";
+$screenXL: "screen and (max-width : 1040px)";
+$screenXXL: "screen and (max-width : 1280px)";
+$screenXXXL: "screen and (max-width : 1600px)";
+
+// Old media queries
+$screen800: "screen and (max-width : 800px)";
+$screen600: "screen and (max-width : 600px)";
+$screen400: "screen and (max-width : 400px)";
+
+// improted from original common.scss
+$screen1000: "screen and (max-width : 1000px)";
+$screen750: "screen and (max-width : 750px)";
+$screen700: "screen and (max-width : 700px)";
+$screen520: "screen and (max-width : 520px)";
+$screen320: "screen and (max-width : 320px)";
+$screen210: "screen and (max-width : 210px)";
+
+$screen-iphone5-landscape: "screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)";
+
+$hidpi: "only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0)";

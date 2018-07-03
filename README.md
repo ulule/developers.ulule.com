@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 03-07-2018
+
+* **[ULULE-API/FIX]** Allow project owners to submit a project if the project status is not `pending`.
+
 ### 29-06-2018
 
 * **[ULULE-API/FEAT]** Add the `user_id` field to the partner resource.

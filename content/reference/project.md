@@ -142,7 +142,7 @@ Finally, the following fields can't be updated by the project owner, they can on
 
 Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.
 
-The project status must be `new`.
+The project status must not be `pending`.
 
 Additionally, the following fields must be set (i18n fields must be set in the project default language):
 

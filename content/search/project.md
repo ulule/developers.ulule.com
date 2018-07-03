@@ -28,7 +28,7 @@ The `q` query parameter may contain any combination of keywords and the followin
 | `city_id`    | int    | Filter projects by city                                                                                                   |
 | `owner_id`   | int    | Filter projects by owner                                                                                                  |
 | `partner_id` | int    | Filter projects by partner                                                                                                |
-| `sort`       | string | Sort field, can be one of `popular`, `amount`, `ending_soon` or `new`, default is `popular`                               |
+| `sort`       | string | Sort field, can be one of `popular`, `amount`, `ending-soon` or `new`, default is `popular`                               |
 
 ## Response
 

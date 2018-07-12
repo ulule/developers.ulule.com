@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.42.2" />
+	<meta name="generator" content="Hugo 0.44-DEV" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -9641,6 +9641,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h1 id="projects">Projects</h1>
 
+<p>The response is <a href="#pagination">paginated</a>.</p>
+
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/search/projects</span>
@@ -9766,41 +9768,9 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
-<td><code>filters</code></td>
-<td><a href="#search-project-filters">project filters</a></td>
-<td>Available filters to further filter the search results</td>
-</tr>
-
-<tr>
 <td><code>projects</code></td>
 <td><a href="#search-project-resource">project resource</a></td>
 <td>Search results</td>
-</tr>
-
-<tr>
-<td><code>results_count</code></td>
-<td>int</td>
-<td>Total number of results</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="search-project-filters">Search project filters</h3>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>countries</code></td>
-<td>array of strings</td>
-<td>Available values for the <code>country</code> filter</td>
 </tr>
 </tbody>
 </table>

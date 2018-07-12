@@ -5,6 +5,8 @@ weight: 1
 
 # Projects
 
+The response is [paginated](#pagination).
+
 {{% http method="get" %}}/v1/search/projects{{% /http %}}
 
 ## Query parameters
@@ -32,17 +34,9 @@ The `q` query parameter may contain any combination of keywords and the followin
 
 ## Response
 
-| Field           | Type                                         | Description                                            |
-| --------------- | -------------------------------------------- | ------------------------------------------------------ |
-| `filters`       | [project filters](#search-project-filters)   | Available filters to further filter the search results |
-| `projects`      | [project resource](#search-project-resource) | Search results                                         |
-| `results_count` | int                                          | Total number of results                                |
-
-### Search project filters
-
-| Field       | Type             | Description                               |
-| ----------- | ---------------- | ----------------------------------------- |
-| `countries` | array of strings | Available values for the `country` filter |
+| Field      | Type                                         | Description    |
+| ---------- | -------------------------------------------- | -------------- |
+| `projects` | [project resource](#search-project-resource) | Search results |
 
 ### Search project resource
 

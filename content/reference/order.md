@@ -154,9 +154,11 @@ The response is [paginated](#pagination).
 
 The list can be filtered with the following query parameters:
 
-| Parameter | Description  |
-| --------- | ------------ |
-| `status`  | Order status |
+| Parameter    | Description  |
+| ------------ | ------------ |
+| `project_id` | Project      |
+| `status`     | Order status |
+
 
 ## List project orders
 

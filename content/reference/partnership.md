@@ -54,11 +54,10 @@ Updates the partnership with the given ID. This endpoint is only accessible to t
 
 ### Payload
 
-| Field        | Type | Description              |
-| ------------ | ---- | ------------------------ |
-| `partner_id` | int  | Unique ID of the partner |
-| `is_default` | bool |                          |
-| `is_support` | bool |                          |
+| Field        | Type | Description |
+| ------------ | ---- | ----------- |
+| `is_default` | bool |             |
+| `is_support` | bool |             |
 
 ## Delete a partnership
 

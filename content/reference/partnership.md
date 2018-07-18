@@ -26,7 +26,7 @@ Retrieves the partnership with the given ID. This endpoint is only accessible to
 
 ## Create a project partnership
 
-Creates a new partnership for the project with the given ID. This endpoint is only accessible to partner users.
+Creates a new partnership for the project with the given ID. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/projects/:id/partnerships{{% /http %}}
 
@@ -44,7 +44,7 @@ Creates a new partnership for the project with the given ID. This endpoint is on
 
 ## Update a partnership
 
-Updates the partnership with the given ID. This endpoint is only accessible to the partner users.
+Updates the partnership with the given ID. This endpoint is only accessible to staff.
 
 {{% http method="patch" %}}/v1/partnerships/:id{{% /http %}}
 
@@ -61,7 +61,7 @@ Updates the partnership with the given ID. This endpoint is only accessible to t
 
 ## Delete a partnership
 
-Deletes the partnership with the given ID. This endpoint has the same limitations as the [create-partnership](#create-a-project-partnership) endpoint.
+Deletes the partnership with the given ID. This endpoint is only accessible to staff.
 
 {{% http method="delete" %}}/v1/partnerships/:id{{% /http %}}
 

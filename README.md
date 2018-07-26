@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 26-07-2018
+
+* **[ULULE-API/FIX]** Fix `absolute_url` fields subdomain, before it was always `www`, now it is consistent with the `lang` query parameter.
 ### 03-07-2018
 
 * **[ULULE-API/FIX]** Allow project owners to submit a project if the project status is not `pending`.

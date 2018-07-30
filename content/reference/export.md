@@ -50,10 +50,67 @@ Creates an export for the project with the given ID. This endpoint is only acces
 
 ### Payload
 
-| Field    | Type   | Description                                               |
-| -------- | ------ | --------------------------------------------------------- |
-| `format` | string | Format of the export -- required, must be `csv` or `xlsx` |
-| `type`   | string | Type of the export -- required, must be `orders`          |
+| Field     | Type                                     | Description                                                                                     |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `format`  | string                                   | Format of the export -- required, must be `csv` or `xlsx`                                       |
+| `type`    | string                                   | Type of the export -- required, must be `orders`                                                |
+| `columns` | [export columns object](#export-columns) | Columns to be exported, and their header names -- optional, by default all columns are included |
+
+
+#### Export columns
+
+The export columns object is a JSON object whose keys are the columns to be exported, and whose values are the headers of each column in the export.
+
+For example, if the `columns` payload field has the following value, the export only includes the order ID, the user email and the reward description, with the given header values.
+
+```json
+{
+    "columns": {
+        "order.id" : "ID de la commande",
+        "user.email": "Email de l'utilisateur",
+        "order.reward.description": "Description de la contrepartie"
+    }
+}
+```
+
+The available columns are the following:
+
+* `order.id`
+* `user.username`
+* `user.lang`
+* `user.full_name`
+* `user.email`
+* `shipping_address.first_name`
+* `shipping_address.last_name`
+* `shipping_address.entity_name`
+* `shipping_address.address_1`
+* `shipping_address.address_2`
+* `shipping_address.postal_code`
+* `shipping_address.city`
+* `shipping_address.state`
+* `shipping_address.country`
+* `billing_address.first_name`
+* `billing_address.last_name`
+* `billing_address.entity_name`
+* `billing_address.type`
+* `billing_address.address_1`
+* `billing_address.address_2`
+* `billing_address.postal_code`
+* `billing_address.city`
+* `billing_address.state`
+* `billing_address.country`
+* `order.reward.id`
+* `order.reward.description`
+* `order.reward.price`
+* `order.reward.quantity`
+* `order.reward.total`
+* `order.total`
+* `order.tracking.source`
+* `order.tracking.medium`
+* `order.payment_method`
+* `order.status`
+* `order.created_at`
+* `order.note`
 
 ## List project exports
 

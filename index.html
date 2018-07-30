@@ -6403,8 +6403,67 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td>string</td>
 <td>Type of the export &ndash; required, must be <code>orders</code></td>
 </tr>
+
+<tr>
+<td><code>columns</code></td>
+<td><a href="#export-columns">export columns object</a></td>
+<td>Columns to be exported, and their header names &ndash; optional, by default all columns are included</td>
+</tr>
 </tbody>
 </table>
+
+<h4 id="export-columns">Export columns</h4>
+
+<p>The export columns object is a JSON object whose keys are the columns to be exported, and whose values are the headers of each column in the export.</p>
+
+<p>For example, if the <code>columns</code> payload field has the following value, the export only includes the order ID, the user email and the reward description, with the given header values.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
+    <span style="color:#f92672">&#34;columns&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+        <span style="color:#f92672">&#34;order.id&#34;</span> <span style="color:#111">:</span> <span style="color:#d88200">&#34;ID de la commande&#34;</span><span style="color:#111">,</span>
+        <span style="color:#f92672">&#34;user.email&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Email de l&#39;utilisateur&#34;</span><span style="color:#111">,</span>
+        <span style="color:#f92672">&#34;order.reward.description&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Description de la contrepartie&#34;</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+<p>The available columns are the following:</p>
+
+<ul>
+<li><code>order.id</code></li>
+<li><code>user.username</code></li>
+<li><code>user.lang</code></li>
+<li><code>user.full_name</code></li>
+<li><code>user.email</code></li>
+<li><code>shipping_address.first_name</code></li>
+<li><code>shipping_address.last_name</code></li>
+<li><code>shipping_address.entity_name</code></li>
+<li><code>shipping_address.address_1</code></li>
+<li><code>shipping_address.address_2</code></li>
+<li><code>shipping_address.postal_code</code></li>
+<li><code>shipping_address.city</code></li>
+<li><code>shipping_address.state</code></li>
+<li><code>shipping_address.country</code></li>
+<li><code>billing_address.first_name</code></li>
+<li><code>billing_address.last_name</code></li>
+<li><code>billing_address.entity_name</code></li>
+<li><code>billing_address.type</code></li>
+<li><code>billing_address.address_1</code></li>
+<li><code>billing_address.address_2</code></li>
+<li><code>billing_address.postal_code</code></li>
+<li><code>billing_address.city</code></li>
+<li><code>billing_address.state</code></li>
+<li><code>billing_address.country</code></li>
+<li><code>order.reward.id</code></li>
+<li><code>order.reward.description</code></li>
+<li><code>order.reward.price</code></li>
+<li><code>order.reward.quantity</code></li>
+<li><code>order.reward.total</code></li>
+<li><code>order.total</code></li>
+<li><code>order.tracking.source</code></li>
+<li><code>order.tracking.medium</code></li>
+<li><code>order.payment_method</code></li>
+<li><code>order.status</code></li>
+<li><code>order.created_at</code></li>
+<li><code>order.note</code></li>
+</ul>
 
 <h2 id="list-project-exports">List project exports</h2>
 

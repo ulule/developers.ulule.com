@@ -311,6 +311,25 @@ The proposal status can have the following values:
     </item>
     
     <item>
+      <title>Partnership</title>
+      <link>/reference/partnership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/partnership/</guid>
+      <description>Partnership Partnership resource    Field Type Description     id int Unique ID of the partnership   is_default int If true, the partner is the default one for the project   is_support int    partner partner resource Partner   presale project resource Project    Retrieve a partnership Retrieves the partnership with the given ID. This endpoint is only accessible to partner users.</description>
+    </item>
+    
+    <item>
+      <title>Sponsorship</title>
+      <link>/reference/sponsorship/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/sponsorship/</guid>
+      <description>Sponsorship Projects can have up to 4 sponsorships.
+Sponsorship resource    Field Type Description     amount int Amount of the sponsorship   coefficient int Coefficient of the sponsorship   description i18n object Main description of the sponsorship   id int Unique ID of the sponsorship   is_full bool True if the total amount is reached   main_color string Main color of the sponsorship &amp;ndash; HEX format   project_id int Unique ID of the project   sponsor sponsor resource Sponsor   title i18n object Title of the sponsorship    Sponsor resource    Field Type Description     id int Unique ID of the sponsor   image image resource Image of the sponsor   link string Link to the sponsor website   name string Name of the sponsor   position int    type string Type of the sponsor (normal or premium)   user user resource User of the sponsor    List project sponsorships Retrieves the all the sponsorships of a project.</description>
+    </item>
+    
+    <item>
       <title>API Key</title>
       <link>/authentication/api-key/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -331,15 +350,6 @@ You can pass it in each request as an authorization header:
 $ curl -H &amp;#34;Authorization: Bearer USER-ACCESS-TOKEN&amp;#34; &amp;#34;https://api.ulule.com/v1/...&amp;#34; Retrieve an access token To retrieve an access token, use the POST https://www.ulule.com/oauth2/token/ endpoint.
 Please, do not forget the slash at the end, just after &amp;ldquo;token&amp;rdquo;. This slash is required.
 Request must be authenticated with the Basic method with the credentials being client_id and client_secret.</description>
-    </item>
-    
-    <item>
-      <title>Partnership</title>
-      <link>/reference/partnership/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/reference/partnership/</guid>
-      <description>Partnership Partnership resource    Field Type Description     id int Unique ID of the partnership   is_default int If true, the partner is the default one for the project   is_support int    partner partner resource Partner   presale project resource Project    Retrieve a partnership Retrieves the partnership with the given ID. This endpoint is only accessible to partner users.</description>
     </item>
     
     <item>

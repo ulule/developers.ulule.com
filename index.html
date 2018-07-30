@@ -900,6 +900,30 @@
 
                         </li>
                         
+                        <li>
+                            <a href="#sponsorship">Sponsorship</a>
+
+                            
+                            
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="#sponsorship-resource">Sponsorship resource</a></li>
+                                
+                                
+                                
+                                <li><a href="#sponsor-resource">Sponsor resource</a></li>
+                                
+                                
+                                
+                                <li><a href="#list-project-sponsorships">List project sponsorships</a></li>
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
                     </ul>
                 </li>
                 
@@ -8594,6 +8618,165 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/partnerships</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Project ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+        </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="sponsorship">Sponsorship</h1>
+
+<p>Projects can have up to 4 sponsorships.</p>
+
+<h2 id="sponsorship-resource">Sponsorship resource</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>amount</code></td>
+<td>int</td>
+<td>Amount of the sponsorship</td>
+</tr>
+
+<tr>
+<td><code>coefficient</code></td>
+<td>int</td>
+<td>Coefficient of the sponsorship</td>
+</tr>
+
+<tr>
+<td><code>description</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Main description of the sponsorship</td>
+</tr>
+
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the sponsorship</td>
+</tr>
+
+<tr>
+<td><code>is_full</code></td>
+<td>bool</td>
+<td>True if the total amount is reached</td>
+</tr>
+
+<tr>
+<td><code>main_color</code></td>
+<td>string</td>
+<td>Main color of the sponsorship &ndash; HEX format</td>
+</tr>
+
+<tr>
+<td><code>project_id</code></td>
+<td>int</td>
+<td>Unique ID of the project</td>
+</tr>
+
+<tr>
+<td><code>sponsor</code></td>
+<td><a href="#sponsor-resource">sponsor resource</a></td>
+<td>Sponsor</td>
+</tr>
+
+<tr>
+<td><code>title</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Title of the sponsorship</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="sponsor-resource">Sponsor resource</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the sponsor</td>
+</tr>
+
+<tr>
+<td><code>image</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Image of the sponsor</td>
+</tr>
+
+<tr>
+<td><code>link</code></td>
+<td>string</td>
+<td>Link to the sponsor website</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Name of the sponsor</td>
+</tr>
+
+<tr>
+<td><code>position</code></td>
+<td>int</td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>Type of the sponsor (<code>normal</code> or <code>premium</code>)</td>
+</tr>
+
+<tr>
+<td><code>user</code></td>
+<td><a href="#user">user resource</a></td>
+<td>User of the sponsor</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="list-project-sponsorships">List project sponsorships</h2>
+
+<p>Retrieves the all the sponsorships of a project.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/projects/:id/sponsorships</span>
 </div>
 
 

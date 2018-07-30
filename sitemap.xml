@@ -151,6 +151,14 @@
   </url>
   
   <url>
+    <loc>/reference/partnership/</loc>
+  </url>
+  
+  <url>
+    <loc>/reference/sponsorship/</loc>
+  </url>
+  
+  <url>
     <loc>/</loc>
   </url>
   
@@ -165,10 +173,6 @@
   
   <url>
     <loc>/authentication/oauth2/</loc>
-  </url>
-  
-  <url>
-    <loc>/reference/partnership/</loc>
   </url>
   
   <url>

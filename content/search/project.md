@@ -20,17 +20,17 @@ The response is [paginated](#pagination).
 
 The `q` query parameter may contain any combination of keywords and the following search qualifiers.
 
-| Qualifier    | Type   | Description                                                                                                               |
-| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| `tag_id`     | int    | Filter projects by tag                                                                                                    |
-| `status`     | string | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ended`, default is `currently` |
-| `country`    | string | Filter projects by country                                                                                                |
-| `lang`       | string | Filter projects by language                                                                                               |
-| `region_id`  | int    | Filter projects by region                                                                                                 |
-| `city_id`    | int    | Filter projects by city                                                                                                   |
-| `owner_id`   | int    | Filter projects by owner                                                                                                  |
-| `partner_id` | int    | Filter projects by partner                                                                                                |
-| `sort`       | string | Sort field, can be one of `popular`, `amount`, `ending-soon` or `new`, default is `popular`                               |
+| Qualifier    | Type   | Description                                                                                                        |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| `tag_id`     | int    | Filter projects by tag                                                                                             |
+| `status`     | string | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ended`, default is `all` |
+| `country`    | string | Filter projects by country                                                                                         |
+| `lang`       | string | Filter projects by language                                                                                        |
+| `region_id`  | int    | Filter projects by region                                                                                          |
+| `city_id`    | int    | Filter projects by city                                                                                            |
+| `owner_id`   | int    | Filter projects by owner                                                                                           |
+| `partner_id` | int    | Filter projects by partner                                                                                         |
+| `sort`       | string | Sort field, can be one of `popular`, `amount`, `ending-soon` or `new`, default is `popular`                        |
 
 ## Response
 

@@ -1,5 +1,6 @@
 ---
 title: "Partnership"
+weight: 20
 ---
 
 # Partnership

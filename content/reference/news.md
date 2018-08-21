@@ -20,6 +20,7 @@ Project owners may add news to their project to keep the crowd updated during an
 | `project`          | [project resource](#project) | Project the news belongs to, only present in the [news-detail endpoint](#retrieve-a-news)       |
 | `reserved`         | bool                         | If true, news is only visible to the project supporters                                         |
 | `resource_uri`     | string                       | URL of the news resource                                                                        |
+| `slug`             | string                       | Slug of the news                                                                                |
 | `status`           | string                       | Status of the news, can be `online`or `waiting`                                                 |
 | `title`            | [i18n object](#i18n)         | Title of the news                                                                               |
 

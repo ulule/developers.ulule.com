@@ -46,7 +46,7 @@ Retrieves the authenticated user.
 
 Retrieves the user with the given ID. This endpoint is only accessible to oneself and to staff users.
 
-{{% http method="/v1/users/:id" %}}/v1/users/:id{{% /http %}}
+{{% http method="get" %}}/v1/users/:id{{% /http %}}
 
 | Parameter | Description |
 | --------- | ----------- |

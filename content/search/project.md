@@ -68,4 +68,5 @@ The `q` query parameter may contain any combination of keywords and the followin
 | `id`           | int    | Unique ID of the user                                                       |
 | `last_name`    | string | Last name of the user                                                       |
 | `name`         | string | Concatenation of first name and last name if they exist, username otherwise |
+| `screenname`   | string | Screenname                                                                  |
 | `username`     | string | Username                                                                    |

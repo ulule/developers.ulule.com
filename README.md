@@ -2,9 +2,14 @@
 
 ## Changelog
 
+### 24-08-2018
+
+* **[ULULE-API/FIX]** Add the `screenname` field to the project owner resource in the search-project endpoint.
+
 ### 21-08-2018
 
 * **[ULULE-API/FIX]** Add the `slug` field to the news resource.
+
 ### 26-07-2018
 
 * **[ULULE-API/FIX]** Fix `absolute_url` fields subdomain, before it was always `www`, now it is consistent with the `lang` query parameter.

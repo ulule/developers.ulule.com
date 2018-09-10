@@ -213,7 +213,7 @@ The proposal status can have the following values:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/partnership/</guid>
-      <description>Partnership Partnership resource    Field Type Description     id int Unique ID of the partnership   is_default bool If true, the partner is the default one for the project   is_support bool    partner partner resource Partner   presale project resource Project    Retrieve a partnership Retrieves the partnership with the given ID. This endpoint is only accessible to partner users.</description>
+      <description>Partnership Partnership resource    Field Type Description     id int Unique ID of the partnership   is_default bool If true, the partner is the default one for the project   is_support bool    partner partner resource Partner   project project resource Project    Retrieve a partnership Retrieves the partnership with the given ID. This endpoint is only accessible to partner users.</description>
     </item>
     
     <item>

@@ -10,8 +10,8 @@ weight: 20
 | Field        | Type                         | Description                                             |
 | ------------ | ---------------------------- | ------------------------------------------------------- |
 | `id`         | int                          | Unique ID of the partnership                            |
-| `is_default` | int                          | If true, the partner is the default one for the project |
-| `is_support` | int                          |                                                         |
+| `is_default` | bool                         | If true, the partner is the default one for the project |
+| `is_support` | bool                         |                                                         |
 | `partner`    | [partner resource](#partner) | Partner                                                 |
 | `presale`    | [project resource](#project) | Project                                                 |
 

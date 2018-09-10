@@ -21,6 +21,11 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2018-09-03
+
+* [partnership resource](#partnership)
+    * `presale` field is renamed to `project`
+
 ### 2018-04-17
 
 * [reward](#reward) and [variant](#variant) resources

@@ -13,7 +13,7 @@ weight: 20
 | `is_default` | bool                         | If true, the partner is the default one for the project |
 | `is_support` | bool                         |                                                         |
 | `partner`    | [partner resource](#partner) | Partner                                                 |
-| `presale`    | [project resource](#project) | Project                                                 |
+| `project`    | [project resource](#project) | Project                                                 |
 
 ## Retrieve a partnership
 

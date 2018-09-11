@@ -7603,7 +7603,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer</code></td>
 <td>string</td>
-<td>Answer of the moderation team</td>
+<td>Answer from the moderation team in raw text</td>
+</tr>
+
+<tr>
+<td><code>answer_html</code></td>
+<td>string</td>
+<td>Answer from the moderation team in HTML format &ndash; in case <code>answer_html</code> is empty, fallback to <code>answer</code></td>
 </tr>
 
 <tr>
@@ -8363,6 +8369,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h3 id="payload-2">Payload</h3>
 
+<p>One of the <code>answer</code> and <code>answer_html</code> fields must be present in the payload.</p>
+
 <table>
 <thead>
 <tr>
@@ -8376,7 +8384,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer</code></td>
 <td>string</td>
-<td>Answer about proposal status change</td>
+<td>Answer from the moderation team in raw text</td>
+</tr>
+
+<tr>
+<td><code>answer_html</code></td>
+<td>string</td>
+<td>Answer from the moderation team in HTML format</td>
 </tr>
 </tbody>
 </table>
@@ -8409,6 +8423,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h3 id="payload-3">Payload</h3>
 
+<p>One of the <code>answer</code> and <code>answer_html</code> fields must be present in the payload.</p>
+
 <table>
 <thead>
 <tr>
@@ -8422,7 +8438,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer</code></td>
 <td>string</td>
-<td>Answer about proposal status change</td>
+<td>Answer from the moderation team in raw text</td>
+</tr>
+
+<tr>
+<td><code>answer_html</code></td>
+<td>string</td>
+<td>Answer from the moderation team in HTML format</td>
 </tr>
 </tbody>
 </table>
@@ -8455,6 +8477,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h3 id="payload-4">Payload</h3>
 
+<p>One of the <code>answer</code> and <code>answer_html</code> fields must be present in the payload.</p>
+
 <table>
 <thead>
 <tr>
@@ -8468,7 +8492,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer</code></td>
 <td>string</td>
-<td>Answer about proposal status change</td>
+<td>Answer from the moderation team in raw text</td>
+</tr>
+
+<tr>
+<td><code>answer_html</code></td>
+<td>string</td>
+<td>Answer from the moderation team in HTML format</td>
 </tr>
 </tbody>
 </table>
@@ -9576,6 +9606,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>body_html</code></td>
+<td>string</td>
+<td>Body of the message in HTML format &ndash; in case <code>body_html</code> is empty, fallback to <code>body</code></td>
+</tr>
+
+<tr>
 <td><code>id</code></td>
 <td>int</td>
 <td>Unique ID of the message</td>
@@ -9647,6 +9683,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h3 id="payload">Payload</h3>
 
+<p>One of the <code>body</code> and <code>body_html</code> fields must be present in the payload.</p>
+
 <table>
 <thead>
 <tr>
@@ -9660,7 +9698,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>body</code></td>
 <td>string</td>
-<td>Body of the message &ndash; required</td>
+<td>Body of the message in raw text</td>
+</tr>
+
+<tr>
+<td><code>body_html</code></td>
+<td>string</td>
+<td>Body of the message in HTML format</td>
 </tr>
 
 <tr>
@@ -9699,6 +9743,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h3 id="payload-1">Payload</h3>
 
+<p>One of the <code>body</code> and <code>body_html</code> fields must be present in the payload.</p>
+
 <table>
 <thead>
 <tr>
@@ -9712,7 +9758,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>body</code></td>
 <td>string</td>
-<td>Body of the message &ndash; required</td>
+<td>Body of the message in raw text</td>
+</tr>
+
+<tr>
+<td><code>body_html</code></td>
+<td>string</td>
+<td>Body of the message in HTML format</td>
 </tr>
 </tbody>
 </table>

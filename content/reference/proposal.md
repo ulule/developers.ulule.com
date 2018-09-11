@@ -34,7 +34,8 @@ For a proposal to go from status `pending` to `new`, the proposal must not be an
 | Field                   | Type                                   | Description                                                                                                                                                                   |
 | ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address`               | string                                 | Address of the proposal author                                                                                                                                                |
-| `answer`                | string                                 | Answer of the moderation team                                                                                                                                                 |
+| `answer`                | string                                 | Answer from the moderation team in raw text                                                                                                                                   |
+| `answer_html`           | string                                 | Answer from the moderation team in HTML format -- in case `answer_html` is empty, fallback to `answer`                                                                       |
 | `category`              | [category resource](#category-and-tag) | Category, null if the proposal has no category                                                                                                                                |
 | `category_id`           | int                                    | Unique ID of the category, null if the proposal has no category                                                                                                               |
 | `country`               | string                                 | Two-letter ISO code of the country                                                                                                                                            |
@@ -235,9 +236,12 @@ Validates the proposal with the given ID. It changes the proposal status to `val
 
 ### Payload
 
-| Field    | Type   | Description                         |
-| -------- | ------ | ----------------------------------- |
-| `answer` | string | Answer about proposal status change |
+One of the `answer` and `answer_html` fields must be present in the payload.
+
+| Field         | Type   | Description                                    |
+| ------------- | ------ | ---------------------------------------------- |
+| `answer`      | string | Answer from the moderation team in raw text    |
+| `answer_html` | string | Answer from the moderation team in HTML format |
 
 ## Refuse Proposal
 
@@ -251,9 +255,12 @@ Refuses the proposal with the given ID. It changes the proposal status to `inval
 
 ### Payload
 
-| Field    | Type   | Description                         |
-| -------- | ------ | ----------------------------------- |
-| `answer` | string | Answer about proposal status change |
+One of the `answer` and `answer_html` fields must be present in the payload.
+
+| Field         | Type   | Description                                    |
+| ------------- | ------ | ---------------------------------------------- |
+| `answer`      | string | Answer from the moderation team in raw text    |
+| `answer_html` | string | Answer from the moderation team in HTML format |
 
 ## Suspend Proposal
 
@@ -267,6 +274,9 @@ Suspends the proposal with the given ID. It changes the proposal status to `wait
 
 ### Payload
 
-| Field    | Type   | Description                         |
-| -------- | ------ | ----------------------------------- |
-| `answer` | string | Answer about proposal status change |
+One of the `answer` and `answer_html` fields must be present in the payload.
+
+| Field         | Type   | Description                                    |
+| ------------- | ------ | ---------------------------------------------- |
+| `answer`      | string | Answer from the moderation team in raw text    |
+| `answer_html` | string | Answer from the moderation team in HTML format |

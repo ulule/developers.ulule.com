@@ -15,8 +15,9 @@ In case a user needs to add attachments to a message, the typical workflow is to
 | ------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | `attachments`       | [list of attachment resource](#attachment) | Attachments of the message                                                                |
 | `body`              | string                                     | Body of the message in raw text and without HTML markup                                   |
+| `body_html`         | string                                     | Body of the message in HTML format -- in case `body_html` is empty, fallback to `body`    |
 | `id`                | int                                        | Unique ID of the message                                                                  |
-| `sender_deleted_at` | string                                     | Date of the message deletion, with RFC 3339 format, null if the message is not deleted  |
+| `sender_deleted_at` | string                                     | Date of the message deletion, with RFC 3339 format, null if the message is not deleted    |
 | `sender`            | [user resource](#user)                     | Sender of the message                                                                     |
 | `sent_at`           | string                                     | Date at which the message has been sent, with RFC 3339 format                             |
 | `status`            | string                                     | Status of the message, can be `draft` or `sent`                                           |
@@ -35,10 +36,13 @@ Creates a message for the thread with the given ID. This endpoint is only access
 
 ### Payload
 
-| Field    | Type   | Description                                                                    |
-| -------- | ------ | ------------------------------------------------------------------------------ |
-| `body`   | string | Body of the message -- required                                                |
-| `status` | string | Status of the message -- optional, can be `sent` or `draft`, default is `sent` |
+One of the `body` and `body_html` fields must be present in the payload.
+
+| Field       | Type   | Description                                                                    |
+| ----------- | ------ | ------------------------------------------------------------------------------ |
+| `body`      | string | Body of the message in raw text                                                |
+| `body_html` | string | Body of the message in HTML format                                             |
+| `status`    | string | Status of the message -- optional, can be `sent` or `draft`, default is `sent` |
 
 ## Update a message
 
@@ -52,9 +56,12 @@ Updates the message with the given ID. This endpoint is only accessible to the m
 
 ### Payload
 
-| Field  | Type   | Description                     |
-| ------ | ------ | ------------------------------- |
-| `body` | string | Body of the message -- required |
+One of the `body` and `body_html` fields must be present in the payload.
+
+| Field       | Type   | Description                        |
+| ----------- | ------ | ---------------------------------- |
+| `body`      | string | Body of the message in raw text    |
+| `body_html` | string | Body of the message in HTML format |
 
 ## Send a message
 

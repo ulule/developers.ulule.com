@@ -351,6 +351,10 @@
                                 
                                 <li><a href="#project-discussion">Project discussion</a></li>
                                 
+                                
+                                
+                                <li><a href="#project-likes">Project likes</a></li>
+                                
                             </ul>
                             
 
@@ -3781,6 +3785,18 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <h3 id="join-a-project-discussion-thread">Join a project discussion thread</h3>
 
 <p><code>POST /v1/projects/:id/join-thread</code> where <code>:id</code> is the project ID.</p>
+
+<h2 id="project-likes">Project likes</h2>
+
+<p>Users can like projects to receive notifications. Project owners and backers automatically like a project, and cannot unlike it.</p>
+
+<h3 id="like-a-project">Like a project</h3>
+
+<p><code>POST /v1/projects/:id/like</code> where <code>:id</code> is the project ID.</p>
+
+<h3 id="unlike-a-project">Unlike a project</h3>
+
+<p><code>POST /v1/projects/:id/unlike</code> where <code>:id</code> is the project ID.</p>
 </div>
         </section>
         

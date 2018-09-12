@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 12-09-2018
+
+* **[ULULE-API/FEAT]** Add the `POST /projects/:id/like` and `POST /projects/:id/unlike` endpoints.
+
 ### 24-08-2018
 
 * **[ULULE-API/FIX]** Add the `screenname` field to the project owner resource in the search-project endpoint.
@@ -12,7 +16,8 @@
 
 ### 26-07-2018
 
-* **[ULULE-API/FIX]** Fix `absolute_url` fields subdomain, before it was always `www`, now it is consistent with the `lang` query parameter.
+* **[ULULE-API/FIX]** Fix `absolute_url` fields subdomain: before it was always `www`, now it is consistent with the `lang` query parameter.
+
 ### 03-07-2018
 
 * **[ULULE-API/FIX]** Allow project owners to submit a project if the project status is not `pending`.

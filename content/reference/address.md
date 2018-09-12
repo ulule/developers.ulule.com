@@ -5,7 +5,7 @@ weight: 18
 
 # Address
 
-Contributors may be required to create addresses resources to be used with orders.
+Backers may be required to create addresses resources to be used with orders.
 
 ## Address resource
 

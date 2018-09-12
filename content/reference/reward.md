@@ -9,7 +9,7 @@ weight: 9
 
 | Field              | Type                                     | Description                                                                                                                                                                         |
 | ------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address_required` | bool                                     | The project owner can choose to set this field. If true, contributors must specify a shipping address when ordering the reward                                                      |
+| `address_required` | bool                                     | The project owner can choose to set this field. If true, backers must specify a shipping address when ordering the reward                                                           |
 | `available`        | bool                                     | True if reward is available                                                                                                                                                         |
 | `date_delivery`    | string                                   | Date of the reward delivery with the YYYY-MM-DD format. This field must be set by the project owner. It is only an estimation of the expected shipping delivery delay of the reward |
 | `description`      | [i18n object](#i18n)                     | Description of the reward, can contain HTML tags                                                                                                                                    |
@@ -48,15 +48,15 @@ Creates a new reward for the project with the given ID. This endpoint is only ac
 
 ### Payload
 
-| Field              | Type                 | Description                                                                                                  |
-| ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `address_required` | bool                 | If true, contributors must specify a shipping address when ordering the reward -- optional, default is false |
-| `date_delivery`    | string               | Date of the reward delivery with the YYYY-MM-DD format -- required                                           |
-| `description`      | [i18n object](#i18n) | Description -- required                                                                                      |
-| `price`            | float                | Price -- required, must be between 0 and 1e10                                                                |
-| `shipping_int`     | float                | International shipping cost -- optional                                                                      |
-| `shipping_nat`     | float                | National shipping cost -- optional                                                                           |
-| `stock`            | int                  | Stock -- optional                                                                                            |
+| Field              | Type                 | Description                                                                                             |
+| ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------- |
+| `address_required` | bool                 | If true, backers must specify a shipping address when ordering the reward -- optional, default is false |
+| `date_delivery`    | string               | Date of the reward delivery with the YYYY-MM-DD format -- required                                      |
+| `description`      | [i18n object](#i18n) | Description -- required                                                                                 |
+| `price`            | float                | Price -- required, must be between 0 and 1e10                                                           |
+| `shipping_int`     | float                | International shipping cost -- optional                                                                 |
+| `shipping_nat`     | float                | National shipping cost -- optional                                                                      |
+| `stock`            | int                  | Stock -- optional                                                                                       |
 
 ## Update a reward
 
@@ -70,15 +70,15 @@ Updates the reward with the given ID. This endpoint is only accessible to the ow
 
 ### Payload
 
-| Field              | Type                 | Description                                                                    |
-| ------------------ | -------------------- | ------------------------------------------------------------------------------ |
-| `address_required` | bool                 | If true, contributors must specify a shipping address when ordering the reward |
-| `date_delivery`    | string               | Date of the reward delivery with the YYYY-MM-DD format                         |
-| `description`      | [i18n object](#i18n) | Description                                                                    |
-| `price`            | float                | Price, must be between 0 and 1e10                                              |
-| `shipping_int`     | float                | International Shipping                                                         |
-| `shipping_nat`     | float                | National Shipping                                                              |
-| `stock`            | int                  | Stock                                                                          |
+| Field              | Type                 | Description                                                               |
+| ------------------ | -------------------- | ------------------------------------------------------------------------- |
+| `address_required` | bool                 | If true, backers must specify a shipping address when ordering the reward |
+| `date_delivery`    | string               | Date of the reward delivery with the YYYY-MM-DD format                    |
+| `description`      | [i18n object](#i18n) | Description                                                               |
+| `price`            | float                | Price, must be between 0 and 1e10                                         |
+| `shipping_int`     | float                | International Shipping                                                    |
+| `shipping_nat`     | float                | National Shipping                                                         |
+| `stock`            | int                  | Stock                                                                     |
 
 ## Delete a reward
 

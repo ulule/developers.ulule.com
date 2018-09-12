@@ -15,7 +15,7 @@ The order `status` field can have the following values:
 | `cancelled`             | User has cancelled order during the campaign                        |
 | `payment-done`          | Campaign has succeeded, funds have been transfered to project owner |
 | `payment-invalid`       | PSP needs more info to transfer payment to project owner            |
-| `payment-reimbursed`    | Campaign has failed, contributor has been reimbursed                |
+| `payment-reimbursed`    | Campaign has failed, the backer has been reimbursed                 |
 | `error`                 | An error has occurred                                               |
 
 ## Order resource
@@ -27,12 +27,12 @@ The order `status` field can have the following values:
 | `created_at`           | string                                                | Date at which the order has been created, with RFC 3339 format=                                                                                                       |
 | `id`                   | int                                                   | Unique ID of the order                                                                                                                                                |
 | `items`                | array of [order item resources](#order-item-resource) | Order items                                                                                                                                                           |
-| `note`                 | string                                                | Free field that the contributor can fill to give special information to the project owner about the order                                                             |
+| `note`                 | string                                                | Free field that the backer can fill to give special information to the project owner about the order                                                                  |
 | `order_shipping_total` | int                                                   | Total shipping cost                                                                                                                                                   |
 | `order_subtotal`       | int                                                   | Cost of the order, minus the shipping cost                                                                                                                            |
 | `order_total`          | int                                                   | Total cost                                                                                                                                                            |
 | `payment_method`       | string                                                | Payment method used for the order, can be `check`, `creditcard`, `paypal`, `directdebit`, `maestro`, `ideal`, `saving`, `bankwire`                                    |
-| `payment_url`          | string                                                | URL that the contributor must visit to fill payment information                                                                                                       |
+| `payment_url`          | string                                                | URL that the backer must visit to fill payment information                                                                                                            |
 | `project`              | [project resource](#project)                          | Project related to the order                                                                                                                                          |
 | `project_id`           | int                                                   | Unique ID of the related project                                                                                                                                      |
 | `refunded`             | bool                                                  | True if the order was refunded                                                                                                                                        |
@@ -75,7 +75,7 @@ Creates an order for the project with the given ID. The authenticated user `is_c
 
 ### Payload for a project of type `project`
 
-The contributor has two choice:
+Backers have two choice:
 
 1. Set the order amount to a value greater than or equal to the project lowest contribution amount.
 2. Select one project reward and optionally set the order amount to a value greater than or equal to the reward price.
@@ -87,12 +87,12 @@ The contributor has two choice:
 | `country`             | string | Country -- required if the selected reward has shippings                                                                                                                                             |
 | `payment_method`      | string | Payment method -- required, `creditcard`, `maestro` or `directdebit`                                                                                                                                 |
 | `reward_id`           | int    | Unique ID of the reward -- optional, must be a project reward                                                                                                                                        |
-| `return_url`          | string | URL at which the contributor will be redirected after payment -- required                                                                                                                            |
+| `return_url`          | string | URL at which the backer will be redirected after payment -- required                                                                                                                                 |
 | `shipping_address_id` | string | Shipping address ID -- optional                                                                                                                                                                      |
 
 ### Payload for a project of type `presale`
 
-The contributor must select at least one or more rewards.
+Backers must select at least one or more rewards.
 
 | Field                 | Type                                   | Description                                                               |
 | --------------------- | -------------------------------------- | ------------------------------------------------------------------------- |
@@ -125,7 +125,7 @@ Updates the order with the given ID. This endpoint is only accessible to the ord
 | Field                 | Type   | Description                                                                   |
 | --------------------- | ------ | ----------------------------------------------------------------------------- |
 | `billing_address_id`  | int    | Billing address ID -- optional, the address must belong to the order author   |
-| `note`                | string | A note from the contributor to the project owner about this order -- optional |
+| `note`                | string | A note from the backer to the project owner about this order -- optional      |
 | `shipping_address_id` | int    | Shipping address ID -- optional, the address must belong to the order author  |
 
 ## Cancel an order

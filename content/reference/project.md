@@ -247,3 +247,15 @@ Projects have one discussion thread where the project owner and the moderation t
 ### Join a project discussion thread
 
 `POST /v1/projects/:id/join-thread` where `:id` is the project ID.
+
+## Project likes
+
+Users can like projects to receive notifications. Project owners and backers automatically like a project, and cannot unlike it.
+
+### Like a project
+
+`POST /v1/projects/:id/like` where `:id` is the project ID.
+
+### Unlike a project
+
+`POST /v1/projects/:id/unlike` where `:id` is the project ID.

@@ -250,7 +250,7 @@ Projects have one discussion thread where the project owner and the moderation t
 
 ## Project likes
 
-Users can like projects to receive notifications.
+Users can like projects to receive notifications. Project owners and backers automatically like a project, and cannot unlike it.
 
 ### Like a project
 

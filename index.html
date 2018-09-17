@@ -3228,7 +3228,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>payment_methods</code></td>
 <td>array of strings</td>
-<td>Payment methods supported by the project (<code>check</code>, <code>creditcard</code>, <code>paypal</code>, <code>directdebit</code>, <code>maestro</code>, <code>ideal</code>, <code>saving</code>, <code>bankwire</code>)</td>
+<td>Payment methods supported by the project &ndash; any number of the available <a href="#payment-methods">payment methods</a></td>
 </tr>
 
 <tr>
@@ -3333,6 +3333,56 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>notifications</code></td>
 <td></td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="payment-methods">Payment methods</h3>
+
+<p>The following payment methods are supported:</p>
+
+<table>
+<thead>
+<tr>
+<th>Payment method</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>bankwire</code></td>
+</tr>
+
+<tr>
+<td><code>check</code></td>
+</tr>
+
+<tr>
+<td><code>creditcard</code></td>
+</tr>
+
+<tr>
+<td><code>directdebit</code></td>
+</tr>
+
+<tr>
+<td><code>ideal</code></td>
+</tr>
+
+<tr>
+<td><code>maestro</code></td>
+</tr>
+
+<tr>
+<td><code>paylib</code></td>
+</tr>
+
+<tr>
+<td><code>paypal</code></td>
+</tr>
+
+<tr>
+<td><code>saving</code></td>
 </tr>
 </tbody>
 </table>
@@ -6654,7 +6704,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>payment_method</code></td>
 <td>string</td>
-<td>Payment method used for the order, can be <code>check</code>, <code>creditcard</code>, <code>paypal</code>, <code>directdebit</code>, <code>maestro</code>, <code>ideal</code>, <code>saving</code>, <code>bankwire</code></td>
+<td>Payment method used for the order &ndash; can be one of the available <a href="#payment-methods">payment methods</a></td>
 </tr>
 
 <tr>
@@ -6855,7 +6905,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>payment_method</code></td>
 <td>string</td>
-<td>Payment method &ndash; required, <code>creditcard</code>, <code>maestro</code> or <code>directdebit</code></td>
+<td>Payment method &ndash; required, must be a payment method supported by the project</td>
 </tr>
 
 <tr>
@@ -6913,7 +6963,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>payment_method</code></td>
 <td>string</td>
-<td>Payment method &ndash; required, <code>creditcard</code>, <code>maestro</code> or <code>directdebit</code></td>
+<td>Payment method &ndash; required, must be a payment method supported by the project</td>
 </tr>
 
 <tr>

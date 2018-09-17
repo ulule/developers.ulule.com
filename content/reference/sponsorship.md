@@ -17,6 +17,7 @@ Projects can have up to 4 sponsorships.
 | `id`          | int                                   | Unique ID of the sponsorship                |
 | `is_full`     | bool                                  | True if the total amount is reached         |
 | `main_color`  | string                                | Main color of the sponsorship -- HEX format |
+| `priority`    | int                                   | Priority of the sponsorship                 |
 | `project_id`  | int                                   | Unique ID of the project                    |
 | `sponsor`     | [sponsor resource](#sponsor-resource) | Sponsor                                     |
 | `title`       | [i18n object](#i18n)                  | Title of the sponsorship                    |

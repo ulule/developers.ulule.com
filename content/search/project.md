@@ -9,7 +9,7 @@ The response is [paginated](#pagination).
 
 {{% http method="get" %}}/v1/search/projects{{% /http %}}
 
-## Query parameters
+### Query parameters
 
 | Parameter | Type   | Description                                                                                                                                                                     |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,13 +32,13 @@ The `q` query parameter may contain any combination of keywords and the followin
 | `partner_id` | int    | Filter projects by partner                                                                                         |
 | `sort`       | string | Sort field, can be one of `popular`, `amount`, `ending-soon` or `new`, default is `popular`                        |
 
-## Response
+### Response
 
 | Field      | Type                                         | Description    |
 | ---------- | -------------------------------------------- | -------------- |
 | `projects` | [project resource](#search-project-resource) | Search results |
 
-### Search project resource
+#### Search project resource
 
 | Field              | Type                                   | Description                                                                                     |
 | ------------------ | -------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ The `q` query parameter may contain any combination of keywords and the followin
 | `subtitle`         | [i18n object](#i18n)                   | Subtitle of the project                                                                         |
 | `type`             | string                                 | Type of the project (`presale` or `project`)                                                    |
 
-### Search project user resource
+#### Search project user resource
 
 | Field          | Type   | Description                                                                 |
 | -------------- | ------ | --------------------------------------------------------------------------- |

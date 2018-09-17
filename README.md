@@ -2,9 +2,18 @@
 
 ## Changelog
 
+### 17-09-2018
+
+* **[ULULE-API/FEAT]** Add the `paylib` payment method.
+* **[ULULE-API/FEAT]** Add the `priority` field to the `sponsorship` resource.
+
 ### 12-09-2018
 
 * **[ULULE-API/FEAT]** Add the `POST /projects/:id/like` and `POST /projects/:id/unlike` endpoints.
+
+### 03-09-2018
+
+* **[ULULE-API/FEAT]** Add the `2018-09-03` version change.
 
 ### 24-08-2018
 

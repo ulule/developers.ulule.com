@@ -31,7 +31,7 @@ The order `status` field can have the following values:
 | `order_shipping_total` | int                                                   | Total shipping cost                                                                                                                                                   |
 | `order_subtotal`       | int                                                   | Cost of the order, minus the shipping cost                                                                                                                            |
 | `order_total`          | int                                                   | Total cost                                                                                                                                                            |
-| `payment_method`       | string                                                | Payment method used for the order, can be `check`, `creditcard`, `paypal`, `directdebit`, `maestro`, `ideal`, `saving`, `bankwire`                                    |
+| `payment_method`       | string                                                | Payment method used for the order -- can be one of the available [payment methods](#payment-methods)                                                                  |
 | `payment_url`          | string                                                | URL that the backer must visit to fill payment information                                                                                                            |
 | `project`              | [project resource](#project)                          | Project related to the order                                                                                                                                          |
 | `project_id`           | int                                                   | Unique ID of the related project                                                                                                                                      |
@@ -85,7 +85,7 @@ Backers have two choice:
 | `amount`              | int    | Order amount -- optional, must be greater than or equal to the selected reward price if `reward_id` is present, or must be greater than or equal to the project lowest contribution amount otherwise |
 | `billing_address_id`  | string | Billing address ID -- optional                                                                                                                                                                       |
 | `country`             | string | Country -- required if the selected reward has shippings                                                                                                                                             |
-| `payment_method`      | string | Payment method -- required, `creditcard`, `maestro` or `directdebit`                                                                                                                                 |
+| `payment_method`      | string | Payment method -- required, must be a payment method supported by the project                                                                                                                        |
 | `reward_id`           | int    | Unique ID of the reward -- optional, must be a project reward                                                                                                                                        |
 | `return_url`          | string | URL at which the backer will be redirected after payment -- required                                                                                                                                 |
 | `shipping_address_id` | string | Shipping address ID -- optional                                                                                                                                                                      |
@@ -94,14 +94,14 @@ Backers have two choice:
 
 Backers must select at least one or more rewards.
 
-| Field                 | Type                                   | Description                                                               |
-| --------------------- | -------------------------------------- | ------------------------------------------------------------------------- |
-| `billing_address_id`  | string                                 | Billing address ID -- optional                                            |
-| `country`             | string                                 | Country -- required if one of the selected reward has shippings           |
-| `rewards`             | array of [reward items](#reward-items) | Selected rewards -- required                                              |
-| `payment_method`      | string                                 | Payment method -- required, `creditcard`, `maestro` or `directdebit`      |
-| `return_url`          | string                                 | Return URL, user will be redirected to this URL after payment -- required |
-| `shipping_address_id` | string                                 | Shipping address ID -- optional                                           |
+| Field                 | Type                                   | Description                                                                   |
+| --------------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
+| `billing_address_id`  | string                                 | Billing address ID -- optional                                                |
+| `country`             | string                                 | Country -- required if one of the selected reward has shippings               |
+| `rewards`             | array of [reward items](#reward-items) | Selected rewards -- required                                                  |
+| `payment_method`      | string                                 | Payment method -- required, must be a payment method supported by the project |
+| `return_url`          | string                                 | Return URL, user will be redirected to this URL after payment -- required     |
+| `shipping_address_id` | string                                 | Shipping address ID -- optional                                               |
 
 #### Reward items
 

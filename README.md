@@ -2,6 +2,14 @@
 
 ## Changelog
 
+### 21-09-2018
+
+* **[ULULE-API/FIX]** Fix the `meta.next` field of the `search-project` endpoint: the offset value was incorrect if the limit parameter was unset.
+
+### 20-09-2018
+
+* **[ULULE-API/FIX]** Fix the `news_count` field of the project resource: before it was not appropriately updated when a news was published or unpublished.
+
 ### 17-09-2018
 
 * **[ULULE-API/FEAT]** Add the `paylib` payment method.

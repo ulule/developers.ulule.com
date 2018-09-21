@@ -1486,7 +1486,7 @@
 
 <p><em>Please, do not forget the slash at the end, just after &ldquo;token&rdquo;. This slash is required.</em></p>
 
-<p>Request must be authenticated with the <code>Basic</code> method with the credentials being <code>client_id</code> and <code>client_secret</code>.</p>
+<p>The request must be authenticated with the <code>Basic</code> method with the credentials being  your <code>client_id</code> and <code>client_secret</code>.</p>
 
 <h3 id="payload">Payload</h3>
 
@@ -1577,7 +1577,7 @@
 <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Refresh-Token: </span><span style="color:#d88200">%s</span><span style="color:#d88200">&#39;</span> <span style="color:#f92672">%</span> <span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;refresh_token&#39;</span><span style="color:#111">))</span></code></pre></div>
 <p>This script can be easily rewritten in any programing langage.</p>
 
-<p>You can run this script by installing <code>requests</code> package and passing variables as environment variables:</p>
+<p>You can run this script by installing the <code>requests</code> package and passing variables as environment variables:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install requests
 $ <span style="color:#111">CLIENT_ID</span><span style="color:#f92672">=</span>your-client-id <span style="color:#111">CLIENT_SECRET</span><span style="color:#f92672">=</span>your-client-secret <span style="color:#111">USERNAME</span><span style="color:#f92672">=</span>user-username <span style="color:#111">PASSWORD</span><span style="color:#f92672">=</span>user-password python access_token.py
 Access-Token: user-access-token
@@ -1586,9 +1586,9 @@ Refresh-Token: user-refresh-token</code></pre></div>
 
 <h2 id="refresh-the-access-token">Refresh the access token</h2>
 
-<p>An access token expires after 10 hours.</p>
+<p>Access tokens expire after 10 hours.</p>
 
-<p>Because you don&rsquo;t store the user passwords in plain text in your database, you can&rsquo;t generate a new access token automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.</p>
+<p>Because you don&rsquo;t store user passwords in plain text in your database, you can&rsquo;t generate new access tokens automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.</p>
 
 <p>To address this issue, we also provide a <em>refresh token</em> which allows you to generate a new access token:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># refresh_token.py</span>
@@ -1631,7 +1631,7 @@ Refresh-Token: user-refresh-token</code></pre></div>
 <span style="color:#00a8c8">assert</span> <span style="color:#111">response</span><span style="color:#f92672">.</span><span style="color:#111">status_code</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>
 
 <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Access-Token: </span><span style="color:#d88200">%s</span><span style="color:#d88200">&#39;</span> <span style="color:#f92672">%</span> <span style="color:#111">data</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;access_token&#39;</span><span style="color:#111">))</span></code></pre></div>
-<p>You can run this script by installing <code>requests</code> package and passing variables as environment variables:</p>
+<p>You can run this script by installing the <code>requests</code> package and passing variables as environment variables:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install requests
 $ <span style="color:#111">CLIENT_ID</span><span style="color:#f92672">=</span>your-client-id <span style="color:#111">CLIENT_SECRET</span><span style="color:#f92672">=</span>your-client-secret <span style="color:#111">REFRESH_TOKEN</span><span style="color:#f92672">=</span>user-refresh-token python refresh_token.py
 Access-Token: user-access-token</code></pre></div>

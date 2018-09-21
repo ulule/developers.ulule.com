@@ -18,7 +18,7 @@ To retrieve an access token, use the `POST https://www.ulule.com/oauth2/token/` 
 
 *Please, do not forget the slash at the end, just after "token". This slash is required.*
 
-Request must be authenticated with the `Basic` method with the credentials being `client_id` and `client_secret`.
+The request must be authenticated with the `Basic` method with the credentials being  your `client_id` and `client_secret`.
 
 ### Payload
 
@@ -101,7 +101,7 @@ print('Refresh-Token: %s' % data.get('refresh_token'))
 
 This script can be easily rewritten in any programing langage.
 
-You can run this script by installing ``requests`` package and passing variables as environment variables:
+You can run this script by installing the ``requests`` package and passing variables as environment variables:
 
 ```bash
 $ pip install requests
@@ -114,9 +114,9 @@ You now have an access token to automatically authenticate the user on Ulule.
 
 ## Refresh the access token
 
-An access token expires after 10 hours.
+Access tokens expire after 10 hours.
 
-Because you don't store the user passwords in plain text in your database, you can't generate a new access token automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.
+Because you don't store user passwords in plain text in your database, you can't generate new access tokens automatically without asking the user credentials again. In terms of user experience, this would be pretty bad.
 
 To address this issue, we also provide a *refresh token* which allows you to generate a new access token:
 
@@ -163,7 +163,7 @@ assert response.status_code == 200
 print('Access-Token: %s' % data.get('access_token'))
 ```
 
-You can run this script by installing ``requests`` package and passing variables as environment variables:
+You can run this script by installing the ``requests`` package and passing variables as environment variables:
 
 ```bash
 $ pip install requests

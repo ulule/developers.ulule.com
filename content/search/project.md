@@ -40,25 +40,26 @@ The `q` query parameter may contain any combination of keywords and the followin
 
 #### Search project resource
 
-| Field              | Type                                   | Description                                                                                     |
-| ------------------ | -------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `absolute_url`     | string                                 | Link to the project page on the Ulule website                                                   |
-| `amount_raised`    | int                                    | Amount raised in project currency                                                               |
-| `country`          | string                                 | Two-letter ISO code of the country                                                              |
-| `currency`         | string                                 | Three-letter ISO code of the currency                                                           |
-| `date_end`         | string                                 | Date at which the funding campaign ends, with RFC 3339 format                                   |
-| `date_start`       | string                                 | Date at which the funding campaign starts, with RFC 3339 format                                 |
-| `goal`             | int                                    | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale` |
-| `id`               | int                                    | Unique ID of the project                                                                        |
-| `lang`             | string                                 | Main language of the project                                                                    |
-| `main_image`       | [image resource](#image)               | Main image of the project                                                                       |
-| `main_tag`         | [tag resource](#category-and-tag)      | Main tag of the project                                                                         |
-| `name`             | [i18n object](#i18n)                   | Name of the project                                                                             |
-| `nb_products_sold` | int                                    | Number of products sold                                                                         |
-| `owner`            | [user resource](#search-user-resource) | Owner of the project                                                                            |
-| `slug`             | string                                 | Unique slug of the project                                                                      |
-| `subtitle`         | [i18n object](#i18n)                   | Subtitle of the project                                                                         |
-| `type`             | string                                 | Type of the project (`presale` or `project`)                                                    |
+| Field              | Type                                   | Description                                                                                          |
+| ------------------ | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `absolute_url`     | string                                 | Link to the project page on the Ulule website                                                        |
+| `amount_raised`    | int                                    | Amount raised in project currency                                                                    |
+| `country`          | string                                 | Two-letter ISO code of the country                                                                   |
+| `currency`         | string                                 | Three-letter ISO code of the currency                                                                |
+| `date_end`         | string                                 | Date at which the funding campaign ends, with RFC 3339 format                                        |
+| `date_start`       | string                                 | Date at which the funding campaign starts, with RFC 3339 format                                      |
+| `goal`             | int                                    | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`      |
+| `id`               | int                                    | Unique ID of the project                                                                             |
+| `lang`             | string                                 | Main language of the project                                                                         |
+| `main_image`       | [image resource](#image)               | Main image of the project                                                                            |
+| `main_tag`         | [tag resource](#category-and-tag)      | Main tag of the project                                                                              |
+| `name`             | [i18n object](#i18n)                   | Name of the project                                                                                  |
+| `nb_products_sold` | int                                    | Number of products sold                                                                              |
+| `owner`            | [user resource](#search-user-resource) | Owner of the project                                                                                 |
+| `slug`             | string                                 | Unique slug of the project                                                                           |
+| `subtitle`         | [i18n object](#i18n)                   | Subtitle of the project                                                                              |
+| `type`             | string                                 | Type of the project (`presale` or `project`)                                                         |
+| `user_role`        | string                                 | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner` |
 
 #### Search project user resource
 

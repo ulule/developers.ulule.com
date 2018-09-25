@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 25-09-2018
+
+* **[ULULE-API/FIX]** Add the `user_role` field to the project resource in the `search-project` endpoint.
+
 ### 21-09-2018
 
 * **[ULULE-API/FIX]** Fix the `meta.next` field of the `search-project` endpoint: the offset value was incorrect if the limit parameter was unset.

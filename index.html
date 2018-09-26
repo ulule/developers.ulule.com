@@ -4593,6 +4593,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>shipping_countries</code></td>
+<td>array of strings</td>
+<td>Array of countries, represented by their two-letter ISO code. If this field is non-null, project owners can only define shippings to these countries, and bakers can only create orders to these countries</td>
+</tr>
+
+<tr>
 <td><code>shipping_int</code></td>
 <td>float</td>
 <td>International shipping cost, null if no shipping</td>
@@ -4725,6 +4731,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>shipping_countries</code></td>
+<td>array of strings</td>
+<td>Countries, represented by their two-letter ISO code &ndash; optional</td>
+</tr>
+
+<tr>
 <td><code>shipping_int</code></td>
 <td>float</td>
 <td>International shipping cost &ndash; optional</td>
@@ -4804,6 +4816,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>price</code></td>
 <td>float</td>
 <td>Price, must be between 0 and 1e10</td>
+</tr>
+
+<tr>
+<td><code>shipping_countries</code></td>
+<td>array of strings</td>
+<td>Countries, represented by their two-letter ISO code</td>
 </tr>
 
 <tr>

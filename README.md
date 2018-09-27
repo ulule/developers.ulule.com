@@ -1,10 +1,13 @@
 # developers.ulule.com
 
+This repository hosts the source code of the https://developers.ulule.com/ website, and also contains a detailed changelog of new features and bug fixes.
+
 ## Changelog
 
 ### 26-09-2018
 
 * **[ULULE-API/FEAT]** Add the `shipping_countries` field to the reward resource and the create-reward and update-reward payloads. If this field is defined, project owners can only create shippings to these countries and bakers can only create orders to this countries.
+* **[DISCUSSIONS-API/FIX]** Disallow html tables in the `body_html` field of the create-message and update-message payloads.
 
 ### 25-09-2018
 

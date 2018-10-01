@@ -33,6 +33,7 @@ title: "Webhooks reference"
 | `news.updated`        | Occurs when a news is updated                                                                 | `news`                     |
 | `news.published`      | Occurs when a news is published                                                               | `news`                     |
 | `news.deleted`        | Occurs when a news is deleted                                                                 | `news`                     |
+| `news.unpublished`    | Occurs when a news is unpublished                                                             | `news`                     |
 | `comment.created`     | Occurs when a comment is created                                                              | can be `project` or `news` |
 | `order.completed`     | Occurs when an order is completed                                                             | `order`                    |
 | `order.cancelled`     | Occurs when an order is cancelled                                                             | `order`                    |

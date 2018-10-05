@@ -20,7 +20,7 @@ The workflow is:
 
 ## Authorize user with Ulule Connect
 
-The Ulule Connect URL is https://www.ulule.com/oauth2/authorize/
+The Ulule Connect URL is https://connect.ulule.com/oauth2/authorize/
 
 The following query parameters are required.
 

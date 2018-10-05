@@ -50,7 +50,7 @@ The request must be authenticated with the Basic method with the credentials bei
       <guid>/authentication/ulule-connect/</guid>
       <description>Ulule Connect Ulule connect allows users to connect their Ulule account to partner websites.
 The workflow is:
- User is on partner website Partner needs to access user data User clicks on &amp;ldquo;Sign In&amp;rdquo; button on partner website This button redirects to Ulule connect URL If the user does not have an existing Ulule account, the interface offers to create a new one If the user already has an account, he or she can sign in with his or her Ulule credentials At the end of sign in / sign up process, user is redirected to the redirect_uri The user access token is returned to the redirect_uri  Authorize user with Ulule Connect The Ulule Connect URL is https://www.</description>
+ User is on partner website Partner needs to access user data User clicks on &amp;ldquo;Sign In&amp;rdquo; button on partner website This button redirects to Ulule connect URL If the user does not have an existing Ulule account, the interface offers to create a new one If the user already has an account, he or she can sign in with his or her Ulule credentials At the end of sign in / sign up process, user is redirected to the redirect_uri The user access token is returned to the redirect_uri  Authorize user with Ulule Connect The Ulule Connect URL is https://connect.</description>
     </item>
     
   </channel>

@@ -14,7 +14,7 @@ $ curl -H "Authorization: Bearer USER-ACCESS-TOKEN" "https://api.ulule.com/v1/..
 
 ## Retrieve an access token
 
-To retrieve an access token, use the `POST https://www.ulule.com/oauth2/token/` endpoint.
+To retrieve an access token, use the `POST https://connect.ulule.com/oauth2/token/` endpoint.
 
 *Please, do not forget the slash at the end, just after "token". This slash is required.*
 
@@ -34,7 +34,7 @@ The request must be authenticated with the `Basic` method with the credentials b
 $ curl -X POST \
     -d "grant_type=password&username=<username>&password=<password>" \
     -H "Authorization: basic PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+" \
-    https://www.ulule.com/oauth2/token/
+    https://connect.ulule.com/oauth2/token/
 ```
 
 where `PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+` is the base64 encoding of the `<client_id>:<client_secret>` string.
@@ -81,7 +81,7 @@ def get_basic_auth_header(user, password):
 # Execute the POST request with: grant_type, username and password as
 # POST parameters. Do not forget to add HTTP Basic header.
 response = requests.post(
-    'https://www.ulule.com/oauth2/token/',
+    'https://connect.ulule.com/oauth2/token/',
     data={
         'grant_type': 'password',
         'username': USERNAME,
@@ -147,7 +147,7 @@ def get_basic_auth_header(user, password):
 # Execute the POST request with: grant_type and refresh_token
 # POST parameters. Do not forget to add HTTP Basic header.
 response = requests.post(
-    'https://www.ulule.com/oauth2/token/',
+    'https://connect.ulule.com/oauth2/token/',
     data={
         'grant_type': 'refresh_token',
         'refresh_token': REFRESH_TOKEN,

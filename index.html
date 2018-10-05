@@ -1482,7 +1482,7 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -H <span style="color:#d88200">&#34;Authorization: Bearer USER-ACCESS-TOKEN&#34;</span> <span style="color:#d88200">&#34;https://api.ulule.com/v1/...&#34;</span></code></pre></div>
 <h2 id="retrieve-an-access-token">Retrieve an access token</h2>
 
-<p>To retrieve an access token, use the <code>POST https://www.ulule.com/oauth2/token/</code> endpoint.</p>
+<p>To retrieve an access token, use the <code>POST https://connect.ulule.com/oauth2/token/</code> endpoint.</p>
 
 <p><em>Please, do not forget the slash at the end, just after &ldquo;token&rdquo;. This slash is required.</em></p>
 
@@ -1520,7 +1520,7 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -X POST <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>    -d <span style="color:#d88200">&#34;grant_type=password&amp;username=&lt;username&gt;&amp;password=&lt;password&gt;&#34;</span> <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>    -H <span style="color:#d88200">&#34;Authorization: basic PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+&#34;</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    https://www.ulule.com/oauth2/token/</code></pre></div>
+</span><span style="color:#8045ff"></span>    https://connect.ulule.com/oauth2/token/</code></pre></div>
 <p>where <code>PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+</code> is the base64 encoding of the <code>&lt;client_id&gt;:&lt;client_secret&gt;</code> string.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
     <span style="color:#f92672">&#34;access_token&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;PKs6dso48MPRPa4pcKjskjIFwpQMA3&#34;</span><span style="color:#111">,</span>
@@ -1559,7 +1559,7 @@
 <span style="color:#75715e"># Execute the POST request with: grant_type, username and password as</span>
 <span style="color:#75715e"># POST parameters. Do not forget to add HTTP Basic header.</span>
 <span style="color:#111">response</span> <span style="color:#f92672">=</span> <span style="color:#111">requests</span><span style="color:#f92672">.</span><span style="color:#111">post</span><span style="color:#111">(</span>
-    <span style="color:#d88200">&#39;https://www.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#39;https://connect.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
     <span style="color:#111">data</span><span style="color:#f92672">=</span><span style="color:#111">{</span>
         <span style="color:#d88200">&#39;grant_type&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;password&#39;</span><span style="color:#111">,</span>
         <span style="color:#d88200">&#39;username&#39;</span><span style="color:#111">:</span> <span style="color:#111">USERNAME</span><span style="color:#111">,</span>
@@ -1617,7 +1617,7 @@ Refresh-Token: user-refresh-token</code></pre></div>
 <span style="color:#75715e"># Execute the POST request with: grant_type and refresh_token</span>
 <span style="color:#75715e"># POST parameters. Do not forget to add HTTP Basic header.</span>
 <span style="color:#111">response</span> <span style="color:#f92672">=</span> <span style="color:#111">requests</span><span style="color:#f92672">.</span><span style="color:#111">post</span><span style="color:#111">(</span>
-    <span style="color:#d88200">&#39;https://www.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#39;https://connect.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
     <span style="color:#111">data</span><span style="color:#f92672">=</span><span style="color:#111">{</span>
         <span style="color:#d88200">&#39;grant_type&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;refresh_token&#39;</span><span style="color:#111">,</span>
         <span style="color:#d88200">&#39;refresh_token&#39;</span><span style="color:#111">:</span> <span style="color:#111">REFRESH_TOKEN</span><span style="color:#111">,</span>
@@ -1704,7 +1704,7 @@ Access-Token: user-access-token</code></pre></div>
 
 <h2 id="retrieve-user-access-token-from-authorization-code">Retrieve user access token from authorization code</h2>
 
-<p>Use the <code>POST https://www.ulule.com/oauth2/token/</code> endpoint as described in the <a href="#retrieve-an-access-token">OAuth2 section</a>.</p>
+<p>Use the <code>POST https://connect.ulule.com/oauth2/token/</code> endpoint as described in the <a href="#retrieve-an-access-token">OAuth2 section</a>.</p>
 
 <h3 id="payload">Payload</h3>
 
@@ -1766,7 +1766,7 @@ Access-Token: user-access-token</code></pre></div>
 <span style="color:#75715e"># Execute the POST request with: grant_type, code and redirect_uri as</span>
 <span style="color:#75715e"># POST parameters. Do not forget to add HTTP Basic header.</span>
 <span style="color:#111">response</span> <span style="color:#f92672">=</span> <span style="color:#111">requests</span><span style="color:#f92672">.</span><span style="color:#111">post</span><span style="color:#111">(</span>
-    <span style="color:#d88200">&#39;https://www.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#39;https://connect.ulule.com/oauth2/token/&#39;</span><span style="color:#111">,</span>
     <span style="color:#111">data</span><span style="color:#f92672">=</span><span style="color:#111">{</span>
         <span style="color:#d88200">&#39;grant_type&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;authorization_code&#39;</span><span style="color:#111">,</span>
         <span style="color:#d88200">&#39;code&#39;</span><span style="color:#111">:</span> <span style="color:#111">GRANT_CODE</span><span style="color:#111">,</span>

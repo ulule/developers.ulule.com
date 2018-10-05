@@ -37,7 +37,7 @@ $ curl -H &amp;#34;Authorization: APIKey YOUR_API_KEY&amp;#34; &amp;#34;https://
       <guid>/authentication/oauth2/</guid>
       <description>OAuth2 The access_token will allow you to log as a user by passing it in each request.
 You can pass it in each request as an authorization header:
-$ curl -H &amp;#34;Authorization: Bearer USER-ACCESS-TOKEN&amp;#34; &amp;#34;https://api.ulule.com/v1/...&amp;#34; Retrieve an access token To retrieve an access token, use the POST https://www.ulule.com/oauth2/token/ endpoint.
+$ curl -H &amp;#34;Authorization: Bearer USER-ACCESS-TOKEN&amp;#34; &amp;#34;https://api.ulule.com/v1/...&amp;#34; Retrieve an access token To retrieve an access token, use the POST https://connect.ulule.com/oauth2/token/ endpoint.
 Please, do not forget the slash at the end, just after &amp;ldquo;token&amp;rdquo;. This slash is required.
 The request must be authenticated with the Basic method with the credentials being your client_id and client_secret.</description>
     </item>

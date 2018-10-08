@@ -142,6 +142,8 @@ Cancels the order with the given ID. This endpoint is only accessible to the ord
 
 Retrieves all orders belonging to the user with the given ID. This endpoint is only accessible to oneself.
 
+This endpoint accepts the `extra_field=project` query parameter. If present, the project resource is embedded in the order resource.
+
 The response is [paginated](#pagination).
 
 {{% http method="get" %}}/v1/users/:id/orders{{% /http %}}

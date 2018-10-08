@@ -101,7 +101,7 @@ The following payment methods are supported:
 
 ## Retrieve a project
 
-Retrieves the project with the given ID. This endpoint is accessible if the project status is `online`, or if the authenticated user is the project owner.
+Retrieves the project with the given ID.
 
 {{% http method="get" %}}/v1/projects/:id{{% /http %}}
 

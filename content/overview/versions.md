@@ -21,10 +21,22 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2018-10-04
+
+* This version changes the permission of the [projet-detail endpoint](#retrieve-a-project): this endpoint is now accessible to all users before its status is `online`.
+
+### 2018-10-03
+
+* This version changes the validation of the [user-create endpoint](#create-a-user): the `password1` payload field must now have a score of at least 1 with the [zxcvbn password strength estimator](https://lowe.github.io/tryzxcvbn/).
+
 ### 2018-09-03
 
 * [partnership resource](#partnership)
     * `presale` field is renamed to `project`
+
+### 2018-05-22
+
+* This version changes the permission of the [order-create endpoint](#create-an-order): the `is_completed` field of the [user resource](#user) is no longer required to be true for a user to [create an order](#create-an-order)
 
 ### 2018-04-17
 

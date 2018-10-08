@@ -65,7 +65,7 @@ Retrieves the order with the given ID. This endpoint is only accessible to the o
 
 ## Create an order
 
-Creates an order for the project with the given ID. The authenticated user `is_completed` field must be set to true.
+Creates an order for the project with the given ID.
 
 {{% http method="post" %}}/v1/projects/:id/orders{{% /http %}}
 

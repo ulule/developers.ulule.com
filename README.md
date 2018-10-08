@@ -4,14 +4,22 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 05-10-2018
+
+* **[ULULE-API/FEAT]** Add the 2018-10-04 version change. The `project-detail` endpoint is accessible to all users before its status is `online
+
+### 04-10-2018
+
+* **[ULULE-API/FEAT]** Add the 2018-10-03 version change. The `password1` field of the `user-create` payload must have a score of at least 1 with the [zxcvbn password strength estimator](https://lowe.github.io/tryzxcvbn/) 
+
 ### 01-10-2018
 
-* **[ULULE-API/FIX]** Replace `partner_id` search parameter by `partner` in the search-project endpoint.
+* **[ULULE-API/FIX]** Replace `partner_id` search parameter by `partner` in the `search-project` endpoint.
 
 ### 26-09-2018
 
-* **[ULULE-API/FEAT]** Add the `shipping_countries` field to the reward resource and the create-reward and update-reward payloads. If this field is defined, project owners can only create shippings to these countries and bakers can only create orders to this countries.
-* **[DISCUSSIONS-API/FIX]** Disallow html tables in the `body_html` field of the create-message and update-message payloads.
+* **[ULULE-API/FEAT]** Add the `shipping_countries` field to the reward resource and the `create-reward` and `update-reward` payloads. If this field is defined, project owners can only create shippings to these countries and bakers can only create orders to this countries.
+* **[DISCUSSIONS-API/FIX]** Disallow html tables in the `body_html` field of the `create-message` and `update-message` payloads.
 
 ### 25-09-2018
 
@@ -36,7 +44,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 03-09-2018
 
-* **[ULULE-API/FEAT]** Add the `2018-09-03` version change.
+* **[ULULE-API/FEAT]** Add the 2018-09-03 version change.
 
 ### 24-08-2018
 

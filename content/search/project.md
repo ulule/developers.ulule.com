@@ -48,6 +48,7 @@ The `q` query parameter may contain any combination of keywords and the followin
 | `currency`         | string                                 | Three-letter ISO code of the currency                                                                |
 | `date_end`         | string                                 | Date at which the funding campaign ends, with RFC 3339 format                                        |
 | `date_start`       | string                                 | Date at which the funding campaign starts, with RFC 3339 format                                      |
+| `finished`         | bool                                   | True if the funding campaign is finished                                                             |
 | `goal`             | int                                    | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`      |
 | `id`               | int                                    | Unique ID of the project                                                                             |
 | `lang`             | string                                 | Main language of the project                                                                         |

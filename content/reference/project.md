@@ -42,7 +42,7 @@ The project `status` can have the following values:
 | `description_funding`        | [i18n object](#i18n)                           | Description of what are funds for                                                                                                  |
 | `description_yourself`       | [i18n object](#i18n)                           | Description of the owner of the project                                                                                            |
 | `discussions_thread_id`      | int                                            |                                                                                                                                    |
-| `finished`                   | bool                                           | True if the funding campaign ended                                                                                                 |
+| `finished`                   | bool                                           | True if the funding campaign is finished                                                                                           |
 | `goal_raised`                | bool                                           | True if the current sum collected is superior to the project goal                                                                  |
 | `goal`                       | int                                            | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`                                    |
 | `id`                         | int                                            | Unique ID of the project                                                                                                           |

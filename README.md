@@ -4,6 +4,11 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 09-10-2018
+
+* **[ULULE-API/FEAT]** Add the `finished` field to the project resource in the `search-project` endpoint.
+* **[ULULE-API/FIX]** Fix the `description` field of the sponsorship resource, and remove the `title` field. Both were always `null`.
+
 ### 08-10-2018
 
 * **[ULULE-API/FEAT]** Add the `extra_fields=project` query parameter to the `list-user-orders` endpoint. If present, the project resource is embedded in the order resource.
@@ -18,7 +23,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 01-10-2018
 
-* **[ULULE-API/FIX]** Replace `partner_id` search parameter by `partner` in the `search-project` endpoint.
+* **[ULULE-API/FIX]** Replace `partner_id` search parameter with `partner` in the `search-project` endpoint.
 
 ### 26-09-2018
 

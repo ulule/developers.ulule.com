@@ -20,7 +20,6 @@ Projects can have up to 4 sponsorships.
 | `priority`    | int                                   | Priority of the sponsorship                 |
 | `project_id`  | int                                   | Unique ID of the project                    |
 | `sponsor`     | [sponsor resource](#sponsor-resource) | Sponsor                                     |
-| `title`       | [i18n object](#i18n)                  | Title of the sponsorship                    |
 
 
 ## Sponsor resource

@@ -296,7 +296,7 @@ The typical workflow is the following:
       
       <guid>/reference/address/</guid>
       <description>Address Backers may be required to create addresses resources to be used with orders.
-Address resource    Field Type Description     address1 string First line of the address   address2 string Second line of the address   city string City name   country string Two-letter ISO code of the country   entity_name string Entity name   first_name string First name of the address owner   id int Unique ID of the address   last_name string Last name of the address owner   postal_code string Postal Code   state string State   type string Legal entity type, can be personal, business, association   user_id int Unique ID of the address owner    Retrieve an address Retrieves the address with the given ID.</description>
+Address resource    Field Type Description     address1 string First line of the address   address2 string Second line of the address   city string City name   country string Two-letter ISO code of the country   entity_name string Entity name   first_name string First name of the address owner   id int Unique ID of the address   last_name string Last name of the address owner   phone_number string Phone number   postal_code string Postal Code   state string State   type string Legal entity type, can be personal, business, association   user_id int Unique ID of the address owner    Retrieve an address Retrieves the address with the given ID.</description>
     </item>
     
     <item>

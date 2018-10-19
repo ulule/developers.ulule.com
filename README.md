@@ -4,6 +4,11 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 19-10-2018
+
+* **[ULULE-API/FEAT]** Add the `phone_number` field to the address payloads and resource.
+* **[ULULE-API/FIX]** Fix the address payload fields sanitizer. The previous sanitizer introduced escaped HTML characters, for example the `'` character was sanitized into `&#39;`.
+
 ### 09-10-2018
 
 * **[ULULE-API/FEAT]** Add the `finished` field to the project resource in the `search-project` endpoint.

@@ -55,7 +55,7 @@ The project `status` can have the following values:
 | `main_tag`                   | [tag resource](#category-and-tag)              | Main tag of the project                                                                                                            |
 | `name`                       | [i18n object](#i18n)                           | Name of the project                                                                                                                |
 | `nb_days`                    | int                                            | Duration of the funding campaign in days                                                                                           |
-| `nb_products_sold`           | int                                            | Number of products sold                                                                                                            |
+| `nb_products_sold`           | int                                            | The number of orders for project of type `presale`                                                                                 |
 | `news_count`                 | int                                            | Count of news published                                                                                                            |
 | `owner`                      | [user resource](#user)                         | Owner of the project                                                                                                               |
 | `partnerships`               | array of [partnership resources](#partnership) | Partnerships of the project, only present in the [project-detail endpoint](#retrieve-a-project)                                    |

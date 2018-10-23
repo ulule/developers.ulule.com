@@ -41,3 +41,7 @@ Indeed it's not possible to set the image field of a background image to null be
 ## What happens if, during the campaign, a project owner wants to switch the account type, for example from individual to business?
 
 It's not possible for the project owner to create a new account if the project status is validated or online. In such a case, the project owner must ask to the project manager.
+
+## Why is the project.nb_products_sold field different from the sum of reward.stock_taken fields ?
+
+For project of type `presale`, the `nb_products_sold` field is the number of orders. A baker can choose to create an order with any quantity of a reward.

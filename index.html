@@ -3210,7 +3210,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>nb_products_sold</code></td>
 <td>int</td>
-<td>Number of products sold</td>
+<td>The number of orders for project of type <code>presale</code></td>
 </tr>
 
 <tr>
@@ -10429,6 +10429,10 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <h2 id="what-happens-if-during-the-campaign-a-project-owner-wants-to-switch-the-account-type-for-example-from-individual-to-business">What happens if, during the campaign, a project owner wants to switch the account type, for example from individual to business?</h2>
 
 <p>It&rsquo;s not possible for the project owner to create a new account if the project status is validated or online. In such a case, the project owner must ask to the project manager.</p>
+
+<h2 id="why-is-the-project-nb-products-sold-field-different-from-the-sum-of-reward-stock-taken-fields">Why is the project.nb_products_sold field different from the sum of reward.stock_taken fields ?</h2>
+
+<p>For project of type <code>presale</code>, the <code>nb_products_sold</code> field is the number of orders. A baker can choose to create an order with any quantity of a reward.</p>
 </div>
         </section>
          

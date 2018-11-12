@@ -4,6 +4,10 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 12-11-2018
+
+* **[ULULE-API/FEAT]** Allow the `status` parameter in the [list-project-orders](https://developers.ulule.com/#list-project-orders) and [list-user-orders](https://developers.ulule.com/#list-user-orders) endpoints to be a list of comma-separated strings.
+
 ### 19-10-2018
 
 * **[ULULE-API/FEAT]** Add the `phone_number` field to the address payloads and resource.

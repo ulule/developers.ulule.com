@@ -44,7 +44,10 @@ Retrieves the authenticated user.
 
 ## Retrieve a user
 
-Retrieves the user with the given ID. This endpoint is only accessible to oneself and to staff users.
+Retrieves the user with the given ID.
+The fields `birthday`, `country`, `nationality`, `personal_id_number`, `email`
+are presents in the resource only if this endpoint is accessed by the
+targeted user himself and the staff users.
 
 {{% http method="get" %}}/v1/users/:id{{% /http %}}
 

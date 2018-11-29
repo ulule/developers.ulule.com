@@ -4,6 +4,10 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 26-11-2018
+
+* **[ULULE-API/FEAT]** Add the 2018-11-26 version change. The `user-detail` endpoint is accessible to all users.
+
 ### 12-11-2018
 
 * **[ULULE-API/FEAT]** Allow the `status` parameter in the [list-project-orders](https://developers.ulule.com/#list-project-orders) and [list-user-orders](https://developers.ulule.com/#list-user-orders) endpoints to be a list of comma-separated strings.

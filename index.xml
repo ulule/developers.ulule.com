@@ -56,7 +56,7 @@ get /v1/search/projects  Query parameters    Parameter Type Description     q st
       
       <guid>/reference/user/</guid>
       <description>User The user resource represents a user registered on the Ulule website, possibly via a partner website.
-User resource    Field Type Description     absolute_url string Link to the profile page of the user on the Ulule website   avatar avatar resource Avatar of the user   birthday string Birthday of the user, with format YYYY-MM-DD   country string Two-letter ISO code of the country where the user lives   date_joined string Date at which the user created an account, with RFC 3339 format   description i18n object Short description of the user   email string Email of the user   first_name string First name of the user   has_avatar bool True if user has an avatar.</description>
+User resource    Field Type Description     absolute_url string Link to the profile page of the user on the Ulule website   avatar avatar resource Avatar of the user   birthday string Birthday of the user, with format YYYY-MM-DD. This field is present only if the authenticated user has permission to read it.</description>
     </item>
     
     <item>

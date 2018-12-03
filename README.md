@@ -4,6 +4,10 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 03-12-2018
+
+* **[ULULE-API/FEAT]** Add the `fans_count` field to the project resource
+
 ### 26-11-2018
 
 * **[ULULE-API/FEAT]** Add the 2018-11-26 version change. The `user-detail` endpoint is accessible to all users.

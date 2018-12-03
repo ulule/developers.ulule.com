@@ -125,7 +125,7 @@ Creates a reply on the comment with the given ID.
 
 | Field     | Type   | Description                     |
 | --------- | ------ | ------------------------------- |
-| `reply`   | string | Body of the comment -- required |
+| `comment` | string | Body of the comment -- required |
 
 ## Update a reply
 
@@ -144,4 +144,4 @@ This endpoint is paginated.
 
 | Parameter | Description |
 | --------- | ----------- |
-| `:id`     | Project ID  |
+| `:id`     | Comment ID  |

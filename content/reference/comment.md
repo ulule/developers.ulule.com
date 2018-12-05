@@ -97,7 +97,7 @@ Retrieves all the comments that belong to the news resource with the given ID.
 | --------- | ----------- |
 | `:id`     | News ID     |
 
-# Comment Reply
+# Comment reply
 
 Users may post comment in reply to another comment.
 

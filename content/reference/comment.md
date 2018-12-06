@@ -9,15 +9,15 @@ Users may post comments on projects and news.
 
 ## Comment resource
 
-| Field                   | Type                             | Description                                          |
-| ----------------------- | -------------------------------- | ---------------------------------------------------- |
-| `comment`               | string                           | Body of the comment                                  |
-| `id`                    | int                              | Unique ID of the tag                                 |
-| `submit_date`           | string                           | Date of the comment submission, with RFC 3339 format |
-| `submit_date_formatted` | string                           | Relative date of the comment submission              |
-| `user`                  | [user resource](#user)           | Author of the comment                                |
-| `replies`               | [reply resource](#comment-reply) | Replies of the comment                               |
-| `replies_count`         | int                              | Count of the comment replies                         |
+| Field                   | Type                                       | Description                                          |
+| ----------------------- | ------------------------------------------ | ---------------------------------------------------- |
+| `comment`               | string                                     | Body of the comment                                  |
+| `id`                    | int                                        | Unique ID of the tag                                 |
+| `replies_count`         | int                                        | Count of the comment replies                         |
+| `replies`               | [array of reply resources](#comment-reply) | Replies to the comment                               |
+| `submit_date_formatted` | string                                     | Relative date of the comment submission              |
+| `submit_date`           | string                                     | Date of the comment submission, with RFC 3339 format |
+| `user`                  | [user resource](#user)                     | Author of the comment                                |
 
 ## Create a project comment
 
@@ -96,20 +96,6 @@ Retrieves all the comments that belong to the news resource with the given ID.
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | News ID     |
-
-# Comment reply
-
-Users may post comment in reply to another comment.
-
-## Reply resource
-
-| Field                   | Type                   | Description                                          |
-| ----------------------- | ---------------------- | ---------------------------------------------------- |
-| `comment`               | string                 | Body of the comment                                  |
-| `id`                    | int                    | Unique ID of the tag                                 |
-| `submit_date`           | string                 | Date of the comment submission, with RFC 3339 format |
-| `submit_date_formatted` | string                 | Relative date of the comment submission              |
-| `user`                  | [user resource](#user) | Author of the comment                                |
 
 ## Create a reply to a comment
 

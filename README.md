@@ -4,6 +4,10 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 12-12-2018
+
+* **[ULULE-API/FEAT]** Add comment replies: the [comment resource](https://developers.ulule.com/#comment-resource) has two new fields (`replies_count` and `replies`) and there are two new endpoints: [create-comment-reply](https://developers.ulule.com/#create-a-reply-to-a-comment) and [list-comment-replies](https://developers.ulule.com/#list-comment-replies).
+
 ### 05-12-2018
 
 * **[ULULE-API/FEAT]** Let the `user.country` field be always present.

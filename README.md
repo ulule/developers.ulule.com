@@ -11,15 +11,15 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 05-12-2018
 
-* **[ULULE-API/FEAT]** Let the `user.country` field be always present.
+* **[ULULE-API/FEAT]** Let the `country` field in the [user resource](https://developers.ulule.com/#user-resource) be always present.
 
 ### 03-12-2018
 
-* **[ULULE-API/FEAT]** Add the `fans_count` field to the project resource.
+* **[ULULE-API/FEAT]** Add the `fans_count` field to the [project resource](https://developers.ulule.com/#project-resource).
 
 ### 26-11-2018
 
-* **[ULULE-API/FEAT]** Add the 2018-11-26 version change. The `user-detail` endpoint is accessible to all users.
+* **[ULULE-API/FEAT]** Add the 2018-11-26 version change. The [user-detail](https://developers.ulule.com/#retrieve-a-user) endpoint is accessible to all users.
 
 ### 12-11-2018
 

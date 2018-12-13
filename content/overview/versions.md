@@ -21,6 +21,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2018-12-12
+
+* This version changes the permission of the [list-user-projects endpoint](#list-user-projects): this endpoint is now accessible to all users.
+
 ### 2018-11-26
 
 * This version changes the permission of the [user-detail endpoint](#retrieve-a-user): this endpoint is now accessible to all users.

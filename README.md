@@ -7,6 +7,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 ### 12-12-2018
 
 * **[ULULE-API/FEAT]** Add comment replies: the [comment resource](https://developers.ulule.com/#comment-resource) has two new fields (`replies_count` and `replies`) and there are two new endpoints: [create-comment-reply](https://developers.ulule.com/#create-a-reply-to-a-comment) and [list-comment-replies](https://developers.ulule.com/#list-comment-replies).
+* **[ULULE-API/FEAT]** Add the 2018-12-12 version change. The [list-user-projects](https://developers.ulule.com/#list-user-projects) endpoint is accessible to all users.
 
 ### 05-12-2018
 

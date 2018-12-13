@@ -239,7 +239,7 @@ The response is [paginated](#pagination).
 
 ## List user projects
 
-Retrieves all the projects related to the user with the given ID. This endpoint is only accessible to oneself.
+Retrieves all the projects related to the user with the given ID.
 
 The response is [paginated](#pagination).
 
@@ -251,9 +251,9 @@ The response is [paginated](#pagination).
 
 ### Query parameters
 
-| Parameter | Description                                                                                                                                                 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `state`   | Allow to filter the type of relationship between the projects and the user. It can be one of `created`, `followed`, `supported`. By default, it returns all |
+| Parameter | Description                                                                                                                                                  |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `state`   | Kind of relationship between the user and the projects. Can be one of `online`, `supported`, `followed`, `created`. `created` is only accessible to oneself. |
 
 ## Project discussion
 

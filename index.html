@@ -1336,6 +1336,12 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2018-12-12">2018-12-12</h3>
+
+<ul>
+<li>This version changes the permission of the <a href="#list-user-projects">list-user-projects endpoint</a>: this endpoint is now accessible to all users.</li>
+</ul>
+
 <h3 id="2018-11-26">2018-11-26</h3>
 
 <ul>
@@ -3806,7 +3812,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="list-user-projects">List user projects</h2>
 
-<p>Retrieves all the projects related to the user with the given ID. This endpoint is only accessible to oneself.</p>
+<p>Retrieves all the projects related to the user with the given ID.</p>
 
 <p>The response is <a href="#pagination">paginated</a>.</p>
 
@@ -3845,7 +3851,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td>Allow to filter the type of relationship between the projects and the user. It can be one of <code>created</code>, <code>followed</code>, <code>supported</code>. By default, it returns all</td>
+<td>Kind of relationship between the user and the projects. Can be one of <code>online</code>, <code>supported</code>, <code>followed</code>, <code>created</code>. <code>created</code> is only accessible to oneself.</td>
 </tr>
 </tbody>
 </table>

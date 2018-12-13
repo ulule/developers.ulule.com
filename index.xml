@@ -263,8 +263,8 @@ News resource    Field Type Description     absolute_url string Link to the news
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/comment/</guid>
-      <description>Comment Users may post comments on projects and news.
-Comment resource    Field Type Description     comment string Body of the comment   id int Unique ID of the tag   submit_date string Date of the comment submission, with RFC 3339 format   submit_date_formatted string Relative date of the comment submission   user user resource Author of the comment    Create a project comment Creates a comment on the project with the given ID.</description>
+      <description>Comment Users may post comments on projects and news, and also reply to comments. We currently support only one level of replies: it&amp;rsquo;s possible to reply to a parent comment, but it&amp;rsquo;s not possible to reply to a reply comment.
+Comment resource    Field Type Description     comment string Body of the comment   id int Unique ID of the tag   replies_count int Count of the comment replies, only present if the comment is a parent comment   replies array of comment resources Replies to the comment, only present if the comment is a parent comment   submit_date_formatted string Relative date of the comment submission   submit_date string Date of the comment submission, with RFC 3339 format   user user resource Author of the comment    Create a project comment Creates a comment on the project with the given ID.</description>
     </item>
     
     <item>

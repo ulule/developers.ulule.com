@@ -681,6 +681,10 @@
                                 
                                 
                                 
+                                <li><a href="#create-a-reply-to-a-comment">Create a reply to a comment</a></li>
+                                
+                                
+                                
                                 <li><a href="#update-a-comment">Update a comment</a></li>
                                 
                                 
@@ -694,6 +698,10 @@
                                 
                                 
                                 <li><a href="#list-news-comments">List news comments</a></li>
+                                
+                                
+                                
+                                <li><a href="#list-comment-replies">List comment replies</a></li>
                                 
                             </ul>
                             
@@ -6103,7 +6111,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h1 id="comment">Comment</h1>
 
-<p>Users may post comments on projects and news.</p>
+<p>Users may post comments on projects and news, and also reply to comments. We currently support only one level of replies: it&rsquo;s possible to reply to a parent comment, but it&rsquo;s not possible to reply to a reply comment.</p>
 
 <h2 id="comment-resource">Comment resource</h2>
 
@@ -6130,9 +6138,15 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
-<td><code>submit_date</code></td>
-<td>string</td>
-<td>Date of the comment submission, with RFC 3339 format</td>
+<td><code>replies_count</code></td>
+<td>int</td>
+<td>Count of the comment replies, only present if the comment is a parent comment</td>
+</tr>
+
+<tr>
+<td><code>replies</code></td>
+<td><a href="#comment-resource">array of comment resources</a></td>
+<td>Replies to the comment, only present if the comment is a parent comment</td>
 </tr>
 
 <tr>
@@ -6142,8 +6156,14 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>submit_date</code></td>
+<td>string</td>
+<td>Date of the comment submission, with RFC 3339 format</td>
+</tr>
+
+<tr>
 <td><code>user</code></td>
-<td><a href="#user">user resource</a></td>
+<td><a href="#user-resource">user resource</a></td>
 <td>Author of the comment</td>
 </tr>
 </tbody>
@@ -6197,7 +6217,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="create-a-news-comment">Create a news comment</h2>
 
-<p>Creates a comment on the news  with the given ID.</p>
+<p>Creates a comment on the news with the given ID.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
@@ -6222,6 +6242,52 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </table>
 
 <h3 id="payload-1">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>comment</code></td>
+<td>string</td>
+<td>Body of the comment &ndash; required</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="create-a-reply-to-a-comment">Create a reply to a comment</h2>
+
+<p>Creates a reply to the comment with the given ID. The comment must be a parent comment.</p>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/comments/:id/replies</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Comment ID</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="payload-2">Payload</h3>
 
 <table>
 <thead>
@@ -6267,7 +6333,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h3 id="payload-2">Payload</h3>
+<h3 id="payload-3">Payload</h3>
 
 <table>
 <thead>
@@ -6315,7 +6381,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="list-project-comments">List project comments</h2>
 
-<p>Retrieves all the comments that belong to the project with the given ID.</p>
+<p>Retrieves all the comments on the project with the given ID.</p>
 
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
@@ -6341,7 +6407,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="list-news-comments">List news comments</h2>
 
-<p>Retrieves all the comments that belong to the news resource with the given ID.</p>
+<p>Retrieves all the comments on the news resource with the given ID.</p>
 
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
@@ -6361,6 +6427,34 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>:id</code></td>
 <td>News ID</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="list-comment-replies">List comment replies</h2>
+
+<p>Retrieves all the replies to the comment with the given ID.</p>
+
+<p>The response is <a href="#pagination">paginated</a>.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/comments/:id/replies</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Comment ID</td>
 </tr>
 </tbody>
 </table>

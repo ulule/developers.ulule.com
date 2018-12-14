@@ -9,7 +9,7 @@ Ulule API has a versioning system to manage upgrades without breaking backward-c
 
 The API version controls the API observable behavior, for example the fields present in resources, etc.
 
-When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitely requested.
+When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitly requested.
 
 To request a specific version, add the `Ulule-Version` HTTP header to the request.
 

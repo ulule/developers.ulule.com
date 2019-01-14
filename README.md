@@ -4,6 +4,11 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 14-01-2019
+* **[ULULE-API/FIX]** Allow anonymous proposals to be owned by staff users.
+* **[DISCUSSIONS-API/FIX]** Fix the [list-thread](https://developers.ulule.com/#retrieve-thread-list) endpoint when the `status` filter is set to `deleted`.
+* **[DISCUSSIONS-API/FIX]** Allow uppercase extensions in the `file` field of the [created-attachment](https://developers.ulule.com/#create-an-attachment) payload.
+
 ### 12-12-2018
 
 * **[ULULE-API/FEAT]** Add comment replies: the [comment resource](https://developers.ulule.com/#comment-resource) has two new fields (`replies_count` and `replies`) and there are two new endpoints: [create-comment-reply](https://developers.ulule.com/#create-a-reply-to-a-comment) and [list-comment-replies](https://developers.ulule.com/#list-comment-replies).

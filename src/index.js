@@ -37,7 +37,7 @@ const updateActive = hash => {
 
 document.addEventListener('DOMContentLoaded', event => {
   const header = document.querySelector('#header > .b-nav')
-  const body = document.querySelector('body')
+  const body = document.body
 
   const handleHeader = scrollPosition => {
     if (scrollPosition === 0) {
@@ -51,30 +51,19 @@ document.addEventListener('DOMContentLoaded', event => {
     }
   }
 
-  handleHeader(document.documentElement.scrollTop)
-  updateActive(window.location.hash)
-  window.addEventListener(
-    'hashchange',
-    e => {
-      e.preventDefault()
-      updateActive(window.location.hash)
-    },
-    false
-  )
-  const elements = document.querySelectorAll('#menu ul li a')
-  const mapping = Array.from(elements).map(elem => {
-    const section = document.querySelector(elem.getAttribute('href'))
-    return {
-      position: section.offsetTop - 5,
-      element: elem,
-      container: section
-    }
-  })
-
-  document.addEventListener('scroll', event => {
+  const handleScroll = event => {
     handleHeader(document.documentElement.scrollTop)
 
     const scrollPosition = document.documentElement.scrollTop
+    const elements = document.querySelectorAll('#menu ul li a')
+    const mapping = Array.from(elements).map(elem => {
+      const section = document.querySelector(elem.getAttribute('href'))
+      return {
+        position: section.offsetTop - 5,
+        element: elem,
+        container: section
+      }
+    })
 
     mapping.forEach((section, index) => {
       if (
@@ -88,5 +77,18 @@ document.addEventListener('DOMContentLoaded', event => {
         updateActive(window.location.hash)
       }
     })
-  })
+  }
+
+  document.addEventListener('scroll', handleScroll)
+  window.addEventListener(
+    'hashchange',
+    e => {
+      e.preventDefault()
+      updateActive(window.location.hash)
+    },
+    false
+  )
+
+  handleHeader(document.documentElement.scrollTop)
+  updateActive(window.location.hash)
 })

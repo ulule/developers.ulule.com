@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "3.12.0",
-  "hash": "481a0bb64025328fd57d",
+  "hash": "f0cea4275dcf2dc12181",
   "publicPath": "../",
   "assetsByChunkName": {
     "index": "js/index-ef8ea2359ef96827ef17.js",
@@ -12,7 +12,7 @@
       "js/style-45ab9f1bf6601850abd1.js",
       "css/style-45ab9f1bf6601850abd1.css"
     ],
-    "main": "js/main-fd3e876bc00f607dfd1f.js"
+    "main": "js/main-761b55eb5a49e5f0bddd.js"
   },
   "assets": [
     {
@@ -68,8 +68,8 @@
       ]
     },
     {
-      "name": "js/main-fd3e876bc00f607dfd1f.js",
-      "size": 2003,
+      "name": "js/main-761b55eb5a49e5f0bddd.js",
+      "size": 1986,
       "chunks": [
         4
       ],
@@ -104,7 +104,7 @@
         4
       ],
       "assets": [
-        "js/main-fd3e876bc00f607dfd1f.js"
+        "js/main-761b55eb5a49e5f0bddd.js"
       ]
     },
     "authorize": {
@@ -376,14 +376,14 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 2534,
+      "size": 2583,
       "names": [
         "main"
       ],
       "files": [
-        "js/main-fd3e876bc00f607dfd1f.js"
+        "js/main-761b55eb5a49e5f0bddd.js"
       ],
-      "hash": "fd3e876bc00f607dfd1f",
+      "hash": "761b55eb5a49e5f0bddd",
       "parents": [],
       "modules": [
         {
@@ -392,7 +392,7 @@
           "name": "./src/index.js",
           "index": 2,
           "index2": 2,
-          "size": 2534,
+          "size": 2583,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -412,7 +412,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 0,
-          "source": "'use strict';\n\nvar updateHash = function updateHash(location) {\n  if (window.history && window.history.replaceState) {\n    if (window.location.hash === location) return;\n\n    history.replaceState({}, document.title, location);\n  }\n};\n\nvar updateActive = function updateActive(hash) {\n  var element = document.querySelector('a[href=\"' + hash + '\"]');\n\n  if (!element || element.classList.contains('active')) return;\n\n  Array.from(document.querySelectorAll('#menu ul li.active')).forEach(function (current) {\n    current.classList.remove('active');\n    current.parentNode.classList.remove('active');\n  });\n\n  while (true) {\n    var parentNode = element.parentNode;\n    if (!parentNode) {\n      break;\n    }\n\n    var nodeName = parentNode.nodeName.toLowerCase();\n    if (nodeName === 'nav') {\n      break;\n    }\n\n    if (nodeName === 'li') {\n      parentNode.classList.add('active');\n    }\n\n    element = parentNode.parentNode;\n  }\n};\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  var header = document.querySelector('#header > .b-nav');\n  var body = document.querySelector('body');\n\n  var handleHeader = function handleHeader(scrollPosition) {\n    if (scrollPosition === 0) {\n      if (!body.classList.contains('header--fixed')) {\n        body.classList.add('header--fixed');\n      }\n    } else {\n      if (body.classList.contains('header--fixed')) {\n        body.classList.remove('header--fixed');\n      }\n    }\n  };\n\n  handleHeader(document.documentElement.scrollTop);\n  updateActive(window.location.hash);\n  window.addEventListener('hashchange', function (e) {\n    e.preventDefault();\n    updateActive(window.location.hash);\n  }, false);\n  var elements = document.querySelectorAll('#menu ul li a');\n  var mapping = Array.from(elements).map(function (elem) {\n    var section = document.querySelector(elem.getAttribute('href'));\n    return {\n      position: section.offsetTop - 5,\n      element: elem,\n      container: section\n    };\n  });\n\n  document.addEventListener('scroll', function (event) {\n    handleHeader(document.documentElement.scrollTop);\n\n    var scrollPosition = document.documentElement.scrollTop;\n\n    mapping.forEach(function (section, index) {\n      if (section.position < scrollPosition && mapping[index + 1] && mapping[index + 1].position > scrollPosition && window.location.hash !== section.element.getAttribute('href')) {\n        var keepScroll = scrollPosition;\n        updateHash(section.element.getAttribute('href'));\n        updateActive(window.location.hash);\n      }\n    });\n  });\n});"
+          "source": "'use strict';\n\nvar updateHash = function updateHash(location) {\n  if (window.history && window.history.replaceState) {\n    if (window.location.hash === location) return;\n\n    history.replaceState({}, document.title, location);\n  }\n};\n\nvar updateActive = function updateActive(hash) {\n  var element = document.querySelector('a[href=\"' + hash + '\"]');\n\n  if (!element || element.classList.contains('active')) return;\n\n  Array.from(document.querySelectorAll('#menu ul li.active')).forEach(function (current) {\n    current.classList.remove('active');\n    current.parentNode.classList.remove('active');\n  });\n\n  while (true) {\n    var parentNode = element.parentNode;\n    if (!parentNode) {\n      break;\n    }\n\n    var nodeName = parentNode.nodeName.toLowerCase();\n    if (nodeName === 'nav') {\n      break;\n    }\n\n    if (nodeName === 'li') {\n      parentNode.classList.add('active');\n    }\n\n    element = parentNode.parentNode;\n  }\n};\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  var header = document.querySelector('#header > .b-nav');\n  var body = document.body;\n\n  var handleHeader = function handleHeader(scrollPosition) {\n    if (scrollPosition === 0) {\n      if (!body.classList.contains('header--fixed')) {\n        body.classList.add('header--fixed');\n      }\n    } else {\n      if (body.classList.contains('header--fixed')) {\n        body.classList.remove('header--fixed');\n      }\n    }\n  };\n\n  var handleScroll = function handleScroll(event) {\n    handleHeader(document.documentElement.scrollTop);\n\n    var scrollPosition = document.documentElement.scrollTop;\n    var elements = document.querySelectorAll('#menu ul li a');\n    var mapping = Array.from(elements).map(function (elem) {\n      var section = document.querySelector(elem.getAttribute('href'));\n      return {\n        position: section.offsetTop - 5,\n        element: elem,\n        container: section\n      };\n    });\n\n    mapping.forEach(function (section, index) {\n      if (section.position < scrollPosition && mapping[index + 1] && mapping[index + 1].position > scrollPosition && window.location.hash !== section.element.getAttribute('href')) {\n        var keepScroll = scrollPosition;\n        updateHash(section.element.getAttribute('href'));\n        updateActive(window.location.hash);\n      }\n    });\n  };\n\n  document.addEventListener('scroll', handleScroll);\n  window.addEventListener('hashchange', function (e) {\n    e.preventDefault();\n    updateActive(window.location.hash);\n  }, false);\n\n  handleHeader(document.documentElement.scrollTop);\n  updateActive(window.location.hash);\n});"
         }
       ],
       "filteredModules": 0,
@@ -464,7 +464,7 @@
       "name": "./src/index.js",
       "index": 2,
       "index2": 2,
-      "size": 2534,
+      "size": 2583,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -484,7 +484,7 @@
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 0,
-      "source": "'use strict';\n\nvar updateHash = function updateHash(location) {\n  if (window.history && window.history.replaceState) {\n    if (window.location.hash === location) return;\n\n    history.replaceState({}, document.title, location);\n  }\n};\n\nvar updateActive = function updateActive(hash) {\n  var element = document.querySelector('a[href=\"' + hash + '\"]');\n\n  if (!element || element.classList.contains('active')) return;\n\n  Array.from(document.querySelectorAll('#menu ul li.active')).forEach(function (current) {\n    current.classList.remove('active');\n    current.parentNode.classList.remove('active');\n  });\n\n  while (true) {\n    var parentNode = element.parentNode;\n    if (!parentNode) {\n      break;\n    }\n\n    var nodeName = parentNode.nodeName.toLowerCase();\n    if (nodeName === 'nav') {\n      break;\n    }\n\n    if (nodeName === 'li') {\n      parentNode.classList.add('active');\n    }\n\n    element = parentNode.parentNode;\n  }\n};\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  var header = document.querySelector('#header > .b-nav');\n  var body = document.querySelector('body');\n\n  var handleHeader = function handleHeader(scrollPosition) {\n    if (scrollPosition === 0) {\n      if (!body.classList.contains('header--fixed')) {\n        body.classList.add('header--fixed');\n      }\n    } else {\n      if (body.classList.contains('header--fixed')) {\n        body.classList.remove('header--fixed');\n      }\n    }\n  };\n\n  handleHeader(document.documentElement.scrollTop);\n  updateActive(window.location.hash);\n  window.addEventListener('hashchange', function (e) {\n    e.preventDefault();\n    updateActive(window.location.hash);\n  }, false);\n  var elements = document.querySelectorAll('#menu ul li a');\n  var mapping = Array.from(elements).map(function (elem) {\n    var section = document.querySelector(elem.getAttribute('href'));\n    return {\n      position: section.offsetTop - 5,\n      element: elem,\n      container: section\n    };\n  });\n\n  document.addEventListener('scroll', function (event) {\n    handleHeader(document.documentElement.scrollTop);\n\n    var scrollPosition = document.documentElement.scrollTop;\n\n    mapping.forEach(function (section, index) {\n      if (section.position < scrollPosition && mapping[index + 1] && mapping[index + 1].position > scrollPosition && window.location.hash !== section.element.getAttribute('href')) {\n        var keepScroll = scrollPosition;\n        updateHash(section.element.getAttribute('href'));\n        updateActive(window.location.hash);\n      }\n    });\n  });\n});"
+      "source": "'use strict';\n\nvar updateHash = function updateHash(location) {\n  if (window.history && window.history.replaceState) {\n    if (window.location.hash === location) return;\n\n    history.replaceState({}, document.title, location);\n  }\n};\n\nvar updateActive = function updateActive(hash) {\n  var element = document.querySelector('a[href=\"' + hash + '\"]');\n\n  if (!element || element.classList.contains('active')) return;\n\n  Array.from(document.querySelectorAll('#menu ul li.active')).forEach(function (current) {\n    current.classList.remove('active');\n    current.parentNode.classList.remove('active');\n  });\n\n  while (true) {\n    var parentNode = element.parentNode;\n    if (!parentNode) {\n      break;\n    }\n\n    var nodeName = parentNode.nodeName.toLowerCase();\n    if (nodeName === 'nav') {\n      break;\n    }\n\n    if (nodeName === 'li') {\n      parentNode.classList.add('active');\n    }\n\n    element = parentNode.parentNode;\n  }\n};\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  var header = document.querySelector('#header > .b-nav');\n  var body = document.body;\n\n  var handleHeader = function handleHeader(scrollPosition) {\n    if (scrollPosition === 0) {\n      if (!body.classList.contains('header--fixed')) {\n        body.classList.add('header--fixed');\n      }\n    } else {\n      if (body.classList.contains('header--fixed')) {\n        body.classList.remove('header--fixed');\n      }\n    }\n  };\n\n  var handleScroll = function handleScroll(event) {\n    handleHeader(document.documentElement.scrollTop);\n\n    var scrollPosition = document.documentElement.scrollTop;\n    var elements = document.querySelectorAll('#menu ul li a');\n    var mapping = Array.from(elements).map(function (elem) {\n      var section = document.querySelector(elem.getAttribute('href'));\n      return {\n        position: section.offsetTop - 5,\n        element: elem,\n        container: section\n      };\n    });\n\n    mapping.forEach(function (section, index) {\n      if (section.position < scrollPosition && mapping[index + 1] && mapping[index + 1].position > scrollPosition && window.location.hash !== section.element.getAttribute('href')) {\n        var keepScroll = scrollPosition;\n        updateHash(section.element.getAttribute('href'));\n        updateActive(window.location.hash);\n      }\n    });\n  };\n\n  document.addEventListener('scroll', handleScroll);\n  window.addEventListener('hashchange', function (e) {\n    e.preventDefault();\n    updateActive(window.location.hash);\n  }, false);\n\n  handleHeader(document.documentElement.scrollTop);\n  updateActive(window.location.hash);\n});"
     },
     {
       "id": 2,

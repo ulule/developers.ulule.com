@@ -16,6 +16,18 @@ Users may add social websites links to their profile.
 
 ## Create a link
 
+Creates a new link. This endpoint is anonymously accessible.
+
+{{% http method="post" %}}/v1/links{{% /http %}}
+
+### Payload
+
+| Field | Type   | Description                 |
+| ----- | ------ | --------------------------- |
+| `url` | string | URL of the link -- required |
+
+## Create a user link
+
 Creates a new link for the user with the given ID. This endpoint is only accessible to oneself.
 
 {{% http method="post" %}}/v1/users/:id/links{{% /http %}}

@@ -106,6 +106,14 @@
 
                         </li>
                         
+                        <li>
+                            <a href="#extra-fields">Extra fields</a>
+
+                            
+                            
+
+                        </li>
+                        
                     </ul>
                 </li>
                 
@@ -1467,6 +1475,47 @@
 <li><a href="#variant">variant resource</a> <code>description</code> is a <a href="#i18n">i18n object</a></li>
 <li><a href="#project">project main_tag resource</a> <code>name</code> is a <a href="#i18n">i18n object</a></li>
 </ul>
+</div>
+        </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="extra-fields">Extra fields</h1>
+
+<p>Extra fields are a way to control which resources are embedded in a response.</p>
+
+<p>Depending on the use case, API clients sometimes don&rsquo;t need embedded resources for a specific endpoint, so adding them is a waste of computing resource and network bandwidth. Other clients may want 2 or 3 levels of resource embedding on the same endpoint, so that they can get the data they need with only one request. The goal of extra fields is to mitigate this issue.</p>
+
+<p>To add an extra field to a response, add the <code>extra_fields</code> parameter to the URL.</p>
+
+<p>For example, embed the <code>stats</code> resource into the user resource with the following request:</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/users/:id?extra_fields=stats</span>
+</div>
+
+
+<p>To add more than one extra field, separate the values with commas.</p>
+
+<p>For example, embed the <code>analytics</code>, <code>partnerships</code> and <code>sponsorships</code> resources into the project resource with the following request:</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/projects/:id?extra_fields=analytics,partnerships,sponsorships</span>
+</div>
+
+
+<p>To nest embedded resource, separate levels of embedding with dots.</p>
+
+<p>For example, embed the <code>orders</code> resource into the user resource, and the <code>project</code> resource into the order resources with the following request:</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/me?extra_fields=orders,orders.project</span>
+</div>
+
 </div>
         </section>
          

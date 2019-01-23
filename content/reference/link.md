@@ -5,14 +5,16 @@ weight: 3
 
 # Link
 
-Users may add social websites links to their profile.
+Users may add social websites links to their profile. Links may also be attached to [proposals](#create-a-proposal).
 
 ## Link resource
 
-| Field | Type   | Description           |
-| ----- | ------ | --------------------- |
-| `id`  | int    | Unique ID of the link |
-| `url` | string | URL of the link       |
+| Field             | Type   | Description           |
+| ----------------- | ------ | --------------------- |
+| `followers_count` | int    | Number of followers   |
+| `id`              | int    | Unique ID of the link |
+| `url`             | string | URL of the link       |
+| `views_count`     | int    | Number of views       |
 
 ## Create a link
 

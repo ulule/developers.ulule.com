@@ -273,6 +273,10 @@
                                 
                                 
                                 
+                                <li><a href="#create-a-user-link">Create a user link</a></li>
+                                
+                                
+                                
                                 <li><a href="#update-a-link">Update a link</a></li>
                                 
                                 
@@ -2627,6 +2631,36 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="create-a-link">Create a link</h2>
 
+<p>Creates a new link. This endpoint is anonymously accessible.</p>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/links</span>
+</div>
+
+
+<h3 id="payload">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the link &ndash; required</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="create-a-user-link">Create a user link</h2>
+
 <p>Creates a new link for the user with the given ID. This endpoint is only accessible to oneself.</p>
 
 <div class="http-endpoint http-endpoint--post">
@@ -2651,7 +2685,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h3 id="payload">Payload</h3>
+<h3 id="payload-1">Payload</h3>
 
 <table>
 <thead>
@@ -2697,7 +2731,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h3 id="payload-1">Payload</h3>
+<h3 id="payload-2">Payload</h3>
 
 <table>
 <thead>
@@ -8158,6 +8192,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>city</code></td>
+<td>string</td>
+<td>User city &ndash; optional, max 255 characters</td>
+</tr>
+
+<tr>
 <td><code>country</code></td>
 <td>string</td>
 <td>User country &ndash; required, two-letter ISO code of the country</td>
@@ -8190,7 +8230,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>goal</code></td>
 <td>int</td>
-<td>Amount the project must raised &ndash; required if type is <code>project</code></td>
+<td>Amount the project must raised &ndash; optional</td>
+</tr>
+
+<tr>
+<td><code>goal_range</code></td>
+<td><a href="#goal-range">goal range object</a></td>
+<td>Maximum and/or minimum amount the project owner needs to collect &ndash; optional</td>
 </tr>
 
 <tr>
@@ -8206,15 +8252,27 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>legal_entity_type</code></td>
+<td>string</td>
+<td>User legal entity type &ndash; optional, can be one of <code>personal</code>, <code>business</code>, <code>association</code></td>
+</tr>
+
+<tr>
 <td><code>links</code></td>
-<td></td>
+<td>array of strings</td>
 <td>References &ndash; optional</td>
+</tr>
+
+<tr>
+<td><code>link_ids</code></td>
+<td>array of ints</td>
+<td>IDs of links related to the project and/or the project owner. The links must have been uploaded via the <a href="#create-a-link">create-link</a> endpoint and must not be already attached to a proposal &ndash; optional</td>
 </tr>
 
 <tr>
 <td><code>name</code></td>
 <td>string</td>
-<td>Proposal name &ndash; required, max 255 characters</td>
+<td>Proposal name &ndash; optional, max 255 characters</td>
 </tr>
 
 <tr>
@@ -8226,19 +8284,25 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>nb_products_min</code></td>
 <td>int</td>
-<td>Minimum number of presales the project must receive  &ndash; required if type is <code>presale</code></td>
+<td>Minimum number of presales the project must receive  &ndash; optional if type is <code>presale</code></td>
 </tr>
 
 <tr>
 <td><code>phone_number</code></td>
 <td>string</td>
-<td>Phone of the proposal user &ndash; optional</td>
+<td>Phone of the proposal user &ndash; optional, max 15 characters</td>
 </tr>
 
 <tr>
 <td><code>rewards</code></td>
 <td>string</td>
 <td>Description of the rewards &ndash; optional</td>
+</tr>
+
+<tr>
+<td><code>rewards_type</code></td>
+<td>string</td>
+<td>Type of rewards &ndash; optional, can be one of <code>concrete</code>, <code>symbolic</code>, <code>financial</code>, <code>none</code>, <code>undefined</code></td>
 </tr>
 
 <tr>
@@ -8250,7 +8314,33 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>type</code></td>
 <td>int</td>
-<td>Project type &ndash; required, 1 for <code>presale</code>, 2 for <code>project</code></td>
+<td>Project type &ndash; optional, 1 for <code>presale</code>, 2 for <code>project</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="goal-range">Goal range</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>min</code></td>
+<td>int</td>
+<td>Minimum amount the project owner needs to collect &ndash; optional</td>
+</tr>
+
+<tr>
+<td><code>max</code></td>
+<td>int</td>
+<td>Maximum amount the project owner needs to collect &ndash; optional</td>
 </tr>
 </tbody>
 </table>

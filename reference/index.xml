@@ -37,8 +37,8 @@ Avatar resource    Field Type Description     id int Unique ID of the avatar   n
       
       <guid>/reference/link/</guid>
       <description>Link Users may add social websites links to their profile.
-Link resource    Field Type Description     id int Unique ID of the link   url string URL of the link    Create a link Creates a new link for the user with the given ID. This endpoint is only accessible to oneself.
-post /v1/users/:id/links     Parameter Description     :id User ID    Payload    Field Type Description     url string URL of the link &amp;ndash; required    Update a link Updates the link with the given ID.</description>
+Link resource    Field Type Description     id int Unique ID of the link   url string URL of the link    Create a link Creates a new link. This endpoint is anonymously accessible.
+post /v1/links  Payload    Field Type Description     url string URL of the link &amp;ndash; required    Create a user link Creates a new link for the user with the given ID.</description>
     </item>
     
     <item>

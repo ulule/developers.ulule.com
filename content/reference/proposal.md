@@ -92,27 +92,39 @@ Creates a proposal. The `POST /proposals` endpoint is anonymously accessible. In
 
 ### Payload
 
-| Field             | Type   | Description                                                                           |
-| ----------------- | ------ | ------------------------------------------------------------------------------------- |
-| `address`         | string | Address -- optional                                                                   |
-| `birthday`        | string | User birthday -- optional, format YYYY-MM-DD                                          |
-| `category_id`     | int    | Unique ID of the category -- optional                                                 |
-| `country`         | string | User country -- required, two-letter ISO code of the country                          |
-| `currency`        | string | Currency -- optional, three-letter ISO code of the currency                           |
-| `description`     | string | Description -- optional                                                               |
-| `email`           | string | User email -- required for anonymous proposal                                         |
-| `first_name`      | string | User first name -- optional, max 30 characters                                        |
-| `goal`            | int    | Amount the project must raised -- required if type is `project`                       |
-| `lang`            | string | Language -- optional                                                                  |
-| `last_name`       | string | User last name -- optional, max 30 characters                                         |
-| `links`           |        | References -- optional                                                                |
-| `name`            | string | Proposal name -- required, max 255 characters                                         |
-| `nationality`     | string | User nationality -- optional, two-letter ISO code of the nationality                  |
-| `nb_products_min` | int    | Minimum number of presales the project must receive  -- required if type is `presale` |
-| `phone_number`    | string | Phone of the proposal user -- optional                                                |
-| `rewards`         | string | Description of the rewards -- optional                                                |
-| `structure`       | string | Structure -- optional, max 150 characters                                             |
-| `type`            | int    | Project type -- required, 1 for `presale`, 2 for `project`                            |
+| Field               | Type                             | Description                                                                                                                                                                                               |
+| ------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`           | string                           | Address -- optional                                                                                                                                                                                       |
+| `birthday`          | string                           | User birthday -- optional, format YYYY-MM-DD                                                                                                                                                              |
+| `category_id`       | int                              | Unique ID of the category -- optional                                                                                                                                                                     |
+| `city`              | string                           | User city -- optional, max 255 characters                                                                                                                                                                 |
+| `country`           | string                           | User country -- required, two-letter ISO code of the country                                                                                                                                              |
+| `currency`          | string                           | Currency -- optional, three-letter ISO code of the currency                                                                                                                                               |
+| `description`       | string                           | Description -- optional                                                                                                                                                                                   |
+| `email`             | string                           | User email -- required for anonymous proposal                                                                                                                                                             |
+| `first_name`        | string                           | User first name -- optional, max 30 characters                                                                                                                                                            |
+| `goal`              | int                              | Amount the project must raised -- optional                                                                                                                                                                |
+| `goal_range`        | [goal range object](#goal-range) | Maximum and/or minimum amount the project owner needs to collect -- optional                                                                                                                              |
+| `lang`              | string                           | Language -- optional                                                                                                                                                                                      |
+| `last_name`         | string                           | User last name -- optional, max 30 characters                                                                                                                                                             |
+| `legal_entity_type` | string                           | User legal entity type -- optional, can be one of `personal`, `business`, `association`                                                                                                                   |
+| `links`             | array of strings                 | References -- optional                                                                                                                                                                                    |
+| `link_ids`          | array of ints                    | IDs of links related to the project and/or the project owner. The links must have been uploaded via the [create-link](#create-a-link) endpoint and must not be already attached to a proposal -- optional |
+| `name`              | string                           | Proposal name -- optional, max 255 characters                                                                                                                                                             |
+| `nationality`       | string                           | User nationality -- optional, two-letter ISO code of the nationality                                                                                                                                      |
+| `nb_products_min`   | int                              | Minimum number of presales the project must receive  -- optional if type is `presale`                                                                                                                     |
+| `phone_number`      | string                           | Phone of the proposal user -- optional, max 15 characters                                                                                                                                                 |
+| `rewards`           | string                           | Description of the rewards -- optional                                                                                                                                                                    |
+| `rewards_type`      | string                           | Type of rewards -- optional, can be one of `concrete`, `symbolic`, `financial`, `none`, `undefined`                                                                                                       |
+| `structure`         | string                           | Structure -- optional, max 150 characters                                                                                                                                                                 |
+| `type`              | int                              | Project type -- optional, 1 for `presale`, 2 for `project`                                                                                                                                                |
+
+### Goal range
+
+| Field | Type | Description                                                   |
+| ----- | ---- | ------------------------------------------------------------- |
+| `min` | int  | Minimum amount the project owner needs to collect -- optional |
+| `max` | int  | Maximum amount the project owner needs to collect -- optional |
 
 ## Update proposal
 

@@ -18,53 +18,75 @@ The proposal `status` can have the following values:
 | `waiting` | The moderation team has suspended the proposal, it must be updated by the user |
 | `updated` | The user has updated the proposal                                              |
 
-For a proposal to go from status `pending` to `new`, the proposal must not be anonymous and the following fields must be completed:
+Only proposals with status `new` are inspected by the moderation team. For a proposal status to be `new`, the proposal must not be anonymous and the following fields must be filled:
 
-* `name`
 * `description`
-* `rewards`
+* `rewards` or `rewards_type`
 * `country`
 * `currency`
 * `lang`
-* `nb_products_min` if the type is `presale`
-* `goal` if the type is `project`
+* `nb_products_min` if the type is `presale` or `goal` if the type is `project` or `goal_range`
 
 ## Proposal resource
 
-| Field                   | Type                                   | Description                                                                                                                                                                   |
-| ----------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`               | string                                 | Address of the proposal author                                                                                                                                                |
-| `answer`                | string                                 | Answer from the moderation team in raw text                                                                                                                                   |
-| `answer_html`           | string                                 | Answer from the moderation team in HTML format -- in case `answer_html` is empty, fallback to `answer`                                                                       |
-| `category`              | [category resource](#category-and-tag) | Category, null if the proposal has no category                                                                                                                                |
-| `category_id`           | int                                    | Unique ID of the category, null if the proposal has no category                                                                                                               |
-| `country`               | string                                 | Two-letter ISO code of the country                                                                                                                                            |
-| `currency`              | string                                 | Three-letter ISO code of the currency                                                                                                                                         |
-| `date_creation`         | string                                 | Date at which the proposal has been created, with RFC 3339 format                                                                                                             |
-| `date_start_estimation` | string                                 | Estimation of the date of the beginning of the founding campaign, can be null, `as soon as possible`, `in the month`, `in one to three months` or `in more than three months` |
-| `date_update`           | string                                 | Date at which the proposal has been last updated, with RFC 3339 format                                                                                                        |
-| `description`           | string                                 | Description of the proposal                                                                                                                                                   |
-| `email`                 | string                                 | Email of the proposal user                                                                                                                                                    |
-| `first_name`            | string                                 | First name of the proposal user                                                                                                                                               |
-| `goal`                  | int                                    | Minimum amount the project must raise to succeed                                                                                                                              |
-| `id`                    | int                                    | Unique ID of the proposal                                                                                                                                                     |
-| `lang`                  | string                                 | Language of the proposal                                                                                                                                                      |
-| `last_name`             | string                                 | Last name of the proposal user                                                                                                                                                |
-| `legal_entity_type`     | string                                 | Legal entity of the author, can be null, `personal`, `business` or `association`                                                                                              |
-| `manager`               | [user resource](#user)                 | Manager assigned to the proposal, null if the proposal is unassigned                                                                                                          |
-| `name`                  | string                                 | Name of the proposal                                                                                                                                                          |
-| `nb_products_min`       | int                                    | Minimum number of presales the project must receive to succeed                                                                                                                |
-| `partner`               | [partner resource](#partner)           | Partner of the proposal                                                                                                                                                       |
-| `phone_number`          | string                                 | Phone of the proposal author                                                                                                                                                  |
-| `project`               | [project resource](#project)           | Project created from the proposal, null if the proposal has not been validated                                                                                                |
-| `references`            | string                                 | References of the proposal                                                                                                                                                    |
-| `resource_uri`          | string                                 | URL of the proposal resource                                                                                                                                                  |
-| `rewards`               | string                                 | Description of the rewards of the proposal                                                                                                                                    |
-| `status`                | string                                 | Current status of the proposal, can be `pending`, `new`, `valid`, `invalid`, `waiting` or `updated`                                                                           |
-| `structure`             | string                                 | Structure of the proposal user                                                                                                                                                |
-| `token`                 | string                                 | Automatically generated token that can be used to retrieve an anonymous proposal                                                                                              |
-| `type`                  | string                                 | Type of the proposal, can be `presale` or `project`                                                                                                                           |
-| `user`                  | [user resource](#user)                 | Author of the proposal, can be null if the proposal is anonymous                                                                                                              |
+| Field                   | Type                                     | Description                                                                                                                                                                    |
+| ----------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `address`               | string                                   | Address of the proposal user                                                                                                                                                   |
+| `answer`                | string                                   | Answer from the moderation team in raw text                                                                                                                                    |
+| `answer_html`           | string                                   | Answer from the moderation team in HTML format -- if `answer_html` is empty, fallback to `answer`                                                                              |
+| `category`              | [category resource](#category-and-tag)   | Category                                                                                                                                                                       |
+| `category_id`           | int                                      | Unique ID of the category                                                                                                                                                      |
+| `city`                  | string                                   | City                                                                                                                                                                           |
+| `country`               | string                                   | Two-letter ISO code of the country                                                                                                                                             |
+| `currency`              | string                                   | Three-letter ISO code of the currency                                                                                                                                          |
+| `date_creation`         | string                                   | Date at which the proposal has been created, with RFC 3339 format                                                                                                              |
+| `date_start_estimation` | string                                   | Estimation of the date of the beginning of the founding campaign -- can be one of `as soon as possible`, `in the month`, `in one to three months`, `in more than three months` |
+| `date_update`           | string                                   | Date at which the proposal has been last updated, with RFC 3339 format                                                                                                         |
+| `description`           | string                                   | Description of the proposal                                                                                                                                                    |
+| `email`                 | string                                   | Email of the proposal user                                                                                                                                                     |
+| `first_name`            | string                                   | First name of the proposal user                                                                                                                                                |
+| `goal`                  | int                                      | Minimum amount the project must raise to succeed                                                                                                                               |
+| `goal_range`            | [goal range resource](#goal-range)       | Maximum and/or minimum amount the project owner needs to collect                                                                                                               |
+| `id`                    | int                                      | Unique ID of the proposal                                                                                                                                                      |
+| `lang`                  | string                                   | Language of the proposal                                                                                                                                                       |
+| `last_name`             | string                                   | Last name of the proposal user                                                                                                                                                 |
+| `legal_entity_type`     | string                                   | Legal entity of the proposal user -- can be one of `personal`, `business`, `association`                                                                                       |
+| `links`                 | array of [links](#link-resource)         | Links attached to the proposal -- only visible to staff and if the `links` [extra_field](#extra-fields) is present                                                             |
+| `manager`               | [user resource](#user)                   | Manager assigned to the proposal -- only visible to staff                                                                                                                      |
+| `name`                  | string                                   | Name of the proposal                                                                                                                                                           |
+| `nb_products_min`       | int                                      | Minimum number of presales the project must receive to succeed                                                                                                                 |
+| `partner`               | [partner resource](#partner)             | Partner of the proposal                                                                                                                                                        |
+| `phone_number`          | string                                   | Phone of the proposal user                                                                                                                                                     |
+| `project`               | [project resource](#project)             | Project created from the proposal                                                                                                                                              |
+| `references`            | string                                   | References of the proposal                                                                                                                                                     |
+| `resource_uri`          | string                                   | URL of the proposal resource                                                                                                                                                   |
+| `rewards`               | string                                   | Description of the rewards of the proposal                                                                                                                                     |
+| `rewards_type`          | string                                   | Rewards type of the proposal -- can be one of `concrete`, `symbolic`, `financial`, `none`, `undefined`                                                                         |
+| `score`                 | int                                      | Score of the proposal -- only visible to staff                                                                                                                                 |
+| `score_entries`         | [score entries resource](#score-entries) | Score entries of the proposal -- only visible to staff                                                                                                                         |
+| `status`                | string                                   | Current status of the proposal -- can be one of `pending`, `new`, `valid`, `invalid`, `waiting`, `updated`                                                                     |
+| `structure`             | string                                   | Structure of the proposal user                                                                                                                                                 |
+| `token`                 | string                                   | Automatically generated token that can be used to retrieve an anonymous proposal                                                                                               |
+| `type`                  | string                                   | Type of the proposal, can be `presale` or `project`                                                                                                                            |
+| `user`                  | [user resource](#user)                   | User who created the proposal                                                                                                                                                  |
+
+### Goal range
+
+| Field | Type | Description                                                   |
+| ----- | ---- | ------------------------------------------------------------- |
+| `min` | int  | Minimum amount the project owner needs to collect -- optional |
+| `max` | int  | Maximum amount the project owner needs to collect -- optional |
+
+### Score entries
+
+| Field               | Type | Description                             |
+| ------------------- | ---- | --------------------------------------- |
+| `description`       | int  | Score of the proposal description       |
+| `goal_range`        | int  | Score of the proposal goal range        |
+| `legal_entity_type` | int  | Score of the proposal legal entity type |
+| `links`             | int  | Score of the proposal links             |
+| `rewards_type`      | int  | Score of the proposal rewards type      |
+| `user`              | int  | Score of the proposal user              |
 
 ## Retrieve a proposal
 
@@ -92,39 +114,32 @@ Creates a proposal. The `POST /proposals` endpoint is anonymously accessible. In
 
 ### Payload
 
-| Field               | Type                             | Description                                                                                                                                                                                               |
-| ------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`           | string                           | Address -- optional                                                                                                                                                                                       |
-| `birthday`          | string                           | User birthday -- optional, format YYYY-MM-DD                                                                                                                                                              |
-| `category_id`       | int                              | Unique ID of the category -- optional                                                                                                                                                                     |
-| `city`              | string                           | User city -- optional, max 255 characters                                                                                                                                                                 |
-| `country`           | string                           | User country -- required, two-letter ISO code of the country                                                                                                                                              |
-| `currency`          | string                           | Currency -- optional, three-letter ISO code of the currency                                                                                                                                               |
-| `description`       | string                           | Description -- optional                                                                                                                                                                                   |
-| `email`             | string                           | User email -- required for anonymous proposal                                                                                                                                                             |
-| `first_name`        | string                           | User first name -- optional, max 30 characters                                                                                                                                                            |
-| `goal`              | int                              | Amount the project must raised -- optional                                                                                                                                                                |
-| `goal_range`        | [goal range object](#goal-range) | Maximum and/or minimum amount the project owner needs to collect -- optional                                                                                                                              |
-| `lang`              | string                           | Language -- optional                                                                                                                                                                                      |
-| `last_name`         | string                           | User last name -- optional, max 30 characters                                                                                                                                                             |
-| `legal_entity_type` | string                           | User legal entity type -- optional, can be one of `personal`, `business`, `association`                                                                                                                   |
-| `links`             | array of strings                 | References -- optional                                                                                                                                                                                    |
-| `link_ids`          | array of ints                    | IDs of links related to the project and/or the project owner. The links must have been uploaded via the [create-link](#create-a-link) endpoint and must not be already attached to a proposal -- optional |
-| `name`              | string                           | Proposal name -- optional, max 255 characters                                                                                                                                                             |
-| `nationality`       | string                           | User nationality -- optional, two-letter ISO code of the nationality                                                                                                                                      |
-| `nb_products_min`   | int                              | Minimum number of presales the project must receive  -- optional if type is `presale`                                                                                                                     |
-| `phone_number`      | string                           | Phone of the proposal user -- optional, max 15 characters                                                                                                                                                 |
-| `rewards`           | string                           | Description of the rewards -- optional                                                                                                                                                                    |
-| `rewards_type`      | string                           | Type of rewards -- optional, can be one of `concrete`, `symbolic`, `financial`, `none`, `undefined`                                                                                                       |
-| `structure`         | string                           | Structure -- optional, max 150 characters                                                                                                                                                                 |
-| `type`              | int                              | Project type -- optional, 1 for `presale`, 2 for `project`                                                                                                                                                |
-
-### Goal range
-
-| Field | Type | Description                                                   |
-| ----- | ---- | ------------------------------------------------------------- |
-| `min` | int  | Minimum amount the project owner needs to collect -- optional |
-| `max` | int  | Maximum amount the project owner needs to collect -- optional |
+| Field               | Type                              | Description                                                                                                                                                                                               |
+| ------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`           | string                            | Address -- optional                                                                                                                                                                                       |
+| `birthday`          | string                            | User birthday -- optional, format YYYY-MM-DD                                                                                                                                                              |
+| `category_id`       | int                               | Unique ID of the category -- optional                                                                                                                                                                     |
+| `city`              | string                            | City -- optional, max 255 characters                                                                                                                                                                      |
+| `country`           | string                            | Country -- required, two-letter ISO code of the country                                                                                                                                                   |
+| `currency`          | string                            | Currency -- optional, three-letter ISO code of the currency                                                                                                                                               |
+| `description`       | string                            | Description -- optional                                                                                                                                                                                   |
+| `email`             | string                            | User email -- required for anonymous proposal                                                                                                                                                             |
+| `first_name`        | string                            | User first name -- optional, max 30 characters                                                                                                                                                            |
+| `goal`              | int                               | Amount the project must raised -- optional                                                                                                                                                                |
+| `goal_range`        | [goal range payload](#goal-range) | Maximum and/or minimum amount the project owner needs to collect -- optional                                                                                                                              |
+| `lang`              | string                            | Language -- optional                                                                                                                                                                                      |
+| `last_name`         | string                            | User last name -- optional, max 30 characters                                                                                                                                                             |
+| `legal_entity_type` | string                            | User legal entity type -- optional, can be one of `personal`, `business`, `association`                                                                                                                   |
+| `links`             | array of strings                  | References -- optional                                                                                                                                                                                    |
+| `link_ids`          | array of ints                     | IDs of links related to the project and/or the project owner. The links must have been uploaded via the [create-link](#create-a-link) endpoint and must not be already attached to a proposal -- optional |
+| `name`              | string                            | Proposal name -- optional, max 255 characters                                                                                                                                                             |
+| `nationality`       | string                            | User nationality -- optional, two-letter ISO code of the nationality                                                                                                                                      |
+| `nb_products_min`   | int                               | Minimum number of presales the project must receive  -- optional if type is `presale`                                                                                                                     |
+| `phone_number`      | string                            | Phone of the proposal user -- optional, max 15 characters                                                                                                                                                 |
+| `rewards`           | string                            | Description of the rewards -- optional                                                                                                                                                                    |
+| `rewards_type`      | string                            | Type of rewards -- optional, can be one of `concrete`, `symbolic`, `financial`, `none`, `undefined`                                                                                                       |
+| `structure`         | string                            | Structure -- optional, max 150 characters                                                                                                                                                                 |
+| `type`              | int                               | Project type -- optional, 1 for `presale`, 2 for `project`                                                                                                                                                |
 
 ## Update proposal
 

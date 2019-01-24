@@ -36,9 +36,8 @@ Avatar resource    Field Type Description     id int Unique ID of the avatar   n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/reference/link/</guid>
-      <description>Link Users may add social websites links to their profile.
-Link resource    Field Type Description     id int Unique ID of the link   url string URL of the link    Create a link Creates a new link. This endpoint is anonymously accessible.
-post /v1/links  Payload    Field Type Description     url string URL of the link &amp;ndash; required    Create a user link Creates a new link for the user with the given ID.</description>
+      <description>Link Users may add social websites links to their profile. Links may also be attached to proposals.
+Link resource    Field Type Description     followers_count int Number of followers   id int Unique ID of the link   url string URL of the link   views_count int Number of views    Create a link Creates a new link. This endpoint is anonymously accessible.</description>
     </item>
     
     <item>
@@ -204,7 +203,7 @@ Address resource    Field Type Description     address1 string First line of the
       <guid>/reference/proposal/</guid>
       <description>Proposal To launch a project on the Ulule platform, users must first go through the proposal process.
 The proposal status can have the following values:
-   Status Description     pending The proposal is pending for more information from the user   new The proposal is ready to be evaluated by the moderation team   valid The moderation team has accepted the proposal   invalid The moderation team has refused the proposal   waiting The moderation team has suspended the proposal, it must be updated by the user   updated The user has updated the proposal    For a proposal to go from status pending to new, the proposal must not be anonymous and the following fields must be completed:</description>
+   Status Description     pending The proposal is pending for more information from the user   new The proposal is ready to be evaluated by the moderation team   valid The moderation team has accepted the proposal   invalid The moderation team has refused the proposal   waiting The moderation team has suspended the proposal, it must be updated by the user   updated The user has updated the proposal    Only proposals with status new are inspected by the moderation team.</description>
     </item>
     
     <item>

@@ -2601,7 +2601,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h1 id="link">Link</h1>
 
-<p>Users may add social websites links to their profile.</p>
+<p>Users may add social websites links to their profile. Links may also be attached to <a href="#create-a-proposal">proposals</a>.</p>
 
 <h2 id="link-resource">Link resource</h2>
 
@@ -2616,6 +2616,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
+<td><code>followers_count</code></td>
+<td>int</td>
+<td>Number of followers</td>
+</tr>
+
+<tr>
 <td><code>id</code></td>
 <td>int</td>
 <td>Unique ID of the link</td>
@@ -2625,6 +2631,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>url</code></td>
 <td>string</td>
 <td>URL of the link</td>
+</tr>
+
+<tr>
+<td><code>views_count</code></td>
+<td>int</td>
+<td>Number of views</td>
 </tr>
 </tbody>
 </table>
@@ -7874,17 +7886,15 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<p>For a proposal to go from status <code>pending</code> to <code>new</code>, the proposal must not be anonymous and the following fields must be completed:</p>
+<p>Only proposals with status <code>new</code> are inspected by the moderation team. For a proposal status to be <code>new</code>, the proposal must not be anonymous and the following fields must be filled:</p>
 
 <ul>
-<li><code>name</code></li>
 <li><code>description</code></li>
-<li><code>rewards</code></li>
+<li><code>rewards</code> or <code>rewards_type</code></li>
 <li><code>country</code></li>
 <li><code>currency</code></li>
 <li><code>lang</code></li>
-<li><code>nb_products_min</code> if the type is <code>presale</code></li>
-<li><code>goal</code> if the type is <code>project</code></li>
+<li><code>nb_products_min</code> if the type is <code>presale</code> or <code>goal</code> if the type is <code>project</code> or <code>goal_range</code></li>
 </ul>
 
 <h2 id="proposal-resource">Proposal resource</h2>
@@ -7902,7 +7912,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>address</code></td>
 <td>string</td>
-<td>Address of the proposal author</td>
+<td>Address of the proposal user</td>
 </tr>
 
 <tr>
@@ -7914,19 +7924,25 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer_html</code></td>
 <td>string</td>
-<td>Answer from the moderation team in HTML format &ndash; in case <code>answer_html</code> is empty, fallback to <code>answer</code></td>
+<td>Answer from the moderation team in HTML format &ndash; if <code>answer_html</code> is empty, fallback to <code>answer</code></td>
 </tr>
 
 <tr>
 <td><code>category</code></td>
 <td><a href="#category-and-tag">category resource</a></td>
-<td>Category, null if the proposal has no category</td>
+<td>Category</td>
 </tr>
 
 <tr>
 <td><code>category_id</code></td>
 <td>int</td>
-<td>Unique ID of the category, null if the proposal has no category</td>
+<td>Unique ID of the category</td>
+</tr>
+
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+<td>City</td>
 </tr>
 
 <tr>
@@ -7950,7 +7966,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>date_start_estimation</code></td>
 <td>string</td>
-<td>Estimation of the date of the beginning of the founding campaign, can be null, <code>as soon as possible</code>, <code>in the month</code>, <code>in one to three months</code> or <code>in more than three months</code></td>
+<td>Estimation of the date of the beginning of the founding campaign &ndash; can be one of <code>as soon as possible</code>, <code>in the month</code>, <code>in one to three months</code>, <code>in more than three months</code></td>
 </tr>
 
 <tr>
@@ -7984,6 +8000,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>goal_range</code></td>
+<td><a href="#goal-range">goal range resource</a></td>
+<td>Maximum and/or minimum amount the project owner needs to collect</td>
+</tr>
+
+<tr>
 <td><code>id</code></td>
 <td>int</td>
 <td>Unique ID of the proposal</td>
@@ -8004,13 +8026,19 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>legal_entity_type</code></td>
 <td>string</td>
-<td>Legal entity of the author, can be null, <code>personal</code>, <code>business</code> or <code>association</code></td>
+<td>Legal entity of the proposal user &ndash; can be one of <code>personal</code>, <code>business</code>, <code>association</code></td>
+</tr>
+
+<tr>
+<td><code>links</code></td>
+<td>array of <a href="#link-resource">links</a></td>
+<td>Links attached to the proposal &ndash; only visible to staff and if the <code>links</code> <a href="#extra-fields">extra_field</a> is present</td>
 </tr>
 
 <tr>
 <td><code>manager</code></td>
 <td><a href="#user">user resource</a></td>
-<td>Manager assigned to the proposal, null if the proposal is unassigned</td>
+<td>Manager assigned to the proposal &ndash; only visible to staff</td>
 </tr>
 
 <tr>
@@ -8034,13 +8062,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>phone_number</code></td>
 <td>string</td>
-<td>Phone of the proposal author</td>
+<td>Phone of the proposal user</td>
 </tr>
 
 <tr>
 <td><code>project</code></td>
 <td><a href="#project">project resource</a></td>
-<td>Project created from the proposal, null if the proposal has not been validated</td>
+<td>Project created from the proposal</td>
 </tr>
 
 <tr>
@@ -8062,9 +8090,27 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>rewards_type</code></td>
+<td>string</td>
+<td>Rewards type of the proposal &ndash; can be one of <code>concrete</code>, <code>symbolic</code>, <code>financial</code>, <code>none</code>, <code>undefined</code></td>
+</tr>
+
+<tr>
+<td><code>score</code></td>
+<td>int</td>
+<td>Score of the proposal &ndash; only visible to staff</td>
+</tr>
+
+<tr>
+<td><code>score_entries</code></td>
+<td><a href="#score-entries">score entries resource</a></td>
+<td>Score entries of the proposal &ndash; only visible to staff</td>
+</tr>
+
+<tr>
 <td><code>status</code></td>
 <td>string</td>
-<td>Current status of the proposal, can be <code>pending</code>, <code>new</code>, <code>valid</code>, <code>invalid</code>, <code>waiting</code> or <code>updated</code></td>
+<td>Current status of the proposal &ndash; can be one of <code>pending</code>, <code>new</code>, <code>valid</code>, <code>invalid</code>, <code>waiting</code>, <code>updated</code></td>
 </tr>
 
 <tr>
@@ -8088,7 +8134,83 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>user</code></td>
 <td><a href="#user">user resource</a></td>
-<td>Author of the proposal, can be null if the proposal is anonymous</td>
+<td>User who created the proposal</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="goal-range">Goal range</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>min</code></td>
+<td>int</td>
+<td>Minimum amount the project owner needs to collect &ndash; optional</td>
+</tr>
+
+<tr>
+<td><code>max</code></td>
+<td>int</td>
+<td>Maximum amount the project owner needs to collect &ndash; optional</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="score-entries">Score entries</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>description</code></td>
+<td>int</td>
+<td>Score of the proposal description</td>
+</tr>
+
+<tr>
+<td><code>goal_range</code></td>
+<td>int</td>
+<td>Score of the proposal goal range</td>
+</tr>
+
+<tr>
+<td><code>legal_entity_type</code></td>
+<td>int</td>
+<td>Score of the proposal legal entity type</td>
+</tr>
+
+<tr>
+<td><code>links</code></td>
+<td>int</td>
+<td>Score of the proposal links</td>
+</tr>
+
+<tr>
+<td><code>rewards_type</code></td>
+<td>int</td>
+<td>Score of the proposal rewards type</td>
+</tr>
+
+<tr>
+<td><code>user</code></td>
+<td>int</td>
+<td>Score of the proposal user</td>
 </tr>
 </tbody>
 </table>
@@ -8194,13 +8316,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>city</code></td>
 <td>string</td>
-<td>User city &ndash; optional, max 255 characters</td>
+<td>City &ndash; optional, max 255 characters</td>
 </tr>
 
 <tr>
 <td><code>country</code></td>
 <td>string</td>
-<td>User country &ndash; required, two-letter ISO code of the country</td>
+<td>Country &ndash; required, two-letter ISO code of the country</td>
 </tr>
 
 <tr>
@@ -8235,7 +8357,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tr>
 <td><code>goal_range</code></td>
-<td><a href="#goal-range">goal range object</a></td>
+<td><a href="#goal-range">goal range payload</a></td>
 <td>Maximum and/or minimum amount the project owner needs to collect &ndash; optional</td>
 </tr>
 
@@ -8315,32 +8437,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>type</code></td>
 <td>int</td>
 <td>Project type &ndash; optional, 1 for <code>presale</code>, 2 for <code>project</code></td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="goal-range">Goal range</h3>
-
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>min</code></td>
-<td>int</td>
-<td>Minimum amount the project owner needs to collect &ndash; optional</td>
-</tr>
-
-<tr>
-<td><code>max</code></td>
-<td>int</td>
-<td>Maximum amount the project owner needs to collect &ndash; optional</td>
 </tr>
 </tbody>
 </table>

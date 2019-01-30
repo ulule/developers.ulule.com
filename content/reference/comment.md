@@ -85,7 +85,7 @@ Updates the comment with the given ID. This endpoint is only accessible to the c
 
 ## Delete a comment
 
-Deletes the comment with the given ID. This endpoint is only accessible to the comment author.
+Deletes the comment with the given ID. This endpoint is only accessible to staff.
 
 {{% http method="delete" %}}/v1/comments/:id{{% /http %}}
 

@@ -24,9 +24,9 @@ Creates a new link. This endpoint is anonymously accessible.
 
 ### Payload
 
-| Field | Type   | Description                 |
-| ----- | ------ | --------------------------- |
-| `url` | string | URL of the link -- required |
+| Field | Type   | Description                                     |
+| ----- | ------ | ----------------------------------------------- |
+| `url` | string | URL of the link -- required, max 200 characters |
 
 ## Create a user link
 
@@ -40,9 +40,9 @@ Creates a new link for the user with the given ID. This endpoint is only accessi
 
 ### Payload
 
-| Field | Type   | Description                 |
-| ----- | ------ | --------------------------- |
-| `url` | string | URL of the link -- required |
+| Field | Type   | Description                                     |
+| ----- | ------ | ----------------------------------------------- |
+| `url` | string | URL of the link -- required, max 200 characters |
 
 ## Update a link
 

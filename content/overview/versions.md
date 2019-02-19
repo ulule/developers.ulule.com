@@ -21,6 +21,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-02-07
+
+* This version removes the `full_name`, `name`, and `region` fields from the [location resource](#location-resource).
+
 ### 2018-12-12
 
 * This version changes the permission of the [list-user-projects endpoint](#list-user-projects): this endpoint is now accessible to all users.

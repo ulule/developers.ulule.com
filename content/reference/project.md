@@ -50,7 +50,7 @@ The project `status` can have the following values:
 | `is_cancelled`               | bool                                           | True if the project is cancelled                                                                                                   |
 | `is_online`                  | bool                                           | True if the project is online                                                                                                      |
 | `lang`                       | string                                         | Main language of the project                                                                                                       |
-| `location`                   | [location resource](#location)                 | Location of the project                                                                                                            |
+| `location`                   | [location resource](#location-resource)        | Location of the project                                                                                                            |
 | `lowest_contribution_amount` | int                                            | Lowest contribution possible in the project currency                                                                               |
 | `main_image`                 | [image resource](#image)                       | Main image of the project                                                                                                          |
 | `main_tag`                   | [tag resource](#category-and-tag)              | Main tag of the project                                                                                                            |
@@ -99,6 +99,14 @@ The following payment methods are supported:
 | `paylib`       |
 | `paypal`       |
 | `saving`       |
+
+
+### Location resource
+
+| Field     | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| `city`    | string | City                               |
+| `country` | string | Two-letter ISO code of the country |
 
 ## Retrieve a project
 

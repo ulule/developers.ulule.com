@@ -6,6 +6,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 19-02-2019
 * **[ULULE-API/FEAT]** Add the 2018-02-07 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).
+* **[ULULE-API/FEAT]** Add the [partner-detail](https://developers.ulule.com/#partner) endpoint.
 
 ### 14-01-2019
 * **[ULULE-API/FIX]** Allow anonymous proposals to be owned by staff users.

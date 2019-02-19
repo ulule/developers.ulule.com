@@ -1348,6 +1348,12 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2019-02-07">2019-02-07</h3>
+
+<ul>
+<li>This version removes the <code>full_name</code>, <code>name</code>, and <code>region</code> fields from the <a href="#location-resource">location resource</a>.</li>
+</ul>
+
 <h3 id="2018-12-12">2018-12-12</h3>
 
 <ul>
@@ -3294,7 +3300,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tr>
 <td><code>location</code></td>
-<td><a href="#location">location resource</a></td>
+<td><a href="#location-resource">location resource</a></td>
 <td>Location of the project</td>
 </tr>
 
@@ -3510,6 +3516,32 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tr>
 <td><code>saving</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="location-resource">Location resource</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+<td>City</td>
+</tr>
+
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td>Two-letter ISO code of the country</td>
 </tr>
 </tbody>
 </table>

@@ -320,6 +320,15 @@ The proposal status can have the following values:
     </item>
     
     <item>
+      <title>Partner</title>
+      <link>/reference/partner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/partner/</guid>
+      <description>Partner Partner resource    Field Type Description     id int Unique ID of the partner   logo image resource Partner logo, only present in the partner-detail endpoint   name string Partner name   ribbon image resource Partner ribbon   slug string Unique slug of the partner   url string Link to the partner website   user_id int Unique ID of the partner user    Retrieve a partner Retrieves the partner with the given ID.</description>
+    </item>
+    
+    <item>
       <title>Partnership</title>
       <link>/reference/partnership/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -889,6 +889,26 @@
                         </li>
                         
                         <li>
+                            <a href="#partner">Partner</a>
+
+                            
+                            
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="#partner-resource">Partner resource</a></li>
+                                
+                                
+                                
+                                <li><a href="#retrieve-a-partner">Retrieve a partner</a></li>
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+                        <li>
                             <a href="#partnership">Partnership</a>
 
                             
@@ -8988,6 +9008,95 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>answer_html</code></td>
 <td>string</td>
 <td>Answer from the moderation team in HTML format</td>
+</tr>
+</tbody>
+</table>
+</div>
+        </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="partner">Partner</h1>
+
+<h2 id="partner-resource">Partner resource</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the partner</td>
+</tr>
+
+<tr>
+<td><code>logo</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Partner logo, only present in the <a href="#retrieve-a-partner">partner-detail</a> endpoint</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Partner name</td>
+</tr>
+
+<tr>
+<td><code>ribbon</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Partner ribbon</td>
+</tr>
+
+<tr>
+<td><code>slug</code></td>
+<td>string</td>
+<td>Unique slug of the partner</td>
+</tr>
+
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>Link to the partner website</td>
+</tr>
+
+<tr>
+<td><code>user_id</code></td>
+<td>int</td>
+<td>Unique ID of the partner user</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="retrieve-a-partner">Retrieve a partner</h2>
+
+<p>Retrieves the partner with the given ID.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/partners/:id</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Partner ID</td>
 </tr>
 </tbody>
 </table>

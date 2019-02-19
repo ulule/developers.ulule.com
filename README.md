@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 19-02-2019
+* **[ULULE-API/FEAT]** Add the 2018-02-07 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).
+
 ### 14-01-2019
 * **[ULULE-API/FIX]** Allow anonymous proposals to be owned by staff users.
 * **[DISCUSSIONS-API/FIX]** Fix the [list-thread](https://developers.ulule.com/#retrieve-thread-list) endpoint when the `status` filter is set to `deleted`.

@@ -21,6 +21,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-03-06
+
+* This version turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects](#search-projects) endpoint into [extra_fields](#extra-fields). They must be explicitly specified.
+
 ### 2019-02-07
 
 * This version removes the `full_name`, `name`, and `region` fields from the [location resource](#location-resource).

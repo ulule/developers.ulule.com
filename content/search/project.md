@@ -3,7 +3,7 @@ title: "Projects"
 weight: 1
 ---
 
-# Projects
+# Search projects
 
 The response is [paginated](#pagination).
 
@@ -40,35 +40,36 @@ The `q` query parameter may contain any combination of keywords and the followin
 
 #### Search project resource
 
-| Field              | Type                                   | Description                                                                                          |
-| ------------------ | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `absolute_url`     | string                                 | Link to the project page on the Ulule website                                                        |
-| `amount_raised`    | int                                    | Amount raised in project currency                                                                    |
-| `country`          | string                                 | Two-letter ISO code of the country                                                                   |
-| `currency`         | string                                 | Three-letter ISO code of the currency                                                                |
-| `date_end`         | string                                 | Date at which the funding campaign ends, with RFC 3339 format                                        |
-| `date_start`       | string                                 | Date at which the funding campaign starts, with RFC 3339 format                                      |
-| `finished`         | bool                                   | True if the funding campaign is finished                                                             |
-| `goal`             | int                                    | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`      |
-| `id`               | int                                    | Unique ID of the project                                                                             |
-| `lang`             | string                                 | Main language of the project                                                                         |
-| `main_image`       | [image resource](#image)               | Main image of the project                                                                            |
-| `main_tag`         | [tag resource](#category-and-tag)      | Main tag of the project                                                                              |
-| `name`             | [i18n object](#i18n)                   | Name of the project                                                                                  |
-| `nb_products_sold` | int                                    | Number of products sold                                                                              |
-| `owner`            | [user resource](#search-user-resource) | Owner of the project                                                                                 |
-| `slug`             | string                                 | Unique slug of the project                                                                           |
-| `subtitle`         | [i18n object](#i18n)                   | Subtitle of the project                                                                              |
-| `type`             | string                                 | Type of the project (`presale` or `project`)                                                         |
-| `user_role`        | string                                 | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner` |
+| Field              | Type                 | Description                                                                                     |
+| ------------------ | -------------------- | ----------------------------------------------------------------------------------------------- |
+| `absolute_url`     | string               | Link to the project page on the Ulule website                                                   |
+| `amount_raised`    | int                  | Amount raised in project currency                                                               |
+| `country`          | string               | Two-letter ISO code of the country                                                              |
+| `currency`         | string               | Three-letter ISO code of the currency                                                           |
+| `date_end`         | string               | Date at which the funding campaign ends, with RFC 3339 format                                   |
+| `date_start`       | string               | Date at which the funding campaign starts, with RFC 3339 format                                 |
+| `finished`         | bool                 | True if the funding campaign is finished                                                        |
+| `goal`             | int                  | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale` |
+| `id`               | int                  | Unique ID of the project                                                                        |
+| `lang`             | string               | Main language of the project                                                                    |
+| `name`             | [i18n object](#i18n) | Name of the project                                                                             |
+| `nb_products_sold` | int                  | Number of products sold                                                                         |
+| `slug`             | string               | Unique slug of the project                                                                      |
+| `subtitle`         | [i18n object](#i18n) | Subtitle of the project                                                                         |
+| `type`             | string               | Type of the project (`presale` or `project`)                                                    |
 
-#### Search project user resource
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-| Field          | Type   | Description                                                                 |
-| -------------- | ------ | --------------------------------------------------------------------------- |
-| `first_name`   | string | First name of the user                                                      |
-| `id`           | int    | Unique ID of the user                                                       |
-| `last_name`    | string | Last name of the user                                                       |
-| `name`         | string | Concatenation of first name and last name if they exist, username otherwise |
-| `screenname`   | string | Screenname                                                                  |
-| `username`     | string | Username                                                                    |
+| Field              | Type                                        | Description                                                                                                                            |
+| ------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `answer_code`      | string                                      | Answer from moderation team -- only accessible to staff                                                                                |
+| `main_image`       | [image resource](#image)                    | Main image of the project                                                                                                              |
+| `main_tag`         | [tag resource](#category-and-tag)           | Main tag of the project                                                                                                                |
+| `manager`          | [user resource](#user-resource)             | Manager of the project -- only accessible to staff                                                                                     |
+| `owner`            | [user resource](#user-resource)             | Owner of the project                                                                                                                   |
+| `owner.email`      | string                                      | Email of the project owner -- only accessible to staff                                                                                 |
+| `owner.stats`      | [user stats resource](#user-stats-resource) | Stats of the project owner -- only accessible to staff                                                                                 |
+| `proposal`         | [proposal resource](#proposal-resource)     | Proposal from which the project was created -- only accessible to staff                                                                |
+| `proposal.links`   | array of [links](#link-resource)            | Links attached to the proposal -- only accessible to staff                                                                             |
+| `proposal.partner` | [partner resource](#partner-resource)       | Partner of the proposal -- only accessible to staff                                                                                    |
+| `user_role`        | string                                      | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`, the request must be authentified |

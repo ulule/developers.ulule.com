@@ -4,8 +4,11 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 06-03-2019
+* **[ULULE-API/FEAT]** Add the 2019-03-06 version change, which turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects endpoint](https://developers.ulule.com/#search-projects) into [extra_fields](https://developers.ulule.com/#extra-fields)
+
 ### 19-02-2019
-* **[ULULE-API/FEAT]** Add the 2018-02-07 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).
+* **[ULULE-API/FEAT]** Add the 2019-02-19 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).
 * **[ULULE-API/FEAT]** Add the [partner-detail](https://developers.ulule.com/#partner) endpoint.
 
 ### 14-01-2019

@@ -17,7 +17,7 @@
       
       <guid>/reference/user/</guid>
       <description>User The user resource represents a user registered on the Ulule website, possibly via a partner website.
-User resource    Field Type Description     absolute_url string Link to the profile page of the user on the Ulule website   avatar avatar resource Avatar of the user   birthday string Birthday of the user, with format YYYY-MM-DD. This field is present only if the authenticated user has permission to read it.</description>
+User resource    Field Type Description     absolute_url string Link to the profile page of the user on the Ulule website   avatar avatar resource Avatar of the user   birthday string Birthday of the user, with format YYYY-MM-DD &amp;ndash; only accessible to oneself   country string Two-letter ISO code of the country where the user lives.</description>
     </item>
     
     <item>

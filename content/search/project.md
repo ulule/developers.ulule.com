@@ -60,16 +60,16 @@ The `q` query parameter may contain any combination of keywords and the followin
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-| Field              | Type                                        | Description                                                                                                                            |
-| ------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `answer_code`      | string                                      | Answer from moderation team -- only accessible to staff                                                                                |
-| `main_image`       | [image resource](#image)                    | Main image of the project                                                                                                              |
-| `main_tag`         | [tag resource](#category-and-tag)           | Main tag of the project                                                                                                                |
-| `manager`          | [user resource](#user-resource)             | Manager of the project -- only accessible to staff                                                                                     |
-| `owner`            | [user resource](#user-resource)             | Owner of the project                                                                                                                   |
-| `owner.email`      | string                                      | Email of the project owner -- only accessible to staff                                                                                 |
-| `owner.stats`      | [user stats resource](#user-stats-resource) | Stats of the project owner -- only accessible to staff                                                                                 |
-| `proposal`         | [proposal resource](#proposal-resource)     | Proposal from which the project was created -- only accessible to staff                                                                |
-| `proposal.links`   | array of [links](#link-resource)            | Links attached to the proposal -- only accessible to staff                                                                             |
-| `proposal.partner` | [partner resource](#partner-resource)       | Partner of the proposal -- only accessible to staff                                                                                    |
-| `user_role`        | string                                      | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`, the request must be authentified |
+| Field              | Type                                        | Description                                                                                                                              |
+| ------------------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `answer_code`      | string                                      | Answer from moderation team -- only accessible to staff                                                                                  |
+| `main_image`       | [image resource](#image)                    | Main image of the project                                                                                                                |
+| `main_tag`         | [tag resource](#category-and-tag)           | Main tag of the project                                                                                                                  |
+| `manager`          | [user resource](#user-resource)             | Manager of the project -- only accessible to staff                                                                                       |
+| `owner`            | [user resource](#user-resource)             | Owner of the project                                                                                                                     |
+| `owner.email`      | string                                      | Email of the project owner -- only accessible to staff                                                                                   |
+| `owner.stats`      | [user stats resource](#user-stats-resource) | Stats of the project owner -- only accessible to staff                                                                                   |
+| `proposal`         | [proposal resource](#proposal-resource)     | Proposal from which the project was created -- only accessible to staff                                                                  |
+| `proposal.links`   | array of [links](#link-resource)            | Links attached to the proposal -- only accessible to staff                                                                               |
+| `proposal.partner` | [partner resource](#partner-resource)       | Partner of the proposal -- only accessible to staff                                                                                      |
+| `user_role`        | string                                      | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner` -- the request must be authentified |

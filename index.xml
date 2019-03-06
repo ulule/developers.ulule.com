@@ -36,7 +36,7 @@ Parameters The limit and since URL query parameters may be used to retrieve diff
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/search/project/</guid>
-      <description>Projects The response is paginated.
+      <description>Search projects The response is paginated.
 get /v1/search/projects  Query parameters    Parameter Type Description     q string Search keywords and qualifiers   lang string Host language, for example it is the fr in fr.ulule.com. Results that are translated in that language are sorted first. Can be one of the supported languages   limit int Page size, default is 16   offset int Pagination offset, default is 0    The q query parameter may contain any combination of keywords and the following search qualifiers.</description>
     </item>
     
@@ -160,7 +160,7 @@ To request a specific version, add the Ulule-Version HTTP header to the request.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/overview/extrafields/</guid>
-      <description>Extra fields Extra fields are a way to control which resources are embedded in a response.
+      <description>Extra fields Extra fields are a way to control which fields and resources are embedded in a response.
 Depending on the use case, API clients sometimes don&amp;rsquo;t need embedded resources for a specific endpoint, so adding them is a waste of computing resource and network bandwidth. Other clients may want 2 or 3 levels of resource embedding on the same endpoint, so that they can get the data they need with only one request.</description>
     </item>
     

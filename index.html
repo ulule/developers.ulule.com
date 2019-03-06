@@ -1368,6 +1368,12 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2019-03-06">2019-03-06</h3>
+
+<ul>
+<li>This version turns the <code>main_image</code>, <code>main_tag</code>, <code>owner</code> and <code>user_role</code> fields from the <a href="#search-projects">search-projects</a> endpoint into <a href="#extra-fields">extra_fields</a>. They must be explicitly specified.</li>
+</ul>
+
 <h3 id="2019-02-07">2019-02-07</h3>
 
 <ul>
@@ -1513,9 +1519,9 @@
 
 <h1 id="extra-fields">Extra fields</h1>
 
-<p>Extra fields are a way to control which resources are embedded in a response.</p>
+<p>Extra fields are a way to control which fields and resources are embedded in a response.</p>
 
-<p>Depending on the use case, API clients sometimes don&rsquo;t need embedded resources for a specific endpoint, so adding them is a waste of computing resource and network bandwidth. Other clients may want 2 or 3 levels of resource embedding on the same endpoint, so that they can get the data they need with only one request. The goal of extra fields is to mitigate this issue.</p>
+<p>Depending on the use case, API clients sometimes don&rsquo;t need embedded resources for a specific endpoint, so adding them is a waste of computing resource and network bandwidth. Other clients may want 2 or 3 levels of resource embedding on the same endpoint, so that they can get the data they need with only one request. The goal of extra fields is to address this issue.</p>
 
 <p>To add an extra field to a response, add the <code>extra_fields</code> parameter to the URL.</p>
 
@@ -10558,7 +10564,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
         <section class="b-about__body">
             <div class="b-about__text">
 
-<h1 id="projects">Projects</h1>
+<h1 id="search-projects">Search projects</h1>
 
 <p>The response is <a href="#pagination">paginated</a>.</p>
 
@@ -10767,18 +10773,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
-<td><code>main_image</code></td>
-<td><a href="#image">image resource</a></td>
-<td>Main image of the project</td>
-</tr>
-
-<tr>
-<td><code>main_tag</code></td>
-<td><a href="#category-and-tag">tag resource</a></td>
-<td>Main tag of the project</td>
-</tr>
-
-<tr>
 <td><code>name</code></td>
 <td><a href="#i18n">i18n object</a></td>
 <td>Name of the project</td>
@@ -10788,12 +10782,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>nb_products_sold</code></td>
 <td>int</td>
 <td>Number of products sold</td>
-</tr>
-
-<tr>
-<td><code>owner</code></td>
-<td><a href="#search-user-resource">user resource</a></td>
-<td>Owner of the project</td>
 </tr>
 
 <tr>
@@ -10813,16 +10801,10 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td>string</td>
 <td>Type of the project (<code>presale</code> or <code>project</code>)</td>
 </tr>
-
-<tr>
-<td><code>user_role</code></td>
-<td>string</td>
-<td>Relation between the project and the authenticated user, can be null, <code>fan</code>, <code>supporter</code> and <code>owner</code></td>
-</tr>
 </tbody>
 </table>
 
-<h4 id="search-project-user-resource">Search project user resource</h4>
+<p>The following fields are <a href="#extra-fields">extra_fields</a> and must be explicitly specified in the request:</p>
 
 <table>
 <thead>
@@ -10835,39 +10817,69 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
-<td><code>first_name</code></td>
+<td><code>answer_code</code></td>
 <td>string</td>
-<td>First name of the user</td>
+<td>Answer from moderation team &ndash; only accessible to staff</td>
 </tr>
 
 <tr>
-<td><code>id</code></td>
-<td>int</td>
-<td>Unique ID of the user</td>
+<td><code>main_image</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Main image of the project</td>
 </tr>
 
 <tr>
-<td><code>last_name</code></td>
-<td>string</td>
-<td>Last name of the user</td>
+<td><code>main_tag</code></td>
+<td><a href="#category-and-tag">tag resource</a></td>
+<td>Main tag of the project</td>
 </tr>
 
 <tr>
-<td><code>name</code></td>
-<td>string</td>
-<td>Concatenation of first name and last name if they exist, username otherwise</td>
+<td><code>manager</code></td>
+<td><a href="#user-resource">user resource</a></td>
+<td>Manager of the project &ndash; only accessible to staff</td>
 </tr>
 
 <tr>
-<td><code>screenname</code></td>
-<td>string</td>
-<td>Screenname</td>
+<td><code>owner</code></td>
+<td><a href="#user-resource">user resource</a></td>
+<td>Owner of the project</td>
 </tr>
 
 <tr>
-<td><code>username</code></td>
+<td><code>owner.email</code></td>
 <td>string</td>
-<td>Username</td>
+<td>Email of the project owner &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>owner.stats</code></td>
+<td><a href="#user-stats-resource">user stats resource</a></td>
+<td>Stats of the project owner &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>proposal</code></td>
+<td><a href="#proposal-resource">proposal resource</a></td>
+<td>Proposal from which the project was created &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>proposal.links</code></td>
+<td>array of <a href="#link-resource">links</a></td>
+<td>Links attached to the proposal &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>proposal.partner</code></td>
+<td><a href="#partner-resource">partner resource</a></td>
+<td>Partner of the proposal &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>user_role</code></td>
+<td>string</td>
+<td>Relation between the project and the authenticated user, can be null, <code>fan</code>, <code>supporter</code> and <code>owner</code>, the request must be authentified</td>
 </tr>
 </tbody>
 </table>

@@ -21,6 +21,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-03-07
+
+* This version adds validation to extra fields: if the request contains an extra field that doesn't exist, or an extra field that the user doesn't have permission to read, an error is returned, instead of silently accepting the request without the extra field.
+
 ### 2019-03-06
 
 * This version turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects](#search-projects) endpoint into [extra_fields](#extra-fields). They must be explicitly specified.

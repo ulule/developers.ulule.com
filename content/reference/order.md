@@ -128,6 +128,21 @@ Updates the order with the given ID. This endpoint is only accessible to the ord
 | `note`                | string | A note from the backer to the project owner about this order -- optional      |
 | `shipping_address_id` | int    | Shipping address ID -- optional, the address must belong to the order author  |
 
+## Cancel an order
+
+Cancels the order with the given ID. This endpoint is only accessible to the order author.
+
+The following conditions must be fulfilled to cancel an order:
+
+* The project must not be finished and succeeded
+* Only orders with `payment-completed` status can be cancelled
+
+{{% http method="post" %}}/v1/orders/:id/cancel{{% /http %}}
+
+| Parameter | Description |
+| --------- | ----------- |
+| `:id`     | Order ID    |
+
 ## List user orders
 
 Retrieves all orders belonging to the user with the given ID. This endpoint is only accessible to oneself.

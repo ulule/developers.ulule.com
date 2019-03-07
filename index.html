@@ -777,6 +777,10 @@
                                 
                                 
                                 
+                                <li><a href="#cancel-an-order">Cancel an order</a></li>
+                                
+                                
+                                
                                 <li><a href="#list-user-orders">List user orders</a></li>
                                 
                                 
@@ -7345,6 +7349,39 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>shipping_address_id</code></td>
 <td>int</td>
 <td>Shipping address ID &ndash; optional, the address must belong to the order author</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="cancel-an-order">Cancel an order</h2>
+
+<p>Cancels the order with the given ID. This endpoint is only accessible to the order author.</p>
+
+<p>The following conditions must be fulfilled to cancel an order:</p>
+
+<ul>
+<li>The project must not be finished and succeeded</li>
+<li>Only orders with <code>payment-completed</code> status can be cancelled</li>
+</ul>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/orders/:id/cancel</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Order ID</td>
 </tr>
 </tbody>
 </table>

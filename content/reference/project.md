@@ -233,6 +233,26 @@ This endpoint is typically used when the project owner mistakenly published the 
 | --------- | ----------- |
 | `:id`     | Project ID  |
 
+## Moderate a project
+
+Moderate the project. This endpoint is only accessible to staff.
+
+This endpoint is used for the project moderation.
+
+{{% http method="post" %}}/v1/projects/:id/moderate{{% /http %}}
+
+| Parameter | Description |
+| --------- | ----------- |
+| `:id`     | Project ID  |
+
+### Payload
+
+| Field         | Type   | Description                                                |
+| ------------- | ------ | ---------------------------------------------------------- |
+| `answer_code` | string | Reference code for the moderation                          |
+| `answer_html` | string | Message in HTML used as response in the project discussion |
+| `status`      | string | Project status                                             |
+
 ## List all partner projects
 
 Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users.

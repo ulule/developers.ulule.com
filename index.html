@@ -353,6 +353,10 @@
                                 
                                 
                                 
+                                <li><a href="#moderate-a-project">Moderate a project</a></li>
+                                
+                                
+                                
                                 <li><a href="#list-all-partner-projects">List all partner projects</a></li>
                                 
                                 
@@ -3937,6 +3941,66 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>:id</code></td>
 <td>Project ID</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="moderate-a-project">Moderate a project</h2>
+
+<p>Moderate the project. This endpoint is only accessible to staff.</p>
+
+<p>This endpoint is used for the project moderation.</p>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/projects/:id/moderate</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>Project ID</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="payload-2">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>answer_code</code></td>
+<td>string</td>
+<td>Reference code for the moderation</td>
+</tr>
+
+<tr>
+<td><code>answer_html</code></td>
+<td>string</td>
+<td>Message in HTML used as response in the project discussion</td>
+</tr>
+
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>Project status</td>
 </tr>
 </tbody>
 </table>

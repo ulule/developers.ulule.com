@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 21-03-2019
+* **[ULULE-API/FEAT]** Add length limit to comment payload.
+
 ### 07-03-2019
 * **[ULULE-API/FEAT]** Add the [cancel-order endpoint](https://developers.ulule.com/#cancel-an-order)
 * **[ULULE-API/FEAT]** Add the 2019-03-07 version change, which adds validation to extra fields: if the request contains an extra field that doesn’t exist, or an extra field that the user doesn’t have permission to read, an error is returned, instead of silently accepting the request without the extra field.

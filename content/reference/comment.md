@@ -31,9 +31,9 @@ Creates a comment on the project with the given ID.
 
 ### Payload
 
-| Field     | Type   | Description                     |
-| --------- | ------ | ------------------------------- |
-| `comment` | string | Body of the comment -- required |
+| Field     | Type   | Description                                         |
+| --------- | ------ | --------------------------------------------------- |
+| `comment` | string | Body of the comment -- required, max 500 characters |
 
 ## Create a news comment
 
@@ -47,9 +47,9 @@ Creates a comment on the news with the given ID.
 
 ### Payload
 
-| Field     | Type   | Description                     |
-| --------- | ------ | ------------------------------- |
-| `comment` | string | Body of the comment -- required |
+| Field     | Type   | Description                                         |
+| --------- | ------ | --------------------------------------------------- |
+| `comment` | string | Body of the comment -- required, max 500 characters |
 
 ## Create a reply to a comment
 

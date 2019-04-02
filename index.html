@@ -223,6 +223,18 @@
                                 
                                 <li><a href="#create-a-discussion-thread-with-a-user">Create a discussion thread with a user</a></li>
                                 
+                                
+                                
+                                <li><a href="#staff-stuff">Staff stuff</a></li>
+                                
+                                
+                                
+                                <li><a href="#ban-user">Ban user</a></li>
+                                
+                                
+                                
+                                <li><a href="#offboard-team-member">Offboard team member</a></li>
+                                
                             </ul>
                             
 
@@ -2431,6 +2443,82 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>subject</code></td>
 <td>string</td>
 <td>Subject of the thread &ndash; required, must be between 3 and 255 characters</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="staff-stuff">Staff stuff</h2>
+
+<p>The following endpoints are only accessible to staff users.</p>
+
+<h2 id="ban-user">Ban user</h2>
+
+<p>Ban the user with the given id.</p>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/users/:id/ban</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>User ID</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="offboard-team-member">Offboard team member</h2>
+
+<p>Offboard the user with the given id.</p>
+
+<div class="http-endpoint http-endpoint--post">
+    <span class="http-verb http-verb--post">post</span>
+    <span class="http-uri">/v1/users/:id/offboard</span>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>User ID</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="payload-3">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>int</td>
+<td>User ID used to substitute the offboarded user &ndash; optional</td>
 </tr>
 </tbody>
 </table>

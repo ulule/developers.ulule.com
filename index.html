@@ -225,10 +225,6 @@
                                 
                                 
                                 
-                                <li><a href="#staff-stuff">Staff stuff</a></li>
-                                
-                                
-                                
                                 <li><a href="#ban-user">Ban user</a></li>
                                 
                                 
@@ -878,10 +874,6 @@
                                 
                                 
                                 <li><a href="#list-proposal-references">List proposal references</a></li>
-                                
-                                
-                                
-                                <li><a href="#staff-stuff">Staff stuff</a></li>
                                 
                                 
                                 
@@ -2447,13 +2439,9 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h2 id="staff-stuff">Staff stuff</h2>
-
-<p>The following endpoints are only accessible to staff users.</p>
-
 <h2 id="ban-user">Ban user</h2>
 
-<p>Ban the user with the given id.</p>
+<p>Ban the user with the given id. This endpoint is only accessible to staff.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
@@ -2479,7 +2467,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="offboard-team-member">Offboard team member</h2>
 
-<p>Offboard the user with the given id.</p>
+<p>Offboard the user with the given id. This endpoint is only accessible to staff.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
@@ -8972,13 +8960,9 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h2 id="staff-stuff">Staff stuff</h2>
-
-<p>The following endpoints are only accessible to staff users.</p>
-
 <h2 id="list-proposals">List proposals</h2>
 
-<p>List all proposals. By default, this endpoint list all proposals with status <code>new</code>.</p>
+<p>List all proposals. By default, this endpoint list all proposals with status <code>new</code>. This endpoint is only accessible to staff.</p>
 
 <p>The response is <a href="#pagination">paginated</a>.</p>
 
@@ -9023,7 +9007,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="validate-proposal">Validate Proposal</h2>
 
-<p>Validates the proposal with the given ID. It changes the proposal status to <code>valid</code> and creates a new project from the proposal.</p>
+<p>Validates the proposal with the given ID. It changes the proposal status to <code>valid</code> and creates a new project from the proposal. This endpoint is only accessible to staff.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
@@ -9077,7 +9061,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="refuse-proposal">Refuse Proposal</h2>
 
-<p>Refuses the proposal with the given ID. It changes the proposal status to <code>invalid</code>.</p>
+<p>Refuses the proposal with the given ID. It changes the proposal status to <code>invalid</code>. This endpoint is only accessible to staff.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
@@ -9131,7 +9115,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="suspend-proposal">Suspend Proposal</h2>
 
-<p>Suspends the proposal with the given ID. It changes the proposal status to <code>waiting</code>.</p>
+<p>Suspends the proposal with the given ID. It changes the proposal status to <code>waiting</code>. This endpoint is only accessible to staff.</p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>

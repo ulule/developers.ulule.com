@@ -230,13 +230,9 @@ List the references of the proposal with the given ID. This endpoint is only acc
 | `id`  | int    | Unique ID of the reference |
 | `url` | string | URL of the reference       |
 
-## Staff stuff
-
-The following endpoints are only accessible to staff users.
-
 ## List proposals
 
-List all proposals. By default, this endpoint list all proposals with status `new`.
+List all proposals. By default, this endpoint list all proposals with status `new`. This endpoint is only accessible to staff.
 
 The response is [paginated](#pagination).
 
@@ -253,7 +249,7 @@ The response is [paginated](#pagination).
 
 ## Validate Proposal
 
-Validates the proposal with the given ID. It changes the proposal status to `valid` and creates a new project from the proposal.
+Validates the proposal with the given ID. It changes the proposal status to `valid` and creates a new project from the proposal. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/proposals/:id/validate{{% /http %}}
 
@@ -272,7 +268,7 @@ One of the `answer` and `answer_html` fields must be present in the payload.
 
 ## Refuse Proposal
 
-Refuses the proposal with the given ID. It changes the proposal status to `invalid`.
+Refuses the proposal with the given ID. It changes the proposal status to `invalid`. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/proposals/:id/refuse{{% /http %}}
 
@@ -291,7 +287,7 @@ One of the `answer` and `answer_html` fields must be present in the payload.
 
 ## Suspend Proposal
 
-Suspends the proposal with the given ID. It changes the proposal status to `waiting`.
+Suspends the proposal with the given ID. It changes the proposal status to `waiting`. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/proposals/:id/suspend{{% /http %}}
 

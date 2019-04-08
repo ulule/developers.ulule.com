@@ -146,13 +146,9 @@ Creates a discussion thread between the authenticated user and the user with the
 | `message` | string | Body of the first message in the thread                                 |
 | `subject` | string | Subject of the thread -- required, must be between 3 and 255 characters |
 
-## Staff stuff
-
-The following endpoints are only accessible to staff users.
-
 ## Ban user
 
-Ban the user with the given id.
+Ban the user with the given id. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/users/:id/ban{{% /http %}}
 
@@ -162,7 +158,7 @@ Ban the user with the given id.
 
 ## Offboard team member
 
-Offboard the user with the given id.
+Offboard the user with the given id. This endpoint is only accessible to staff.
 
 {{% http method="post" %}}/v1/users/:id/offboard{{% /http %}}
 

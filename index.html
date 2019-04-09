@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.54.0" />
+	<meta name="generator" content="Hugo 0.55.0" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -210,6 +210,10 @@
                                 
                                 
                                 <li><a href="#update-a-user">Update a user</a></li>
+                                
+                                
+                                
+                                <li><a href="#delete-a-user">Delete a user</a></li>
                                 
                                 
                                 
@@ -1546,7 +1550,6 @@
     <span class="http-uri">/v1/users/:id?extra_fields=stats</span>
 </div>
 
-
 <p>To add more than one extra field, separate the values with commas.</p>
 
 <p>For example, embed the <code>analytics</code>, <code>partnerships</code> and <code>sponsorships</code> resources into the project resource with the following request:</p>
@@ -1556,7 +1559,6 @@
     <span class="http-uri">/v1/projects/:id?extra_fields=analytics,partnerships,sponsorships</span>
 </div>
 
-
 <p>To nest embedded resource, separate levels of embedding with dots.</p>
 
 <p>For example, embed the <code>orders</code> resource into the user resource, and the <code>project</code> resource into the order resources with the following request:</p>
@@ -1565,7 +1567,6 @@
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/me?extra_fields=orders,orders.project</span>
 </div>
-
 </div>
         </section>
          
@@ -2109,7 +2110,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/me</span>
 </div>
 
-
 <h2 id="retrieve-a-user">Retrieve a user</h2>
 
 <p>Retrieves the user with the given ID.</p>
@@ -2118,7 +2118,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/users/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -2144,7 +2143,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/partners/:slug/users</span>
 </div>
-
 
 <table>
 <thead>
@@ -2214,7 +2212,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/users/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -2324,6 +2321,31 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
+<h2 id="delete-a-user">Delete a user</h2>
+
+<p>Deletes the user with the given ID. This endpoint is only accessible to oneself.</p>
+
+<div class="http-endpoint http-endpoint--delete">
+    <span class="http-verb http-verb--delete">delete</span>
+    <span class="http-uri">/v1/users/:id</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>User ID</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="list-all-partner-members">List all partner members</h2>
 
 <p>Retrieves all the users that has been registered via the partner with the given slug. This endpoint is only accessible to partner users.</p>
@@ -2334,7 +2356,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/partners/:slug/users</span>
 </div>
-
 
 <table>
 <thead>
@@ -2362,7 +2383,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/supporters</span>
 </div>
-
 
 <table>
 <thead>
@@ -2395,7 +2415,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/users/:id/threads</span>
 </div>
-
 
 <table>
 <thead>
@@ -2448,7 +2467,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/users/:id/ban</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -2473,7 +2491,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/users/:id/offboard</span>
 </div>
-
 
 <table>
 <thead>
@@ -2599,7 +2616,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/users/:id/avatars</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -2647,7 +2663,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/avatars/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -2694,7 +2709,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--delete">delete</span>
     <span class="http-uri">/v1/avatars/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -2768,7 +2782,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/links</span>
 </div>
 
-
 <h3 id="payload">Payload</h3>
 
 <table>
@@ -2797,7 +2810,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/users/:id/links</span>
 </div>
-
 
 <table>
 <thead>
@@ -2844,7 +2856,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/links/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -2890,7 +2901,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/links/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -2915,7 +2925,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/users/:id/links</span>
 </div>
-
 
 <table>
 <thead>
@@ -3035,7 +3044,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/users/:id/notifications</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -3060,7 +3068,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/users/:id/notifications</span>
 </div>
-
 
 <table>
 <thead>
@@ -3154,7 +3161,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/projects/:id/notifications</span>
 </div>
-
 
 <table>
 <thead>
@@ -3667,7 +3673,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -3692,7 +3697,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/projects/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -3918,7 +3922,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/submit</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -3949,7 +3952,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/publish</span>
 </div>
-
 
 <table>
 <thead>
@@ -4004,7 +4006,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/unpublish</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4031,7 +4032,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/moderate</span>
 </div>
-
 
 <table>
 <thead>
@@ -4092,7 +4092,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partners/:slug/projects</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4119,7 +4118,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/users/:id/projects</span>
 </div>
-
 
 <table>
 <thead>
@@ -4247,7 +4245,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/categories</span>
 </div>
 
-
 <h2 id="list-tags">List tags</h2>
 
 <p>Retrieves all tags (categories and subtags).</p>
@@ -4257,7 +4254,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/tags</span>
 </div>
 
-
 <h2 id="list-category-subtags">List category subtags</h2>
 
 <p>Retrieves all the subtags that belong to the category with the given ID.</p>
@@ -4266,7 +4262,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/categories/:id/tags</span>
 </div>
-
 
 <table>
 <thead>
@@ -4292,7 +4287,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/tags</span>
 </div>
-
 
 <table>
 <thead>
@@ -4416,7 +4410,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/images</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4481,7 +4474,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/images/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -4548,7 +4540,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/images/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4575,7 +4566,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/images</span>
 </div>
-
 
 <table>
 <thead>
@@ -4721,7 +4711,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/videos</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4773,7 +4762,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/videos/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4819,7 +4807,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/videos/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -4844,7 +4831,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/videos</span>
 </div>
-
 
 <table>
 <thead>
@@ -4994,7 +4980,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/rewards/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5019,7 +5004,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/rewards</span>
 </div>
-
 
 <table>
 <thead>
@@ -5108,7 +5092,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/rewards/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5196,7 +5179,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/rewards/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5221,8 +5203,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/rewards</span>
-</div>
-</p>
+</div></p>
 
 <table>
 <thead>
@@ -5259,7 +5240,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/rewards/:id/variants</span>
 </div>
-
 
 <table>
 <thead>
@@ -5318,7 +5298,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/variants/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5376,7 +5355,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/variants/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5403,7 +5381,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/rewards/:id/variants</span>
 </div>
-
 
 <table>
 <thead>
@@ -5469,7 +5446,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/rewards/:id/shippings</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5520,7 +5496,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/shippings/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -5573,7 +5548,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/shippings/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5598,7 +5572,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/rewards/:id/shippings</span>
 </div>
-
 
 <table>
 <thead>
@@ -5666,7 +5639,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/analytics</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5717,7 +5689,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/analytics/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -5770,7 +5741,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/analytics/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5795,7 +5765,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/analytics</span>
 </div>
-
 
 <table>
 <thead>
@@ -5933,7 +5902,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/accounts/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -5958,7 +5926,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/accounts</span>
 </div>
-
 
 <h3 id="payload">Payload</h3>
 
@@ -6138,7 +6105,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/news/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6163,7 +6129,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/news</span>
 </div>
-
 
 <table>
 <thead>
@@ -6222,7 +6187,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/news/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6280,7 +6244,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/news/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6305,7 +6268,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/news</span>
 </div>
-
 
 <table>
 <thead>
@@ -6333,7 +6295,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/news/:id/try</span>
 </div>
-
 
 <table>
 <thead>
@@ -6364,7 +6325,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/news/:id/publish</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6391,7 +6351,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/news/:id/unpublish</span>
 </div>
-
 
 <table>
 <thead>
@@ -6483,7 +6442,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/comments</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6528,7 +6486,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/news/:id/comments</span>
 </div>
-
 
 <table>
 <thead>
@@ -6575,7 +6532,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/comments/:id/replies</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6620,7 +6576,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/comments/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -6667,7 +6622,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/comments/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6693,7 +6647,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/projects/:id/comments</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6718,7 +6671,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/news/:id/comments</span>
 </div>
-
 
 <table>
 <thead>
@@ -6746,7 +6698,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/comments/:id/replies</span>
 </div>
-
 
 <table>
 <thead>
@@ -6854,7 +6805,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/exports/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -6879,7 +6829,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/exports</span>
 </div>
-
 
 <table>
 <thead>
@@ -6992,7 +6941,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/exports</span>
 </div>
-
 
 <table>
 <thead>
@@ -7257,7 +7205,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/orders/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -7282,7 +7229,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/orders</span>
 </div>
-
 
 <table>
 <thead>
@@ -7450,7 +7396,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/orders/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -7515,7 +7460,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/orders/:id/cancel</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -7544,7 +7488,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/users/:id/orders</span>
 </div>
-
 
 <table>
 <thead>
@@ -7597,7 +7540,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/orders</span>
 </div>
-
 
 <table>
 <thead>
@@ -7755,7 +7697,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/addresses/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -7780,7 +7721,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/users/:id/addresses</span>
 </div>
-
 
 <table>
 <thead>
@@ -7888,7 +7828,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/v1/addresses/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -8002,7 +7941,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/addresses/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -8027,7 +7965,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/users/:id/addresses</span>
 </div>
-
 
 <table>
 <thead>
@@ -8435,12 +8372,10 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/proposals/(:id)</span>
 </div>
 
-
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/proposals/(:token)</span>
 </div>
-
 
 <table>
 <thead>
@@ -8467,7 +8402,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <p>Creates a proposal. The <code>POST /proposals</code> endpoint is anonymously accessible. In case a user is authenticated, he or she automatically owns the created proposal. The <code>POST /users/:id/proposals</code> is only accessible to the user with the given ID, who automatically owns the created proposal.</p>
 
-<p><div class="http-endpoint http-endpoint--post">
+<div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/proposals</span>
 </div>
@@ -8476,7 +8411,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/users/:id/proposals</span>
 </div>
-</p>
 
 <table>
 <thead>
@@ -8656,7 +8590,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <p>Updates the proposal with the given ID or token. This endpoint is only accessible to the proposal user if the path parameter is the proposal ID, and it is anonymously accessible if the path parameter is the proposal token.</p>
 
-<p><div class="http-endpoint http-endpoint--patch">
+<div class="http-endpoint http-endpoint--patch">
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/proposals/:id</span>
 </div>
@@ -8665,7 +8599,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/proposals/:token</span>
 </div>
-</p>
 
 <table>
 <thead>
@@ -8827,7 +8760,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/users/:id/proposals</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -8873,7 +8805,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partners/:slug/proposals</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -8916,7 +8847,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/proposals/:id/links</span>
 </div>
-
 
 <table>
 <thead>
@@ -8971,7 +8901,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/proposals</span>
 </div>
 
-
 <h3 id="query-parameters-2">Query parameters</h3>
 
 <table>
@@ -9013,7 +8942,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/proposals/:id/validate</span>
 </div>
-
 
 <table>
 <thead>
@@ -9068,7 +8996,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/proposals/:id/refuse</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -9121,7 +9048,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/proposals/:id/suspend</span>
 </div>
-
 
 <table>
 <thead>
@@ -9239,7 +9165,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partners/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -9316,7 +9241,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partnerships/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -9341,7 +9265,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/v1/projects/:id/partnerships</span>
 </div>
-
 
 <table>
 <thead>
@@ -9400,7 +9323,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partnerships/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -9452,7 +9374,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/v1/partnerships/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -9477,7 +9398,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/partnerships</span>
 </div>
-
 
 <table>
 <thead>
@@ -9636,7 +9556,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/projects/:id/sponsorships</span>
 </div>
-
 
 <table>
 <thead>
@@ -10051,7 +9970,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/threads</span>
 </div>
 
-
 <h3 id="query-parameters">Query parameters</h3>
 
 <table>
@@ -10079,7 +9997,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/threads/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10104,7 +10021,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--patch">patch</span>
     <span class="http-uri">/threads/:id</span>
 </div>
-
 
 <table>
 <thead>
@@ -10157,7 +10073,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/threads/:id/read</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10182,7 +10097,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/threads/:id/unread</span>
 </div>
-
 
 <table>
 <thead>
@@ -10209,7 +10123,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/threads/:id/unwatch</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10234,7 +10147,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/threads/:id/leave</span>
 </div>
-
 
 <table>
 <thead>
@@ -10264,7 +10176,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/threads/bulk</span>
 </div>
-
 
 <h3 id="payload-1">Payload</h3>
 
@@ -10311,7 +10222,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--post">post</span>
     <span class="http-uri">/threads/:id/recipients</span>
 </div>
-
 
 <table>
 <thead>
@@ -10423,7 +10333,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/threads/:id/messages</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10483,7 +10392,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/messages/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10539,7 +10447,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/messages/:id/send</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10566,7 +10473,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/threads/:id/messages</span>
 </div>
-
 
 <table>
 <thead>
@@ -10638,7 +10544,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/messages/:id/attachments</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10684,7 +10589,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-uri">/attachments/:id</span>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -10721,7 +10625,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/search/projects</span>
 </div>
-
 
 <h3 id="query-parameters">Query parameters</h3>
 

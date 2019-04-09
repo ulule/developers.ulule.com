@@ -100,6 +100,16 @@ Updates the user with the given ID. This endpoint is only accessible to oneself.
 | `screenname`   | string               | Screenname of the user -- max 30 characters                                            |
 | `username`     | string               | Username -- max 80 characters                                                          |
 
+## Delete a user
+
+Deletes the user with the given ID. This endpoint is only accessible to oneself.
+
+{{% http method="delete" %}}/v1/users/:id{{% /http %}}
+
+| Parameter | Description |
+| --------- | ----------- |
+| `:id`     | User ID     |
+
 ## List all partner members
 
 Retrieves all the users that has been registered via the partner with the given slug. This endpoint is only accessible to partner users.

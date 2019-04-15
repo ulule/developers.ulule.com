@@ -24,65 +24,74 @@ The project `status` can have the following values:
 
 ## Project resource
 
-| Field                        | Type                                           | Description                                                                                                                        |
-| ---------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `absolute_url`               | string                                         | Link to the project page on the Ulule website                                                                                      |
-| `account`                    | [account resource](#account)                   |                                                                                                                                    |
-| `amount_raised`              | int                                            | Amount raised in project currency                                                                                                  |
-| `analytics_count`            | int                                            |                                                                                                                                    |
-| `background`                 | [image resource](#image)                       | Background image or color of the project                                                                                           |
-| `comments_count`             | int                                            |                                                                                                                                    |
-| `committed`                  | int                                            |                                                                                                                                    |
-| `country`                    | string                                         | Two-letter ISO code of the country                                                                                                 |
-| `currency`                   | string                                         | Three-letter ISO code of the currency                                                                                              |
-| `currency_display`           | string                                         | Unicode character of the currency                                                                                                  |
-| `date_end`                   | string                                         | Date at which the funding campaign ends, with RFC 3339 format                                                                      |
-| `date_start`                 | string                                         | Date at which the funding campaign starts, with RFC 3339 format                                                                    |
-| `description`                | [i18n object](#i18n)                           | Main description of the project                                                                                                    |
-| `description_funding`        | [i18n object](#i18n)                           | Description of what are funds for                                                                                                  |
-| `description_yourself`       | [i18n object](#i18n)                           | Description of the owner of the project                                                                                            |
-| `discussions_thread_id`      | int                                            |                                                                                                                                    |
-| `fans_count`                 | int                                            | Number of fans                                                                                                                     |
-| `finished`                   | bool                                           | True if the funding campaign is finished                                                                                           |
-| `goal_raised`                | bool                                           | True if the current sum collected is superior to the project goal                                                                  |
-| `goal`                       | int                                            | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`                                    |
-| `id`                         | int                                            | Unique ID of the project                                                                                                           |
-| `is_cancelled`               | bool                                           | True if the project is cancelled                                                                                                   |
-| `is_online`                  | bool                                           | True if the project is online                                                                                                      |
-| `lang`                       | string                                         | Main language of the project                                                                                                       |
-| `location`                   | [location resource](#location-resource)        | Location of the project                                                                                                            |
-| `lowest_contribution_amount` | int                                            | Lowest contribution possible in the project currency                                                                               |
-| `main_image`                 | [image resource](#image)                       | Main image of the project                                                                                                          |
-| `main_tag`                   | [tag resource](#category-and-tag)              | Main tag of the project                                                                                                            |
-| `name`                       | [i18n object](#i18n)                           | Name of the project                                                                                                                |
-| `nb_days`                    | int                                            | Duration of the funding campaign in days                                                                                           |
-| `nb_products_sold`           | int                                            | The number of orders for project of type `presale`                                                                                 |
-| `news_count`                 | int                                            | Count of news published                                                                                                            |
-| `owner`                      | [user resource](#user)                         | Owner of the project                                                                                                               |
-| `partnerships`               | array of [partnership resources](#partnership) | Partnerships of the project, only present in the [project-detail endpoint](#retrieve-a-project)                                    |
-| `payment_methods`            | array of strings                               | Payment methods supported by the project -- any number of the available [payment methods](#payment-methods)                        |
-| `percent`                    | int                                            | Percentage of the goal raised on the goal targeted                                                                                 |
-| `resource_uri`               | string                                         | URL of the project resource                                                                                                        |
-| `rewards`                    | array of [reward resources](#reward)           | Rewards of the project                                                                                                             |
-| `slug`                       | string                                         | Unique slug of the project                                                                                                         |
-| `sponsorships_count`         | int                                            |                                                                                                                                    |
-| `status`                     | string                                         | Status of the project (`online`, `new`, `pending`, `pending-owner`, `validated`, `refused`, `waiting`, `pending-final-validation`) |
-| `subtitle`                   | [i18n object](#i18n)                           | Subtitle of the project                                                                                                            |
-| `supporters_count`           | int                                            | Number of supporters                                                                                                               |
-| `timezone`                   | string                                         | Timezone of the project                                                                                                            |
-| `type`                       | string                                         | Type of the project (`presale` or `project`)                                                                                       |
-| `urls`                       | [urls resource](#urls)                         | URLs of the project                                                                                                                |
-| `video`                      | [video resource](#video)                       | Video of the project                                                                                                               |
-| `visible`                    | bool                                           |                                                                                                                                    |
+| Field                        | Type                                    | Description                                                                                                                                                                    |
+| ---------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `absolute_url`               | string                                  | Link to the project page on the Ulule website                                                                                                                                  |
+| `amount_raised`              | int                                     | Amount raised in project currency                                                                                                                                              |
+| `analytics_count`            | int                                     |                                                                                                                                                                                |
+| `background`                 | [image resource](#image)                | Background image or color of the project                                                                                                                                       |
+| `comments_count`             | int                                     |                                                                                                                                                                                |
+| `committed`                  | int                                     |                                                                                                                                                                                |
+| `country`                    | string                                  | Two-letter ISO code of the country                                                                                                                                             |
+| `currency`                   | string                                  | Three-letter ISO code of the currency                                                                                                                                          |
+| `currency_display`           | string                                  | Unicode character of the currency                                                                                                                                              |
+| `date_end`                   | string                                  | Date at which the funding campaign ends, with RFC 3339 format                                                                                                                  |
+| `date_start`                 | string                                  | Date at which the funding campaign starts, with RFC 3339 format                                                                                                                |
+| `description`                | [i18n object](#i18n)                    | Main description of the project                                                                                                                                                |
+| `description_funding`        | [i18n object](#i18n)                    | Description of what are funds for                                                                                                                                              |
+| `description_yourself`       | [i18n object](#i18n)                    | Description of the owner of the project                                                                                                                                        |
+| `discussions_thread_id`      | int                                     |                                                                                                                                                                                |
+| `fans_count`                 | int                                     | Number of fans                                                                                                                                                                 |
+| `fields_needed`              | array of strings                        | Project fields that must be filled by the project owner before the project can be submitted for validation to the moderation team, only present when the project is not online |
+| `finished`                   | bool                                    | True if the funding campaign is finished                                                                                                                                       |
+| `goal_raised`                | bool                                    | True if the current sum collected is superior to the project goal                                                                                                              |
+| `goal`                       | int                                     | Goal in the project currency if type is `project`, or number of pre-orders if type is `presale`                                                                                |
+| `id`                         | int                                     | Unique ID of the project                                                                                                                                                       |
+| `is_cancelled`               | bool                                    | True if the project is cancelled                                                                                                                                               |
+| `is_online`                  | bool                                    | True if the project is online                                                                                                                                                  |
+| `lang`                       | string                                  | Main language of the project                                                                                                                                                   |
+| `location`                   | [location resource](#location-resource) | Location of the project                                                                                                                                                        |
+| `lowest_contribution_amount` | int                                     | Lowest contribution possible in the project currency                                                                                                                           |
+| `main_image`                 | [image resource](#image)                | Main image of the project                                                                                                                                                      |
+| `main_tag`                   | [tag resource](#category-and-tag)       | Main tag of the project                                                                                                                                                        |
+| `name`                       | [i18n object](#i18n)                    | Name of the project                                                                                                                                                            |
+| `nb_days`                    | int                                     | Duration of the funding campaign in days                                                                                                                                       |
+| `nb_products_sold`           | int                                     | The number of orders for project of type `presale`                                                                                                                             |
+| `news_count`                 | int                                     | Count of news published                                                                                                                                                        |
+| `owner`                      | [user resource](#user)                  | Owner of the project                                                                                                                                                           |
+| `payment_methods`            | array of strings                        | Payment methods supported by the project -- any number of the available [payment methods](#payment-methods)                                                                    |
+| `percent`                    | int                                     | Percentage of the goal raised on the goal targeted                                                                                                                             |
+| `resource_uri`               | string                                  | URL of the project resource                                                                                                                                                    |
+| `slug`                       | string                                  | Unique slug of the project                                                                                                                                                     |
+| `sponsorships_count`         | int                                     |                                                                                                                                                                                |
+| `status`                     | string                                  | Status of the project (`online`, `new`, `pending`, `pending-owner`, `validated`, `refused`, `waiting`, `pending-final-validation`)                                             |
+| `subtitle`                   | [i18n object](#i18n)                    | Subtitle of the project                                                                                                                                                        |
+| `supporters_count`           | int                                     | Number of supporters                                                                                                                                                           |
+| `timezone`                   | string                                  | Timezone of the project                                                                                                                                                        |
+| `type`                       | string                                  | Type of the project (`presale` or `project`)                                                                                                                                   |
+| `urls`                       | [urls resource](#urls)                  | URLs of the project                                                                                                                                                            |
+| `video`                      | [video resource](#video)                | Video of the project                                                                                                                                                           |
+| `visible`                    | bool                                    |                                                                                                                                                                                |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-In addition, some fields are present only in certain conditions:
-
-| Field           | Type             | Description                                                                                                                                                                    |
-| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `fields_needed` | array of strings | Project fields that must be filled by the project owner before the project can be submitted for validation to the moderation team, only present when the project is not online |
-| `notifications` |                  |                                                                                                                                                                                |
-
+| Field                | Type                                               | Description                                                                                          |
+| -------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                              |
+| `analytics`          | array of [analytics tags](#analytics-tag-resource) | Project analytics tags                                                                               |
+| `latest_news`        | [news resource](#news)                             | Latest news -- only accessible to staff                                                              |
+| `links`              | array of [links](#link-resource)                   | Links attached to the project                                                                        |
+| `manager`            | [user resource](#user-resource)                    | Project manager -- only accessible to the project owner                                              |
+| `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                            |
+| `owner.stats`        | [user stats resource](#user-stats-resource)        | Stats of the project owner -- only accessible to staff                                               |
+| `partnerships`       | array of [partnerships](#partnership-resource)     | Partnerships of the project                                                                          |
+| `proposal`           | [proposal resource](#proposal-resource)            | Proposal from which the project was created -- only accessible to staff                              |
+| `proposal.links`     | array of [links](#link-resource)                   | Links attached to the proposal from which the project was created -- only accessible to staff        |
+| `proposal.validator` | [user resource](#user-resource)                    | User who validated the proposal from which the project was created -- only accessible to staff       |
+| `rewards`            | array of [rewards](#reward)                        | Project rewards                                                                                      |
+| `sponsorships`       | array of [sponsorships](#sponsorship-resource)     | Sponsorships of the project                                                                          |
+| `tags`               | array of [tags](#tag-resource)                     | Tags of the project                                                                                  |
+| `user_role`          | string                                             | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner` |
 
 ### Payment methods
 
@@ -100,13 +109,19 @@ The following payment methods are supported:
 | `paypal`       |
 | `saving`       |
 
-
 ### Location resource
 
 | Field     | Type   | Description                        |
 | --------- | ------ | ---------------------------------- |
 | `city`    | string | City                               |
 | `country` | string | Two-letter ISO code of the country |
+
+### Note resource
+
+| Field     | Type   | Description           |
+| --------- | ------ | --------------------- |
+| `billing` | string | Note about billing    |
+| `manager` | string | Note about management |
 
 ## Retrieve a project
 
@@ -216,10 +231,10 @@ The `date_end` field must be set for a project to go online.
 
 ### Payload
 
-|Field|Type|Description|
-|---|---|---|
-|`date_end`|string|Date at which the funding campaign ends, with RFC 3339 format -- optional|
-|`timezone`|string|Timezone of the project -- optional|
+| Field      | Type   | Description                                                               |
+| ---------- | ------ | ------------------------------------------------------------------------- |
+| `date_end` | string | Date at which the funding campaign ends, with RFC 3339 format -- optional |
+| `timezone` | string | Timezone of the project -- optional                                       |
 
 ## Unpublish a project
 

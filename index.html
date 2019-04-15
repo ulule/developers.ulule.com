@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0" />
+	<meta name="generator" content="Hugo 0.55.1" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -1379,6 +1379,12 @@
 <h3 id="example">Example</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
+
+<h3 id="2019-04-11">2019-04-11</h3>
+
+<ul>
+<li>This version turns the <code>account</code>, <code>manager</code>, <code>notes</code>, <code>owner.stats</code>, <code>rewards</code> and <code>user_role</code> fields from the <a href="#project">project</a> resource into <a href="#extra-fields">extra_fields</a>. They must be explicitly specified.</li>
+</ul>
 
 <h3 id="2019-03-07">2019-03-07</h3>
 
@@ -3279,12 +3285,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
-<td><code>account</code></td>
-<td><a href="#account">account resource</a></td>
-<td></td>
-</tr>
-
-<tr>
 <td><code>amount_raised</code></td>
 <td>int</td>
 <td>Amount raised in project currency</td>
@@ -3372,6 +3372,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>fans_count</code></td>
 <td>int</td>
 <td>Number of fans</td>
+</tr>
+
+<tr>
+<td><code>fields_needed</code></td>
+<td>array of strings</td>
+<td>Project fields that must be filled by the project owner before the project can be submitted for validation to the moderation team, only present when the project is not online</td>
 </tr>
 
 <tr>
@@ -3471,12 +3477,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
-<td><code>partnerships</code></td>
-<td>array of <a href="#partnership">partnership resources</a></td>
-<td>Partnerships of the project, only present in the <a href="#retrieve-a-project">project-detail endpoint</a></td>
-</tr>
-
-<tr>
 <td><code>payment_methods</code></td>
 <td>array of strings</td>
 <td>Payment methods supported by the project &ndash; any number of the available <a href="#payment-methods">payment methods</a></td>
@@ -3492,12 +3492,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>resource_uri</code></td>
 <td>string</td>
 <td>URL of the project resource</td>
-</tr>
-
-<tr>
-<td><code>rewards</code></td>
-<td>array of <a href="#reward">reward resources</a></td>
-<td>Rewards of the project</td>
 </tr>
 
 <tr>
@@ -3562,7 +3556,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<p>In addition, some fields are present only in certain conditions:</p>
+<p>The following fields are <a href="#extra-fields">extra_fields</a> and must be explicitly specified in the request:</p>
 
 <table>
 <thead>
@@ -3575,15 +3569,93 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
-<td><code>fields_needed</code></td>
-<td>array of strings</td>
-<td>Project fields that must be filled by the project owner before the project can be submitted for validation to the moderation team, only present when the project is not online</td>
+<td><code>account</code></td>
+<td><a href="#account-resource">account resource</a></td>
+<td>Project account &ndash; only accessible to the project owner</td>
 </tr>
 
 <tr>
-<td><code>notifications</code></td>
-<td></td>
-<td></td>
+<td><code>analytics</code></td>
+<td>array of <a href="#analytics-tag-resource">analytics tags</a></td>
+<td>Project analytics tags</td>
+</tr>
+
+<tr>
+<td><code>latest_news</code></td>
+<td><a href="#news">news resource</a></td>
+<td>Latest news &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>links</code></td>
+<td>array of <a href="#link-resource">links</a></td>
+<td>Links attached to the project</td>
+</tr>
+
+<tr>
+<td><code>manager</code></td>
+<td><a href="#user-resource">user resource</a></td>
+<td>Project manager &ndash; only accessible to the project owner</td>
+</tr>
+
+<tr>
+<td><code>notes</code></td>
+<td><a href="#note-resource">notes resource</a></td>
+<td>Project notes &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>owner.stats</code></td>
+<td><a href="#user-stats-resource">user stats resource</a></td>
+<td>Stats of the project owner &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>partnerships</code></td>
+<td>array of <a href="#partnership-resource">partnerships</a></td>
+<td>Partnerships of the project</td>
+</tr>
+
+<tr>
+<td><code>proposal</code></td>
+<td><a href="#proposal-resource">proposal resource</a></td>
+<td>Proposal from which the project was created &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>proposal.links</code></td>
+<td>array of <a href="#link-resource">links</a></td>
+<td>Links attached to the proposal from which the project was created &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>proposal.validator</code></td>
+<td><a href="#user-resource">user resource</a></td>
+<td>User who validated the proposal from which the project was created &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>rewards</code></td>
+<td>array of <a href="#reward">rewards</a></td>
+<td>Project rewards</td>
+</tr>
+
+<tr>
+<td><code>sponsorships</code></td>
+<td>array of <a href="#sponsorship-resource">sponsorships</a></td>
+<td>Sponsorships of the project</td>
+</tr>
+
+<tr>
+<td><code>tags</code></td>
+<td>array of <a href="#tag-resource">tags</a></td>
+<td>Tags of the project</td>
+</tr>
+
+<tr>
+<td><code>user_role</code></td>
+<td>string</td>
+<td>Relation between the project and the authenticated user, can be null, <code>fan</code>, <code>supporter</code> and <code>owner</code></td>
 </tr>
 </tbody>
 </table>
@@ -3660,6 +3732,32 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>country</code></td>
 <td>string</td>
 <td>Two-letter ISO code of the country</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="note-resource">Note resource</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>billing</code></td>
+<td>string</td>
+<td>Note about billing</td>
+</tr>
+
+<tr>
+<td><code>manager</code></td>
+<td>string</td>
+<td>Note about management</td>
 </tr>
 </tbody>
 </table>

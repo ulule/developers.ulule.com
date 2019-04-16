@@ -66,6 +66,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `main_image`       | [image resource](#image)                    | Main image of the project                                                                                                                |
 | `main_tag`         | [tag resource](#category-and-tag)           | Main tag of the project                                                                                                                  |
 | `manager`          | [user resource](#user-resource)             | Manager of the project -- only accessible to staff                                                                                       |
+| `moderator`        | [user resource](#user-resource)             | User who moderated the project -- only accessible to staff                                                                               |
 | `owner`            | [user resource](#user-resource)             | Owner of the project                                                                                                                     |
 | `owner.email`      | string                                      | Email of the project owner -- only accessible to staff                                                                                   |
 | `owner.stats`      | [user stats resource](#user-stats-resource) | Stats of the project owner -- only accessible to staff                                                                                   |

@@ -51,7 +51,6 @@ Only proposals with status `new` are inspected by the moderation team. For a pro
 | `lang`                  | string                                   | Language of the proposal                                                                                                                                                       |
 | `last_name`             | string                                   | Last name of the proposal user                                                                                                                                                 |
 | `legal_entity_type`     | string                                   | Legal entity of the proposal user -- can be one of `personal`, `business`, `association`                                                                                       |
-| `links`                 | array of [links](#link-resource)         | Links attached to the proposal -- only visible to staff and if the `links` [extra_field](#extra-fields) is present                                                             |
 | `manager`               | [user resource](#user)                   | Manager assigned to the proposal -- only visible to staff                                                                                                                      |
 | `name`                  | string                                   | Name of the proposal                                                                                                                                                           |
 | `nb_products_min`       | int                                      | Minimum number of presales the project must receive to succeed                                                                                                                 |
@@ -69,6 +68,15 @@ Only proposals with status `new` are inspected by the moderation team. For a pro
 | `token`                 | string                                   | Automatically generated token that can be used to retrieve an anonymous proposal                                                                                               |
 | `type`                  | string                                   | Type of the proposal, can be `presale` or `project`                                                                                                                            |
 | `user`                  | [user resource](#user)                   | User who created the proposal                                                                                                                                                  |
+
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field           | Type                                        | Description                                            |
+| --------------- | ------------------------------------------- | ------------------------------------------------------ |
+| `links`         | array of [links](#link-resource)            | Links attached to the proposal                         |
+| `project.links` | array of [links](#link-resource)            | Links attached to the proposal project                  |
+| `project.tags`  | array of [tags](#tag-resource)              | Tags of the proposal project                           |
+| `user.stats`    | [user stats resource](#user-stats-resource) | Stats of the proposal user -- only accessible to staff |
 
 ### Goal range
 
@@ -213,7 +221,7 @@ The response is [paginated](#pagination).
 | --------- | ------------------------------------------------- |
 | `status`  | Status, must be one of `new`, `valid` or`invalid` |
 
-## List proposal references
+## List proposal links
 
 List the references of the proposal with the given ID. This endpoint is only accessible to the proposal user.
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.1" />
+	<meta name="generator" content="Hugo 0.55.4" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -3988,7 +3988,8 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <h2 id="submit-a-project">Submit a project</h2>
 
-<p>Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.</p>
+<p>Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.
+The project owner can send a message to the moderation team. This message will be added to the project discussion thread.</p>
 
 <p>The project status must not be <code>pending</code>.</p>
 
@@ -4036,6 +4037,26 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
+<h3 id="payload-1">Payload</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Message to the moderation team &ndash; optional</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="publish-a-project">Publish a project</h2>
 
 <p>Publishes the project and make it publicly visible. This endpoint is only accessible to the project owner.</p>
@@ -4067,7 +4088,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h3 id="payload-1">Payload</h3>
+<h3 id="payload-2">Payload</h3>
 
 <table>
 <thead>
@@ -4147,7 +4168,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
-<h3 id="payload-2">Payload</h3>
+<h3 id="payload-3">Payload</h3>
 
 <table>
 <thead>

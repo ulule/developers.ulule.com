@@ -4,6 +4,12 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 30-04-2019
+* **[ULULE-API/FEAT]** Add the `message` field to the [submit-project endpoint](https://developers.ulule.com/#submit-a-project).
+
+### 11-04-2019
+* **[ULULE-API/FEAT]** Add the 2019-04-11 version change, which turns the `account`, `manager`, `notes`, `owner.stats`, `rewards` and `user_role` fields from the project resource into [extra_fields](https://developers.ulule.com/#extra-fields).
+
 ### 21-03-2019
 * **[ULULE-API/FEAT]** Add length limit to comment payload.
 
@@ -12,7 +18,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 * **[ULULE-API/FEAT]** Add the 2019-03-07 version change, which adds validation to extra fields: if the request contains an extra field that doesn’t exist, or an extra field that the user doesn’t have permission to read, an error is returned, instead of silently accepting the request without the extra field.
 
 ### 06-03-2019
-* **[ULULE-API/FEAT]** Add the 2019-03-06 version change, which turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects endpoint](https://developers.ulule.com/#search-projects) into [extra_fields](https://developers.ulule.com/#extra-fields)
+* **[ULULE-API/FEAT]** Add the 2019-03-06 version change, which turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects endpoint](https://developers.ulule.com/#search-projects) into [extra_fields](https://developers.ulule.com/#extra-fields).
 
 ### 19-02-2019
 * **[ULULE-API/FEAT]** Add the 2019-02-19 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).

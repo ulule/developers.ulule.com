@@ -183,6 +183,7 @@ Finally, the following fields can't be updated by the project owner, they can on
 ## Submit a project
 
 Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.
+The project owner can send a message to the moderation team. This message will be added to the project discussion thread.
 
 The project status must not be `pending`.
 
@@ -212,6 +213,12 @@ Finally, the `account.is_completed` field must be `true`
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | Project ID  |
+
+### Payload
+
+| Field     | Type   | Description                                |
+| --------- | ------ | ------------------------------------------ |
+| `message` | string | Message to the moderation team -- optional |
 
 ## Publish a project
 

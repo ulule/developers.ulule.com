@@ -168,6 +168,7 @@ In addition, the following fields can't be updated after the project has been va
 | `main_tag_id` | int           | ID of the main tag of the project                             |
 | `nb_days`     | string        | Duration of the funding campaign in days                      |
 | `tags`        | array of ints | ID of tags related to the project                             |
+| `type`        | string        | Project type -- must be `project` or `presale`                |
 
 Finally, the following fields can't be updated by the project owner, they can only be updated by staff users.
 
@@ -176,7 +177,6 @@ Finally, the following fields can't be updated by the project owner, they can on
 | `comments_enabled`    | string | Enable comments, must be one of `everyone`, `supporters` and `disabled`                   |
 | `status`              | string | Project status                                                                            |
 | `supporters_disabled` | string | If set to false, the "Supporters" tab is not visible on the project page on Ulule website |
-| `type`                | string | Project type -- must be `project` or `presale`                                            |
 | `unread`              | bool   |                                                                                           |
 | `visible`             | bool   | If set to false, the project is not indexed by search engines                             |
 

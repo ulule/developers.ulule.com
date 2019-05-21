@@ -85,7 +85,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                            |
 | `owner.stats`        | [user stats resource](#user-stats-resource)        | Stats of the project owner -- only accessible to staff                                               |
 | `partnerships`       | array of [partnerships](#partnership-resource)     | Partnerships of the project                                                                          |
-| `proposal`           | [proposal resource](#proposal-resource)            | Proposal from which the project was created -- only accessible to staff                              |
+| `proposal`           | [proposal resource](#proposal-resource)            | Proposal from which the project was created -- only accessible to the project owner                   |
 | `proposal.links`     | array of [links](#link-resource)                   | Links attached to the proposal from which the project was created -- only accessible to staff        |
 | `proposal.validator` | [user resource](#user-resource)                    | User who validated the proposal from which the project was created -- only accessible to staff       |
 | `rewards`            | array of [rewards](#reward)                        | Project rewards                                                                                      |

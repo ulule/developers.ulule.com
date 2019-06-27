@@ -193,8 +193,6 @@ Additionally, the following fields must be set (i18n fields must be set in the p
 * `country`
 * `currency`
 * `description`
-* `description_funding`
-* `description_yourself`
 * `goal` (if `type` is `project`)
 * `lang`
 * `name`

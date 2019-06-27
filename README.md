@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 26-06-2019
+* **[ULULE-API/FEAT]** Remove the `description_funding` and `description_yourself` from the list of fields that are required to be set to submit a project.
+
 ### 30-04-2019
 * **[ULULE-API/FEAT]** Add the `message` field to the [submit-project endpoint](https://developers.ulule.com/#submit-a-project).
 

@@ -4,11 +4,14 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 01-07-2019
+* **[ULULE-API/FEAT]** Add the `dry_run` field to the [users.create payload](https://developers.ulule.com/#create-a-user).
+
 ### 26-06-2019
 * **[ULULE-API/FEAT]** Remove the `description_funding` and `description_yourself` fields from the list of fields that are required to be set to submit a project.
 
 ### 30-04-2019
-* **[ULULE-API/FEAT]** Add the `message` field to the [submit-project endpoint](https://developers.ulule.com/#submit-a-project).
+* **[ULULE-API/FEAT]** Add the `message` field to the [projects.submit endpoint](https://developers.ulule.com/#submit-a-project).
 
 ### 11-04-2019
 * **[ULULE-API/FEAT]** Add the 2019-04-11 version change, which turns the `account`, `manager`, `notes`, `owner.stats`, `rewards` and `user_role` fields from the project resource into [extra_fields](https://developers.ulule.com/#extra-fields).
@@ -17,25 +20,25 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 * **[ULULE-API/FEAT]** Add length limit to comment payload.
 
 ### 07-03-2019
-* **[ULULE-API/FEAT]** Add the [cancel-order endpoint](https://developers.ulule.com/#cancel-an-order)
+* **[ULULE-API/FEAT]** Add the [orders.cancel endpoint](https://developers.ulule.com/#cancel-an-order)
 * **[ULULE-API/FEAT]** Add the 2019-03-07 version change, which adds validation to extra fields: if the request contains an extra field that doesn’t exist, or an extra field that the user doesn’t have permission to read, an error is returned, instead of silently accepting the request without the extra field.
 
 ### 06-03-2019
-* **[ULULE-API/FEAT]** Add the 2019-03-06 version change, which turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects endpoint](https://developers.ulule.com/#search-projects) into [extra_fields](https://developers.ulule.com/#extra-fields).
+* **[ULULE-API/FEAT]** Add the 2019-03-06 version change, which turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search.projects endpoint](https://developers.ulule.com/#search-projects) into [extra_fields](https://developers.ulule.com/#extra-fields).
 
 ### 19-02-2019
 * **[ULULE-API/FEAT]** Add the 2019-02-19 version change, which removes the `full_name`, `name` and `region` fields from the [location resource](https://developers.ulule.com/#project-resource).
-* **[ULULE-API/FEAT]** Add the [partner-detail](https://developers.ulule.com/#partner) endpoint.
+* **[ULULE-API/FEAT]** Add the [partners.detail](https://developers.ulule.com/#partner) endpoint.
 
 ### 14-01-2019
 * **[ULULE-API/FIX]** Allow anonymous proposals to be owned by staff users.
-* **[DISCUSSIONS-API/FIX]** Fix the [list-thread](https://developers.ulule.com/#retrieve-thread-list) endpoint when the `status` filter is set to `deleted`.
-* **[DISCUSSIONS-API/FIX]** Allow uppercase extensions in the `file` field of the [created-attachment](https://developers.ulule.com/#create-an-attachment) payload.
+* **[DISCUSSIONS-API/FIX]** Fix the [threads.list](https://developers.ulule.com/#retrieve-thread-list) endpoint when the `status` filter is set to `deleted`.
+* **[DISCUSSIONS-API/FIX]** Allow uppercase extensions in the `file` field of the [messages.attachments_create](https://developers.ulule.com/#create-an-attachment) payload.
 
 ### 12-12-2018
 
-* **[ULULE-API/FEAT]** Add comment replies: the [comment resource](https://developers.ulule.com/#comment-resource) has two new fields (`replies_count` and `replies`) and there are two new endpoints: [create-comment-reply](https://developers.ulule.com/#create-a-reply-to-a-comment) and [list-comment-replies](https://developers.ulule.com/#list-comment-replies).
-* **[ULULE-API/FEAT]** Add the 2018-12-12 version change. The [list-user-projects](https://developers.ulule.com/#list-user-projects) endpoint is accessible to all users.
+* **[ULULE-API/FEAT]** Add comment replies: the [comment resource](https://developers.ulule.com/#comment-resource) has two new fields (`replies_count` and `replies`) and there are two new endpoints: [comments.replies_create](https://developers.ulule.com/#create-a-reply-to-a-comment) and [comments.replies_list](https://developers.ulule.com/#list-comment-replies).
+* **[ULULE-API/FEAT]** Add the 2018-12-12 version change. The [users.projects_list](https://developers.ulule.com/#list-user-projects) endpoint is accessible to all users.
 
 ### 05-12-2018
 
@@ -51,7 +54,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 12-11-2018
 
-* **[ULULE-API/FEAT]** Allow the `status` parameter in the [list-project-orders](https://developers.ulule.com/#list-project-orders) and [list-user-orders](https://developers.ulule.com/#list-user-orders) endpoints to be a list of comma-separated strings.
+* **[ULULE-API/FEAT]** Allow the `status` parameter in the [projects.orders_list](https://developers.ulule.com/#list-project-orders) and [users.orders_list](https://developers.ulule.com/#list-user-orders) endpoints to be a list of comma-separated strings.
 
 ### 19-10-2018
 

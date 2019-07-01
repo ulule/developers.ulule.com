@@ -2179,15 +2179,9 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
-<td><code>username</code></td>
-<td>string</td>
-<td>Username &ndash; required, max 80 characters</td>
-</tr>
-
-<tr>
-<td><code>password1</code></td>
-<td>string</td>
-<td>Password of the user &ndash; required, max 128 characters, must have a score of at least 1 with the <a href="https://lowe.github.io/tryzxcvbn/">zxcvbn password strength estimator</a></td>
+<td><code>dry_run</code></td>
+<td>bool</td>
+<td>If true, fields are checked but the user is not created &ndash; optional</td>
 </tr>
 
 <tr>
@@ -2197,15 +2191,27 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>ip_address</code></td>
+<td>string</td>
+<td>IP address of the user &ndash; optional</td>
+</tr>
+
+<tr>
 <td><code>lang</code></td>
 <td>string</td>
 <td>Language of the user &ndash; optional</td>
 </tr>
 
 <tr>
-<td><code>ip_address</code></td>
+<td><code>password1</code></td>
 <td>string</td>
-<td>IP address of the user &ndash; optional</td>
+<td>Password of the user &ndash; required, max 128 characters, must have a score of at least 1 with the <a href="https://lowe.github.io/tryzxcvbn/">zxcvbn password strength estimator</a></td>
+</tr>
+
+<tr>
+<td><code>username</code></td>
+<td>string</td>
+<td>Username &ndash; required, max 80 characters</td>
 </tr>
 </tbody>
 </table>

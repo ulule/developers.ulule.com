@@ -303,6 +303,7 @@ The response is [paginated](#pagination).
 | Parameter | Description                                                                                                                                                  |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `state`   | Kind of relationship between the user and the projects. Can be one of `online`, `supported`, `followed`, `created`. `created` is only accessible to oneself. |
+| `sort`    | Sort the project list. Can be one of `created_at`, `supported_at`, `followed_at`. Default is `created_at`.                                                   |
 
 ## Project discussion
 

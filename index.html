@@ -114,6 +114,22 @@
 
                         </li>
                         
+                        <li>
+                            <a href="#errors">Errors</a>
+
+                            
+                            
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="#client-error-resource">Client error resource</a></li>
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
                     </ul>
                 </li>
                 
@@ -1573,6 +1589,50 @@
     <span class="http-verb http-verb--get">get</span>
     <span class="http-uri">/v1/me?extra_fields=orders,orders.project</span>
 </div>
+</div>
+        </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="errors">Errors</h1>
+
+<p>Ulule uses conventional HTTP response codes to indicate the success or failure
+of an API request. Codes in the <code>2xx</code> range indicate success.
+Codes in the <code>4xx</code> range indicate a client error (bad payload or query string, no permission, resource does not exist, etc.)
+Codes in the <code>5xx range</code> indicate a server error.</p>
+
+<h2 id="client-error-resource">Client error resource</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>classification</code></td>
+<td>string</td>
+<td>Type of the error</td>
+</tr>
+
+<tr>
+<td><code>fieldNames</code></td>
+<td>array of strings</td>
+<td>List of the concerned fields</td>
+</tr>
+
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Short text describing the error</td>
+</tr>
+</tbody>
+</table>
 </div>
         </section>
          

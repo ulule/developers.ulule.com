@@ -12,8 +12,8 @@ Codes in the `5xx range` indicate a server error.
 
 ## Client error resource
 
-| Field            | type            | Description                     |
-| ---------------- | --------------- | ------------------------------- |
-| `classification` | string          | Type of the error               |
+| Field            | type             | Description                     |
+| ---------------- | ---------------- | ------------------------------- |
+| `classification` | string           | Type of the error               |
 | `fieldNames`     | array of strings | List of the concerned fields    |
-| `message`        | string          | Short text describing the error |
+| `message`        | string           | Short text describing the error |

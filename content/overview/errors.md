@@ -11,13 +11,10 @@ Codes in the `4xx` range indicate a client error (bad payload or query string, n
 (e.g., a required parameter was omitted, the deserialization of the payload failed, etc.).
 Codes in the `5xx range` indicate a server error.
 
-With the response code, the API returns a serialized json list of Error
-with the following fields:
+## Client error resource
 
-| Field            | Description                          |
-| ---------------- | ------------------------------------ |
-| `fieldNames`     | List of the concerned fields         |
-| `classification` | Type of the error                    |
-| `message`        | Short text describing the error      |
-
-
+| Field            | type            | Description                     |
+| ---------------- | --------------- | ------------------------------- |
+| `classification` | string          | Type of the error               |
+| `fieldNames`     | array of string | List of the concerned fields    |
+| `message`        | string          | Short text describing the error |

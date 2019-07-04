@@ -26,7 +26,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2019-07-03
 
-* This version makes the `username` fields from the [users.create payload](#create-a-user) optional. If absent, the username is deduced from the local part of the email.
+* This version makes the `username` field from the [users.create payload](#create-a-user) optional. If absent, the username is deduced from the local part of the email.
 
 ### 2019-04-11
 

@@ -1386,7 +1386,12 @@
 
 <p>Ulule API has a versioning system to manage upgrades without breaking backward-compatibility.</p>
 
-<p>The API version controls the API observable behavior, for example the fields present in resources, etc.</p>
+<p>We consider the following changes to be backward-incompatible:</p>
+
+<ul>
+<li>Removing a resource field, or changing the type of a resource field.</li>
+<li>Changing the validation of a parameter, or the permission required to call an endpoint.</li>
+</ul>
 
 <p>When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitly requested.</p>
 
@@ -1395,6 +1400,12 @@
 <h3 id="example">Example</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
+
+<h3 id="2019-07-03">2019-07-03</h3>
+
+<ul>
+<li>This version makes the <code>username</code> fields from the <a href="#create-a-user">users.create payload</a> optional. If absent, the username is deduced from the local part of the email.</li>
+</ul>
 
 <h3 id="2019-04-11">2019-04-11</h3>
 
@@ -1411,7 +1422,7 @@
 <h3 id="2019-03-06">2019-03-06</h3>
 
 <ul>
-<li>This version turns the <code>main_image</code>, <code>main_tag</code>, <code>owner</code> and <code>user_role</code> fields from the <a href="#search-projects">search-projects</a> endpoint into <a href="#extra-fields">extra_fields</a>. They must be explicitly specified.</li>
+<li>This version turns the <code>main_image</code>, <code>main_tag</code>, <code>owner</code> and <code>user_role</code> fields from the <a href="#search-projects">search.projects</a> endpoint into <a href="#extra-fields">extra_fields</a>. They must be explicitly specified.</li>
 </ul>
 
 <h3 id="2019-02-07">2019-02-07</h3>
@@ -1423,25 +1434,25 @@
 <h3 id="2018-12-12">2018-12-12</h3>
 
 <ul>
-<li>This version changes the permission of the <a href="#list-user-projects">list-user-projects endpoint</a>: this endpoint is now accessible to all users.</li>
+<li>This version changes the permission of the <a href="#list-user-projects">users.projects_list endpoint</a>: this endpoint is now accessible to all users.</li>
 </ul>
 
 <h3 id="2018-11-26">2018-11-26</h3>
 
 <ul>
-<li>This version changes the permission of the <a href="#retrieve-a-user">user-detail endpoint</a>: this endpoint is now accessible to all users.</li>
+<li>This version changes the permission of the <a href="#retrieve-a-user">users.detail endpoint</a>: this endpoint is now accessible to all users.</li>
 </ul>
 
 <h3 id="2018-10-04">2018-10-04</h3>
 
 <ul>
-<li>This version changes the permission of the <a href="#retrieve-a-project">projet-detail endpoint</a>: this endpoint is now accessible to all users before its status is <code>online</code>.</li>
+<li>This version changes the permission of the <a href="#retrieve-a-project">projets.detail endpoint</a>: this endpoint is now accessible to all users before its status is <code>online</code>.</li>
 </ul>
 
 <h3 id="2018-10-03">2018-10-03</h3>
 
 <ul>
-<li>This version changes the validation of the <a href="#create-a-user">user-create endpoint</a>: the <code>password1</code> payload field must now have a score of at least 1 with the <a href="https://lowe.github.io/tryzxcvbn/">zxcvbn password strength estimator</a>.</li>
+<li>This version changes the validation of the <a href="#create-a-user">users.create endpoint</a>: the <code>password1</code> payload field must now have a score of at least 1 with the <a href="https://lowe.github.io/tryzxcvbn/">zxcvbn password strength estimator</a>.</li>
 </ul>
 
 <h3 id="2018-09-03">2018-09-03</h3>
@@ -1457,7 +1468,7 @@
 <h3 id="2018-05-22">2018-05-22</h3>
 
 <ul>
-<li>This version changes the permission of the <a href="#create-an-order">order-create endpoint</a>: the <code>is_completed</code> field of the <a href="#user">user resource</a> is no longer required to be true for a user to <a href="#create-an-order">create an order</a></li>
+<li>This version changes the permission of the <a href="#create-an-order">projects.orders_create endpoint</a>: the <code>is_completed</code> field of the <a href="#user">user resource</a> is no longer required to be true for a user to <a href="#create-an-order">create an order</a></li>
 </ul>
 
 <h3 id="2018-04-17">2018-04-17</h3>
@@ -2271,7 +2282,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>username</code></td>
 <td>string</td>
-<td>Username &ndash; required, max 80 characters</td>
+<td>Username &ndash; optional, max 80 characters</td>
 </tr>
 </tbody>
 </table>

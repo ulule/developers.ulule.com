@@ -49,9 +49,8 @@ For example, the description field of the user resource field may look like this
       
       <guid>/overview/versions/</guid>
       <description>Versions Ulule API has a versioning system to manage upgrades without breaking backward-compatibility.
-The API version controls the API observable behavior, for example the fields present in resources, etc.
-When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitly requested.
-To request a specific version, add the Ulule-Version HTTP header to the request.</description>
+We consider the following changes to be backward-incompatible:
+ Removing a resource field, or changing the type of a resource field. Changing the validation of a parameter, or the permission required to call an endpoint.  When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitly requested.</description>
     </item>
     
     <item>

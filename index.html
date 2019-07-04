@@ -1401,6 +1401,12 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2019-07-05">2019-07-05</h3>
+
+<ul>
+<li>This version disallows unknown fields in JSON payloads.</li>
+</ul>
+
 <h3 id="2019-07-03">2019-07-03</h3>
 
 <ul>
@@ -1608,18 +1614,13 @@
 
 <h1 id="errors">Errors</h1>
 
-<p>Ulule uses conventional HTTP response codes to indicate the success or failure
-of an API request. Codes in the <code>2xx</code> range indicate success.
-Codes in the <code>4xx</code> range indicate a client error (bad payload or query string, no permission, resource does not exist, etc.)
-Codes in the <code>5xx range</code> indicate a server error.</p>
-
 <h2 id="client-error-resource">Client error resource</h2>
 
 <table>
 <thead>
 <tr>
 <th>Field</th>
-<th>type</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1628,7 +1629,7 @@ Codes in the <code>5xx range</code> indicate a server error.</p>
 <tr>
 <td><code>classification</code></td>
 <td>string</td>
-<td>Type of the error</td>
+<td>Class of the error</td>
 </tr>
 
 <tr>
@@ -1640,7 +1641,45 @@ Codes in the <code>5xx range</code> indicate a server error.</p>
 <tr>
 <td><code>message</code></td>
 <td>string</td>
-<td>Short text describing the error</td>
+<td>Description of the error</td>
+</tr>
+</tbody>
+</table>
+
+<p>The following values are possible for the <code>classification</code> field:</p>
+
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>DeserializationError</td>
+<td>Payload can&rsquo;t be deserialized because it is malformed</td>
+</tr>
+
+<tr>
+<td>PermissionError</td>
+<td>User doesn&rsquo;t have the permission to use this field</td>
+</tr>
+
+<tr>
+<td>RequiredError</td>
+<td>Field is required</td>
+</tr>
+
+<tr>
+<td>UnknownFieldError</td>
+<td>Field is unknown</td>
+</tr>
+
+<tr>
+<td>ValueError</td>
+<td>Bad value, the <code>message</code> field explains why</td>
 </tr>
 </tbody>
 </table>

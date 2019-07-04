@@ -7,7 +7,10 @@ weight: 4
 
 Ulule API has a versioning system to manage upgrades without breaking backward-compatibility.
 
-The API version controls the API observable behavior, for example the fields present in resources, etc.
+We consider the following changes to be backward-incompatible:
+
+* Removing a resource field, or changing the type of a resource field.
+* Changing the validation of a parameter, or the permission required to call an endpoint.
 
 When we must introduce a backward-incompatible change, we release a new version named after the current date. To avoid breaking external programs, these versions are always opt-in and must be explicitly requested.
 
@@ -21,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-07-03
+
+* This version makes the `username` fields from the [users.create payload](#create-a-user) optional. If absent, the username is deduced from the local part of the email.
+
 ### 2019-04-11
 
 * This version turns the `account`, `manager`, `notes`, `owner.stats`, `rewards` and `user_role` fields from the [project](#project) resource into [extra_fields](#extra-fields). They must be explicitly specified.
@@ -31,7 +38,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2019-03-06
 
-* This version turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search-projects](#search-projects) endpoint into [extra_fields](#extra-fields). They must be explicitly specified.
+* This version turns the `main_image`, `main_tag`, `owner` and `user_role` fields from the [search.projects](#search-projects) endpoint into [extra_fields](#extra-fields). They must be explicitly specified.
 
 ### 2019-02-07
 
@@ -39,19 +46,19 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2018-12-12
 
-* This version changes the permission of the [list-user-projects endpoint](#list-user-projects): this endpoint is now accessible to all users.
+* This version changes the permission of the [users.projects_list endpoint](#list-user-projects): this endpoint is now accessible to all users.
 
 ### 2018-11-26
 
-* This version changes the permission of the [user-detail endpoint](#retrieve-a-user): this endpoint is now accessible to all users.
+* This version changes the permission of the [users.detail endpoint](#retrieve-a-user): this endpoint is now accessible to all users.
 
 ### 2018-10-04
 
-* This version changes the permission of the [projet-detail endpoint](#retrieve-a-project): this endpoint is now accessible to all users before its status is `online`.
+* This version changes the permission of the [projets.detail endpoint](#retrieve-a-project): this endpoint is now accessible to all users before its status is `online`.
 
 ### 2018-10-03
 
-* This version changes the validation of the [user-create endpoint](#create-a-user): the `password1` payload field must now have a score of at least 1 with the [zxcvbn password strength estimator](https://lowe.github.io/tryzxcvbn/).
+* This version changes the validation of the [users.create endpoint](#create-a-user): the `password1` payload field must now have a score of at least 1 with the [zxcvbn password strength estimator](https://lowe.github.io/tryzxcvbn/).
 
 ### 2018-09-03
 
@@ -60,7 +67,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2018-05-22
 
-* This version changes the permission of the [order-create endpoint](#create-an-order): the `is_completed` field of the [user resource](#user) is no longer required to be true for a user to [create an order](#create-an-order)
+* This version changes the permission of the [projects.orders_create endpoint](#create-an-order): the `is_completed` field of the [user resource](#user) is no longer required to be true for a user to [create an order](#create-an-order)
 
 ### 2018-04-17
 

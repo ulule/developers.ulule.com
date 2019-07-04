@@ -71,7 +71,7 @@ Creates a new user. The created user is a member of the partner with the given s
 | `ip_address` | string | IP address of the user -- optional                                                                                                                                     |
 | `lang`       | string | Language of the user -- optional                                                                                                                                       |
 | `password1`  | string | Password of the user -- required, max 128 characters, must have a score of at least 1 with the [zxcvbn password strength estimator](https://lowe.github.io/tryzxcvbn/) |
-| `username`   | string | Username -- required, max 80 characters                                                                                                                                |
+| `username`   | string | Username -- optional, max 80 characters                                                                                                                                |
 
 ## Update a user
 

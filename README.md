@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 03-07-2019
+* **[ULULE-API/FEAT]** Add the 2019-04-11 version change, which makes the `username` field from the [users.create payload](https://developers.ulule.com/#create-a-user) optional.
+
 ### 01-07-2019
 * **[ULULE-API/FEAT]** Add the `dry_run` field to the [users.create payload](https://developers.ulule.com/#create-a-user).
 

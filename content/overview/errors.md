@@ -20,5 +20,6 @@ The following values are possible for the `classification` field:
 | DeserializationError | Payload can't be deserialized because it is malformed |
 | PermissionError      | User doesn't have the permission to use this field    |
 | RequiredError        | Field is required                                     |
+| TypeError            | Field can't be deserialized because of its type       |
 | UnknownFieldError    | Field is unknown                                      |
 | ValueError           | Bad value, the `message` field explains why           |

@@ -70,7 +70,7 @@ Depending on the use case, API clients sometimes don&amp;rsquo;t need embedded r
       
       <guid>/overview/errors/</guid>
       <description> Errors Client error resource    Field Type Description     classification string Class of the error   fieldNames array of strings List of the concerned fields   message string Description of the error    The following values are possible for the classification field:
-   Classification Description     DeserializationError Payload can&amp;rsquo;t be deserialized because it is malformed   PermissionError User doesn&amp;rsquo;t have the permission to use this field   RequiredError Field is required   UnknownFieldError Field is unknown   ValueError Bad value, the message field explains why    </description>
+   Classification Description     DeserializationError Payload can&amp;rsquo;t be deserialized because it is malformed   PermissionError User doesn&amp;rsquo;t have the permission to use this field   RequiredError Field is required   TypeError Field can&amp;rsquo;t be deserialized because of its type   UnknownFieldError Field is unknown   ValueError Bad value, the message field explains why    </description>
     </item>
     
   </channel>

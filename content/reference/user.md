@@ -36,6 +36,12 @@ The user resource represents a user registered on the Ulule website, possibly vi
 | `timezone`           | string                     | Timezone of the user                                                                                                                                                                                                                                                         |
 | `username`           | string                     | Username                                                                                                                                                                                                                                                                     |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field          | Type   | Description                                                            |
+| -------------- | ------ | ---------------------------------------------------------------------- |
+| `contact_lang` | string | Preferred language for contacting the user -- only accessible to staff |
+
 ## Retrieve authenticated user
 
 Retrieves the authenticated user.
@@ -85,21 +91,22 @@ Updates the user with the given ID. This endpoint is only accessible to oneself.
 
 ### Payload
 
-| Field          | Type                 | Description                                                                            |
-| -------------- | -------------------- | -------------------------------------------------------------------------------------- |
-| `birthday`     | string               | Birthday of the user -- must have YYYY-MM-DD format and year must be greater than 1901 |
-| `country`      | string               | Country where the user lives -- must be two-letter ISO code                            |
-| `description`  | [i18n object](#i18n) | Short description of the user                                                          |
-| `email`        | string               | Email of the user                                                                      |
-| `first_name`   | string               | First name of the user -- max 30 characters                                            |
-| `ip_address`   | string               | IP address of the user -- must be ipv4 or ipv6                                         |
-| `last_name`    | string               | Last name of the user -- max 30 characters                                             |
-| `lang`         | string               | Language of the user -- must be one of the [supported languages](#languages)           |
-| `location`     | string               | Location of the user -- max 255 characters                                             |
-| `nationality`  | string               | Nationality of the user -- must be two-letter ISO code                                 |
-| `presentation` | [i18n object](#i18n) | Longer presentation of the user                                                        |
-| `screenname`   | string               | Screenname of the user -- max 30 characters                                            |
-| `username`     | string               | Username -- max 80 characters                                                          |
+| Field          | Type                 | Description                                                                                                                  |
+| -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `birthday`     | string               | Birthday of the user -- must have YYYY-MM-DD format and year must be greater than 1901                                       |
+| `country`      | string               | Country where the user lives -- must be two-letter ISO code                                                                  |
+| `contact_lang` | string               | Preferred language for contacting the user -- must be one of the [supported languages](#languages), only accessible to staff |
+| `description`  | [i18n object](#i18n) | Short description of the user                                                                                                |
+| `email`        | string               | Email of the user                                                                                                            |
+| `first_name`   | string               | First name of the user -- max 30 characters                                                                                  |
+| `ip_address`   | string               | IP address of the user -- must be ipv4 or ipv6                                                                               |
+| `last_name`    | string               | Last name of the user -- max 30 characters                                                                                   |
+| `lang`         | string               | Language of the user -- must be one of the [supported languages](#languages)                                                 |
+| `location`     | string               | Location of the user -- max 255 characters                                                                                   |
+| `nationality`  | string               | Nationality of the user -- must be two-letter ISO code                                                                       |
+| `presentation` | [i18n object](#i18n) | Longer presentation of the user                                                                                              |
+| `screenname`   | string               | Screenname of the user -- max 30 characters                                                                                  |
+| `username`     | string               | Username -- max 80 characters                                                                                                |
 
 ## Delete a user
 

@@ -2222,6 +2222,26 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tbody>
 </table>
 
+<p>The following fields are <a href="#extra-fields">extra_fields</a> and must be explicitly specified in the request:</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>contact_lang</code></td>
+<td>string</td>
+<td>Preferred language for contacting the user &ndash; only accessible to staff</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="retrieve-authenticated-user">Retrieve authenticated user</h2>
 
 <p>Retrieves the authenticated user.</p>
@@ -2378,6 +2398,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>country</code></td>
 <td>string</td>
 <td>Country where the user lives &ndash; must be two-letter ISO code</td>
+</tr>
+
+<tr>
+<td><code>contact_lang</code></td>
+<td>string</td>
+<td>Preferred language for contacting the user &ndash; must be one of the <a href="#languages">supported languages</a>, only accessible to staff</td>
 </tr>
 
 <tr>
@@ -3729,6 +3755,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <td><code>notes</code></td>
 <td><a href="#note-resource">notes resource</a></td>
 <td>Project notes &ndash; only accessible to staff</td>
+</tr>
+
+<tr>
+<td><code>owner.contact_lang</code></td>
+<td>string</td>
+<td>Preferred language for contacting the project owner &ndash; only accessible to staff</td>
 </tr>
 
 <tr>

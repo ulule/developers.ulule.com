@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 23-07-2019
+* **[ULULE-API/FEAT]** Add the `contact_lang` field to the [users.update payload](https://developers.ulule.com/#update-a-user) and the [user resource](https://developers.ulule.com/#user-resource).
+
 ### 05-07-2019
 * **[ULULE-API/FEAT]** Add the 2019-07-05 version change, which disallows unknown fields in JSON payloads.
 

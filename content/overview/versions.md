@@ -24,9 +24,13 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-07-24
+
+* This version disallows forbidden fields in the [projects.update](#update-a-project) and [users.update](#update-a-user) JSON payloads. If a user doesn't have the permission to set a field, a [PermissionError](#errors) is returned.
+
 ### 2019-07-05
 
-* This version disallows unknown fields in JSON payloads.
+* This version disallows unknown fields in JSON payloads. If an unknown field is present, a [UnknownFieldError](#errors) is returned.
 
 ### 2019-07-03
 

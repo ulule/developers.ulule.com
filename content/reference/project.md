@@ -155,32 +155,39 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 | `name`                 | [i18n object](#i18n) | Name of the project                                                                                                     |
 | `slug`                 | string               | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |
 | `subtitle`             | [i18n object](#i18n) | Subtitle of the project                                                                                                 |
+| `tags`                 | array of ints        | ID of tags related to the project                                                                                       |
 | `timezone`             | string               | Timezone of the project                                                                                                 |
 
 In addition, the following fields can't be updated after the project has been validated by the moderation team, they can only be updated when the project status is one of `new`, `pending` and `pending-owner`.
 
-| Field         | Type          | Description                                                   |
-| ------------- | ------------- | ------------------------------------------------------------- |
-| `account_id`  | int           | ID of the project owner account                               |
-| `country`     | string        | Two-letter ISO code of the country                            |
-| `currency`    | string        | Three-letter ISO code of the currency                         |
-| `date_end`    | string        | Date at which the funding campaign ends, with RFC 3339 format |
-| `goal`        | int           | Goal of the project                                           |
-| `lang`        | string        | Main language of the project                                  |
-| `main_tag_id` | int           | ID of the main tag of the project                             |
-| `nb_days`     | string        | Duration of the funding campaign in days                      |
-| `tags`        | array of ints | ID of tags related to the project                             |
-| `type`        | string        | Project type -- must be `project` or `presale`                |
+| Field         | Type   | Description                                                   |
+| ------------- | ------ | ------------------------------------------------------------- |
+| `account_id`  | int    | ID of the project owner account                               |
+| `country`     | string | Two-letter ISO code of the country                            |
+| `currency`    | string | Three-letter ISO code of the currency                         |
+| `date_end`    | string | Date at which the funding campaign ends, with RFC 3339 format |
+| `goal`        | int    | Goal of the project                                           |
+| `lang`        | string | Main language of the project                                  |
+| `main_tag_id` | int    | ID of the main tag of the project                             |
+| `nb_days`     | string | Duration of the funding campaign in days                      |
+| `type`        | string | Project type -- must be `project` or `presale`                |
 
 Finally, the following fields can't be updated by the project owner, they can only be updated by staff users.
 
-| Field                 | Type   | Description                                                                               |
-| --------------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `comments_enabled`    | string | Enable comments, must be one of `everyone`, `supporters` and `disabled`                   |
-| `status`              | string | Project status                                                                            |
-| `supporters_disabled` | string | If set to false, the "Supporters" tab is not visible on the project page on Ulule website |
-| `unread`              | bool   |                                                                                           |
-| `visible`             | bool   | If set to false, the project is not indexed by search engines                             |
+| Field                 | Type                             | Description                                                                           |
+| --------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
+| `answer_code`         | string                           | Answer code, must be one of `accepted`, `need-moderation`, `sent-to-okpal`, `refused` |
+| `comments_enabled`    | string                           | Enable comments, must be one of `everyone`, `supporters`, `disabled`                  |
+| `discussion_disabled` | bool                             | Disable discussion                                                                    |
+| `manager_id`          | int64                            | Manager ID                                                                            |
+| `manager_type`        | string                           | Manager type, must be one of `specialist`, `success`                                  |
+| `notes`               | [notes resource](#note-resource) | Notes                                                                                 |
+| `quality_score`       | string                           | Quality score, must be one of `A`, `B`, `C`, `X`                                      |
+| `recommendable`       | bool                             | Allow to show this project to other project owners for inspiration                    |
+| `status`              | string                           | Project status                                                                        |
+| `supporters_disabled` | bool                             | Don't show supporters                                                                 |
+| `unread`              | bool                             | Show this project in moderation team pipe                                             |
+| `visible`             | bool                             | Index this project in search engines                                                  |
 
 ## Submit a project
 

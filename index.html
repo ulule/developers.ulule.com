@@ -1401,10 +1401,16 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2019-07-24">2019-07-24</h3>
+
+<ul>
+<li>This version disallows forbidden fields in the <a href="#update-a-project">projects.update</a> and <a href="#update-a-user">users.update</a> JSON payloads. If a user doesn&rsquo;t have the permission to set a field, a <a href="#errors">PermissionError</a> is returned.</li>
+</ul>
+
 <h3 id="2019-07-05">2019-07-05</h3>
 
 <ul>
-<li>This version disallows unknown fields in JSON payloads.</li>
+<li>This version disallows unknown fields in JSON payloads. If an unknown field is present, a <a href="#errors">UnknownFieldError</a> is returned.</li>
 </ul>
 
 <h3 id="2019-07-03">2019-07-03</h3>
@@ -4020,6 +4026,12 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>tags</code></td>
+<td>array of ints</td>
+<td>ID of tags related to the project</td>
+</tr>
+
+<tr>
 <td><code>timezone</code></td>
 <td>string</td>
 <td>Timezone of the project</td>
@@ -4088,12 +4100,6 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
-<td><code>tags</code></td>
-<td>array of ints</td>
-<td>ID of tags related to the project</td>
-</tr>
-
-<tr>
 <td><code>type</code></td>
 <td>string</td>
 <td>Project type &ndash; must be <code>project</code> or <code>presale</code></td>
@@ -4114,9 +4120,51 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tbody>
 <tr>
+<td><code>answer_code</code></td>
+<td>string</td>
+<td>Answer code, must be one of <code>accepted</code>, <code>need-moderation</code>, <code>sent-to-okpal</code>, <code>refused</code></td>
+</tr>
+
+<tr>
 <td><code>comments_enabled</code></td>
 <td>string</td>
-<td>Enable comments, must be one of <code>everyone</code>, <code>supporters</code> and <code>disabled</code></td>
+<td>Enable comments, must be one of <code>everyone</code>, <code>supporters</code>, <code>disabled</code></td>
+</tr>
+
+<tr>
+<td><code>discussion_disabled</code></td>
+<td>bool</td>
+<td>Disable discussion</td>
+</tr>
+
+<tr>
+<td><code>manager_id</code></td>
+<td>int64</td>
+<td>Manager ID</td>
+</tr>
+
+<tr>
+<td><code>manager_type</code></td>
+<td>string</td>
+<td>Manager type, must be one of <code>specialist</code>, <code>success</code></td>
+</tr>
+
+<tr>
+<td><code>notes</code></td>
+<td><a href="#note-resource">notes resource</a></td>
+<td>Notes</td>
+</tr>
+
+<tr>
+<td><code>quality_score</code></td>
+<td>string</td>
+<td>Quality score, must be one of <code>A</code>, <code>B</code>, <code>C</code>, <code>X</code></td>
+</tr>
+
+<tr>
+<td><code>recommendable</code></td>
+<td>bool</td>
+<td>Allow to show this project to other project owners for inspiration</td>
 </tr>
 
 <tr>
@@ -4127,20 +4175,20 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 
 <tr>
 <td><code>supporters_disabled</code></td>
-<td>string</td>
-<td>If set to false, the &ldquo;Supporters&rdquo; tab is not visible on the project page on Ulule website</td>
+<td>bool</td>
+<td>Don&rsquo;t show supporters</td>
 </tr>
 
 <tr>
 <td><code>unread</code></td>
 <td>bool</td>
-<td></td>
+<td>Show this project in moderation team pipe</td>
 </tr>
 
 <tr>
 <td><code>visible</code></td>
 <td>bool</td>
-<td>If set to false, the project is not indexed by search engines</td>
+<td>Index this project in search engines</td>
 </tr>
 </tbody>
 </table>

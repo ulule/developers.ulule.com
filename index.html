@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
+	<meta name="generator" content="Hugo 0.56.3" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -996,6 +996,34 @@
 
                         </li>
                         
+                        <li>
+                            <a href="#channel">Channel</a>
+
+                            
+                            
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="#channel-resource">Channel resource</a></li>
+                                
+                                
+                                
+                                <li><a href="#list-channels">List channels</a></li>
+                                
+                                
+                                
+                                <li><a href="#retrieve-a-channel">Retrieve a channel</a></li>
+                                
+                                
+                                
+                                <li><a href="#list-user-channels">List user channels</a></li>
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
                     </ul>
                 </li>
                 
@@ -1369,14 +1397,16 @@
 
 <ul>
 <li><code>en</code> because it is the parent resource main language</li>
-<li><code>fr</code> because it is provided in the request payload</li>
-</ul>
+
+<li><p><code>fr</code> because it is provided in the request payload</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
-    <span style="color:#f92672">&#34;description&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
-        <span style="color:#f92672">&#34;en&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;my awesome description&#34;</span><span style="color:#111">,</span>
-        <span style="color:#f92672">&#34;fr&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;ma superbe description&#34;</span>
-    <span style="color:#111">}</span>
-<span style="color:#111">}</span></code></pre></div></div>
+<span style="color:#f92672">&#34;description&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+    <span style="color:#f92672">&#34;en&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;my awesome description&#34;</span><span style="color:#111">,</span>
+    <span style="color:#f92672">&#34;fr&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;ma superbe description&#34;</span>
+<span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div></li>
+</ul>
+</div>
         </section>
         
         <section class="b-about__body">
@@ -9935,6 +9965,156 @@ The project owner can send a message to the moderation team. This message will b
 </table>
 </div>
         </section>
+        
+        <section class="b-about__body">
+            <div class="b-about__text">
+
+<h1 id="channel">Channel</h1>
+
+<h2 id="channel-resource">Channel resource</h2>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>absolute_url</code></td>
+<td>string</td>
+<td>Link to the channel page on the Ulule website</td>
+</tr>
+
+<tr>
+<td><code>background</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Background image of the channel</td>
+</tr>
+
+<tr>
+<td><code>created_at</code></td>
+<td>string</td>
+<td>Date at which the channel has been created, with RFC 3339 format</td>
+</tr>
+
+<tr>
+<td><code>description</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Description of the channel</td>
+</tr>
+
+<tr>
+<td><code>logo</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Logo image of the channel</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Name of the channel</td>
+</tr>
+
+<tr>
+<td><code>position</code></td>
+<td>int</td>
+<td>Position of the channel</td>
+</tr>
+
+<tr>
+<td><code>slug</code></td>
+<td>string</td>
+<td>Unique slug of the channel</td>
+</tr>
+
+<tr>
+<td><code>subtitle</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Subtitle of the channel</td>
+</tr>
+
+<tr>
+<td><code>updated_at</code></td>
+<td>string</td>
+<td>Date at which the channel has been updated, with RFC 3339 format</td>
+</tr>
+
+<tr>
+<td><code>user</code></td>
+<td><a href="#user">user resource</a></td>
+<td>User who created the channel</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="list-channels">List channels</h2>
+
+<p>List all channels.</p>
+
+<p>The response is <a href="#pagination">paginated</a>.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/channels</span>
+</div>
+
+<h2 id="retrieve-a-channel">Retrieve a channel</h2>
+
+<p>Retrieves the channel with the given slug.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/channels/:id</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:slug</code></td>
+<td>Channel slug</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="list-user-channels">List user channels</h2>
+
+<p>List channels for the user with the given ID.</p>
+
+<p>The response is <a href="#pagination">paginated</a>.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/users/:id/channels</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:id</code></td>
+<td>User ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+        </section>
          
         <section class="b-about__body">
             <div class="b-about__text">
@@ -11038,6 +11218,12 @@ The project owner can send a message to the moderation team. This message will b
 
 <tbody>
 <tr>
+<td><code>channel_ids</code></td>
+<td>array of int</td>
+<td>Filter projects by channel</td>
+</tr>
+
+<tr>
 <td><code>tag_id</code></td>
 <td>int</td>
 <td>Filter projects by tag</td>
@@ -11088,7 +11274,7 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>sort</code></td>
 <td>string</td>
-<td>Sort field, can be one of <code>popular</code>, <code>amount</code>, <code>ending-soon</code> or <code>new</code>, default is <code>popular</code></td>
+<td>Sort field, can be one of <code>popular</code>, <code>amount</code>, <code>ending-soon</code>, <code>position</code> or <code>new</code>, default is <code>popular</code></td>
 </tr>
 </tbody>
 </table>

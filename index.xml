@@ -357,6 +357,15 @@ Sponsorship resource    Field Type Description     amount int Amount of the spon
     </item>
     
     <item>
+      <title>Channel</title>
+      <link>/reference/channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/channel/</guid>
+      <description>Channel Channel resource    Field Type Description     absolute_url string Link to the channel page on the Ulule website   background image resource Background image of the channel   created_at string Date at which the channel has been created, with RFC 3339 format   description i18n object Description of the channel   logo image resource Logo image of the channel   name i18n object Name of the channel   position int Position of the channel   slug string Unique slug of the channel   subtitle i18n object Subtitle of the channel   updated_at string Date at which the channel has been updated, with RFC 3339 format   user user resource User who created the channel    List channels List all channels.</description>
+    </item>
+    
+    <item>
       <title>API Key</title>
       <link>/authentication/api-key/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

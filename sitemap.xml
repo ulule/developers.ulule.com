@@ -171,6 +171,10 @@
   </url>
   
   <url>
+    <loc>/reference/channel/</loc>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <priority>0</priority>
   </url>

@@ -22,7 +22,7 @@ The `q` query parameter may contain any combination of keywords and the followin
 
 | Qualifier     | Type             | Description                                                                                                        |
 | ------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `channel_ids` | array of int     | Filter projects by channel                                                                                         |
+| `channel_ids` | array of ints    | Filter projects by channel                                                                                         |
 | `tag_id`      | int              | Filter projects by tag                                                                                             |
 | `status`      | string           | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ended`, default is `all` |
 | `country`     | string           | Filter projects by country                                                                                         |

@@ -21,6 +21,24 @@ weight: 22
 | `updated_at`   | string                   | Date at which the channel has been updated, with RFC 3339 format |
 | `user`         | [user resource](#user)   | User who created the channel                                     |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field              | Type                                                      | Description      |
+| ------------------ | --------------------------------------------------------- | ---------------- |
+| `featured_project` | [project resource](#project-resource)                     | Featured project |
+| `links`            | array of [channel link resources](#channel-link-resource) | Channel links    |
+
+### Channel link resource
+
+| Field         | Type                     | Description             |
+| ------------- | ------------------------ | ----------------------- |
+| `cta_label`   | [i18n object](#i18n)     | CTA label of the link   |
+| `description` | [i18n object](#i18n)     | Description of the link |
+| `image`       | [image resource](#image) | Image of the link    |
+| `name`        | [i18n object](#i18n)     | Name of the link        |
+| `url`         | string                   | URL of the link         |
+| `video`       | string                   | Video of the link       |
+
 ## List channels
 
 List all channels.

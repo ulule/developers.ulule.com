@@ -75,25 +75,25 @@ The project `status` can have the following values:
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-| Field                | Type                                               | Description                                                                                                 |
-| -------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                                     |
-| `analytics`          | array of [analytics tags](#analytics-tag-resource) | Project analytics tags                                                                                      |
-| `default_manager`    | [user resource](#user-resource)                    | A default manager for the project, based on its default partnership -- only accessible to the project owner |
-| `latest_news`        | [news resource](#news)                             | Latest news -- only accessible to staff                                                                     |
-| `links`              | array of [links](#link-resource)                   | Links attached to the project                                                                               |
-| `manager`            | [user resource](#user-resource)                    | Project manager -- only accessible to the project owner                                                     |
-| `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                                   |
-| `owner.contact_lang` | string                                             | Preferred language for contacting the project owner -- only accessible to staff                             |
-| `owner.stats`        | [user stats resource](#user-stats-resource)        | Stats of the project owner -- only accessible to staff                                                      |
-| `partnerships`       | array of [partnerships](#partnership-resource)     | Partnerships of the project                                                                                 |
-| `proposal`           | [proposal resource](#proposal-resource)            | Proposal from which the project was created -- only accessible to the project owner                         |
-| `proposal.links`     | array of [links](#link-resource)                   | Links attached to the proposal from which the project was created -- only accessible to staff               |
-| `proposal.validator` | [user resource](#user-resource)                    | User who validated the proposal from which the project was created -- only accessible to staff              |
-| `rewards`            | array of [rewards](#reward)                        | Project rewards                                                                                             |
-| `sponsorships`       | array of [sponsorships](#sponsorship-resource)     | Sponsorships of the project                                                                                 |
-| `tags`               | array of [tags](#tag-resource)                     | Tags of the project                                                                                         |
-| `user_role`          | string                                             | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`        |
+| Field                | Type                                               | Description                                                                                                            |
+| -------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                                                |
+| `analytics`          | array of [analytics tags](#analytics-tag-resource) | Project analytics tags                                                                                                 |
+| `default_manager`    | [user resource](#user-resource)                    | A default manager for the project, based on its default partnership -- only accessible to the project owner            |
+| `latest_news`        | [news resource](#news)                             | Latest news -- only accessible to staff                                                                                |
+| `links`              | array of [links](#link-resource)                   | Links attached to the project, this extra field also adds a `post_campaign_link` [link resource](#link-resource) field |
+| `manager`            | [user resource](#user-resource)                    | Project manager -- only accessible to the project owner                                                                |
+| `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                                              |
+| `owner.contact_lang` | string                                             | Preferred language for contacting the project owner -- only accessible to staff                                        |
+| `owner.stats`        | [user stats resource](#user-stats-resource)        | Stats of the project owner -- only accessible to staff                                                                 |
+| `partnerships`       | array of [partnerships](#partnership-resource)     | Partnerships of the project                                                                                            |
+| `proposal`           | [proposal resource](#proposal-resource)            | Proposal from which the project was created -- only accessible to the project owner                                    |
+| `proposal.links`     | array of [links](#link-resource)                   | Links attached to the proposal from which the project was created -- only accessible to staff                          |
+| `proposal.validator` | [user resource](#user-resource)                    | User who validated the proposal from which the project was created -- only accessible to staff                         |
+| `rewards`            | array of [rewards](#reward)                        | Project rewards                                                                                                        |
+| `sponsorships`       | array of [sponsorships](#sponsorship-resource)     | Sponsorships of the project                                                                                            |
+| `tags`               | array of [tags](#tag-resource)                     | Tags of the project                                                                                                    |
+| `user_role`          | string                                             | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`                   |
 
 ### Payment methods
 
@@ -147,16 +147,17 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 
 ### Payload
 
-| Field                  | Type                 | Description                                                                                                             |
-| ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `description`          | [i18n object](#i18n) | Main description of the project                                                                                         |
-| `description_funding`  | [i18n object](#i18n) | Description of what the funds are for                                                                                   |
-| `description_yourself` | [i18n object](#i18n) | Description of the owner of the project                                                                                 |
-| `name`                 | [i18n object](#i18n) | Name of the project                                                                                                     |
-| `slug`                 | string               | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |
-| `subtitle`             | [i18n object](#i18n) | Subtitle of the project                                                                                                 |
-| `tags`                 | array of ints        | ID of tags related to the project                                                                                       |
-| `timezone`             | string               | Timezone of the project                                                                                                 |
+| Field                  | Type                  | Description                                                                                                             |
+| ---------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `description`          | [i18n object](#i18n)  | Main description of the project                                                                                         |
+| `description_funding`  | [i18n object](#i18n)  | Description of what the funds are for                                                                                   |
+| `description_yourself` | [i18n object](#i18n)  | Description of the owner of the project                                                                                 |
+| `name`                 | [i18n object](#i18n)  | Name of the project                                                                                                     |
+| `post_campaign_link`   | [link payload](#link) | Post-campaign link                                                                                                      |
+| `slug`                 | string                | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |
+| `subtitle`             | [i18n object](#i18n)  | Subtitle of the project                                                                                                 |
+| `tags`                 | array of ints         | ID of tags related to the project                                                                                       |
+| `timezone`             | string                | Timezone of the project                                                                                                 |
 
 In addition, the following fields can't be updated after the project has been validated by the moderation team, they can only be updated when the project status is one of `new`, `pending` and `pending-owner`.
 

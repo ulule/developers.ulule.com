@@ -10051,6 +10051,82 @@ The project owner can send a message to the moderation team. This message will b
 </tbody>
 </table>
 
+<p>The following fields are <a href="#extra-fields">extra_fields</a> and must be explicitly specified in the request:</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>featured_project</code></td>
+<td><a href="#project-resource">project resource</a></td>
+<td>Featured project</td>
+</tr>
+
+<tr>
+<td><code>links</code></td>
+<td>array of <a href="#channel-link-resource">channel link resources</a></td>
+<td>Channel links</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="channel-link-resource">Channel link resource</h3>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>cta_label</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>CTA label of the link</td>
+</tr>
+
+<tr>
+<td><code>description</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Description of the link</td>
+</tr>
+
+<tr>
+<td><code>image</code></td>
+<td><a href="#image">image resource</a></td>
+<td>Image of the link</td>
+</tr>
+
+<tr>
+<td><code>name</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Name of the link</td>
+</tr>
+
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+<td>URL of the link</td>
+</tr>
+
+<tr>
+<td><code>video</code></td>
+<td>string</td>
+<td>Video of the link</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="list-channels">List channels</h2>
 
 <p>List all channels.</p>

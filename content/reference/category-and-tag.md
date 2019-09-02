@@ -34,7 +34,7 @@ Retrieves all categories.
 
 Retrieves the category with the given slug.
 
-{{% http method="get" %}}/v1/categories/:id{{% /http %}}
+{{% http method="get" %}}/v1/categories/:slug{{% /http %}}
 
 | Parameter | Description   |
 | --------- | ------------- |

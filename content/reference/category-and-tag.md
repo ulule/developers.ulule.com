@@ -18,6 +18,22 @@ There are two kinds of tag. The main ones are categories and can be used as a pr
 | `position`     | int                  | Position of the tag                                                   |
 | `slug`         | string               | Unique slug of the tag                                                |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field              | Type                                  | Description      |
+| ------------------ | ------------------------------------- | ---------------- |
+| `featured_project` | [project resource](#project-resource) | Featured project |
+
+## Retrieve a category
+
+Retrieves the category with the given slug.
+
+{{% http method="get" %}}/v1/categories/:slug{{% /http %}}
+
+| Parameter | Description   |
+| --------- | ------------- |
+| `:slug`   | Category slug |
+
 ## List categories
 
 Retrieves all categories.

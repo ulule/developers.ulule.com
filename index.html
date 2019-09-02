@@ -417,6 +417,10 @@
                                 
                                 
                                 
+                                <li><a href="#retrieve-a-category">Retrieve a category</a></li>
+                                
+                                
+                                
                                 <li><a href="#list-categories">List categories</a></li>
                                 
                                 
@@ -4597,6 +4601,51 @@ The project owner can send a message to the moderation team. This message will b
 <td><code>slug</code></td>
 <td>string</td>
 <td>Unique slug of the tag</td>
+</tr>
+</tbody>
+</table>
+
+<p>The following fields are <a href="#extra-fields">extra_fields</a> and must be explicitly specified in the request:</p>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>featured_project</code></td>
+<td><a href="#project-resource">project resource</a></td>
+<td>Featured project</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="retrieve-a-category">Retrieve a category</h2>
+
+<p>Retrieves the category with the given slug.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/categories/:slug</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:slug</code></td>
+<td>Category slug</td>
 </tr>
 </tbody>
 </table>

@@ -182,7 +182,7 @@ The project status can have the following values:
       
       <guid>/reference/category-and-tag/</guid>
       <description>Category and Tag There are two kinds of tag. The main ones are categories and can be used as a project main tag. The secondary ones are subtags, they always belong to a category and can be used as project tags.
-Tag resource    Field Type Description     absolute_url string Link to the category page on the Ulule website   category Tag resource Parent category, only present in the list-tags endpoint   id int Unique ID of the tag   name i18n object Name of the tag   position int Position of the tag   slug string Unique slug of the tag    List categories Retrieves all categories.</description>
+Tag resource    Field Type Description     absolute_url string Link to the category page on the Ulule website   category Tag resource Parent category, only present in the list-tags endpoint   id int Unique ID of the tag   name i18n object Name of the tag   position int Position of the tag   slug string Unique slug of the tag    The following fields are extra_fields and must be explicitly specified in the request:</description>
     </item>
     
     <item>

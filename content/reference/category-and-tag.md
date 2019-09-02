@@ -24,12 +24,6 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | ------------------ | ------------------------------------- | ---------------- |
 | `featured_project` | [project resource](#project-resource) | Featured project |
 
-## List categories
-
-Retrieves all categories.
-
-{{% http method="get" %}}/v1/categories{{% /http %}}
-
 ## Retrieve a category
 
 Retrieves the category with the given slug.
@@ -39,6 +33,12 @@ Retrieves the category with the given slug.
 | Parameter | Description   |
 | --------- | ------------- |
 | `:slug`   | Category slug |
+
+## List categories
+
+Retrieves all categories.
+
+{{% http method="get" %}}/v1/categories{{% /http %}}
 
 ## List tags
 

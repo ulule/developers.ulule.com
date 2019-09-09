@@ -18,7 +18,7 @@ The response is [paginated](#pagination).
 | `limit`   | int    | Page size, default is 16                                                                                                                                                        |
 | `offset`  | int    | Pagination offset, default is 0                                                                                                                                                 |
 
-The `q` query parameter may contain any combination of keywords and the following search qualifiers.
+The `q` query parameter may contain any combination of terms and of the following search qualifiers.
 
 | Qualifier     | Type             | Description                                                                                                        |
 | ------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------ |

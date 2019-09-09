@@ -24,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-09-05
+
+* This version adds unknown search qualifiers to search terms, whereas they were ignored before that version.
+
 ### 2019-07-24
 
 * This version disallows forbidden fields in the [projects.update](#update-a-project) and [users.update](#update-a-user) JSON payloads. If a user doesn't have the permission to set a field, a [PermissionError](#errors) is returned.

@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 05-09-2019
+* **[ULULE-API/FEAT]** Add the 2019-09-05 version change, which adds unknown search qualifier to search terms.
+
 ### 23-07-2019
 * **[ULULE-API/FEAT]** Add the `contact_lang` field to the [users.update payload](https://developers.ulule.com/#update-a-user) and the [user resource](https://developers.ulule.com/#user-resource).
 

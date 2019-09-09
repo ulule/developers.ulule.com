@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.57.2" />
+	<meta name="generator" content="Hugo 0.58.1" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -1434,6 +1434,12 @@
 <h3 id="example">Example</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
+
+<h3 id="2019-09-05">2019-09-05</h3>
+
+<ul>
+<li>This version adds unknown search qualifiers to search terms, whereas they were ignored before that version.</li>
+</ul>
 
 <h3 id="2019-07-24">2019-07-24</h3>
 
@@ -11336,7 +11342,7 @@ The project owner can send a message to the moderation team. This message will b
 </tbody>
 </table>
 
-<p>The <code>q</code> query parameter may contain any combination of keywords and the following search qualifiers.</p>
+<p>The <code>q</code> query parameter may contain any combination of terms and of the following search qualifiers.</p>
 
 <table>
 <thead>

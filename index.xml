@@ -37,7 +37,7 @@ Parameters The limit and since URL query parameters may be used to retrieve diff
       
       <guid>/search/project/</guid>
       <description>Search projects The response is paginated.
-get /v1/search/projects  Query parameters    Parameter Type Description     q string Search keywords and qualifiers   lang string Host language, for example it is the fr in fr.ulule.com. Results that are translated in that language are sorted first. Can be one of the supported languages   limit int Page size, default is 16   offset int Pagination offset, default is 0    The q query parameter may contain any combination of keywords and the following search qualifiers.</description>
+get /v1/search/projects  Query parameters    Parameter Type Description     q string Search keywords and qualifiers   lang string Host language, for example it is the fr in fr.ulule.com. Results that are translated in that language are sorted first. Can be one of the supported languages   limit int Page size, default is 16   offset int Pagination offset, default is 0    The q query parameter may contain any combination of terms and of the following search qualifiers.</description>
     </item>
     
     <item>

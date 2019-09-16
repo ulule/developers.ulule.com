@@ -37,7 +37,7 @@ Projects can have up to 4 sponsorships.
 
 ## List project sponsorships
 
-Retrieves the all the sponsorships of a project.
+Retrieves all the sponsorships of a project.
 
 {{% http method="get" %}}/v1/projects/:id/sponsorships{{% /http %}}
 

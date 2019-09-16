@@ -295,6 +295,18 @@ The response is [paginated](#pagination).
 | --------- | ------------ |
 | `:slug`   | Partner slug |
 
+## List sponsor projects
+
+Retrieves all the projects sponsored by the sponsor with the given user ID.
+
+The response is [paginated](#pagination).
+
+{{% http method="get" %}}/v1/sponsors/:user_id/projects{{% /http %}}
+
+| Parameter  | Description      |
+| ---------- | ---------------- |
+| `:user_id` | Sponsor user ID  |
+
 ## List user projects
 
 Retrieves all the projects related to the user with the given ID.

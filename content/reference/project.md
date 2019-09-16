@@ -147,17 +147,17 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 
 ### Payload
 
-| Field                  | Type                  | Description                                                                                                             |
-| ---------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `description`          | [i18n object](#i18n)  | Main description of the project                                                                                         |
-| `description_funding`  | [i18n object](#i18n)  | Description of what the funds are for                                                                                   |
-| `description_yourself` | [i18n object](#i18n)  | Description of the owner of the project                                                                                 |
-| `name`                 | [i18n object](#i18n)  | Name of the project                                                                                                     |
-| `post_campaign_link`   | [link payload](#link) | Post-campaign link                                                                                                      |
-| `slug`                 | string                | Slug of the project, this field must be unique accross the platform and so can't be updated to an already existing slug |
-| `subtitle`             | [i18n object](#i18n)  | Subtitle of the project                                                                                                 |
-| `tags`                 | array of ints         | ID of tags related to the project                                                                                       |
-| `timezone`             | string                | Timezone of the project                                                                                                 |
+| Field                  | Type                  | Description                                               |
+| ---------------------- | --------------------- | --------------------------------------------------------- |
+| `description`          | [i18n object](#i18n)  | Main description of the project                           |
+| `description_funding`  | [i18n object](#i18n)  | Description of what the funds are for                     |
+| `description_yourself` | [i18n object](#i18n)  | Description of the owner of the project                   |
+| `name`                 | [i18n object](#i18n)  | Name of the project                                       |
+| `post_campaign_link`   | [link payload](#link) | Post-campaign link                                        |
+| `slug`                 | string                | Slug of the project -- must be unique, max 250 characters |
+| `subtitle`             | [i18n object](#i18n)  | Subtitle of the project                                   |
+| `tags`                 | array of ints         | ID of tags related to the project                         |
+| `timezone`             | string                | Timezone of the project                                   |
 
 In addition, the following fields can't be updated after the project has been validated by the moderation team, they can only be updated when the project status is one of `new`, `pending` and `pending-owner`.
 

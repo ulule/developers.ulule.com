@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.58.1" />
+	<meta name="generator" content="Hugo 0.58.2" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -386,6 +386,10 @@
                                 
                                 
                                 <li><a href="#list-all-partner-projects">List all partner projects</a></li>
+                                
+                                
+                                
+                                <li><a href="#list-sponsor-projects">List sponsor projects</a></li>
                                 
                                 
                                 
@@ -4474,6 +4478,33 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>:slug</code></td>
 <td>Partner slug</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="list-sponsor-projects">List sponsor projects</h2>
+
+<p>Retrieves all the projects sponsored by the sponsor with the given user ID.</p>
+
+<p>The response is <a href="#pagination">paginated</a>.</p>
+
+<div class="http-endpoint http-endpoint--get">
+    <span class="http-verb http-verb--get">get</span>
+    <span class="http-uri">/v1/sponsors/:user_id/projects</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>:user_id</code></td>
+<td>Sponsor user ID</td>
 </tr>
 </tbody>
 </table>
@@ -10002,7 +10033,7 @@ The project owner can send a message to the moderation team. This message will b
 
 <h2 id="list-project-sponsorships">List project sponsorships</h2>
 
-<p>Retrieves the all the sponsorships of a project.</p>
+<p>Retrieves all the sponsorships of a project.</p>
 
 <div class="http-endpoint http-endpoint--get">
     <span class="http-verb http-verb--get">get</span>

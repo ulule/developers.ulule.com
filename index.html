@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.58.2" />
+	<meta name="generator" content="Hugo 0.58.3" />
     <title>Ulule API documentation</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab|Roboto+Condensed|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-45ab9f1bf6601850abd1.css">
@@ -4172,13 +4172,13 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>answer_code</code></td>
 <td>string</td>
-<td>Answer code, must be one of <code>accepted</code>, <code>need-moderation</code>, <code>sent-to-okpal</code>, <code>refused</code></td>
+<td>Answer code &ndash; must be one of <code>accepted</code>, <code>need-moderation</code>, <code>sent-to-okpal</code>, <code>refused</code></td>
 </tr>
 
 <tr>
 <td><code>comments_enabled</code></td>
 <td>string</td>
-<td>Enable comments, must be one of <code>everyone</code>, <code>supporters</code>, <code>disabled</code></td>
+<td>Enable comments &ndash; must be one of <code>everyone</code>, <code>supporters</code>, <code>disabled</code></td>
 </tr>
 
 <tr>
@@ -4196,7 +4196,7 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <tr>
 <td><code>manager_type</code></td>
 <td>string</td>
-<td>Manager type, must be one of <code>specialist</code>, <code>success</code></td>
+<td>Manager type &ndash; must be one of <code>specialist</code>, <code>success</code></td>
 </tr>
 
 <tr>
@@ -4206,9 +4206,15 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 </tr>
 
 <tr>
+<td><code>owner_id</code></td>
+<td>int64</td>
+<td>Owner ID</td>
+</tr>
+
+<tr>
 <td><code>quality_score</code></td>
 <td>string</td>
-<td>Quality score, must be one of <code>A</code>, <code>B</code>, <code>C</code>, <code>X</code></td>
+<td>Quality score &ndash; must be one of <code>A</code>, <code>B</code>, <code>C</code>, <code>X</code></td>
 </tr>
 
 <tr>
@@ -11406,7 +11412,7 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>status</code></td>
 <td>string</td>
-<td>Filter projects based on the goal status, can be one of <code>currently</code>, <code>all</code>, <code>success</code> or <code>ended</code>, default is <code>all</code></td>
+<td>Filter projects based on the goal status &ndash; must be one of <code>currently</code>, <code>all</code>, <code>success</code> or <code>ended</code>, default is <code>all</code></td>
 </tr>
 
 <tr>
@@ -11442,13 +11448,19 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>partners</code></td>
 <td>array of strings</td>
-<td>Filter projects by partner, the qualifier may be suffixed with <code>__not</code>, which reverses the filter</td>
+<td>Filter projects by partner &ndash; the qualifier may be suffixed with <code>__not</code>, which reverses the filter</td>
+</tr>
+
+<tr>
+<td><code>quality_score</code></td>
+<td>array of strings</td>
+<td>Filter projects by quality score &ndash; must be one of <code>A</code>, <code>B</code>, <code>C</code>, <code>X</code>, the qualifier may be suffixed with <code>__not</code>, which reverses the filter</td>
 </tr>
 
 <tr>
 <td><code>sort</code></td>
 <td>string</td>
-<td>Sort field, can be one of <code>popular</code>, <code>amount</code>, <code>ending-soon</code>, <code>position</code> or <code>new</code>, default is <code>popular</code></td>
+<td>Sort field &ndash; must be one of <code>popular</code>, <code>amount</code>, <code>ending-soon</code>, <code>position</code> or <code>new</code>, default is <code>popular</code></td>
 </tr>
 </tbody>
 </table>

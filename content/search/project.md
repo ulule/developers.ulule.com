@@ -20,18 +20,19 @@ The response is [paginated](#pagination).
 
 The `q` query parameter may contain any combination of terms and of the following search qualifiers.
 
-| Qualifier     | Type             | Description                                                                                                        |
-| ------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `channel_ids` | array of ints    | Filter projects by channel                                                                                         |
-| `tag_id`      | int              | Filter projects by tag                                                                                             |
-| `status`      | string           | Filter projects based on the goal status, can be one of `currently`, `all`, `success` or `ended`, default is `all` |
-| `country`     | string           | Filter projects by country                                                                                         |
-| `lang`        | string           | Filter projects by language                                                                                        |
-| `region_id`   | int              | Filter projects by region                                                                                          |
-| `city_id`     | int              | Filter projects by city                                                                                            |
-| `owner_id`    | int              | Filter projects by owner                                                                                           |
-| `partners`    | array of strings | Filter projects by partner, the qualifier may be suffixed with `__not`, which reverses the filter                  |
-| `sort`        | string           | Sort field, can be one of `popular`, `amount`, `ending-soon`, `position` or `new`, default is `popular`            |
+| Qualifier       | Type             | Description                                                                                                                                  |
+| --------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `channel_ids`   | array of ints    | Filter projects by channel                                                                                                                   |
+| `tag_id`        | int              | Filter projects by tag                                                                                                                       |
+| `status`        | string           | Filter projects based on the goal status -- must be one of `currently`, `all`, `success` or `ended`, default is `all`                        |
+| `country`       | string           | Filter projects by country                                                                                                                   |
+| `lang`          | string           | Filter projects by language                                                                                                                  |
+| `region_id`     | int              | Filter projects by region                                                                                                                    |
+| `city_id`       | int              | Filter projects by city                                                                                                                      |
+| `owner_id`      | int              | Filter projects by owner                                                                                                                     |
+| `partners`      | array of strings | Filter projects by partner -- the qualifier may be suffixed with `__not`, which reverses the filter                                          |
+| `quality_score` | array of strings | Filter projects by quality score -- must be one of `A`, `B`, `C`, `X`, the qualifier may be suffixed with `__not`, which reverses the filter |
+| `sort`          | string           | Sort field -- must be one of `popular`, `amount`, `ending-soon`, `position` or `new`, default is `popular`                                   |
 
 ### Response
 

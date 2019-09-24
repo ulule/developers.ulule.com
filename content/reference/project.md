@@ -175,20 +175,21 @@ In addition, the following fields can't be updated after the project has been va
 
 Finally, the following fields can't be updated by the project owner, they can only be updated by staff users.
 
-| Field                 | Type                             | Description                                                                           |
-| --------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| `answer_code`         | string                           | Answer code, must be one of `accepted`, `need-moderation`, `sent-to-okpal`, `refused` |
-| `comments_enabled`    | string                           | Enable comments, must be one of `everyone`, `supporters`, `disabled`                  |
-| `discussion_disabled` | bool                             | Disable discussion                                                                    |
-| `manager_id`          | int64                            | Manager ID                                                                            |
-| `manager_type`        | string                           | Manager type, must be one of `specialist`, `success`                                  |
-| `notes`               | [notes resource](#note-resource) | Notes                                                                                 |
-| `quality_score`       | string                           | Quality score, must be one of `A`, `B`, `C`, `X`                                      |
-| `recommendable`       | bool                             | Allow to show this project to other project owners for inspiration                    |
-| `status`              | string                           | Project status                                                                        |
-| `supporters_disabled` | bool                             | Don't show supporters                                                                 |
-| `unread`              | bool                             | Show this project in moderation team pipe                                             |
-| `visible`             | bool                             | Index this project in search engines                                                  |
+| Field                 | Type                             | Description                                                                             |
+| --------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
+| `answer_code`         | string                           | Answer code -- must be one of `accepted`, `need-moderation`, `sent-to-okpal`, `refused` |
+| `comments_enabled`    | string                           | Enable comments -- must be one of `everyone`, `supporters`, `disabled`                  |
+| `discussion_disabled` | bool                             | Disable discussion                                                                      |
+| `manager_id`          | int64                            | Manager ID                                                                              |
+| `manager_type`        | string                           | Manager type -- must be one of `specialist`, `success`                                  |
+| `notes`               | [notes resource](#note-resource) | Notes                                                                                   |
+| `owner_id`            | int64                            | Owner ID                                                                                |
+| `quality_score`       | string                           | Quality score -- must be one of `A`, `B`, `C`, `X`                                      |
+| `recommendable`       | bool                             | Allow to show this project to other project owners for inspiration                      |
+| `status`              | string                           | Project status                                                                          |
+| `supporters_disabled` | bool                             | Don't show supporters                                                                   |
+| `unread`              | bool                             | Show this project in moderation team pipe                                               |
+| `visible`             | bool                             | Index this project in search engines                                                    |
 
 ## Submit a project
 

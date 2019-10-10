@@ -4463,7 +4463,7 @@ The project owner can send a message to the moderation team. This message will b
 
 <h2 id="list-all-partner-projects">List all partner projects</h2>
 
-<p>Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users.</p>
+<p>Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users, unless the <code>status=online</code> query parameter is present.</p>
 
 <p>The response is <a href="#pagination">paginated</a>.</p>
 
@@ -4484,6 +4484,31 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>:slug</code></td>
 <td>Partner slug</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="query-parameters">Query parameters</h3>
+
+<p>The list can be filtered with the following query parameters:</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>is_winner</code></td>
+<td>Whether the project is a prizewinner. Can be <code>true</code> or <code>false</code></td>
+</tr>
+
+<tr>
+<td><code>status</code></td>
+<td>Project status. Can be one of <code>online</code>, <code>new</code>, <code>pending</code>, <code>pending-owner</code>, <code>validated</code>, <code>refused</code>, <code>waiting</code>, <code>pending-final-validation</code></td>
 </tr>
 </tbody>
 </table>
@@ -4542,7 +4567,7 @@ The project owner can send a message to the moderation team. This message will b
 </tbody>
 </table>
 
-<h3 id="query-parameters">Query parameters</h3>
+<h3 id="query-parameters-1">Query parameters</h3>
 
 <table>
 <thead>

@@ -284,7 +284,7 @@ This endpoint is used for the project moderation.
 | `answer_html` | string | Message in HTML used as response in the project discussion |
 | `status`      | string | Project status                                             |
 
-## List all partner projects
+## List partner projects
 
 Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users, unless the `status=online` query parameter is present.
 

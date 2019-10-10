@@ -286,7 +286,7 @@ This endpoint is used for the project moderation.
 
 ## List all partner projects
 
-Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users.
+Retrieves all the projects that have a partnership with the partner with the given slug. This endpoint is only accessible to partner users, unless the `status=online` query parameter is present.
 
 The response is [paginated](#pagination).
 
@@ -295,6 +295,15 @@ The response is [paginated](#pagination).
 | Parameter | Description  |
 | --------- | ------------ |
 | `:slug`   | Partner slug |
+
+### Query parameters
+
+The list can be filtered with the following query parameters:
+
+| Parameter   | Description                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `is_winner` | Whether the project is a prizewinner. Can be `true` or `false`                                                                           |
+| `status`    | Project status. Can be one of `online`, `new`, `pending`, `pending-owner`, `validated`, `refused`, `waiting`, `pending-final-validation` |
 
 ## List sponsor projects
 

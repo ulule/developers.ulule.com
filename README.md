@@ -4,6 +4,9 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ## Changelog
 
+### 10-10-2019
+* **[ULULE-API/FEAT]** Add the `is_winner` query parameter to the [partners.projects_list]*https://developers.ulule.com/#list-partner-projects) endpoint.
+
 ### 05-09-2019
 * **[ULULE-API/FEAT]** Add the 2019-09-05 version change, which adds unknown search qualifier to search terms.
 

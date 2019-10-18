@@ -4254,16 +4254,14 @@ Refresh-Token: user-refresh-token</code></pre></div></div>
 <p>Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.
 The project owner can send a message to the moderation team. This message will be added to the project discussion thread.</p>
 
-<p>The project status must not be <code>pending</code>.</p>
-
-<p>Additionally, the following fields must be set (i18n fields must be set in the project default language):</p>
+<p>The project status must not be <code>pending</code>, and the following fields must be set (i18n fields must be set in the project default language):</p>
 
 <ul>
 <li><code>country</code></li>
 <li><code>currency</code></li>
 <li><code>description</code></li>
 <li><code>goal</code> (if <code>type</code> is <code>project</code>)</li>
-<li><code>lang</code></li>
+<li><code>main_image</code></li>
 <li><code>name</code></li>
 <li><code>nb_product_min</code> (if <code>type</code> is <code>presale</code>)</li>
 <li><code>owner.avatar</code></li>
@@ -4272,10 +4270,10 @@ The project owner can send a message to the moderation team. This message will b
 <li><code>rewards</code></li>
 <li><code>slug</code></li>
 <li><code>subtitle</code></li>
+<li><code>timezone</code></li>
 <li>one of <code>date_end</code> anf <code>nb_days</code></li>
+<li><code>account.is_completed</code> must be <code>true</code></li>
 </ul>
-
-<p>Finally, the <code>account.is_completed</code> field must be <code>true</code></p>
 
 <div class="http-endpoint http-endpoint--post">
     <span class="http-verb http-verb--post">post</span>

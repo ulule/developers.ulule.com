@@ -196,15 +196,13 @@ Finally, the following fields can't be updated by the project owner, they can on
 Submits the project for review to the moderation team. This endpoint is only accessible to the project owner.
 The project owner can send a message to the moderation team. This message will be added to the project discussion thread.
 
-The project status must not be `pending`.
-
-Additionally, the following fields must be set (i18n fields must be set in the project default language):
+The project status must not be `pending`, and the following fields must be set (i18n fields must be set in the project default language):
 
 * `country`
 * `currency`
 * `description`
 * `goal` (if `type` is `project`)
-* `lang`
+* `main_image`
 * `name`
 * `nb_product_min` (if `type` is `presale`)
 * `owner.avatar`
@@ -213,9 +211,9 @@ Additionally, the following fields must be set (i18n fields must be set in the p
 * `rewards`
 * `slug`
 * `subtitle`
+* `timezone`
 * one of `date_end` anf `nb_days`
-
-Finally, the `account.is_completed` field must be `true`
+* `account.is_completed` must be `true`
 
 {{% http method="post" %}}/v1/projects/:id/submit{{% /http %}}
 

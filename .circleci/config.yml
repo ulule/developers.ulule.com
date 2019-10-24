@@ -9,5 +9,5 @@ jobs:
       - image: cibuilds/hugo:latest
     steps:
       - checkout
-      - run: apk add --update npm
+      - run: apt-get update && apt-get install npm -y
       - run: ./build-and-push-to-gh-pages.bash

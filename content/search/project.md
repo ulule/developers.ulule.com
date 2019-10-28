@@ -75,4 +75,5 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `proposal`         | [proposal resource](#proposal-resource)     | Proposal from which the project was created -- only accessible to staff                                                                  |
 | `proposal.links`   | array of [links](#link-resource)            | Links attached to the proposal -- only accessible to staff                                                                               |
 | `proposal.partner` | [partner resource](#partner-resource)       | Partner of the proposal -- only accessible to staff                                                                                      |
+| `quality_score`    | string                                      | Quality score of the project -- only accessible to staff                                                                                 |
 | `user_role`        | string                                      | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner` -- the request must be authentified |

@@ -21,11 +21,10 @@ Creates a new variant for the reward with the given ID. This endpoint has the sa
 
 ### Payload
 
-| Field           | Type                 | Description                                                            |
-| --------------- | -------------------- | ---------------------------------------------------------------------- |
-| `date_delivery` | string               | Date estimated for the delivery with the YYYY-MM-DD format -- optional |
-| `description`   | [i18n object](#i18n) | Description -- required                                                |
-| `stock`         | int                  | Stock -- optional                                                      |
+| Field         | Type                 | Description             |
+| ------------- | -------------------- | ----------------------- |
+| `description` | [i18n object](#i18n) | Description -- required |
+| `stock`       | int                  | Stock -- optional       |
 
 ## Update a variant
 
@@ -39,11 +38,10 @@ Updates the variant with the given ID. This endpoint has the same limitations as
 
 ### Payload
 
-| Field           | Type                 | Description                                                |
-| --------------- | -------------------- | ---------------------------------------------------------- |
-| `date_delivery` | string               | Date estimated for the delivery with the YYYY-MM-DD format |
-| `description`   | [i18n object](#i18n) | Description                                                |
-| `stock`         | int                  | Stock                                                      |
+| Field         | Type                 | Description |
+| ------------- | -------------------- | ----------- |
+| `description` | [i18n object](#i18n) | Description |
+| `stock`       | int                  | Stock       |
 
 ## Delete a variant
 

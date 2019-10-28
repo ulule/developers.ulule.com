@@ -99,7 +99,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 26-09-2018
 
-* **[ULULE-API/FEAT]** Add the `shipping_countries` field to the reward resource and the `create-reward` and `update-reward` payloads. If this field is defined, project owners can only create shippings to these countries and bakers can only create orders to this countries.
+* **[ULULE-API/FEAT]** Add the `shipping_countries` field to the reward resource. If this field is defined, project owners can only create shippings to these countries and bakers can only create orders to this countries.
 * **[DISCUSSIONS-API/FIX]** Disallow html tables in the `body_html` field of the `create-message` and `update-message` payloads.
 
 ### 25-09-2018
@@ -181,7 +181,7 @@ This repository hosts the source code of the https://developers.ulule.com/ websi
 
 ### 23-05-2018
 
-* **[ULULE-API/FEAT]** Add the `2018-05-22` version change. This change affects the permissions of the `POST /projects/:id/orders` endpoint. If the version change is activated, that is if Ulule-Version is set to `2018-05-22` or to a later version change, a user may create an order without having to fill the `first_name`, `last_name`, `email`, `country`, `nationality` and `birthday` profile information. 
+* **[ULULE-API/FEAT]** Add the `2018-05-22` version change. This change affects the permissions of the `POST /projects/:id/orders` endpoint. If the version change is activated, that is if Ulule-Version is set to `2018-05-22` or to a later version change, a user may create an order without having to fill the `first_name`, `last_name`, `email`, `country`, `nationality` and `birthday` profile information.
 * **[DISCUSSIONS-API/FEAT]** Add the `body_html` field to the create-message and update-message payloads and to the message resource. Only one of `body` and `body_html` can be present in the payload. If `body` is present, `body_html` is set to empty string. If `body_html` is present, `body` is set to a text version of `body_html`.
 * **[ULULE-API/FEAT]** Add the `answer_html` field to the validate-proposal and refuse-proposal payloads, and to the proposal resource. The validation rules are the same as with the `message.body_html` above.
 

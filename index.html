@@ -1404,6 +1404,21 @@
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl <span style="color:#d88200">&#34;https://api.ulule.com/v1/projects/56599&#34;</span> -H Ulule-Version:2017-10-10</code></pre></div>
 <h2 id="versions-changelog">Versions changelog</h2>
 
+<h3 id="2019-10-28">2019-10-28</h3>
+
+<ul>
+<li>This version removes the following fields from the <a href="#variant-resource">variant resource</a>:
+
+<ul>
+<li><code>address_required</code></li>
+<li><code>date_delivery</code></li>
+<li><code>num_products</code></li>
+<li><code>phone_number_required</code></li>
+<li><code>price</code></li>
+<li><code>project_id</code></li>
+</ul></li>
+</ul>
+
 <h3 id="2019-09-05">2019-09-05</h3>
 
 <ul>
@@ -5411,7 +5426,7 @@ The project owner can send a message to the moderation team. This message will b
 <tr>
 <td><code>variants</code></td>
 <td>array of <a href="#variant">variant resources</a></td>
-<td></td>
+<td>Variants of the reward</td>
 </tr>
 </tbody>
 </table>
@@ -5615,7 +5630,65 @@ The project owner can send a message to the moderation team. This message will b
 
 <h2 id="variant-resource">Variant resource</h2>
 
-<p>The variant resource is almost the same as the <a href="#reward-resource">reward resource</a>. It has no <code>has_shippings</code>, <code>shipping_int</code>, <code>shipping_nat</code>, <code>shippings</code> fields, as a variant always has the same shipping costs as its parent reward. It also has no <code>variants</code> field.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>available</code></td>
+<td>bool</td>
+<td>True if reward is available</td>
+</tr>
+
+<tr>
+<td><code>description</code></td>
+<td><a href="#i18n">i18n object</a></td>
+<td>Description of the reward, can contain HTML tags</td>
+</tr>
+
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Unique ID of the reward</td>
+</tr>
+
+<tr>
+<td><code>parent</code></td>
+<td><a href="#reward-resource">reward resource</a></td>
+<td>Parent of the variant</td>
+</tr>
+
+<tr>
+<td><code>resource_uri</code></td>
+<td>string</td>
+<td>URL of the reward resource</td>
+</tr>
+
+<tr>
+<td><code>stock</code></td>
+<td>int</td>
+<td>Maximum number of rewards the project owner can produce. If null there is no limit</td>
+</tr>
+
+<tr>
+<td><code>stock_available</code></td>
+<td>int</td>
+<td>Count of remaining rewards, null if stock is null, otherwise equal to <code>stock</code> - <code>stock_taken</code></td>
+</tr>
+
+<tr>
+<td><code>stock_taken</code></td>
+<td>int</td>
+<td>Count of taken reward items</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="create-a-reward-variant">Create a reward variant</h2>
 

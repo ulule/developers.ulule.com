@@ -25,7 +25,7 @@ weight: 9
 | `stock`              | int                                      | Maximum number of rewards the project owner can produce. If null there is no limit                                                                                                                         |
 | `stock_available`    | int                                      | Count of remaining rewards, null if stock is null, otherwise equal to `stock` - `stock_taken`                                                                                                              |
 | `stock_taken`        | int                                      | Count of taken reward items                                                                                                                                                                                |
-| `variants`           | array of [variant resources](#variant)   |                                                                                                                                                                                                            |
+| `variants`           | array of [variant resources](#variant)   | Variants of the reward                                                                                                                                                                                     |
 
 ## Retrieve a reward
 

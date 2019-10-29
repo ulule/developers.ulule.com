@@ -7,7 +7,16 @@ weight: 10
 
 ## Variant resource
 
-The variant resource is almost the same as the [reward resource](#reward-resource). It has no `has_shippings`, `shipping_int`, `shipping_nat`, `shippings` fields, as a variant always has the same shipping costs as its parent reward. It also has no `variants` field.
+| Field             | Type                                | Description                                                                                   |
+| ----------------- | ----------------------------------- | --------------------------------------------------------------------------------------------- |
+| `available`       | bool                                | True if reward is available                                                                   |
+| `description`     | [i18n object](#i18n)                | Description of the reward, can contain HTML tags                                              |
+| `id`              | int                                 | Unique ID of the reward                                                                       |
+| `parent`          | [reward resource](#reward-resource) | Parent of the variant                                                                         |
+| `resource_uri`    | string                              | URL of the reward resource                                                                    |
+| `stock`           | int                                 | Maximum number of rewards the project owner can produce. If null there is no limit            |
+| `stock_available` | int                                 | Count of remaining rewards, null if stock is null, otherwise equal to `stock` - `stock_taken` |
+| `stock_taken`     | int                                 | Count of taken reward items                                                                   |
 
 ## Create a reward variant
 

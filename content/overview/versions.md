@@ -24,6 +24,16 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-10-28
+
+* This version removes the following fields from the [variant resource](#variant-resource):
+    * `address_required`
+    * `date_delivery`
+    * `num_products`
+    * `phone_number_required`
+    * `price`
+    * `project_id`
+
 ### 2019-09-05
 
 * This version adds unknown search qualifiers to search terms, whereas they were ignored before that version.

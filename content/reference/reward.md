@@ -83,7 +83,7 @@ Updates the reward with the given ID. This endpoint is only accessible to the pr
 | Field          | Type                                          | Description                                                                                                          |
 | -------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `description`  | [i18n object](#i18n)                          | Description -- max 1000 characters                                                                                   |
-| `dry_run`      | bool                                          | Validate the payload, but do not actually create the reward                                                          |
+| `dry_run`      | bool                                          | Validate the payload, but do not actually update the reward                                                          |
 | `image_id`     | [reward image payload](#reward-image-payload) |                                                                                                                      |
 | Image          |                                               |                                                                                                                      |
 | `num_products` | int                                           | Number of products that are counted when the reward is ordered -- optional, only valid if project is in presale mode |

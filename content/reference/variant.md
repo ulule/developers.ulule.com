@@ -20,7 +20,7 @@ weight: 10
 
 ## Create a reward variant
 
-Creates a new variant for the reward with the given ID. This endpoint has the same limitations as the [create-reward](#create-a-project-reward) endpoint.
+Creates a new variant for the reward with the given ID. This endpoint is only accessible to the project owner.
 
 {{% http method="post" %}}/v1/rewards/:id/variants{{% /http %}}
 
@@ -30,14 +30,15 @@ Creates a new variant for the reward with the given ID. This endpoint has the sa
 
 ### Payload
 
-| Field         | Type                 | Description             |
-| ------------- | -------------------- | ----------------------- |
-| `description` | [i18n object](#i18n) | Description -- required |
-| `stock`       | int                  | Stock -- optional       |
+| Field         | Type                 | Description                                                 |
+| ------------- | -------------------- | ----------------------------------------------------------- |
+| `description` | [i18n object](#i18n) | Description -- required in project lang, max 200 characters |
+| `position`    | int                  | Position -- required                                        |
+| `stock`       | int                  | Stock -- optional                                           |
 
 ## Update a variant
 
-Updates the variant with the given ID. This endpoint has the same limitations as the [update-reward](#update-a-reward) endpoint.
+Updates the variant with the given ID. This endpoint is only accessible to the project owner.
 
 {{% http method="patch" %}}/v1/variants/:id{{% /http %}}
 
@@ -47,10 +48,11 @@ Updates the variant with the given ID. This endpoint has the same limitations as
 
 ### Payload
 
-| Field         | Type                 | Description |
-| ------------- | -------------------- | ----------- |
-| `description` | [i18n object](#i18n) | Description |
-| `stock`       | int                  | Stock       |
+| Field         | Type                 | Description                       |
+| ------------- | -------------------- | --------------------------------- |
+| `description` | [i18n object](#i18n) | Description -- max 200 characters |
+| `position`    | int                  | Position                          |
+| `stock`       | int                  | Stock                             |
 
 ## Delete a variant
 

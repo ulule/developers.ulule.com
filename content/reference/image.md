@@ -5,13 +5,14 @@ weight: 7
 
 # Image
 
-There are three different types of images:
+There are four different kinds of images:
 
 | Type         | Description                                                                                                                                                                                          |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `main`       | The main image of a project. It is the main image displayed on the project page. It is also used to preview the project in a list of projects. A project can have only one `main` image per language |
 | `background` | The background image of a project. It is only displayed on the project page. It can consist of a background color and/or an image file. A project can have only one `background` image per language  |
 | `secondary`  | Secondary images are image files uploaded to Ulule, which can be embedded into HTML fields such as `project.description`                                                                             |
+| `reward`     | Reward images are image files uploaded to Ulule, which can be set to a reward via the [projects.create_reward](#create-a-project-reward) and the [rewards.update](#update-a-reward) endpoints.       |
 
 ## Image resource
 
@@ -21,8 +22,8 @@ There are three different types of images:
 | `id`       | int    | Unique ID of the image                                                                                                                                                                                                                                                      |
 | `lang`     | string | Language of the image                                                                                                                                                                                                                                                       |
 | `name`     | string | Filename. This field is not present for images of type `background` without an image file                                                                                                                                                                                   |
-| `type`     | string | Type of the image (`main`, `secondary`, `background`)                                                                                                                                                                                                                       |
-| `url`      | string | Publicly available URL of the image. This field is only present for images of type `background` that have a URL                                                                                                                                                           |
+| `type`     | string | Type of the image, can be one of `main`, `secondary`, `background` and `reward`                                                                                                                                                                                             |
+| `url`      | string | Publicly available URL of the image. This field is only present for images of type `background` that have a URL                                                                                                                                                             |
 | `value`    | string | Path to the file. This field is not present for images of type `background` without an image file                                                                                                                                                                           |
 | `versions` | object | Object whose keys are strings representing the image dimensions (`small`, `medium`, `large`, and `full` for the image in its original size), and whose values are [image version objects](#image-version-object). This field is not present for images of type `background` |
 
@@ -45,7 +46,7 @@ The Content-Type must be `multipart/form-data`.
 | `color` | string | HTML hex color code -- only used for images of type `background`                                                              |
 | `image` | file   | Image file -- required for images of type `main` and `secondary`, format must be GIF, JPEG or PNG, size must be less than 5MB |
 | `lang`  | string | Image language -- required                                                                                                    |
-| `type`  | string | Image type (`main`, `secondary`, `background`) -- required                                                                    |
+| `type`  | string | Image type -- required, must be one of `main`, `secondary`, `background` or `reward`                                          |
 
 ## Update an image
 
@@ -65,9 +66,6 @@ The Content-Type must be `multipart/form-data`.
 | ------- | ------ | ------------------------------------------------------------------------- |
 | `color` | string | HTML hex color code -- only used for images of type `background`          |
 | `image` | file   | Image file -- format must be GIF, JPEG or PNG, size must be less than 5MB |
-| `lang`  | string | Image language                                                            |
-| `type`  | string | Image type (`main`, `secondary`, `background`)                            |
-
 
 ## Delete an image
 

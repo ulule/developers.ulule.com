@@ -33,7 +33,7 @@ Creates a new variant for the reward with the given ID. This endpoint is only ac
 | Field         | Type                 | Description                                                 |
 | ------------- | -------------------- | ----------------------------------------------------------- |
 | `description` | [i18n object](#i18n) | Description -- required in project lang, max 200 characters |
-| `position`    | int                  | Position -- required                                        |
+| `position`    | int                  | Position -- required, must be greater than 0                |
 | `stock`       | int                  | Stock -- optional                                           |
 
 ## Update a variant
@@ -48,11 +48,11 @@ Updates the variant with the given ID. This endpoint is only accessible to the p
 
 ### Payload
 
-| Field         | Type                 | Description                       |
-| ------------- | -------------------- | --------------------------------- |
-| `description` | [i18n object](#i18n) | Description -- max 200 characters |
-| `position`    | int                  | Position                          |
-| `stock`       | int                  | Stock                             |
+| Field         | Type                 | Description                        |
+| ------------- | -------------------- | ---------------------------------- |
+| `description` | [i18n object](#i18n) | Description -- max 200 characters  |
+| `position`    | int                  | Position -- must be greater than 0 |
+| `stock`       | int                  | Stock                              |
 
 ## Delete a variant
 

@@ -92,11 +92,11 @@ Updates the reward with the given ID. This endpoint is only accessible to the pr
 
 Also, it's possible to create, update, and delete variants with the following payload fields.
 
-| Field             | Type                                                         | Description                                                               |
-| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| `create_variants` | array of [create-variant payloads](#create-a-reward-variant) | Create variants                                                           |
-| `update_variants` | array of [update-variant payloads](#update-a-variant)        | Update variants -- the variant `id` field must be set                     |
-| `delete_variants` | array of ints                                                | Delete variants -- the ints in the array be existing variants `id` fields |
+| Field             | Type                                                         | Description                                                                    |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `create_variants` | array of [create-variant payloads](#create-a-reward-variant) | Create variants                                                                |
+| `update_variants` | array of [update-variant payloads](#update-a-variant)        | Update variants -- the variant `id` field must be set                          |
+| `delete_variants` | array of ints                                                | Delete variants -- the ints in the array must be existing variants `id` fields |
 
 ## Delete a reward
 

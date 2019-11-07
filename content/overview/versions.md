@@ -24,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-11-07
+
+* This version removes values that do not exist from [i18n objects](#i18n). Before that version, non existing values were always filled with empty strings.
+
 ### 2019-10-28
 
 * This version removes the following fields from the [variant resource](#variant-resource):

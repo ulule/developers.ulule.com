@@ -24,13 +24,28 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2019-11-13
+
+* This version removes the following fields from the [project resource](#project-resource), the fields are always present in the `delivery` embedded resource:
+    * `address_required`
+    * `phone_number_required`
+* This version removes the following fields from the [reward resource](#reward-resource), the fields are always present in the `delivery` embedded resource:
+    * `address_required`
+    * `date_delivery`
+    * `has_shippings`
+    * `phone_number_required`
+    * `shipping_int`
+    * `shipping_nat`
+    * `shippings`
+* This version turns the `delivery` field from the [project](#project) resource into an [extra field](#extra-fields). It must be explicitly specified.
+
 ### 2019-11-07
 
 * This version removes values that do not exist from [i18n objects](#i18n). Before that version, non existing values were always filled with empty strings.
 
 ### 2019-10-28
 
-* This version removes the following fields from the [variant resource](#variant-resource):
+* This version removes the following fields from the [variant resource](#variant-resource), the fields are always present in the `parent` embedded resource:
     * `address_required`
     * `date_delivery`
     * `num_products`

@@ -120,6 +120,12 @@ Also, it's possible to create, update, and delete variants with the following pa
 | `position`    | int                  | Position -- must be greater than 0 |
 | `stock`       | int                  | Stock                              |
 
+It is possible to reset the delivery settings of the reward with the following payload field:
+
+| Field                    | Type | Description                                         |
+| ------------------------ | ---- | --------------------------------------------------- |
+| `delete_custom_delivery` | bool | If true, delete the reward custom delivery settings |
+
 ## Delete a reward
 
 Deletes the reward with the given ID. This endpoint is only accessible to the project owner.

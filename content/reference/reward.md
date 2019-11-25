@@ -122,9 +122,9 @@ Also, it's possible to create, update, and delete variants with the following pa
 
 It is possible to reset the delivery settings of the reward with the following payload field:
 
-| Field                    | Type | Description                                         |
-| ------------------------ | ---- | --------------------------------------------------- |
-| `delete_custom_delivery` | bool | If true, delete the reward custom delivery settings |
+| Field                    | Type | Description                                                                                                                                                               |
+| ------------------------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `delete_custom_delivery` | bool | If true, delete the reward custom delivery settings. The `has_custom_delivery` field is set to false, and the `delivery` embedded resource is set to the project delivery |
 
 ## Delete a reward
 

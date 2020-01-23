@@ -103,17 +103,19 @@ Similarly, project pickup points may be created, updated, and deleted with the f
 
 ### Create pickup point payload
 
-| Field         | Type                 | Description                          |
-| ------------- | -------------------- | ------------------------------------ |
-| `address`     | [i18n object](#i18n) | Address -- max 200 characters        |
-| `city`        | [i18n object](#i18n) | City -- required, max 100 characters |
-| `description` | [i18n object](#i18n) | Description -- max 200 characters    |
+| Field         | Type                 | Description                                  |
+| ------------- | -------------------- | -------------------------------------------- |
+| `address`     | [i18n object](#i18n) | Address -- max 200 characters                |
+| `city`        | [i18n object](#i18n) | City -- required, max 100 characters         |
+| `description` | [i18n object](#i18n) | Description -- max 200 characters            |
+| `position`    | int                  | Position -- required, must be greater than 0 |
 
 ### Update pickup point payload
 
-| Field         | Type                 | Description                       |
-| ------------- | -------------------- | --------------------------------- |
-| `address`     | [i18n object](#i18n) | Address -- max 200 characters     |
-| `city`        | [i18n object](#i18n) | City -- max 100 characters        |
-| `description` | [i18n object](#i18n) | Description -- max 200 characters |
-| `id`          | int                  | Unique ID of the pickup point     |
+| Field         | Type                 | Description                        |
+| ------------- | -------------------- | ---------------------------------- |
+| `address`     | [i18n object](#i18n) | Address -- max 200 characters      |
+| `city`        | [i18n object](#i18n) | City -- max 100 characters         |
+| `description` | [i18n object](#i18n) | Description -- max 200 characters  |
+| `id`          | int                  | Unique ID of the pickup point      |
+| `position`    | int                  | Position -- must be greater than 0 |

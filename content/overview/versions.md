@@ -24,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2020-01-27
+
+* This version changes the format of the date_delivery field from the [delivery](#delivery-resource) from YYYY-MM-DD to YYYY-MM.
+
 ### 2019-11-13
 
 * This version removes the following fields from the [project resource](#project-resource), the fields are always present in the `delivery` embedded resource:

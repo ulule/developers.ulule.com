@@ -10,7 +10,7 @@ weight: 10
 | Field                   | Type                                                      | Description                                                                                        |
 | ----------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `address_required`      | bool                                                      | Whether backers must specify a shipping address when ordering a reward                             |
-| `date_delivery`         | string                                                    | Estimated date of delivery of rewards, with the YYYY-MM-DD format                                  |
+| `date_delivery`         | string                                                    | Estimated date of delivery of rewards, with the YYYY-MM format                                     |
 | `has_shippings`         | bool                                                      | Whether there are shipping costs                                                                   |
 | `phone_number_required` | bool                                                      | Whether backers must specify the phone number in the shipping address when ordering a reward       |
 | `pickup_points`         | array of [pickup point resources](#pickup-point-resource) | Pick up points, only present in the project delivery resource                                      |
@@ -63,7 +63,7 @@ Updates the delivery settings of the project or the reward with the given ID. Th
 | Field                   | Type   | Description                                                                                                   |
 | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------- |
 | `address_required`      | bool   | Whether backers must specify a shipping address when ordering a reward                                        |
-| `date_delivery`         | string | Date at which the delivery is expected, with the YYYY-MM-DD format -- required                                |
+| `date_delivery`         | string | Date at which the delivery is expected, with the YYYY-MM format -- required                                   |
 | `phone_number_required` | bool   | Whether backers must specify the phone number in the shipping address when ordering a reward                  |
 | `shipping_int`          | int    | International shipping cost                                                                                   |
 | `shipping_nat`          | int    | National shipping cost                                                                                        |

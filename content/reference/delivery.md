@@ -7,7 +7,7 @@ weight: 10
 
 Deliveries are options related to reward shippings, pick up points, and fields that may be required from backers during the checkout step. Projects have default delivery options, and rewards inherit delivery options from their parent project. Rewards may then override delivery options.
 
-Note that pick up points may not be overiden, they are always defined for every rewards of a project, never for an individual reward.
+Note that pick up points may not be overriden, they are always defined for every rewards of a project, never for an individual reward.
 
 ## Delivery resource
 

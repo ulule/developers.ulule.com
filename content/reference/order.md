@@ -73,42 +73,29 @@ Creates an order for the project with the given ID.
 | --------- | ----------- |
 | `:id`     | Project ID  |
 
-### Payload for a project of type `project`
+### Payload
 
-Backers have two choice:
+Backers have two choices:
 
 1. Set the order amount to a value greater than or equal to the project lowest contribution amount.
-2. Select one project reward and optionally set the order amount to a value greater than or equal to the reward price.
+2. Select project rewards and optionally set the order amount to a value greater than or equal to the sum of each reward price.
 
-| Field                 | Type   | Description                                                                                                                                                                                          |
-| --------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `amount`              | int    | Order amount -- optional, must be greater than or equal to the selected reward price if `reward_id` is present, or must be greater than or equal to the project lowest contribution amount otherwise |
-| `billing_address_id`  | string | Billing address ID -- optional                                                                                                                                                                       |
-| `country`             | string | Country -- required if the selected reward has shippings                                                                                                                                             |
-| `payment_method`      | string | Payment method -- required, must be a payment method supported by the project                                                                                                                        |
-| `reward_id`           | int    | Unique ID of the reward -- optional, must be a project reward                                                                                                                                        |
-| `return_url`          | string | URL at which the backer will be redirected after payment -- required                                                                                                                                 |
-| `shipping_address_id` | string | Shipping address ID -- optional                                                                                                                                                                      |
-
-### Payload for a project of type `presale`
-
-Backers must select at least one or more rewards.
-
-| Field                 | Type                                   | Description                                                                   |
-| --------------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
-| `billing_address_id`  | string                                 | Billing address ID -- optional                                                |
-| `country`             | string                                 | Country -- required if one of the selected reward has shippings               |
-| `rewards`             | array of [reward items](#reward-items) | Selected rewards -- required                                                  |
-| `payment_method`      | string                                 | Payment method -- required, must be a payment method supported by the project |
-| `return_url`          | string                                 | Return URL, user will be redirected to this URL after payment -- required     |
-| `shipping_address_id` | string                                 | Shipping address ID -- optional                                               |
+| Field                 | Type                                   | Description                                                                                                                                                                      |
+| --------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `amount`              | int                                    | Order amount -- optional, must be greater than or equal to the sum of each selected reward price if `rewards` is present, or to the project lowest contribution amount otherwise |
+| `billing_address_id`  | string                                 | Billing address ID -- optional                                                                                                                                                   |
+| `country`             | string                                 | Country -- required if the selected reward has shippings                                                                                                                         |
+| `payment_method`      | string                                 | Payment method -- required, must be a payment method supported by the project                                                                                                    |
+| `return_url`          | string                                 | URL at which the backer will be redirected after payment -- required                                                                                                             |
+| `rewards`             | array of [reward items](#reward-items) | Selected rewards -- optional                                                                                                                                                     |
+| `shipping_address_id` | string                                 | Shipping address ID -- optional                                                                                                                                                  |
 
 #### Reward items
 
-| Field      | Type | Description                                                                                   |
-| ---------- | ---- | --------------------------------------------------------------------------------------------- |
-| `id`       | int  | Unique ID of the reward -- optional, must be a project reward                                 |
-| `quantity` | int  | Reward quantity -- required, must be less than or equal to the reward `stock_available` field |
+| Field       | Type | Description                                                                                   |
+| ----------- | ---- | --------------------------------------------------------------------------------------------- |
+| `reward_id` | int  | Unique ID of the reward -- required, must be a project reward                                 |
+| `quantity`  | int  | Reward quantity -- required, must be less than or equal to the reward `stock_available` field |
 
 ## Update an order
 

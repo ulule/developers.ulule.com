@@ -47,19 +47,19 @@ Creates an address for the user with the given ID. This endpoint is only accessi
 
 ### Payload
 
-| Field          | Type   | Description                                                                               |
-| -------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `address1`     | string | First line of the address -- optional, max 255 characters                                 |
-| `address2`     | string | Second line of the address -- optional, max 255 characters                                |
-| `city`         | string | City -- optional, max 140 characters                                                      |
-| `country`      | string | Country -- optional, two-letter ISO code                                                  |
-| `entity_name`  | string | Entity name -- required if type is `business` or `association`, max 250 characters        |
-| `first_name`   | string | First name -- required if type is `personal`, max 30 characters                           |
-| `last_name`    | string | Last name -- required if type is `personal`, max 30 characters                            |
-| `phone_number` | string | Phone number -- optional, max 20 characters                                               |
-| `postal_code`  | string | Postal code -- optional, max 140 characters                                               |
-| `state`        | string | State -- optional, max 255 characters                                                     |
-| `type`         | string | Type -- optional, must be `personal`, `business` or `association`, defaults to `personal` |
+| Field          | Type   | Description                                                                        |
+| -------------- | ------ | ---------------------------------------------------------------------------------- |
+| `address1`     | string | First line of the address -- required, max 255 characters                          |
+| `address2`     | string | Second line of the address -- optional, max 255 characters                         |
+| `city`         | string | City -- required, max 140 characters                                               |
+| `country`      | string | Country -- required, two-letter ISO code                                           |
+| `entity_name`  | string | Entity name -- required if type is `business` or `association`, max 250 characters |
+| `first_name`   | string | First name -- required if type is `personal`, max 30 characters                    |
+| `last_name`    | string | Last name -- required if type is `personal`, max 30 characters                     |
+| `phone_number` | string | Phone number -- optional, max 20 characters                                        |
+| `postal_code`  | string | Postal code -- required, max 140 characters                                        |
+| `state`        | string | State -- optional, max 255 characters                                              |
+| `type`         | string | Type -- required, must be `personal`, `business` or `association`                  |
 
 ## Update an address
 

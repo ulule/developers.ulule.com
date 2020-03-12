@@ -112,11 +112,12 @@ Updates the order with the given ID. This endpoint is only accessible to the ord
 
 ### Payload
 
-| Field                 | Type   | Description                                                                   |
-| --------------------- | ------ | ----------------------------------------------------------------------------- |
-| `billing_address_id`  | int    | Billing address ID -- optional, the address must belong to the order author   |
-| `note`                | string | A note from the backer to the project owner about this order -- optional      |
-| `shipping_address_id` | int    | Shipping address ID -- optional, the address must belong to the order author  |
+| Field                 | Type   | Description                                                                     |
+| --------------------- | ------ | ------------------------------------------------------------------------------- |
+| `billing_address_id`  | int    | Billing address ID -- the address must belong to the order author               |
+| `hidden`              | bool   | Whether the order project is shown or hidden in the user supported project list |
+| `note`                | string | A note from the backer to the project owner about this order                    |
+| `shipping_address_id` | int    | Shipping address ID -- the address must belong to the order author              |
 
 ## Cancel an order
 

@@ -26,7 +26,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2020-03-11
 
-* This version removes the `country` field from the [order payload](#create-an-order) and adds validation regarding the order shipping.
+* This version removes the `country` field from the [projects.orders_create payload](#create-an-order) and adds validation regarding the order shipping.
 
 ### 2020-01-27
 

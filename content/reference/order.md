@@ -83,19 +83,16 @@ Backers have two choices:
 | Field                 | Type                                   | Description                                                                                                                                                                      |
 | --------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `amount`              | int                                    | Order amount -- optional, must be greater than or equal to the sum of each selected reward price if `rewards` is present, or to the project lowest contribution amount otherwise |
-| `billing_address`     | [address payload](#create-an-address)  | Billing address created with the order -- optional                                                                                                                               |
+| `billing_address`     | [address payload](#create-an-address)  | Billing address created with the order -- optional, must not be set with `billing_address_id`                                                                                    |
 | `billing_address_id`  | string                                 | Billing address ID -- optional                                                                                                                                                   |
 | `payment_method`      | string                                 | Payment method -- required, must be a payment method supported by the project                                                                                                    |
 | `pickup_point_id`     | string                                 | Pickup point ID -- optional, must be a project pickup point                                                                                                                      |
 | `return_url`          | string                                 | URL at which the backer will be redirected after payment -- required                                                                                                             |
 | `rewards`             | array of [reward items](#reward-items) | Selected rewards -- optional                                                                                                                                                     |
-| `shipping_address`    | [address payload](#create-an-address)  | Shipping address created with the order -- optional                                                                                                                              |
+| `shipping_address`    | [address payload](#create-an-address)  | Shipping address created with the order -- optional, must not be set with `shipping_address_id`                                                                                  |
 | `shipping_address_id` | string                                 | Shipping address ID -- optional                                                                                                                                                  |
 
-The billing address ID and new billing address must not be set together.
-The shipping address ID or a new shipping address is required if one of the selected reward has shippings.
-The shipping address ID and the new shipping address must not be set together.
-Shipping address and pickup point must not be set together.
+If the order has shippings (that is, if one or more of the selected reward has shippings), one of `billing_address`, `billing_address_id` and `pickup_point_id` is required.
 
 #### Reward items
 

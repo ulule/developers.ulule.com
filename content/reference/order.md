@@ -92,7 +92,7 @@ Backers have two choices:
 | `shipping_address`    | [address payload](#create-an-address)  | Shipping address created with the order -- optional, must not be set with `shipping_address_id`                                                                                  |
 | `shipping_address_id` | string                                 | Shipping address ID -- optional                                                                                                                                                  |
 
-If the order has shippings (that is, if one or more of the selected reward has shippings), one of `billing_address`, `billing_address_id` and `pickup_point_id` is required.
+If the order has shippings (that is, if one or more of the selected reward has shippings), one of `shipping_address`, `shipping_address_id` and `pickup_point_id` is required.
 
 #### Reward items
 

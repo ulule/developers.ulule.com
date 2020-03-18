@@ -9,12 +9,13 @@ Users may add social websites links to their profile. Links may also be attached
 
 ## Link resource
 
-| Field             | Type   | Description           |
-| ----------------- | ------ | --------------------- |
-| `followers_count` | int    | Number of followers   |
-| `id`              | int    | Unique ID of the link |
-| `url`             | string | URL of the link       |
-| `views_count`     | int    | Number of views       |
+| Field             | Type   | Description               |
+| ----------------- | ------ | ------------------------- |
+| `crawlable`       | bool   | Whether link is crawlable |
+| `followers_count` | int    | Number of followers       |
+| `id`              | int    | Unique ID of the link     |
+| `url`             | string | URL of the link           |
+| `views_count`     | int    | Number of views           |
 
 ## Create a link
 

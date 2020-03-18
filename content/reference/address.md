@@ -113,3 +113,11 @@ Retrieves all the addresses owned by the user with the given ID. This endpoint i
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | Address ID  |
+
+### Query parameters
+
+The list can be filtered with the following query parameters:
+
+| Parameter | Description         |
+| --------- | ------------------- |
+| `country` | The address country |

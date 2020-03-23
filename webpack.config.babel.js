@@ -14,13 +14,14 @@ module.exports = {
     main: "./index.js",
     authorize: "./img/authorize.jpg",
     form: "./img/form.jpg",
-    index: "./index.html"
+    foot: "./foot.html",
+    head: "./head.html",
   },
 
   output: {
     path: `${baseDir}/static`,
     filename: "js/[name]-[chunkhash].js",
-    publicPath: "../"
+    publicPath: "/"
   },
 
   bail: production,
@@ -52,7 +53,7 @@ module.exports = {
       {
         test: /\.html$/,
         loader: PathRewriterPlugin.rewriteAndEmit({
-          name: '../layouts/[name].[ext]',
+          name: '../layouts/partials/[name].[ext]',
         })
       }
     ]

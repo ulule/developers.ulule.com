@@ -28,6 +28,43 @@
     background-color: #00608B !important;
 }
 
+.logo__link {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 3.4375rem;
+        line-height: 1;
+
+        span {
+                margin: 0 8px;
+                position: relative;
+                top: 4px;
+                font-size: .6rem;
+                color: gray;
+                text-transform: uppercase;
+        }
+}
+
+.logo__img {
+        display: inline-block;
+        margin: 1.125rem 0 .625rem;
+        height: 1.6875rem;
+        vertical-align: middle;
+        width: 4.5rem;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.41421;
+}
+
+.home {
+    margin-top: 60px;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .markdown-body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

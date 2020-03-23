@@ -1,0 +1,47 @@
+{{ partial "header" . }}
+<aside id="menu">
+  <nav>
+    <ul>
+      {{range .Sections}}
+      <li>
+        <a href="#{{ .Title | urlize }}">{{.Title}}</a>
+        <ul>
+          {{range .Pages}}
+          <li>
+            <a href="#{{ .Title | urlize }}">{{.Title}}</a>
+            {{$subsections := findRE "<h2.*>.*</h2>" .Content}}
+            {{if ge (len $subsections) 1}}
+            <ul>
+              {{range $subsections}}
+              {{$plain := . | plainify}}
+              {{$anchor := $plain | htmlEscape | urlize}}
+              <li><a href="#{{$anchor}}">{{$plain}}</a></li>
+              {{end}}
+            </ul>
+            {{end}}
+          </li>
+          {{end}}
+        </ul>
+      </li>
+      {{end}}
+
+    </ul>
+  </nav>
+</aside>
+<main class="markdown-body">
+  <section class="b-about__body">
+    <div class="b-about__text">
+      {{.Content}}
+    </div>
+  </section>
+  {{range .Sections}}
+  <section class="b-about__body">
+    <div class="b-about__text">{{.Content}}</div>
+  </section>
+  {{range .Pages}}
+  <section class="b-about__body">
+    <div class="b-about__text">{{.Content}}</div>
+  </section>
+  {{end}} {{end}}
+</main>
+{{ partial "footer" . }}

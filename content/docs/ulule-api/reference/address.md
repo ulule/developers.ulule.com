@@ -5,7 +5,7 @@ weight: 18
 
 # Address
 
-Backers may be required to create addresses resources to be used with orders.
+Backers may be required to create addresses to be used with orders.
 
 ## Address resource
 
@@ -92,11 +92,6 @@ The country can not be updated if the address is the shipping address of an orde
 ## Delete an address
 
 Deletes the address with the given ID. This endpoint is only accessible to the address owner.
-
-An address cannot be deleted if:
-
-* it is the billing or shipping address of an order with shippings
-* it belongs to an account
 
 {{% http method="delete" %}}/v1/addresses/:id{{% /http %}}
 

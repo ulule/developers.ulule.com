@@ -25,6 +25,12 @@ Backers may be required to create addresses to be used with orders.
 | `type`         | string | Legal entity type, can be `personal`, `business`, `association` |
 | `user_id`      | int    | Unique ID of the address owner                                  |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field           | Type | Description                                                           |
+| --------------- | ---- | --------------------------------------------------------------------- |
+| `has_shippings` | bool | Whether the address is the shipping address of an order with shipping |
+
 ## Retrieve an address
 
 Retrieves the address with the given ID. This endpoint is only accessible to the address owner.
@@ -65,8 +71,6 @@ Creates an address for the user with the given ID. This endpoint is only accessi
 
 Updates the address with the given ID. This endpoint is only accessible to the address owner.
 
-The country can not be updated if the address is the shipping address of an order with shippings.
-
 {{% http method="patch" %}}/v1/addresses/:id{{% /http %}}
 
 | Parameter | Description |
@@ -75,19 +79,19 @@ The country can not be updated if the address is the shipping address of an orde
 
 ### Payload
 
-| Field          | Type   | Description                                      |
-| -------------- | ------ | ------------------------------------------------ |
-| `address1`     | string | First line of the address -- max 255 characters  |
-| `address2`     | string | Second line of the address -- max 255 characters |
-| `city`         | string | City -- max 140 characters                       |
-| `country`      | string | Country -- two-letter ISO code                   |
-| `entity_name`  | string | Entity name -- max 250 characters                |
-| `first_name`   | string | First name -- max 30 characters                  |
-| `last_name`    | string | Last name -- max 30 characters                   |
-| `phone_number` | string | Phone number -- max 20 characters                |
-| `postal_code`  | string | Postal code -- max 140 characters                |
-| `state`        | string | State -- max 255 characters                      |
-| `type`         | string | Type -- `personal`, `business` or `association`  |
+| Field          | Type   | Description                                                                  |
+| -------------- | ------ | ---------------------------------------------------------------------------- |
+| `address1`     | string | First line of the address -- max 255 characters                              |
+| `address2`     | string | Second line of the address -- max 255 characters                             |
+| `city`         | string | City -- max 140 characters                                                   |
+| `country`      | string | Country -- two-letter ISO code, must not be updated if address has shippings |
+| `entity_name`  | string | Entity name -- max 250 characters                                            |
+| `first_name`   | string | First name -- max 30 characters                                              |
+| `last_name`    | string | Last name -- max 30 characters                                               |
+| `phone_number` | string | Phone number -- max 20 characters                                            |
+| `postal_code`  | string | Postal code -- max 140 characters                                            |
+| `state`        | string | State -- max 255 characters                                                  |
+| `type`         | string | Type -- `personal`, `business` or `association`                              |
 
 ## Delete an address
 

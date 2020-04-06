@@ -39,6 +39,7 @@ The order `status` field can have the following values:
 | `resource_uri`         | string                                                | URL of the order resource                                                                                                                                             |
 | `shipping_address`     | [address resource](#address)                          | Shipping address                                                                                                                                                      |
 | `status`               | string                                                | Status of the order, can be `processing`, `awaiting-confirmation`, `payment-completed`, `cancelled`, `payment-done`, `payment-invalid`, `payment-reimbursed`, `error` |
+| `tip`                  | float                                                 | Difference between the order total and the sum of each order item total with shippings included                                                                       |
 | `user`                 | [user resource](#user)                                | Author of the order                                                                                                                                                   |
 
 ## Order item resource

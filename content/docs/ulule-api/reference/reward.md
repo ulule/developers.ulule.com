@@ -14,7 +14,7 @@ weight: 9
 | `description`         | [i18n object](#i18n)                                        | Description of the reward, can contain HTML tags                                                         |
 | `has_custom_delivery` | bool                                                        | Whether the reward has custom delivery settings                                                          |
 | `id`                  | int                                                         | Unique ID of the reward                                                                                  |
-| `image`               | [i18n object](#i18n) with [image resource](#image) as value | Image of the reward                                                                                      |
+| `image`               | [i18n object](#i18n) where values are [image resources](#image) | Image of the reward                                                                                      |
 | `num_products`        | int                                                         | Number of products that are counted when the reward is ordered, only valid if project is in presale mode |
 | `price`               | int                                                         | Price of the reward                                                                                      |
 | `project_id`          | int                                                         | Unique ID of the related project                                                                         |

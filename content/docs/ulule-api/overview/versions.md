@@ -26,7 +26,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2020-04-08
 
-* This version change `main_image` in an [i18n object](#i18n) in the [project resource](#project resource).
+* This version changes the `main_image` fields of the  [project resource](#project resource) and the [search-project resource](#search-project-resource) to [i18n objects](#i18n).
 
 ### 2020-03-11
 

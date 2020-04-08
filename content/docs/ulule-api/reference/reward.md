@@ -7,23 +7,23 @@ weight: 9
 
 ## Reward resource
 
-| Field                 | Type                                            | Description                                                                                              |
-| --------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `available`           | bool                                            | Whether the reward is available                                                                          |
-| `delivery`            | [delivery resource](#delivery-resource)         | Delivery settings for the reward, copied from project delivery settings, or custom for the reward        |
-| `description`         | [i18n object](#i18n)                            | Description of the reward, can contain HTML tags                                                         |
-| `has_custom_delivery` | bool                                            | Whether the reward has custom delivery settings                                                          |
-| `id`                  | int                                             | Unique ID of the reward                                                                                  |
-| `image`               | [image resource](#image)                        | Image of the reward                                                                                      |
-| `num_products`        | int                                             | Number of products that are counted when the reward is ordered, only valid if project is in presale mode |
-| `price`               | int                                             | Price of the reward                                                                                      |
-| `project_id`          | int                                             | Unique ID of the related project                                                                         |
-| `resource_uri`        | string                                          | URL of the reward resource                                                                               |
-| `stock`               | int                                             | Maximum number of rewards the project owner can produce. If null there is no limit                       |
-| `stock_available`     | int                                             | Count of remaining rewards, null if stock is null, otherwise equal to `stock` - `stock_taken`            |
-| `stock_taken`         | int                                             | Count of taken reward items                                                                              |
-| `title`               | [i18n object](#i18n)                            | Title of the reward                                                                                      |
-| `variants`            | array of [variant resources](#variant-resource) | Variants of the reward                                                                                   |
+| Field                 | Type                                                            | Description                                                                                              |
+| --------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `available`           | bool                                                            | Whether the reward is available                                                                          |
+| `delivery`            | [delivery resource](#delivery-resource)                         | Delivery settings for the reward, copied from project delivery settings, or custom for the reward        |
+| `description`         | [i18n object](#i18n)                                            | Description of the reward, can contain HTML tags                                                         |
+| `has_custom_delivery` | bool                                                            | Whether the reward has custom delivery settings                                                          |
+| `id`                  | int                                                             | Unique ID of the reward                                                                                  |
+| `image`               | [i18n object](#i18n) where values are [image resources](#image) | Image of the reward                                                                                      |
+| `num_products`        | int                                                             | Number of products that are counted when the reward is ordered, only valid if project is in presale mode |
+| `price`               | int                                                             | Price of the reward                                                                                      |
+| `project_id`          | int                                                             | Unique ID of the related project                                                                         |
+| `resource_uri`        | string                                                          | URL of the reward resource                                                                               |
+| `stock`               | int                                                             | Maximum number of rewards the project owner can produce. If null there is no limit                       |
+| `stock_available`     | int                                                             | Count of remaining rewards, null if stock is null, otherwise equal to `stock` - `stock_taken`            |
+| `stock_taken`         | int                                                             | Count of taken reward items                                                                              |
+| `title`               | [i18n object](#i18n)                                            | Title of the reward                                                                                      |
+| `variants`            | array of [variant resources](#variant-resource)                 | Variants of the reward                                                                                   |
 
 ### Variant resource
 

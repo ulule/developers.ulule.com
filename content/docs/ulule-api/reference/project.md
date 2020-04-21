@@ -74,6 +74,7 @@ The project `status` can have the following values:
 | `visible`                    | bool                                                            |                                                                                                                                                                                |
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
 | Field                | Type                                               | Description                                                                                                              |
 | -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                                                  |

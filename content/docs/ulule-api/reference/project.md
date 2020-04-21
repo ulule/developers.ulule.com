@@ -74,14 +74,13 @@ The project `status` can have the following values:
 | `visible`                    | bool                                                            |                                                                                                                                                                                |
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
-
 | Field                | Type                                               | Description                                                                                                              |
 | -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                                                  |
 | `analytics`          | array of [analytics tags](#analytics-tag-resource) | Project analytics tags                                                                                                   |
 | `default_manager`    | [user resource](#user-resource)                    | A default manager for the project, based on its default partnership -- only accessible to the project owner              |
 | `delivery`           | [delivery resource](#delivery-resource)            | Delivery settings for the project                                                                                        |
-| `latest_news`        | [news resource](#news)                             | Latest news -- only accessible to staff                                                                                  |
+| `latest_news`        | [news resource](#news)                             | Latest news                                                                                                              |
 | `links`              | array of [links](#link-resource)                   | Links attached to the project, this extra field also adds the `post_campaign_link` [link resource](#link-resource) field |
 | `manager`            | [user resource](#user-resource)                    | Project manager -- only accessible to the project owner                                                                  |
 | `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                                                |

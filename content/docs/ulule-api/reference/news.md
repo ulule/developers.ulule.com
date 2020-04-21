@@ -9,20 +9,20 @@ Project owners may add news to their project to keep the crowd updated during an
 
 ## News resource
 
-| Field              | Type                         | Description                                                                                     |
-| ------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `absolute_url`     | string                       | Link to the news on the Ulule website                                                           |
-| `author`           | [user resource](#user)       | Author of the news, only present in the [news-detail endpoint](<#retrieve a news>)              |
-| `comments_count`   | int                          | Count of news comments                                                                          |
-| `content`          | [i18n object](#i18n)         | Content of the news                                                                             |
+| Field              | Type                         | Description                                                                                   |
+| ------------------ | ---------------------------- | --------------------------------------------------------------------------------------------- |
+| `absolute_url`     | string                       | Link to the news on the Ulule website                                                         |
+| `author`           | [user resource](#user)       | Author of the news, only present in the [news-detail endpoint](<#retrieve a news>)            |
+| `comments_count`   | int                          | Count of news comments                                                                        |
+| `content`          | [i18n object](#i18n)         | Content of the news                                                                           |
 | `date_publication` | string                       | Date at which the news was published, with RFC 3339 format, null if the news is not published |
-| `id`               | int                          | Unique ID of the news                                                                           |
-| `project`          | [project resource](#project) | Project the news belongs to, only present in the [news-detail endpoint](#retrieve-a-news)       |
-| `reserved`         | bool                         | If true, news is only visible to the project supporters                                         |
-| `resource_uri`     | string                       | URL of the news resource                                                                        |
-| `slug`             | string                       | Slug of the news                                                                                |
-| `status`           | string                       | Status of the news, can be `online`or `waiting`                                                 |
-| `title`            | [i18n object](#i18n)         | Title of the news                                                                               |
+| `id`               | int                          | Unique ID of the news                                                                         |
+| `project`          | [project resource](#project) | Project the news belongs to, only present in the [news-detail endpoint](#retrieve-a-news)     |
+| `reserved`         | bool                         | Whether the content is only visible to supporters                                             |
+| `resource_uri`     | string                       | URL of the news resource                                                                      |
+| `slug`             | string                       | Slug of the news                                                                              |
+| `status`           | string                       | Status of the news, can be `online`or `waiting`                                               |
+| `title`            | [i18n object](#i18n)         | Title of the news                                                                             |
 
 ## Retrieve a news
 
@@ -46,11 +46,11 @@ Creates a news for the project with the given ID. This endpoint is only accessib
 
 ### Payload
 
-| Field      | Type                 | Description                                                                                  |
-| ---------- | -------------------- | -------------------------------------------------------------------------------------------- |
-| `content`  | [i18n object](#i18n) | Content of the news -- required                                                              |
-| `reserved` | bool                 | If true, news will be visible only to the project supporters -- optional, default is `false` |
-| `title`    | [i18n object](#i18n) | Title of the news -- required, max 255 characters                                            |
+| Field      | Type                 | Description                                                                       |
+| ---------- | -------------------- | --------------------------------------------------------------------------------- |
+| `content`  | [i18n object](#i18n) | Content of the news -- required                                                   |
+| `reserved` | bool                 | Whether the content is only visible to supporters -- optional, default is `false` |
+| `title`    | [i18n object](#i18n) | Title of the news -- required, max 255 characters                                 |
 
 ## Update a news
 
@@ -64,11 +64,11 @@ Updates the news with the given ID. This endpoint is only accessible to the proj
 
 ### Payload
 
-|Field|Type|Description|
-|---|---|---|
-|`content`|[i18n object](#i18n)|Content of the news|
-|`reserved`|bool|If true, news will be visible only to the project supporters|
-|`title`|[i18n object](#i18n)|Title of the news -- max 255 characters|
+| Field      | Type                 | Description                                       |
+| ---------- | -------------------- | ------------------------------------------------- |
+| `content`  | [i18n object](#i18n) | Content of the news                               |
+| `reserved` | bool                 | Whether the content is only visible to supporters |
+| `title`    | [i18n object](#i18n) | Title of the news -- max 255 characters           |
 
 ## Delete a news
 

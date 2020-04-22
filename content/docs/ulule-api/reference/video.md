@@ -29,7 +29,6 @@ The video resource also contains the following [oEmbed](https://oembed.com/) fie
 | `thumbnail_width`  | int    |
 | `title`            | string |
 | `type`             | string |
-| `value`            | string |
 | `version`          | string |
 | `width`            | int    |
 

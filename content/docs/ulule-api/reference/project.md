@@ -93,6 +93,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `rewards`            | array of [rewards](#reward)                        | Project rewards                                                                                                          |
 | `sponsorships`       | array of [sponsorships](#sponsorship-resource)     | Sponsorships of the project                                                                                              |
 | `tags`               | array of [tags](#tag-resource)                     | Tags of the project                                                                                                      |
+| `user_orders`        | array of [orders](#order-resource)                 | Orders the authenticated user has completed on project                                                                   |
 | `user_role`          | string                                             | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`                     |
 
 ### Payment methods

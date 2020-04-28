@@ -21,6 +21,11 @@ Projects can have up to 4 sponsorships.
 | `project_id`  | int                                   | Unique ID of the project                    |
 | `sponsor`     | [sponsor resource](#sponsor-resource) | Sponsor                                     |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field     | Type                                  | Description |
+| --------- | ------------------------------------- | ----------- |
+| `channel` | [channel resource](#channel-resource) | Channel     |
 
 ## Sponsor resource
 

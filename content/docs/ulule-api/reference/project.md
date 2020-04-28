@@ -81,6 +81,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `default_manager`    | [user resource](#user-resource)                    | A default manager for the project, based on its default partnership -- only accessible to the project owner              |
 | `delivery`           | [delivery resource](#delivery-resource)            | Delivery settings for the project                                                                                        |
 | `latest_news`        | [news resource](#news)                             | Latest news                                                                                                              |
+| `latest_supporter`   | [user resource](#user-resource)                    | Latest supporter                                                                                                         |
 | `links`              | array of [links](#link-resource)                   | Links attached to the project, this extra field also adds the `post_campaign_link` [link resource](#link-resource) field |
 | `manager`            | [user resource](#user-resource)                    | Project manager -- only accessible to the project owner                                                                  |
 | `notes`              | [notes resource](#note-resource)                   | Project notes -- only accessible to staff                                                                                |

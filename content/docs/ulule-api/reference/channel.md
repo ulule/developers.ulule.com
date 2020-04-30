@@ -48,6 +48,14 @@ The response is [paginated](#pagination).
 
 {{% http method="get" %}}/v1/channels{{% /http %}}
 
+### Query parameters
+
+| Parameter    | Description |
+| ------------ | ----------- |
+| `country`    | Country     |
+| `lang`       | Lang        |
+| `project_id` | Project ID  |
+
 ## Retrieve a channel
 
 Retrieves the channel with the given slug.

@@ -38,9 +38,11 @@ The user resource represents a user registered on the Ulule website, possibly vi
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-| Field          | Type   | Description                                                            |
-| -------------- | ------ | ---------------------------------------------------------------------- |
-| `contact_lang` | string | Preferred language for contacting the user -- only accessible to staff |
+| Field                    | Type                                  | Description                                                                                                                                            |
+| ------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `contact_lang`           | string                                | Preferred language for contacting the user -- only accessible to staff                                                                                 |
+| `latest_project_comment` | [comment resource](#comment-resource) | Latest comment of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters) |
+| `latest_project_order`   | [order resource](#order-resource)     | Latest order of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters)   |
 
 ## Retrieve authenticated user
 

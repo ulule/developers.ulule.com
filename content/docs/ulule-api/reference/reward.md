@@ -6,10 +6,8 @@ weight: 9
 # Reward
 
 ## Reward resource
-
 | Field                 | Type                                                            | Description                                                                                              |
 | --------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `absolute_url`        | string                                                          | Link to the detail page of the reward on the Ulule website                                               |
 | `available`           | bool                                                            | Whether the reward is available                                                                          |
 | `delivery`            | [delivery resource](#delivery-resource)                         | Delivery settings for the reward, copied from project delivery settings, or custom for the reward        |
 | `description`         | [i18n object](#i18n)                                            | Description of the reward, can contain HTML tags                                                         |

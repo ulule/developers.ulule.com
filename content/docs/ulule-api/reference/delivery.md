@@ -11,17 +11,18 @@ Note that pick up points may not be overriden, they are always defined for every
 
 ## Delivery resource
 
-| Field                   | Type                                                      | Description                                                                                        |
-| ----------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `address_required`      | bool                                                      | Whether backers must specify a shipping address when ordering a reward                             |
-| `date_delivery`         | string                                                    | Estimated date of delivery of rewards, with the YYYY-MM format                                     |
-| `has_shippings`         | bool                                                      | Whether there are shipping costs                                                                   |
-| `phone_number_required` | bool                                                      | Whether backers must specify the phone number in the shipping address when ordering a reward       |
-| `pickup_points`         | array of [pickup point resources](#pickup-point-resource) | Pick up points, only present in the project delivery resource                                      |
-| `shipping_int`          | int                                                       | International shipping cost                                                                        |
-| `shipping_nat`          | int                                                       | National shipping cost                                                                             |
-| `shipping_type`         | string                                                    | Shipping type -- can be one of `none`, `national-only`, `national-and-some-countries`, `worldwide` |
-| `shippings`             | array of [shipping resource](#shipping-resource)          | Per country shippings                                                                              |
+| Field                    | Type                                                      | Description                                                                                              |
+| ------------------------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `address_required`       | bool                                                      | Whether backers must specify a shipping address when ordering a reward                                   |
+| `date_delivery`          | string                                                    | Estimated date of delivery of rewards, with the YYYY-MM format                                           |
+| `force_address_required` | bool                                                      | Whether an address is required for orders without rewards, only present in the project delivery resource |
+| `has_shippings`          | bool                                                      | Whether there are shipping costs                                                                         |
+| `phone_number_required`  | bool                                                      | Whether backers must specify the phone number in the shipping address when ordering a reward             |
+| `pickup_points`          | array of [pickup point resources](#pickup-point-resource) | Pick up points, only present in the project delivery resource                                            |
+| `shipping_int`           | int                                                       | International shipping cost                                                                              |
+| `shipping_nat`           | int                                                       | National shipping cost                                                                                   |
+| `shipping_type`          | string                                                    | Shipping type -- can be one of `none`, `national-only`, `national-and-some-countries`, `worldwide`       |
+| `shippings`              | array of [shipping resource](#shipping-resource)          | Per country shippings                                                                                    |
 
 ### Shipping resource
 
@@ -64,14 +65,15 @@ Updates the delivery settings of the project or the reward with the given ID. Th
 
 ### Payload
 
-| Field                   | Type   | Description                                                                                                   |
-| ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------- |
-| `address_required`      | bool   | Whether backers must specify a shipping address when ordering a reward                                        |
-| `date_delivery`         | string | Date at which the delivery is expected, with the YYYY-MM format -- required                                   |
-| `phone_number_required` | bool   | Whether backers must specify the phone number in the shipping address when ordering a reward                  |
-| `shipping_int`          | int    | International shipping cost                                                                                   |
-| `shipping_nat`          | int    | National shipping cost                                                                                        |
-| `shipping_type`         | string | Shipping type -- required, must be one of `none`, `national-only`, `national-and-some-countries`, `worldwide` |
+| Field                    | Type   | Description                                                                                                   |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------- |
+| `address_required`       | bool   | Whether backers must specify a shipping address when ordering a reward                                        |
+| `date_delivery`          | string | Date at which the delivery is expected, with the YYYY-MM format -- required                                   |
+| `force_address_required` | bool   | Whether an address is required for orders without rewards, only valid in the project delivery payload         |
+| `phone_number_required`  | bool   | Whether backers must specify the phone number in the shipping address when ordering a reward                  |
+| `shipping_int`           | int    | International shipping cost                                                                                   |
+| `shipping_nat`           | int    | National shipping cost                                                                                        |
+| `shipping_type`          | string | Shipping type -- required, must be one of `none`, `national-only`, `national-and-some-countries`, `worldwide` |
 
 Also, it's possible to create, update, and delete shippings with the following payload fields.
 

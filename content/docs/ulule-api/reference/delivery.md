@@ -45,12 +45,13 @@ The following shipping zones are supported.
 
 ### Pickup point resource
 
-| Field         | Type                 | Description                   |
-| ------------- | -------------------- | ----------------------------- |
-| `address`     | [i18n object](#i18n) | Address                       |
-| `city`        | [i18n object](#i18n) | City                          |
-| `description` | [i18n object](#i18n) | Description                   |
-| `id`          | int                  | Unique ID of the pickup point |
+| Field         | Type                                  | Description                   |
+| ------------- | ------------------------------------- | ----------------------------- |
+| `address`     | [address resource](#address-resource) | Address                       |
+| `description` | [i18n object](#i18n)                  | Description                   |
+| `id`          | int                                   | Unique ID of the pickup point |
+| `name`        | [i18n object](#i18n)                  | Name                          |
+| `raw_address` | [i18n object](#i18n)                  | Raw address                   |
 
 ## Update project or reward delivery settings
 
@@ -109,19 +110,21 @@ Similarly, project pickup points may be created, updated, and deleted with the f
 
 ### Create pickup point payload
 
-| Field         | Type                 | Description                                  |
-| ------------- | -------------------- | -------------------------------------------- |
-| `address`     | [i18n object](#i18n) | Address -- max 200 characters                |
-| `city`        | [i18n object](#i18n) | City -- required, max 100 characters         |
-| `description` | [i18n object](#i18n) | Description -- max 200 characters            |
-| `position`    | int                  | Position -- required, must be greater than 0 |
+| Field         | Type                                  | Description                                  |
+| ------------- | ------------------------------------- | -------------------------------------------- |
+| `address`     | [address payload](#create-an-address) | Address                                      |
+| `description` | [i18n object](#i18n)                  | Description -- max 200 characters            |
+| `name`        | [i18n object](#i18n)                  | Name -- required, max 100 characters         |
+| `position`    | int                                   | Position -- required, must be greater than 0 |
+| `raw_address` | [i18n object](#i18n)                  | Raw address -- max 200 characters            |
 
 ### Update pickup point payload
 
-| Field         | Type                 | Description                        |
-| ------------- | -------------------- | ---------------------------------- |
-| `address`     | [i18n object](#i18n) | Address -- max 200 characters      |
-| `city`        | [i18n object](#i18n) | City -- max 100 characters         |
-| `description` | [i18n object](#i18n) | Description -- max 200 characters  |
-| `id`          | int                  | Unique ID of the pickup point      |
-| `position`    | int                  | Position -- must be greater than 0 |
+| Field         | Type                                  | Description                        |
+| ------------- | ------------------------------------- | ---------------------------------- |
+| `address`     | [address payload](#update-an-address) | Address                            |
+| `description` | [i18n object](#i18n)                  | Description -- max 200 characters  |
+| `id`          | int                                   | Unique ID of the pickup point      |
+| `name`        | [i18n object](#i18n)                  | Name -- max 100 characters         |
+| `position`    | int                                   | Position -- must be greater than 0 |
+| `raw_address` | [i18n object](#i18n)                  | Raw address -- max 200 characters  |

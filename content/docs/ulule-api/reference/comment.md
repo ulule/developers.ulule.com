@@ -51,6 +51,22 @@ Creates a comment on the news with the given ID.
 | --------- | ------ | --------------------------------------------------- |
 | `comment` | string | Body of the comment -- required, max 500 characters |
 
+## Create an order comment
+
+Creates a comment on the order with the given ID.
+
+{{% http method="post" %}}/v1/orders/:id/comment{{% /http %}}
+
+| Parameter | Description |
+| --------- | ----------- |
+| `:id`     | Order ID    |
+
+### Payload
+
+| Field     | Type   | Description                                         |
+| --------- | ------ | --------------------------------------------------- |
+| `comment` | string | Body of the comment -- required, max 500 characters |
+
 ## Create a reply to a comment
 
 Creates a reply to the comment with the given ID. The comment must be a parent comment.

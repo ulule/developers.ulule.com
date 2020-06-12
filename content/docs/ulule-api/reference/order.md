@@ -43,6 +43,15 @@ The order `status` field can have the following values:
 | `tip`                  | float                                                 | Difference between the order total and the sum of each order item total with shippings included                                                                       |
 | `user`                 | [user resource](#user)                                | Author of the order                                                                                                                                                   |
 
+The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
+
+| Field                  | Type                                                | Description                                                  |
+| ---------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
+| `project.analytics`    | array of [analytics tags](#analytics-tag-resource)  | Order project analytics tags                                 |
+| `project.partnerships` | array of [partnerships](#partnership-resource)      | Partnerships of the order project                            |
+| `project.sponsorships` | array of [sponsorships](#sponsorship-resource)      | Sponsorships of the order project                            |
+| `tracking`             | [order tracking resource](#order-tracking-resource) | Order tracking -- only accessible to the order project owner |
+
 ## Order item resource
 
 | Field                 | Type                       | Description                               |
@@ -54,6 +63,13 @@ The order `status` field can have the following values:
 | `reward`              | [reward resource](#reward) | Reward item                               |
 | `reward_id`           | int                        | Unique ID of the reward item              |
 | `unit_price`          | int                        | Price of a single reward item             |
+
+## Order tracking resource
+
+| Field    | Type   | Description           |
+| -------- | ------ | --------------------- |
+| `medium` | string | Order tracking medium |
+| `source` | source | Order tracking source |
 
 ## Retrieve an order
 

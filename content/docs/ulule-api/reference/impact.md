@@ -31,7 +31,7 @@ Project owners may set information about the impact of their project. In particu
 | `code`        | string                                                          | Code of the SDG                                                        |
 | `description` | [i18n object](#i18n)                                            | Description of the SDG                                                 |
 | `logo`        | [i18n object](#i18n) where values are [image resources](#image) | Logo image of the SDG                                                  |
-| `title`       | [i18n object](#i18n)                                            | Title of the SDG                                                       |
+| `title`       | [i18n object](#i18n)                                            | Title of the SDG, only shown for top level SDGs                        |
 | `targets`     | [array of SDG resources](#sdg-resource)                         | Targets of the SDG, only shown in the [list SDGs endpoint](#list-sdgs) |
 
 ## List SDGs
@@ -39,6 +39,16 @@ Project owners may set information about the impact of their project. In particu
 Retrieves all SDGs.
 
 {{% http method="get" %}}/v1/sdgs{{% /http %}}
+
+## Retrieve project impact
+
+Retrieves the impact of the project with the given ID.
+
+{{% http method="get" %}}/v1/projects/:id/impact{{% /http %}}
+
+| Parameter | Description |
+| --------- | ----------- |
+| `:id`     | Project ID  |
 
 ## Update project impact
 

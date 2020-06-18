@@ -89,4 +89,3 @@ Also, it's possible to create, update, and delete project SDGs with the followin
 | ------------- | -------------------- | --------------------------------- |
 | `description` | [i18n object](#i18n) | How the project addresses the SDG |
 | `id`          | int                  | Unique ID of the project SDG      |
-| `sdg_code`    | string               | Code of the SDG                   |

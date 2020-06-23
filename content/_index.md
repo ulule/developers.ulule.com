@@ -1,4 +1,4 @@
-# Welcome developers !
+# Welcome developers!
 
 As creators, citizens, non-profits or companies, we all increasingly
 share the same desire to take action to build a better world: one that

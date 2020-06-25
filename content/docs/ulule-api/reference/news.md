@@ -24,6 +24,18 @@ Project owners may add news to their project to keep the crowd updated during an
 | `status`           | string                       | Status of the news, can be `online`or `waiting`                                               |
 | `title`            | [i18n object](#i18n)         | Title of the news                                                                             |
 
+The field [`permissions`](#permissions) is present in the
+following endpoints:
+
+* [Create a project news](#create a project news)
+* [Retrieve a news](#retrieve-a-news)
+* [Update a news](#update-a-news)
+* [List project news](#list-project-news)
+
+| Fields | Possible values |
+| ------ | --------------- |
+| `self` | `update`        |
+
 ## Retrieve a news
 
 Retrieves the news resource with the given ID. This endpoint is only accessible if the news status is `online`, or if the authenticated user is the project owner.
@@ -80,7 +92,7 @@ Deletes the news with the given ID. This endpoint is only accessible to the proj
 | --------- | ----------- |
 | `:id`     | News ID     |
 
-## List a project news
+## List project news
 
 Retrieves all the news resources that belong to the project with the given ID. This endpoint is only accessible if the project status is `online`, or if the authenticated user is the project owner.
 

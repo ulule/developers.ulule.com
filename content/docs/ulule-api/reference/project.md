@@ -97,6 +97,17 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `user_orders`        | array of [orders](#order-resource)                 | Orders the authenticated user has completed on project                                                                   |
 | `user_role`          | string                                             | Relation between the project and the authenticated user, can be null, `fan`, `supporter` and `owner`                     |
 
+The field [`permissions`](#permissions) is present in the
+following endpoints:
+
+* [Retrieve a project](#retrieve-a-project)
+* [Update a project](#update-a-project)
+
+| Fields | Possible values |
+| ------ | --------------- |
+| `self` | `update`        |
+| `news` | `create`        |
+
 ### Payment methods
 
 The following payment methods are supported:

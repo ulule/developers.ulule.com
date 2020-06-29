@@ -7,16 +7,16 @@ weight: 17
 
 The order `status` field can have the following values:
 
-| Status                  | Description                                                         |
-| ----------------------- | ------------------------------------------------------------------- |
-| `processing`            | Order is processing                                                 |
-| `awaiting-confirmation` | User is filling payment information                                 |
-| `payment-completed`     | Order is completed                                                  |
-| `cancelled`             | User has cancelled order during the campaign                        |
-| `payment-done`          | Campaign has succeeded, funds have been transfered to project owner |
-| `payment-invalid`       | PSP needs more info to transfer payment to project owner            |
-| `payment-reimbursed`    | Campaign has failed, the backer has been reimbursed                 |
-| `error`                 | An error has occurred                                               |
+| Status                  | Description                                                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `processing`            | The order is processing                                                                                                  |
+| `awaiting-confirmation` | The user is filling payment information                                                                                  |
+| `payment-completed`     | The order is completed                                                                                                   |
+| `cancelled`             | The user has cancelled the order during the campaign                                                                     |
+| `payment-done`          | The order was completed, the campaign succeeded and the funds were successfully transferred to the project owner account |
+| `payment-invalid`       | The order was completed, the campaign succeeded but the funds couldn't be transferred to the project owner account       |
+| `payment-reimbursed`    | The order was completed but the campaign has failed, so the backer has been reimbursed                                   |
+| `error`                 | An error has occurred                                                                                                    |
 
 ## Order resource
 
@@ -171,10 +171,10 @@ The response is [paginated](#pagination).
 
 The list can be filtered with the following query parameters:
 
-| Parameter    | Description  |
-| ------------ | ------------ |
-| `project_id` | Project      |
-| `status`     | Order status |
+| Parameter    | Description            |
+| ------------ | ---------------------- |
+| `project_id` | Project                |
+| `status`     | [Order status](#order) |
 
 
 ## List project orders
@@ -193,8 +193,8 @@ The response is [paginated](#pagination).
 
 The list can be filtered with the following query parameters:
 
-| Parameter        | Description          |
-| ---------------- | -------------------- |
-| `payment_method` | Order payment method |
-| `reward_id`      | Order reward ID      |
-| `status`         | Order status         |
+| Parameter        | Description            |
+| ---------------- | ---------------------- |
+| `payment_method` | Order payment method   |
+| `reward_id`      | Order reward ID        |
+| `status`         | [Order status](#order) |

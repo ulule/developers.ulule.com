@@ -6,6 +6,7 @@ weight: 9
 # Reward
 
 ## Reward resource
+
 | Field                 | Type                                                            | Description                                                                                              |
 | --------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `available`           | bool                                                            | Whether the reward is available                                                                          |
@@ -16,6 +17,7 @@ weight: 9
 | `image`               | [i18n object](#i18n) where values are [image resources](#image) | Image of the reward                                                                                      |
 | `is_hidden`           | bool                                                            | Whether the reward is hidden                                                                             |
 | `num_products`        | int                                                             | Number of products that are counted when the reward is ordered, only valid if project is in presale mode |
+| `position`            | int                                                             | Position of the reward                                                                                   |
 | `price`               | int                                                             | Price of the reward                                                                                      |
 | `project_id`          | int                                                             | Unique ID of the related project                                                                         |
 | `resource_uri`        | string                                                          | URL of the reward resource                                                                               |

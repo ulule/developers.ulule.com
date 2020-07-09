@@ -1,6 +1,6 @@
 ---
 title: "News"
-weight: 14
+weight: 15
 ---
 
 # News

@@ -1,6 +1,6 @@
 ---
 title: "Partner"
-weight: 20
+weight: 21
 ---
 
 # Partner

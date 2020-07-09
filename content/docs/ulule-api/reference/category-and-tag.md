@@ -1,6 +1,6 @@
 ---
 title: "Category and Tag"
-weight: 6
+weight: 7
 ---
 
 # Category and Tag

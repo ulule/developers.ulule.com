@@ -106,6 +106,7 @@ Updates the user with the given ID. This endpoint is only accessible to oneself.
 | `lang`         | string               | Language of the user -- must be one of the [supported languages](#languages)                                                 |
 | `location`     | string               | Location of the user -- max 255 characters                                                                                   |
 | `nationality`  | string               | Nationality of the user -- must be two-letter ISO code                                                                       |
+| `newsletters`  | array of strings     | Newsletter slugs                                                                                                             |
 | `presentation` | [i18n object](#i18n) | Longer presentation of the user                                                                                              |
 | `screenname`   | string               | Screenname of the user -- max 30 characters                                                                                  |
 | `username`     | string               | Username -- max 80 characters                                                                                                |

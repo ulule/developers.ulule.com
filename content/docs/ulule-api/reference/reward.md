@@ -1,6 +1,6 @@
 ---
 title: "Reward"
-weight: 9
+weight: 10
 ---
 
 # Reward

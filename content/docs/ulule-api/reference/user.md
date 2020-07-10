@@ -43,6 +43,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `contact_lang`           | string                                | Preferred language for contacting the user -- only accessible to staff                                                                                 |
 | `latest_project_comment` | [comment resource](#comment-resource) | Latest comment of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters) |
 | `latest_project_order`   | [order resource](#order-resource)     | Latest order of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters)   |
+| `newsletters`            | array of strings                      | Slugs of the newsletters the user is subscribed to                                                                                                     |
 
 ## Retrieve authenticated user
 

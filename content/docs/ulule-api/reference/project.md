@@ -78,6 +78,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `account`            | [account resource](#account-resource)              | Project account -- only accessible to the project owner                                                                  |
 | `analytics`          | array of [analytics tags](#analytics-tag-resource) | Project analytics tags                                                                                                   |
+| `billing`            | [billing resource](#billing-resource)              | Project billing -- only accessible to the project owner                                                                  |
 | `default_manager`    | [user resource](#user-resource)                    | A default manager for the project, based on its default partnership -- only accessible to the project owner              |
 | `delivery`           | [delivery resource](#delivery-resource)            | Delivery settings for the project                                                                                        |
 | `latest_news`        | [news resource](#news)                             | Latest news                                                                                                              |
@@ -123,6 +124,19 @@ The following payment methods are supported:
 | `paylib`       |
 | `paypal`       |
 | `saving`       |
+
+### Billing resource
+
+| Field            | Type                                  | Description                                                                                                        |
+| ---------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `invoice`        | [invoice resource](#invoice-resource) | Project invoice                                                                                                    |
+| `payment_status` | string                                | Project payment status, can be one of `waiting`, `processing`, `ready`, `error`, `payment-processing`, `completed` |
+
+### Invoice resource
+
+| Field | Type   | Description |
+| ----- | ------ | ----------- |
+| `url` | string | Invoice URL |
 
 ### Location resource
 

@@ -137,6 +137,7 @@ Updates the order with the given ID. This endpoint is only accessible to the ord
 | `hidden`              | bool   | Whether the order project is shown or hidden in the user supported project list |
 | `note`                | string | A note from the backer to the project owner about this order                    |
 | `shipping_address_id` | int    | Shipping address ID -- the address must belong to the order author              |
+| `user_id`             | int    | The ID of the new owner of the order -- only accessible to staff                |
 
 ## Cancel an order
 

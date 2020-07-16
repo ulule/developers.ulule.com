@@ -10,7 +10,7 @@ weight: 5
 | Field           | Type                 | Description                                                    |
 | --------------- | -------------------- | -------------------------------------------------------------- |
 | `is_subscribed` | bool                 | Whether the authenticated user is subscribed to the newsletter |
-| `name`          | [i18n object](#i18n) | Name of the tag                                                |
+| `name`          | [i18n object](#i18n) | Name of the newsletter                                         |
 | `slug`          | string               | Unique slug of the newsletter                                  |
 
 ## List newsletters

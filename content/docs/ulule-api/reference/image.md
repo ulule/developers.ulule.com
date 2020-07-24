@@ -1,6 +1,6 @@
 ---
 title: "Image"
-weight: 7
+weight: 8
 ---
 
 # Image

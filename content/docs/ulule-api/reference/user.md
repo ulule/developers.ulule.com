@@ -43,6 +43,7 @@ The following fields are [extra_fields](#extra-fields) and must be explicitly sp
 | `contact_lang`           | string                                | Preferred language for contacting the user -- only accessible to staff                                                                                 |
 | `latest_project_comment` | [comment resource](#comment-resource) | Latest comment of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters) |
 | `latest_project_order`   | [order resource](#order-resource)     | Latest order of the user for the project with the given ID -- only accessible on the [project supporter list endpoint](#list-all-project-supporters)   |
+| `newsletters`            | array of strings                      | Slugs of the newsletters the user is subscribed to                                                                                                     |
 
 ## Retrieve authenticated user
 
@@ -106,6 +107,7 @@ Updates the user with the given ID. This endpoint is only accessible to oneself.
 | `lang`         | string               | Language of the user -- must be one of the [supported languages](#languages)                                                 |
 | `location`     | string               | Location of the user -- max 255 characters                                                                                   |
 | `nationality`  | string               | Nationality of the user -- must be two-letter ISO code                                                                       |
+| `newsletters`  | array of strings     | Slugs of the newsletters the user is subscribed to                                                                           |
 | `presentation` | [i18n object](#i18n) | Longer presentation of the user                                                                                              |
 | `screenname`   | string               | Screenname of the user -- max 30 characters                                                                                  |
 | `username`     | string               | Username -- max 80 characters                                                                                                |

@@ -193,3 +193,18 @@ Offboard the user with the given id. This endpoint is only accessible to staff.
 | Field     | Type | Description                                                |
 | --------- | ---- | ---------------------------------------------------------- |
 | `user_id` | int  | User ID used to substitute the offboarded user -- optional |
+
+## List all official users
+
+Retrieves all the official users.
+
+The response is [paginated](#pagination).
+
+{{% http method="get" %}}/v1/officialusers{{% /http %}}
+
+### Query parameters
+
+| Parameter | Type   | Description                  |
+| --------- | ------ | ---------------------------- |
+| `country` | string | Country of the official user |
+| `lang`    | string | Lang of the official user    |

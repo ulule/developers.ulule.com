@@ -24,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2020-08-13
+
+* This version turns the `fields_needed` field from the [project](#project) resource into an [extra field](#extra-fields). It must be explicitly specified.
+
 ### 2020-04-08
 
 * This version changes the `main_image` fields of the [project resource](#project resource) and the [search-project resource](#search-project-resource) to [i18n objects](#i18n).

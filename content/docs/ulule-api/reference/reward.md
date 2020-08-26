@@ -15,6 +15,7 @@ weight: 10
 | `has_custom_delivery` | bool                                                            | Whether the reward has custom delivery settings                                                          |
 | `id`                  | int                                                             | Unique ID of the reward                                                                                  |
 | `image`               | [i18n object](#i18n) where values are [image resources](#image) | Image of the reward                                                                                      |
+| `is_featured`         | bool                                                            | Whether the reward is featured                                                                           |
 | `is_hidden`           | bool                                                            | Whether the reward is hidden                                                                             |
 | `num_products`        | int                                                             | Number of products that are counted when the reward is ordered, only valid if project is in presale mode |
 | `position`            | int                                                             | Position of the reward                                                                                   |
@@ -66,6 +67,8 @@ Creates a new reward for the project with the given ID. This endpoint is only ac
 | `description`  | [i18n object](#i18n)                                        | Description -- optional                                                                                              |
 | `dry_run`      | bool                                                        | Validate the payload, but do not actually create the reward                                                          |
 | `image_id`     | [reward image payload](#reward-image-payload)               | Image -- optional                                                                                                    |
+| `is_featured`  | bool                                                        | Whether the reward is featured. There can be only one featured reward per project -- optional, default is false      |
+| `is_hidden`    | bool                                                        | Whether the reward is hidden -- optional, default is false                                                           |
 | `num_products` | int                                                         | Number of products that are counted when the reward is ordered -- optional, only valid if project is in presale mode |
 | `price`        | float                                                       | Price -- required, must be between 0 and 1e10, must be an int if project is in project mode                          |
 | `stock`        | int                                                         | Stock -- optional                                                                                                    |
@@ -101,6 +104,8 @@ Updates the reward with the given ID. This endpoint is only accessible to the pr
 | `description`  | [i18n object](#i18n)                          | Description                                                                                                          |
 | `dry_run`      | bool                                          | Validate the payload, but do not actually update the reward                                                          |
 | `image_id`     | [reward image payload](#reward-image-payload) | Image                                                                                                                |
+| `is_featured`  | bool                                          | Whether the reward is featured. There can be only one featured reward per project.                                   |
+| `is_hidden`    | bool                                          | Whether the reward is hidden                                                                                         |
 | `num_products` | int                                           | Number of products that are counted when the reward is ordered -- optional, only valid if project is in presale mode |
 | `price`        | float                                         | Price, must be between 0 and 1e10                                                                                    |
 | `stock`        | int                                           | Stock                                                                                                                |

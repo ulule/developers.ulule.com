@@ -20,7 +20,7 @@ weight: 5
 ## Subscribe contact to newsletter
 
 Subscribe an email to a given newsletter.
-The email cannot belong to an existing user.
+The email must not belong to an existing user.
 
 {{% http method="post" %}}/v1/newsletters/:slug/subscribe{{% /http %}}
 
@@ -28,7 +28,7 @@ The email cannot belong to an existing user.
 | --------- | --------------- |
 | `:slug`   | Newsletter Slug |
 
-### payload
+### Payload
 
 | Field   | Type   | Description |
 | ------- | ------ | ----------- |

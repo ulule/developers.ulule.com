@@ -22,7 +22,7 @@ weight: 5
 Subscribe an email to a given newsletter.
 The email must not belong to an existing user.
 
-{{% http method="post" %}}/v1/newsletters/:slug/subscribe{{% /http %}}
+{{% http method="post" %}}/v1/newsletters/:slug{{% /http %}}
 
 | Parameter | Description     |
 | --------- | --------------- |

@@ -379,7 +379,7 @@ Users can like projects to receive notifications. Project owners and backers aut
 
 ### Like a project
 
-`POST /v1/projects/:id/like` where `:id` is the project ID.
+`POST /v1/projects/:id/like` where `:id` is the project ID. This endpoint is accessible to guest users.
 
 ### Unlike a project
 

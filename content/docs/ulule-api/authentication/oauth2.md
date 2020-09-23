@@ -1,20 +1,21 @@
 ---
 title: "OAuth2"
+weight: 3
 ---
 
 # OAuth2
 
-The `access_token` will allow you to log as a user by passing it in each request.
+This authentication method is only accessible if you have a registered OAuth2 application. Contact [support@ulule.com](mailto:support@ulule.com) for more information.
 
-You can pass it in each request as an authorization header:
+Users use their access token for authentication via the Authorization HTTP header.
 
 ```bash
-$ curl -H "Authorization: Bearer USER-ACCESS-TOKEN" "https://api.ulule.com/v1/..."
+$ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" "https://api.ulule.com/v1/..."
 ```
 
 ## Retrieve an access token
 
-To retrieve an access token, use the `POST https://connect.ulule.com/oauth2/token/` endpoint.
+To retrieve an access token, use the `POST https://api.ulule.com/oauth2/token/` endpoint.
 
 *Please, do not forget the slash at the end, just after "token". This slash is required.*
 
@@ -34,7 +35,7 @@ The request must be authenticated with the `Basic` method with the credentials b
 $ curl -X POST \
     -d "grant_type=password&username=<username>&password=<password>" \
     -H "Authorization: basic PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+" \
-    https://connect.ulule.com/oauth2/token/
+    https://api.ulule.com/oauth2/token/
 ```
 
 where `PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+` is the base64 encoding of the `<client_id>:<client_secret>` string.
@@ -81,7 +82,7 @@ def get_basic_auth_header(user, password):
 # Execute the POST request with: grant_type, username and password as
 # POST parameters. Do not forget to add HTTP Basic header.
 response = requests.post(
-    'https://connect.ulule.com/oauth2/token/',
+    'https://api.ulule.com/oauth2/token/',
     data={
         'grant_type': 'password',
         'username': USERNAME,
@@ -110,7 +111,7 @@ Access-Token: user-access-token
 Refresh-Token: user-refresh-token
 ```
 
-You now have an access token to automatically authenticate the user on Ulule.
+You now have an access token to authenticate the user.
 
 ## Refresh the access token
 
@@ -147,7 +148,7 @@ def get_basic_auth_header(user, password):
 # Execute the POST request with: grant_type and refresh_token
 # POST parameters. Do not forget to add HTTP Basic header.
 response = requests.post(
-    'https://connect.ulule.com/oauth2/token/',
+    'https://api.ulule.com/oauth2/token/',
     data={
         'grant_type': 'refresh_token',
         'refresh_token': REFRESH_TOKEN,
@@ -171,4 +172,4 @@ $ CLIENT_ID=your-client-id CLIENT_SECRET=your-client-secret REFRESH_TOKEN=user-r
 Access-Token: user-access-token
 ```
 
-You now have a new access token to re-authenticate the user on Ulule.
+You now have a new access token to re-authenticate the user.

@@ -1,5 +1,6 @@
 ---
 title: "Ulule Connect"
+weight: 4
 ---
 
 # Ulule Connect
@@ -17,10 +18,9 @@ The workflow is:
 7. At the end of sign in / sign up process, user is redirected to the `redirect_uri`
 8. The user access token is returned to the `redirect_uri`
 
-
 ## Authorize user with Ulule Connect
 
-The Ulule Connect URL is https://connect.ulule.com/oauth2/authorize/
+The Ulule Connect URL is https://api.ulule.com/oauth2/authorize/.
 
 The following query parameters are required.
 
@@ -43,7 +43,7 @@ If `response_type` is [code], an access code is sent to the redirect URI via the
 
 ## Retrieve user access token from authorization code
 
-Use the `POST https://connect.ulule.com/oauth2/token/` endpoint as described in the [OAuth2 section](#retrieve-an-access-token).
+Use the `POST https://api.ulule.com/oauth2/token/` endpoint as described in the [OAuth2 section](#retrieve-an-access-token).
 
 ### Payload
 
@@ -87,7 +87,7 @@ def get_basic_auth_header(user, password):
 # Execute the POST request with: grant_type, code and redirect_uri as
 # POST parameters. Do not forget to add HTTP Basic header.
 response = requests.post(
-    'https://connect.ulule.com/oauth2/token/',
+    'https://api.ulule.com/oauth2/token/',
     data={
         'grant_type': 'authorization_code',
         'code': GRANT_CODE,

@@ -383,4 +383,4 @@ Users can like projects to receive notifications. Project owners and backers aut
 
 ### Unlike a project
 
-`POST /v1/projects/:id/unlike` where `:id` is the project ID.
+`POST /v1/projects/:id/unlike` where `:id` is the project ID. This endpoint is accessible to guest users.

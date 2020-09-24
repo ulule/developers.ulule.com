@@ -205,6 +205,7 @@ Finally, the following fields can't be updated by the project owner, they can on
 | Field                 | Type                             | Description                                                                             |
 | --------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
 | `answer_code`         | string                           | Answer code -- must be one of `accepted`, `need-moderation`, `sent-to-okpal`, `refused` |
+| `channel_ids`         | array of ints                    | IDs of channels related to the project and ordered by position                          |
 | `comments_enabled`    | string                           | Enable comments -- must be one of `everyone`, `supporters`, `disabled`                  |
 | `discussion_disabled` | bool                             | Disable discussion                                                                      |
 | `manager_id`          | int64                            | Manager ID                                                                              |

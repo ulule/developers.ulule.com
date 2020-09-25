@@ -15,6 +15,7 @@ Project owners may add news to their project to keep the crowd updated during an
 | `author`           | [user resource](#user)       | Author of the news, only present in the [news-detail endpoint](#retrieve-a-news)              |
 | `comments_count`   | int                          | Count of news comments                                                                        |
 | `content`          | [i18n object](#i18n)         | Content of the news                                                                           |
+| `date_creation`    | string                       | Date at which the news was created, with RFC 3339 format, only accessible to the news author  |
 | `date_publication` | string                       | Date at which the news was published, with RFC 3339 format, null if the news is not published |
 | `id`               | int                          | Unique ID of the news                                                                         |
 | `project`          | [project resource](#project) | Project the news belongs to, only present in the [news-detail endpoint](#retrieve-a-news)     |

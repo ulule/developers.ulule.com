@@ -16,3 +16,20 @@ weight: 5
 ## List newsletters
 
 {{% http method="get" %}}/v1/newsletters{{% /http %}}
+
+## Subscribe contact to newsletter
+
+Subscribe an email to a given newsletter.
+The email must not belong to an existing user.
+
+{{% http method="post" %}}/v1/newsletters/:slug{{% /http %}}
+
+| Parameter | Description     |
+| --------- | --------------- |
+| `:slug`   | Newsletter Slug |
+
+### Payload
+
+| Field   | Type   | Description |
+| ------- | ------ | ----------- |
+| `email` | string | Email       |

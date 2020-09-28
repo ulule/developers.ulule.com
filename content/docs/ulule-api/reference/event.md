@@ -20,20 +20,11 @@ Various events related to the same project can be fetched together.
 
 ## Event resource
 
-| Field  | Type   | Description                                                                 |
-| ------ | ------ | --------------------------------------------------------------------------- |
-| `time` | string | Date at which the event occurred, with RFC 3339 format                      |
-| `type` | string | Type of the event, must be one of the [available event types](#event-types) |
-
-Depending on its `type`, an event may have one of these fields:
-
-| Field            | Type                                     |
-| ---------------- | ---------------------------------------- |
-| `news`           | [News](#news-resource)                   |
-| `order`          | [Order](#order-resource)                 |
-| `percent_raised` | Object with a `percent` number field     |
-| `project_end`    | Object with a `goal_status` string field |
-| `sponsorship`    | [Sponsorship](#sponsorship-resource)     |
+| Field  | Type            | Description                                                                 |
+| ------ | --------------- | --------------------------------------------------------------------------- |
+| `data` | depends on type | Event data                                                                  |
+| `time` | string          | Date at which the event occurred, with RFC 3339 format                      |
+| `type` | string          | Type of the event, must be one of the [available event types](#event-types) |
 
 ## List project events
 

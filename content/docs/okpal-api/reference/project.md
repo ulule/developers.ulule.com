@@ -57,6 +57,15 @@ The following configuration can also be updated:
 | `subscriptions_only_enabled`       | bool  | Enable the subscriptions only feature      |
 | `tax_deductible_donations_enabled` | bool  | Enable the tax deductible donation feature |
 
+
+### Contribution tier configuration
+
+| Field                 | Type         | Description                                                            |
+| --------------------- | ------------ | ---------------------------------------------------------------------- |
+| `contribution_levels` | array of int | Levels of contribution for the project -- must have 4 different values |
+| `subscription_levels` | array of int | Levels of subscription for the project -- must have 4 different values |
+
+
 ### Media Payload
 
 | Field           | Type   | Description                   |

@@ -45,6 +45,20 @@ Updates the project with the given ID. This endpoint is only accessible to the p
 | `timezone`                         | string                                                                       | Timezone of the project                        |
 | `title`                            | string                                                                       | The title of the project -- max 255 characters |
 
+Project owner can insert and delete key/value analytics:
+
+| Field                              | Type                      | Description                                    |
+| ---------------------------------- | ------------------------- | ---------------------------------------------- |
+| `upsert_analytics`                 | array of analytic payload | Project owner analytics                        |
+| `delete_analytics`                 | array of int              | Array of project owner analytics IDs to delete |
+
+with analytic payload:
+
+| Field   | Type   | Description                                                                      |
+| ------- | ------ | -------------------------------------------------------------------------------- |
+| `type`  | string | Project owner analytic type -- required, can be `twitter`, `facebook`, `google`  |
+| `value` | string | Project owner analytic value -- required, max 255 characters                     |
+
 The following configuration can also be updated:
 
 | Field                              | Type  | Description                                |

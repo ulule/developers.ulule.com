@@ -9,10 +9,10 @@ Project owners may add news to their project to keep the crowd updated during an
 
 The news `status` field can have the following values:
 
-| Status   | Description           |
-| -------- | --------------------- |
-| `online` | The order is online   |
-| `wating` | The order is not sent |
+| Status    | Description           |
+| --------- | --------------------- |
+| `online`  | The news is online    |
+| `waiting` | The news is not sent  |
 
 ## News resource
 
@@ -114,9 +114,9 @@ Retrieves all the news resources that belong to the project with the given ID. T
 
 The list can be filtered with the following query parameters:
 
-| Parameter    | Description            |
-| ------------ | ---------------------- |
-| `status`     | [News status](#news)   |
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| `status`  | [News status](#news) -- value `waiting` is only accessible to project owner |
 
 ## Test a news
 

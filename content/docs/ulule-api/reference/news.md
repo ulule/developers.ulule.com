@@ -7,6 +7,13 @@ weight: 15
 
 Project owners may add news to their project to keep the crowd updated during and after the funding campaign.
 
+The news `status` field can have the following values:
+
+| Status    | Description           |
+| --------- | --------------------- |
+| `online`  | The news is online    |
+| `waiting` | The news is not sent  |
+
 ## News resource
 
 | Field              | Type                         | Description                                                                                   |
@@ -102,6 +109,14 @@ Retrieves all the news resources that belong to the project with the given ID. T
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | Project ID |
+
+### Query parameters
+
+The list can be filtered with the following query parameters:
+
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| `status`  | [News status](#news) -- value `waiting` is only accessible to project owner |
 
 ## Test a news
 

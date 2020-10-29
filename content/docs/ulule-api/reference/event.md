@@ -32,6 +32,8 @@ Retrieves all the events of a project.
 
 The response is [paginated](#pagination).
 
+This endpoint also accepts the `with_draft_news=true` parameter, which adds the 3 most recent draft news to the response. This parameter is only accessible to the project owner.
+
 {{% http method="get" %}}/v1/projects/:id/events{{% /http %}}
 
 | Parameter | Description |

@@ -7,6 +7,45 @@ weight: 1
 
 The project resource represents a project hosted on Okpal.
 
+## Project Resource
+
+| Field                            | Type | Description |
+| -------------------------------- | ---- | ----------- |
+| anonymous_contributions_disabled |      |             |
+| bankwire_contributions_enabled   |      |             |
+| comments_enabled                 |      |             |
+| contributions_tier_configuration |      |             |
+| contributions_tier_enabled       |      |             |
+| currency                         |      |             |
+| description                      |      |             |
+| donation_max                     |      |             |
+| donation_min                     |      |             |
+| end_date                         |      |             |
+| funded_at                        |      |             |
+| goal                             |      |             |
+| goal_display_type                |      |             |
+| id                               |      |             |
+| is_deleted                       |      |             |
+| is_permanent                     |      |             |
+| is_private                       |      |             |
+| main_media                       |      |             |
+| offline_contributions_enabled    |      |             |
+| owner_analytics                  |      |             |
+| partner                          |      |             |
+| published_at                     |      |             |
+| requires_address                 |      |             |
+| slug                             |      |             |
+| stats                            |      |             |
+| status                           |      |             |
+| subscriptions_enabled            |      |             |
+| subscriptions_only_enabled       |      |             |
+| tags                             |      |             |
+| tax_deductible_donations_enabled |      |             |
+| theme                            |      |             |
+| timezone                         |      |             |
+| title                            |      |             |
+| user                             |      |             |
+
 ## Update a project
 
 Updates the project with the given ID. This endpoint is only accessible to the project owner.

@@ -24,6 +24,10 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ## Versions changelog
 
+### 2020-11-10
+
+* This version changes the `video` field of the [project resource](#project resource) to an [i18n object](#i18n).
+
 ### 2020-10-07
 
 * This version disallows invalid credentials during authentication for endpoints that can be used anonymously. Before this version, if the credentials are invalid and the endpoint can be used anonymously, the request proceeds without being authenticated. With this version, a 401 Unauthorized error is returned.

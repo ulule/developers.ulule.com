@@ -5,7 +5,7 @@ weight: 3
 
 # OAuth2
 
-This authentication method is only accessible if you have a registered OAuth2 application. Contact [support@ulule.com](mailto:support@ulule.com) for more information.
+This authentication method is only accessible if you have a registered OAuth2 application. Contact [api@ulule.com](mailto:api@ulule.com) for more information.
 
 Users use their access token for authentication via the Authorization HTTP header.
 

@@ -126,7 +126,6 @@ Creates a proposal. The `POST /proposals` endpoint is anonymously accessible. In
 | ------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `address`           | string                            | Address -- optional                                                                                                                                                                                       |
 | `birthday`          | string                            | User birthday -- optional, format YYYY-MM-DD                                                                                                                                                              |
-| `category_id`       | int                               | Unique ID of the category -- optional                                                                                                                                                                     |
 | `city`              | string                            | City -- optional, max 255 characters                                                                                                                                                                      |
 | `country`           | string                            | Country -- required, two-letter ISO code of the country                                                                                                                                                   |
 | `currency`          | string                            | Currency -- optional, three-letter ISO code of the currency                                                                                                                                               |
@@ -167,7 +166,6 @@ Updates the proposal with the given ID or token. This endpoint is only accessibl
 | ----------------- | ---------------- | ---------------------------------------------------------- |
 | `address`         | string           | Address                                                    |
 | `birthday`        | string           | User birthday -- format YYYY-MM-DD                         |
-| `category_id`     | int              | Unique ID of the category                                  |
 | `country`         | string           | User country -- two-letter ISO code of the country         |
 | `currency`        | string           | Currency -- three-letter ISO code of the currency          |
 | `description`     | string           | Description                                                |

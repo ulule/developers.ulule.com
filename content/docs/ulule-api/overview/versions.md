@@ -119,7 +119,7 @@ $ curl "https://api.ulule.com/v1/projects/56599" -H Ulule-Version:2017-10-10
 
 ### 2018-10-04
 
-* This version changes the permission of the [projets.detail endpoint](#retrieve-a-project): this endpoint is now accessible to all users before its status is `online`.
+* This version changes the permission of the [projects.detail endpoint](#retrieve-a-project): this endpoint is now accessible to all users before its status is `online`.
 
 ### 2018-10-03
 

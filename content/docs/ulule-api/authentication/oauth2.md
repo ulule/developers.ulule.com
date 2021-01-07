@@ -19,7 +19,7 @@ To retrieve an access token, use the `POST https://api.ulule.com/oauth2/token/` 
 
 *Please, do not forget the slash at the end, just after "token". This slash is required.*
 
-The request must be authenticated with the `Basic` method with the credentials being  your `client_id` and `client_secret`.
+The request must be authenticated with the `Basic` method with the credentials being your `client_id` and `client_secret`.
 
 ### Payload
 
@@ -34,12 +34,9 @@ The request must be authenticated with the `Basic` method with the credentials b
 ```bash
 $ curl -X POST \
     -d "grant_type=password&username=<username>&password=<password>" \
-    -H "Authorization: basic PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+" \
+    -u <client_id> \
     https://api.ulule.com/oauth2/token/
 ```
-
-where `PGNsaWVudF9pZD46PGNsaWVudF9zZWNyZXQ+` is the base64 encoding of the `<client_id>:<client_secret>` string.
-
 ```json
 {
     "access_token": "PKs6dso48MPRPa4pcKjskjIFwpQMA3",

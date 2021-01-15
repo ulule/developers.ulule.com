@@ -24,10 +24,11 @@ weight: 25
 
 The following fields are [extra_fields](#extra-fields) and must be explicitly specified in the request:
 
-| Field              | Type                                                      | Description      |
-| ------------------ | --------------------------------------------------------- | ---------------- |
-| `featured_project` | [project resource](#project-resource)                     | Featured project |
-| `links`            | array of [channel link resources](#channel-link-resource) | Channel links    |
+| Field              | Type                                                      | Description                                                 |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------- |
+| `featured_project` | [project resource](#project-resource)                     | Featured project                                            |
+| `is_subscribed`    | bool                                                      | Whether the authenticated user is subscribed to the channel |
+| `links`            | array of [channel link resources](#channel-link-resource) | Channel links                                               |
 
 ### Channel link resource
 

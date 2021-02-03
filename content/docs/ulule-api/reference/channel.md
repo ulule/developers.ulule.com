@@ -78,3 +78,15 @@ The response is [paginated](#pagination).
 | Parameter | Description |
 | --------- | ----------- |
 | `:id`     | User ID     |
+
+## Channel subscriptions
+
+Users can subscribe to channels to receive weekly notifications about new projects from the subscribed channels.
+
+### Subscribe to a channel
+
+`POST /v1/channel/:id/subscribe` where `:id` is the channel ID or slug.
+
+### Unsubscribe to a channel
+
+`POST /v1/channel/:id/unsubscribe` where `:id` is the channel ID or slug.
